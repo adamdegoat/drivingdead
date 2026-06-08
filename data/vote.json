@@ -1,25 +1,35 @@
 {
   "world": "drivingdead",
   "poll": {
-    "id": "2026-06-08",
+    "id": "2026-06-09",
     "closes": "tonight",
-    "question": "Hui Ling hears scratching at the ramp—a voice, maybe human. Dan wants it sealed. Does she talk him into opening it?",
+    "question": "Should Dan open the ramp for Hui Ling's injured birds, or hold the seal tight?",
     "options": [
       {
-        "id": "unlock_ramp",
-        "label": "Unlock the ramp",
-        "desc": "Hui Ling's mercy wins — let the narrator lean toward her need to help"
+        "id": "open_the_ramp",
+        "label": "Open the ramp",
+        "desc": "Trust her instinct. What she's choosing to be matters more than his protocols."
       },
       {
-        "id": "seal_tight",
-        "label": "Seal it tight",
-        "desc": "Dan's logic holds — narrate his cold math: two alive beats three dead"
+        "id": "hold_the_seal",
+        "label": "Hold the seal",
+        "desc": "Keep it locked. Survival means the hard no—even to her."
       },
       {
-        "id": "talk_first",
-        "label": "Talk before opening",
-        "desc": "Neither fully wins — one tense conversation through the door to decide"
+        "id": "negotiate",
+        "label": "Make a deal",
+        "desc": "Both their instincts are right. Help the birds without breaking the seal."
       }
     ]
+  },
+  "in_play": {
+    "id": "talk_first",
+    "label": "Talk before opening",
+    "desc": "Neither fully wins — one tense conversation through the door to decide",
+    "decided": "2026-06-09",
+    "votes": 1,
+    "tally": {
+      "talk_first": 1
+    }
   }
 }

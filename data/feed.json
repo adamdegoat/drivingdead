@@ -298,5 +298,80 @@
       }
     ],
     "timestamp": "2026-06-08T23:40:14.224873"
+  },
+  {
+    "day": 2,
+    "cycle": "morning",
+    "character": "dan",
+    "action": "Checks the solar panel readings—77% charge, stable—and braces for what's coming.",
+    "thought": "She's going to push again.",
+    "location": {
+      "waypoint": "van_front",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "wary",
+    "timestamp": "2026-06-09T07:02:29.283460"
+  },
+  {
+    "day": 2,
+    "cycle": "morning",
+    "character": "huiling",
+    "action": "Heats water for tea and listens—the birds are still out there, still calling.",
+    "thought": "I can't watch people die again.",
+    "location": {
+      "waypoint": "van_front",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "unsettled",
+    "timestamp": "2026-06-09T07:02:29.283460"
+  },
+  {
+    "day": 2,
+    "cycle": "morning",
+    "type": "interaction",
+    "characters": [
+      "huiling",
+      "dan"
+    ],
+    "description": "In the cabin at first light, Hui Ling heats water and Dan checks the battery; the subject they've been avoiding since last night finally surfaces.",
+    "dialogue": [
+      {
+        "speaker": "huiling",
+        "line": "They're still out there."
+      },
+      {
+        "speaker": "dan",
+        "line": "You were outside at dawn, then."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Just listening. They need help, Dan."
+      },
+      {
+        "speaker": "dan",
+        "line": "We don't know what that is. Could be fever, infection."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Or a broken wing. Something we could fix."
+      },
+      {
+        "speaker": "dan",
+        "line": "Once you open that door—"
+      },
+      {
+        "speaker": "huiling",
+        "line": "Once I stop being someone who watches them die, you mean."
+      },
+      {
+        "speaker": "dan",
+        "line": "That's not fair."
+      }
+    ],
+    "timestamp": "2026-06-09T07:02:29.283460"
   }
 ]

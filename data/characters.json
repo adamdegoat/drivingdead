@@ -7,26 +7,26 @@
     "color": "#f59e0b",
     "scores": {
       "trust": 54,
-      "openness": 34,
+      "openness": 33,
       "ambition": 63,
-      "loneliness": 16,
-      "resilience": 87,
+      "loneliness": 14,
+      "resilience": 88,
       "health": 100,
       "hunger": 53,
       "thirst": 53,
-      "energy": 83
+      "energy": 76
     },
     "mood": "wary",
     "location": {
-      "waypoint": "ramp_block",
+      "waypoint": "van_front",
       "x": 42,
       "y": 52
     },
     "shelter": "van",
     "relationships": {
       "huiling": {
-        "closeness": 81,
-        "tension": 12,
+        "closeness": 80,
+        "tension": 14,
         "attraction": 80
       }
     },
@@ -57,6 +57,11 @@
         "day": 1,
         "text": "She defied me on the birds. I let her. That changes things.",
         "weight": 2
+      },
+      {
+        "day": 2,
+        "text": "She's already gone outside to listen. I know before she says it.",
+        "weight": 2
       }
     ]
   },
@@ -68,26 +73,26 @@
     "color": "#22d3ee",
     "scores": {
       "trust": 67,
-      "openness": 82,
+      "openness": 83,
       "ambition": 45,
-      "loneliness": 32,
-      "resilience": 67,
+      "loneliness": 30,
+      "resilience": 68,
       "health": 100,
       "hunger": 53,
       "thirst": 53,
-      "energy": 83
+      "energy": 76
     },
     "mood": "unsettled",
     "location": {
-      "waypoint": "ramp_block",
+      "waypoint": "van_front",
       "x": 64,
       "y": 44
     },
     "shelter": "van",
     "relationships": {
       "dan": {
-        "closeness": 81,
-        "tension": 12,
+        "closeness": 80,
+        "tension": 14,
         "attraction": 80
       }
     },
@@ -120,6 +125,11 @@
       {
         "day": 1,
         "text": "I sheltered the birds. Dan refused. We're not the same people on this anymore.",
+        "weight": 2
+      },
+      {
+        "day": 2,
+        "text": "Dan won't budge, and I can't just watch them die.",
         "weight": 2
       }
     ]
