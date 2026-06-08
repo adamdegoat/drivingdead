@@ -1,9 +1,10 @@
 {
   "day": 1,
-  "text": "Fate not yet revealed",
-  "cycle": "evening",
-  "happens_at": "6pm",
+  "text": "Hui Ling wants to shelter injured birds on the ramp; Dan refuses the risk.",
+  "flavor": "the bond is tested",
+  "cycle": "night",
+  "happens_at": "11pm",
   "status": "upcoming",
-  "revealed_at": "2026-06-08T00:00:00.404165",
+  "revealed_at": "2026-06-08T23:31:53.986599",
   "activated_at": null
 }
