@@ -964,15 +964,14 @@ html,body{width:100%;height:100%;overflow:hidden;font-family:'Plus Jakarta Sans'
 <!-- collected water vessel (fill level tracks resources.water) -->
 <g id="water-store"></g>
 
-<!-- ══ THE VAN'S SYSTEMS GLOW — warm interior light when POWER is on (= 'fire' lit; scales w/ battery) ══ -->
+<!-- ══ THE VAN'S SYSTEMS GLOW — soft warm spill when POWER is on at night (the windows themselves
+     light up via applySky; this is just the ambient halo + a faint pool of light on the deck) ══ -->
 <g id="fire-flames" display="none" style="mix-blend-mode:screen">
-  <!-- soft halo so the warmth punches through the night overlay -->
-  <ellipse cx="419" cy="428" rx="92" ry="40" fill="#f59e0b" opacity=".18"/>
-  <rect x="357" y="417" width="36" height="22" rx="2.5" fill="#fcd34d" opacity=".9"/>
-  <rect x="403" y="417" width="36" height="22" rx="2.5" fill="#fef3c7" opacity=".95"/>
-  <rect x="449" y="417" width="32" height="22" rx="2.5" fill="#fcd34d" opacity=".9"/>
+  <!-- soft blurred halo around the cab so the warmth bleeds out past the windows -->
+  <ellipse cx="419" cy="430" rx="78" ry="30" fill="#f59e0b" opacity=".16" filter="url(#soft-blur)"/>
+  <ellipse cx="419" cy="430" rx="48" ry="18" fill="#fcd34d" opacity=".14" filter="url(#soft-blur)"/>
   <!-- light spill down onto the deck -->
-  <path d="M 396 438 L 320 600 L 300 600 L 380 438 Z" fill="#fde68a" opacity=".1"/>
+  <path d="M 396 440 L 322 600 L 300 600 L 380 440 Z" fill="#fde68a" opacity=".08"/>
 </g>
 <!-- a thin vent wisp from the van when the systems run -->
 <g id="fire-smoke" display="none" opacity=".4">
@@ -1246,6 +1245,13 @@ function applySky(sky) {
   document.getElementById('night-stars')?.setAttribute('opacity',isNight?'1':'0')
   const fireLit = !!(S.world && S.world.fire && S.world.fire.lit)
   document.getElementById('fire-glow')?.setAttribute('opacity',(isNight && fireLit)?'1':'0')
+  // the van's interior glow only reads at night when powered. The WINDOWS THEMSELVES warm up
+  // (dark glass → amber, via the .van-glow fill transition) so the light looks built into the
+  // van rather than floating on top; #fire-flames is just the soft ambient halo + deck spill.
+  const winFill = (isNight && fireLit) ? '#f9b53d' : '#243038'
+  document.querySelectorAll('#van-windows .van-glow').forEach(w=>w.setAttribute('fill',winFill))
+  document.getElementById('fire-flames')?.setAttribute('display',(isNight && fireLit)?'inline':'none')
+  document.getElementById('fire-smoke')?.setAttribute('display',(isNight && fireLit)?'inline':'none')
   document.getElementById('fireflies')?.setAttribute('opacity',isNight?'1':'0')
   // Sun shafts only break through in daylight; soften the haze at night.
   const gr=document.getElementById('god-rays'); if(gr) gr.style.display=isNight?'none':''
@@ -2016,17 +2022,16 @@ function updateFireChip() {
   el.style.display = 'flex'
   el.className = lit ? 'lit' : 'out'
   el.innerHTML = lit ? '⚡ POWER ON' : '🌑 DARK'
-  // Scene flames only burn when the fire is actually lit (the stone ring always stays).
-  // The night glow is handled in applySky (gated on fire.lit).
+  // The van's warm interior window-glow only reads at NIGHT — in daylight the windows are
+  // just dark glass. Its actual show/hide is night-gated in applySky (isNight && fire.lit);
+  // here we only scale it by the battery level so a draining battery dims the glow.
   const ff = document.getElementById('fire-flames')
   if(ff){
-    ff.setAttribute('display', lit ? '' : 'none')
-    // Flames scale with the real fuel level — a dying fire visibly shrinks.
     const fuel = (typeof fire.fuel === 'number') ? fire.fuel : 8
     ff.style.transformBox = 'fill-box'; ff.style.transformOrigin = '50% 100%'
-    ff.style.transform = lit ? `scale(${Math.max(0.5, Math.min(1.3, 0.5 + fuel / 14)).toFixed(2)})` : ''
+    ff.style.transform = lit ? `scale(${Math.max(0.5, Math.min(1.15, 0.55 + fuel / 16)).toFixed(2)})` : ''
   }
-  document.getElementById('fire-smoke')?.setAttribute('display', lit ? '' : 'none')
+  // a faint vent wisp from the van's systems — only at night, only when powered (set in applySky)
 }
 
 // ── CAMP STORES: the clearing is an honest readout of the survival sim. Firewood, drying
