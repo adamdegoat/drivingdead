@@ -9,12 +9,12 @@
       "trust": 55,
       "openness": 35,
       "ambition": 62,
-      "loneliness": 20,
-      "resilience": 86,
+      "loneliness": 18,
+      "resilience": 87,
       "health": 100,
-      "hunger": 48,
+      "hunger": 53,
       "thirst": 53,
-      "energy": 56
+      "energy": 49
     },
     "mood": "steady",
     "location": {
@@ -25,8 +25,8 @@
     "shelter": "van",
     "relationships": {
       "huiling": {
-        "closeness": 79,
-        "tension": 12,
+        "closeness": 80,
+        "tension": 11,
         "attraction": 80
       }
     },
@@ -48,10 +48,7 @@
       ],
       "beard": true
     },
-    "interaction": {
-      "with": "huiling",
-      "state": "sitting_together"
-    }
+    "interaction": null
   },
   "huiling": {
     "name": "Hui Ling",
@@ -61,16 +58,16 @@
     "color": "#22d3ee",
     "scores": {
       "trust": 68,
-      "openness": 80,
+      "openness": 81,
       "ambition": 45,
-      "loneliness": 36,
-      "resilience": 69,
+      "loneliness": 33,
+      "resilience": 68,
       "health": 100,
-      "hunger": 48,
+      "hunger": 53,
       "thirst": 53,
-      "energy": 56
+      "energy": 49
     },
-    "mood": "weary",
+    "mood": "unsettled",
     "location": {
       "waypoint": "van_rear",
       "x": 64,
@@ -79,8 +76,8 @@
     "shelter": "van",
     "relationships": {
       "dan": {
-        "closeness": 79,
-        "tension": 12,
+        "closeness": 80,
+        "tension": 11,
         "attraction": 80
       }
     },
@@ -100,9 +97,13 @@
         "slingbag"
       ]
     },
-    "interaction": {
-      "with": "dan",
-      "state": "sitting_together"
-    }
+    "interaction": null,
+    "memories": [
+      {
+        "day": 1,
+        "text": "The sound stays with me. Dan says it's probably the dead.",
+        "weight": 2
+      }
+    ]
   }
 }

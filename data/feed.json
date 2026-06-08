@@ -140,5 +140,80 @@
       }
     ],
     "timestamp": "2026-06-08T23:35:50.855565"
+  },
+  {
+    "day": 1,
+    "cycle": "evening",
+    "character": "dan",
+    "action": "He walks the perimeter of the solar array one last time as the light falls, checking the charge on the battery.",
+    "thought": "The day held. We held.",
+    "location": {
+      "waypoint": "solar_array",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "steady",
+    "timestamp": "2026-06-08T23:37:48.926215"
+  },
+  {
+    "day": 1,
+    "cycle": "evening",
+    "character": "huiling",
+    "action": "She heats water on the small stove inside the van, moving with the careful quiet that darkness brings.",
+    "thought": "The sound. Is it out there still?",
+    "location": {
+      "waypoint": "van_rear",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "unsettled",
+    "timestamp": "2026-06-08T23:37:48.926215"
+  },
+  {
+    "day": 1,
+    "cycle": "evening",
+    "type": "interaction",
+    "characters": [
+      "dan",
+      "huiling"
+    ],
+    "description": "In the van's cab as dusk thickens, they eat a hot meal together—Dan reports the battery while Hui Ling listens, both aware of the city darkening beyond the windscreen.",
+    "dialogue": [
+      {
+        "speaker": "dan",
+        "line": "Ninety-two percent. The filter can run tonight."
+      },
+      {
+        "speaker": "huiling",
+        "line": "That's good. Did you hear anything? During the day?"
+      },
+      {
+        "speaker": "dan",
+        "line": "Nothing. Why."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Last night's sound. Still in my head."
+      },
+      {
+        "speaker": "dan",
+        "line": "The one in the street? Probably just the dead wandering."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Yeah. Probably."
+      },
+      {
+        "speaker": "dan",
+        "line": "The ramp's tight. We're sealed."
+      },
+      {
+        "speaker": "huiling",
+        "line": "I know. I know."
+      }
+    ],
+    "timestamp": "2026-06-08T23:37:48.926215"
   }
 ]
