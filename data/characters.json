@@ -8,24 +8,24 @@
       "trust": 55,
       "openness": 34,
       "ambition": 62,
-      "loneliness": 22,
-      "resilience": 84,
+      "loneliness": 20,
+      "resilience": 85,
       "health": 100,
-      "hunger": 59,
-      "thirst": 56,
-      "energy": 63
+      "hunger": 48,
+      "thirst": 45,
+      "energy": 97
     },
     "mood": "focused",
     "location": {
-      "waypoint": "van_front",
+      "waypoint": "ramp_block",
       "x": 42,
       "y": 52
     },
     "shelter": "van",
     "relationships": {
       "huiling": {
-        "closeness": 78,
-        "tension": 12,
+        "closeness": 81,
+        "tension": 11,
         "attraction": 80
       }
     },
@@ -48,10 +48,7 @@
       "beard": true
     },
     "tag": "Dan",
-    "interaction": {
-      "with": "huiling",
-      "state": "talking"
-    }
+    "interaction": null
   },
   "huiling": {
     "name": "Hui Ling",
@@ -62,12 +59,12 @@
       "trust": 68,
       "openness": 78,
       "ambition": 45,
-      "loneliness": 39,
+      "loneliness": 36,
       "resilience": 70,
       "health": 100,
-      "hunger": 59,
-      "thirst": 56,
-      "energy": 63
+      "hunger": 48,
+      "thirst": 45,
+      "energy": 97
     },
     "mood": "weary",
     "location": {
@@ -78,8 +75,8 @@
     "shelter": "van",
     "relationships": {
       "dan": {
-        "closeness": 78,
-        "tension": 12,
+        "closeness": 81,
+        "tension": 11,
         "attraction": 80
       }
     },
@@ -100,9 +97,6 @@
       ]
     },
     "tag": "Hui Ling",
-    "interaction": {
-      "with": "dan",
-      "state": "talking"
-    }
+    "interaction": null
   }
 }

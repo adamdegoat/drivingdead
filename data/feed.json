@@ -73,5 +73,92 @@
       }
     ],
     "timestamp": "2026-06-08T22:38:00.426313"
+  },
+  {
+    "day": 1,
+    "cycle": "night",
+    "character": "dan",
+    "action": "Checks the ramp barricade one final time, running his hands over the locks and frame before heading back into the van.",
+    "thought": "Barricade holds, we're secure for tonight.",
+    "location": {
+      "waypoint": "ramp_block",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "focused",
+    "timestamp": "2026-06-08T23:02:08.756720"
+  },
+  {
+    "day": 1,
+    "cycle": "night",
+    "character": "huiling",
+    "action": "Sits in the van's cab with a cup of water, listening to the dark streets settle into silence as she waits for Dan.",
+    "thought": "First night held. How many more?",
+    "location": {
+      "waypoint": "van_front",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "weary",
+    "timestamp": "2026-06-08T23:02:08.756720"
+  },
+  {
+    "day": 1,
+    "cycle": "night",
+    "type": "interaction",
+    "characters": [
+      "dan",
+      "huiling"
+    ],
+    "description": "In the van, Dan returns from checking the ramp to find Hui Ling waiting; together they settle into the first night.",
+    "dialogue": [
+      {
+        "speaker": "huiling",
+        "line": "Ramp's solid?"
+      },
+      {
+        "speaker": "dan",
+        "line": "Solid. Everything's locked."
+      },
+      {
+        "speaker": "huiling",
+        "line": "And the battery?"
+      },
+      {
+        "speaker": "dan",
+        "line": "Seventy-six. We're good."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Then stop checking. Come sit."
+      },
+      {
+        "speaker": "dan",
+        "line": "I wasn't checking."
+      },
+      {
+        "speaker": "huiling",
+        "line": "You were. But I'm glad you're here."
+      },
+      {
+        "speaker": "dan",
+        "line": "Long day."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Yeah. But we made it."
+      },
+      {
+        "speaker": "dan",
+        "line": "Tomorrow too."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Tomorrow too."
+      }
+    ],
+    "timestamp": "2026-06-08T23:02:08.756720"
   }
 ]
