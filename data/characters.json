@@ -7,16 +7,16 @@
     "color": "#f59e0b",
     "scores": {
       "trust": 55,
-      "openness": 34,
+      "openness": 35,
       "ambition": 62,
-      "loneliness": 22,
-      "resilience": 85,
+      "loneliness": 20,
+      "resilience": 86,
       "health": 100,
-      "hunger": 59,
-      "thirst": 56,
-      "energy": 63
+      "hunger": 48,
+      "thirst": 53,
+      "energy": 56
     },
-    "mood": "guarded",
+    "mood": "steady",
     "location": {
       "waypoint": "solar_array",
       "x": 42,
@@ -25,7 +25,7 @@
     "shelter": "van",
     "relationships": {
       "huiling": {
-        "closeness": 78,
+        "closeness": 79,
         "tension": 12,
         "attraction": 80
       }
@@ -48,7 +48,10 @@
       ],
       "beard": true
     },
-    "interaction": null
+    "interaction": {
+      "with": "huiling",
+      "state": "sitting_together"
+    }
   },
   "huiling": {
     "name": "Hui Ling",
@@ -58,14 +61,14 @@
     "color": "#22d3ee",
     "scores": {
       "trust": 68,
-      "openness": 79,
+      "openness": 80,
       "ambition": 45,
-      "loneliness": 39,
-      "resilience": 70,
+      "loneliness": 36,
+      "resilience": 69,
       "health": 100,
-      "hunger": 59,
-      "thirst": 56,
-      "energy": 63
+      "hunger": 48,
+      "thirst": 53,
+      "energy": 56
     },
     "mood": "weary",
     "location": {
@@ -76,7 +79,7 @@
     "shelter": "van",
     "relationships": {
       "dan": {
-        "closeness": 78,
+        "closeness": 79,
         "tension": 12,
         "attraction": 80
       }
@@ -97,6 +100,9 @@
         "slingbag"
       ]
     },
-    "interaction": null
+    "interaction": {
+      "with": "dan",
+      "state": "sitting_together"
+    }
   }
 }

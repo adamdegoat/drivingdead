@@ -65,5 +65,80 @@
       }
     ],
     "timestamp": "2026-06-08T23:33:57.022245"
+  },
+  {
+    "day": 1,
+    "cycle": "midday",
+    "character": "dan",
+    "action": "Checks the solar array's connections and tightens a bolt, reads the battery status holding at ninety-six percent.",
+    "thought": "Battery's holding. The rig is clean.",
+    "location": {
+      "waypoint": "solar_array",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "steady",
+    "timestamp": "2026-06-08T23:35:50.855565"
+  },
+  {
+    "day": 1,
+    "cycle": "midday",
+    "character": "huiling",
+    "action": "Prepares canned food and bread in the van's cab, hands moving with purpose, mind still caught on the night's sound.",
+    "thought": "That sound last night. Still echoing.",
+    "location": {
+      "waypoint": "van_rear",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "weary",
+    "timestamp": "2026-06-08T23:35:50.855565"
+  },
+  {
+    "day": 1,
+    "cycle": "midday",
+    "type": "interaction",
+    "characters": [
+      "dan",
+      "huiling"
+    ],
+    "description": "In the van's cab at midday, Dan returns from checking the rig as Hui Ling sets out a hot meal. The battery is full and the systems are warm, but last night's sound still weighs on her.",
+    "dialogue": [
+      {
+        "speaker": "dan",
+        "line": "Battery's at ninety-six. Rig is solid."
+      },
+      {
+        "speaker": "huiling",
+        "line": "That's good."
+      },
+      {
+        "speaker": "dan",
+        "line": "Filter's running. We can eat hot for once."
+      },
+      {
+        "speaker": "huiling",
+        "line": "I'm still thinking about last night."
+      },
+      {
+        "speaker": "dan",
+        "line": "The barricade held. The ramp is still sealed."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Did it? Or did we just not hear them?"
+      },
+      {
+        "speaker": "dan",
+        "line": "We're still here. That's what counts."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Yeah. Yeah, we are."
+      }
+    ],
+    "timestamp": "2026-06-08T23:35:50.855565"
   }
 ]

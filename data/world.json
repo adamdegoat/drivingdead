@@ -1,6 +1,6 @@
 {
   "day": 1,
-  "cycle": "morning",
+  "cycle": "midday",
   "weather": "clear",
   "pending_events": [],
   "started": "2026-06-08",
@@ -9,7 +9,7 @@
       "id": "solar_rig",
       "type": "solar_rig",
       "level": 1,
-      "condition": 96,
+      "condition": 92,
       "x": 50,
       "y": 40,
       "builder": "dan",
@@ -20,24 +20,24 @@
   ],
   "fire": {
     "lit": true,
-    "fuel": 39
+    "fuel": 26
   },
   "last_run_date": "2026-06-08",
-  "pulse": "Dan checks the battery like a daily prayer; Hui Ling slept badly, and the city's quiet doesn't help.",
-  "scene": "The morning sun hits the solar array and the van's systems hum — filter running, lights steady, battery full. Dan emerges from checking the panels while Hui Ling pours hot water inside the cab, both listening to the streets below.",
+  "pulse": "The battery is full and the systems warm, but Hui Ling carries last night's sound. Dan has no answer for her fear.",
+  "scene": "The battery topped at ninety-six percent; Dan confirmed the rig while Hui Ling prepared a meal. They eat in the van's cab at midday, but the sound from last night still haunts her, and his reassurances don't reach it.",
   "resources_prev": {
-    "food": 50,
-    "water": 50,
-    "wood": 30,
-    "medicine": 20
-  },
-  "resources": {
     "food": 52,
     "water": 63,
     "wood": 49,
     "medicine": 20
   },
+  "resources": {
+    "food": 52,
+    "water": 70,
+    "wood": 69,
+    "medicine": 20
+  },
   "camp_climate": "steady",
   "discoveries": [],
-  "last_cycle_key": "2026-06-08:morning"
+  "last_cycle_key": "2026-06-08:midday"
 }
