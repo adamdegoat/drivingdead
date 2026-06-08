@@ -1036,7 +1036,7 @@ function dogProfileCard(cid, c){
   const moodEmoji = MOOD_EMOJI[(c.mood||'').toLowerCase()] || '🐾'
   const bio = c.bio || "A survivor of the dead city."
   const tag = named ? '🐱 The camp cat' : '🐾 Not yet named'
-  const shelter = {tent:'⛺',house:'🏠',hammock:'🌴',beach:'🏖️',forest:'🌲',cayenne:'🚙',lean_to:'🛖'}
+  const shelter = {van:'🚐',rooftop:'🏚️',barricade:'🧱',tent:'⛺',house:'🏠',lean_to:'🛖'}
   return `<div class="char-card dog-card" style="box-shadow:0 0 30px ${color}12">
     <div class="char-avatar" style="background:${color}18;border:2px solid ${color}40;font-size:24px">🐾</div>
     <div class="char-name" style="color:${color}">${displayName}</div>

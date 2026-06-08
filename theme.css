@@ -26,11 +26,10 @@
   --nes-vignette:rgba(2,6,23,.5);               /* scene edge darkening         */
 
   /* ── Palette — PER-WORLD (override these in each new world) ─────────────── */
-  /* Rimba / World 03 — deep Malaysian rainforest. Dappled canopy gold over wet
-     emerald + earth; night falls to a near-black jungle green with firefly/ember
-     warmth and a teal river. Same craft as Tropicana, re-skinned for the jungle. */
-  /* DRIVING DEAD — a dead-city rooftop: weathered concrete + rust, the warm
-     amber/solar glow of the van against a cold-steel apocalypse. Same craft. */
+  /* DRIVING DEAD / World 02 — a dead-city carpark rooftop: weathered concrete +
+     rust, the warm amber/solar glow of the camper van against a cold-steel
+     apocalypse; night falls to a deep steel-blue. Same craft as the other worlds,
+     re-skinned for the dead city. */
   --w-gold:#f59e0b;        /* solar / van amber — primary warm accent          */
   --w-gold-soft:#fbbf24;   /* warm telltale amber                              */
   --w-cream:#dfe6ec;       /* cold concrete-white (headlines on dark)          */

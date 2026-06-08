@@ -1497,7 +1497,7 @@ function updateBubble(cid) {
 }
 
 const CYCLE_HOUR = {morning:'7am',midday:'12:30pm',evening:'6pm',night:'11pm'}
-const CHAR_COLOR = {chills:'#6a994e',wesley:'#6ba3e0',mutu:'#d98a4a'}
+const CHAR_COLOR = {dan:'#f59e0b',huiling:'#22d3ee'}
 function getCharColor(cid){return CHAR_COLOR[cid]||S.chars[cid]?.color||'#e2e8f0'}
 
 function fmtSGT(ts) {
@@ -2071,29 +2071,6 @@ function renderCampStores() {
   const wsEl = document.getElementById('water-store'); if (wsEl) wsEl.innerHTML = ws
 }
 
-// ── VEHICLE STATE: the Cayenne is a finite reserve. As the story strips it for parts,
-//    the truck visibly dismantles — and it STAYS that way. The Onewheel vanishes if it's
-//    cannibalised for its battery. Reads world.cayenne.stripped[] + world.onewheel. ──
-function renderVehicleState() {
-  const cay = (S.world && S.world.cayenne) || {}
-  const stripped = Array.isArray(cay.stripped) ? cay.stripped : []
-  const has = k => stripped.includes(k)
-  // Use explicit 'inline'/'none' (not '') — the overlay groups carry a display="none" SVG
-  // attribute, and an empty inline style would let that attribute win and keep them hidden.
-  const show = (id, on) => { const el = document.getElementById(id); if (el) el.style.display = on ? 'inline' : 'none' }
-  // parts that simply disappear when taken
-  const HIDE = { mirror:'cay-mirror', snorkel:'cay-snorkel', lightbar:'cay-lightbar', tent:'cay-tent', spare:'cay-spare', wheel:'cay-wheel' }
-  for (const k in HIDE) show(HIDE[k], !has(k))
-  // a pulled wheel reveals the bare hub propped on logs
-  show('cay-wheel-gone', has('wheel'))
-  // overlays revealed when the engine bay or a door is opened up / stripped
-  show('cay-hood-open', has('hood') || has('battery'))
-  show('cay-door-removed', has('door') || has('seat'))
-  // the Onewheel is gone once cannibalised (battery taken) or otherwise removed
-  const ow = (S.world && S.world.onewheel) || {}
-  show('onewheel', !(ow.present === false || ow.stripped === true))
-}
-
 function renderStructures() {
   const layer = document.getElementById('structures-layer')
   if(!layer) return
@@ -2459,7 +2436,7 @@ function makeGenericCharSVG(cid, color, skin) {
   </svg>`
 }
 
-// ── ANIMAL MODEL (Mutu — a ginger tabby cat) ─────────────────
+// ── ANIMAL MODEL (generic cat/dog rig — unused in Driving Dead, kept for shared engine) ─────────────────
 // A sitting cat whose face uses the SAME rig geometry (eyes ~-72.5, mouth -64.5,
 // brows) so applyFace drives eyes/brows/mouth/blush unchanged. Cat-specific parts
 // (pointed ears + long tail) are animated by applyAnimalExtras from the mood. Coat
@@ -2662,7 +2639,6 @@ function updateWorld() {
   renderResHud()
   updateFireChip()
   renderCampStores()
-  renderVehicleState()
 
   if(isMobile() && !mobileScrollInited) {
     mobileScrollInited = true
