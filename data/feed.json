@@ -215,5 +215,88 @@
       }
     ],
     "timestamp": "2026-06-08T23:37:48.926215"
+  },
+  {
+    "day": 1,
+    "cycle": "night",
+    "character": "dan",
+    "action": "He checks the ramp's barricade as dusk darkens when Hui Ling appears with injured birds.",
+    "thought": "She's going to break my rules again.",
+    "location": {
+      "waypoint": "ramp_block",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "wary",
+    "timestamp": "2026-06-08T23:40:14.224873"
+  },
+  {
+    "day": 1,
+    "cycle": "night",
+    "character": "huiling",
+    "action": "She carries two injured sparrows in a cloth to the van, resolved to shelter them.",
+    "thought": "People died because I did nothing. Not again.",
+    "location": {
+      "waypoint": "ramp_block",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "unsettled",
+    "timestamp": "2026-06-08T23:40:14.224873"
+  },
+  {
+    "day": 1,
+    "cycle": "night",
+    "type": "interaction",
+    "characters": [
+      "dan",
+      "huiling"
+    ],
+    "description": "In the van's dim cab at nightfall, Hui Ling tells Dan she found injured birds on the ramp and intends to shelter them — a collision between his fear and her conscience.",
+    "dialogue": [
+      {
+        "speaker": "huiling",
+        "line": "I found injured birds on the ramp. I'm bringing them up."
+      },
+      {
+        "speaker": "dan",
+        "line": "That's a risk we can't carry, Hui."
+      },
+      {
+        "speaker": "huiling",
+        "line": "I know what we carry. I'm doing it anyway."
+      },
+      {
+        "speaker": "dan",
+        "line": "And if noise draws them? The dead are close."
+      },
+      {
+        "speaker": "huiling",
+        "line": "They won't make noise. And if they do, I accept that."
+      },
+      {
+        "speaker": "dan",
+        "line": "You don't accept for both of us."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Then I won't ask permission again. But I'm doing it."
+      },
+      {
+        "speaker": "dan",
+        "line": "The corner, then. Sheltered, away from the door. Gone at first light."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Thank you."
+      },
+      {
+        "speaker": "dan",
+        "line": "I'm not thanking you for this."
+      }
+    ],
+    "timestamp": "2026-06-08T23:40:14.224873"
   }
 ]

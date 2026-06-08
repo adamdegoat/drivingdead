@@ -1,6 +1,6 @@
 {
   "day": 1,
-  "cycle": "evening",
+  "cycle": "night",
   "weather": "clear",
   "pending_events": [],
   "started": "2026-06-08",
@@ -9,7 +9,7 @@
       "id": "solar_rig",
       "type": "solar_rig",
       "level": 1,
-      "condition": 88,
+      "condition": 84,
       "x": 50,
       "y": 40,
       "builder": "dan",
@@ -20,24 +20,27 @@
   ],
   "fire": {
     "lit": true,
-    "fuel": 13
+    "fuel": 18
   },
   "last_run_date": "2026-06-08",
-  "pulse": "Dan's reassurance settles her briefly, but Hui Ling can't shake last night's sound—she needs more than he can give.",
-  "scene": "The clear day charged the battery to ninety-two percent; by evening they ate something hot in the cab, Dan steady while Hui Ling kept one ear on the darkening city, the sound from the night before still in her head.",
+  "pulse": "She wins this one, and he lets her — but the cost is paid in silence.",
+  "scene": "Hui Ling found injured birds on the ramp at dusk and sheltered them on the van's corner against Dan's fear; by nightfall they were sitting in guarded silence.",
   "resources_prev": {
-    "food": 52,
-    "water": 70,
-    "wood": 69,
-    "medicine": 20
-  },
-  "resources": {
     "food": 37,
     "water": 72,
     "wood": 78,
     "medicine": 20
   },
-  "camp_climate": "steady",
+  "resources": {
+    "food": 32,
+    "water": 80,
+    "wood": 77,
+    "medicine": 20
+  },
+  "camp_climate": "content",
   "discoveries": [],
-  "last_cycle_key": "2026-06-08:evening"
+  "last_cycle_key": "2026-06-08:night",
+  "day_summaries": {
+    "1": "Day 1 was clear and warm — good charging, hot meals in the cab, the systems steady. At dusk, Hui Ling found injured birds on the ramp and sheltered them on the van's corner despite Dan's strong refusal. By nightfall, they were sitting together in guarded silence, both aware that the cost of survival might exceed what they could afford to become."
+  }
 }

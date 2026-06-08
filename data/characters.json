@@ -6,27 +6,27 @@
     "archetype": "builder",
     "color": "#f59e0b",
     "scores": {
-      "trust": 55,
-      "openness": 35,
-      "ambition": 62,
-      "loneliness": 18,
+      "trust": 54,
+      "openness": 34,
+      "ambition": 63,
+      "loneliness": 16,
       "resilience": 87,
       "health": 100,
       "hunger": 53,
       "thirst": 53,
-      "energy": 49
+      "energy": 83
     },
-    "mood": "steady",
+    "mood": "wary",
     "location": {
-      "waypoint": "solar_array",
+      "waypoint": "ramp_block",
       "x": 42,
       "y": 52
     },
     "shelter": "van",
     "relationships": {
       "huiling": {
-        "closeness": 80,
-        "tension": 11,
+        "closeness": 81,
+        "tension": 12,
         "attraction": 80
       }
     },
@@ -48,7 +48,17 @@
       ],
       "beard": true
     },
-    "interaction": null
+    "interaction": {
+      "with": "huiling",
+      "state": "talking"
+    },
+    "memories": [
+      {
+        "day": 1,
+        "text": "She defied me on the birds. I let her. That changes things.",
+        "weight": 2
+      }
+    ]
   },
   "huiling": {
     "name": "Hui Ling",
@@ -57,27 +67,27 @@
     "archetype": "healer",
     "color": "#22d3ee",
     "scores": {
-      "trust": 68,
-      "openness": 81,
+      "trust": 67,
+      "openness": 82,
       "ambition": 45,
-      "loneliness": 33,
-      "resilience": 68,
+      "loneliness": 32,
+      "resilience": 67,
       "health": 100,
       "hunger": 53,
       "thirst": 53,
-      "energy": 49
+      "energy": 83
     },
     "mood": "unsettled",
     "location": {
-      "waypoint": "van_rear",
+      "waypoint": "ramp_block",
       "x": 64,
       "y": 44
     },
     "shelter": "van",
     "relationships": {
       "dan": {
-        "closeness": 80,
-        "tension": 11,
+        "closeness": 81,
+        "tension": 12,
         "attraction": 80
       }
     },
@@ -97,11 +107,19 @@
         "slingbag"
       ]
     },
-    "interaction": null,
+    "interaction": {
+      "with": "dan",
+      "state": "talking"
+    },
     "memories": [
       {
         "day": 1,
         "text": "The sound stays with me. Dan says it's probably the dead.",
+        "weight": 2
+      },
+      {
+        "day": 1,
+        "text": "I sheltered the birds. Dan refused. We're not the same people on this anymore.",
         "weight": 2
       }
     ]

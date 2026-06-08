@@ -4,7 +4,7 @@
   "flavor": "the bond is tested",
   "cycle": "night",
   "happens_at": "11pm",
-  "status": "upcoming",
+  "status": "activated",
   "revealed_at": "2026-06-08T23:31:53.986599",
-  "activated_at": null
+  "activated_at": "2026-06-08T23:38:16.123608"
 }
