@@ -1,10 +1,10 @@
 {
   "day": 1,
-  "text": "Hui Ling wants to shelter injured birds on the ramp; Dan refuses the risk.",
-  "flavor": "the bond is tested",
-  "cycle": "night",
-  "happens_at": "11pm",
-  "status": "activated",
-  "revealed_at": "2026-06-08T23:31:53.986599",
-  "activated_at": "2026-06-08T23:38:16.123608"
+  "text": "Dan watches through the night while Hui Ling's fever breaks, her hand in his.",
+  "flavor": "a quiet mercy",
+  "cycle": "evening",
+  "happens_at": "6pm",
+  "status": "upcoming",
+  "revealed_at": "2026-06-09T00:00:22.788327",
+  "activated_at": null
 }
