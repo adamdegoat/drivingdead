@@ -78,6 +78,14 @@ html,body{width:100%;height:100%;overflow:hidden;font-family:'Plus Jakarta Sans'
 .shamble{transform-box:view-box;animation:shamble 6.5s ease-in-out infinite}
 @keyframes blink{0%,82%,100%{opacity:.25}88%{opacity:1}}
 .blink{animation:blink 3.4s ease-in-out infinite}
+/* a distant window that flickers on/off — a sign of life (or failing power) out in the dead city */
+@keyframes winflick{0%,42%,46%,100%{opacity:.85}44%{opacity:.12}70%,74%{opacity:.85}72%{opacity:.3}}
+.winflick{animation:winflick 6.5s steps(1,end) infinite}
+.winflick.b{animation-duration:4.8s;animation-delay:-2.1s}
+.winflick.c{animation-duration:7.6s;animation-delay:-3.7s}
+/* the far rooftop beacon — slow red aircraft-warning pulse on the tallest tower */
+@keyframes beacon{0%,70%,100%{opacity:.15}82%{opacity:.9}}
+.beacon{animation:beacon 2.6s ease-in-out infinite}
 @keyframes croworbit{0%{transform:translate(0,0)}25%{transform:translate(34px,-10px)}50%{transform:translate(58px,6px)}75%{transform:translate(24px,16px)}100%{transform:translate(0,0)}}
 .crow-orbit{transform-box:view-box;animation:croworbit 22s ease-in-out infinite}
 .van-glow{transition:fill .8s ease}
@@ -802,21 +810,86 @@ html,body{width:100%;height:100%;overflow:hidden;font-family:'Plus Jakarta Sans'
   <!-- a snapped / collapsed tower -->
   <path d="M 372 236 L 438 236 L 438 300 L 410 280 L 372 296 Z" fill="#2c333d"/>
 </g>
-<!-- lit / broken windows scattered (mostly dark, a few catch light) -->
-<g fill="#4a525e" opacity=".5">
-  <rect x="108" y="222" width="6" height="8"/><rect x="120" y="240" width="6" height="8"/><rect x="300" y="232" width="6" height="8"/>
-  <rect x="478" y="238" width="6" height="8"/><rect x="676" y="236" width="6" height="8"/><rect x="870" y="240" width="6" height="8"/>
+<!-- ROOFTOP STRUCTURES on the towers (water tank, antennae, a leaning crane, a dead billboard) -->
+<g fill="#2c333d" stroke="#39414c" stroke-width="1">
+  <!-- water tank on legs (atop the x556 tower) -->
+  <ellipse cx="588" cy="232" rx="15" ry="5"/><rect x="573" y="220" width="30" height="14" rx="2"/><ellipse cx="588" cy="220" rx="15" ry="4.5" fill="#39414c"/>
+  <path d="M 576 234 L 574 244 M 600 234 L 602 244 M 588 234 L 588 246" stroke="#2c333d" stroke-width="2" fill="none"/>
+  <!-- a small water tank on the x170 tower -->
+  <rect x="196" y="222" width="20" height="11" rx="2"/><path d="M 199 233 L 197 240 M 213 233 L 215 240" stroke="#2c333d" stroke-width="1.6"/>
 </g>
-<!-- a thin smoke plume rising from a distant fire in the city -->
-<g opacity=".4"><path class="smoke" d="M 222 232 Q 214 196 226 156 Q 232 130 224 104" stroke="#3a3f45" stroke-width="6" fill="none" stroke-linecap="round"/></g>
-<ellipse cx="223" cy="244" rx="9" ry="5" fill="#9a3412" opacity=".35"/>
+<!-- antenna / aerial masts -->
+<g stroke="#3a3f45" stroke-width="1.4" opacity=".8" stroke-linecap="round">
+  <path d="M 120 206 L 120 184 M 114 194 L 126 194 M 116 189 L 124 189"/>
+  <path d="M 790 234 L 790 210 M 785 220 L 795 220"/>
+  <path d="M 432 172 L 432 150"/>
+</g>
+<!-- a leaning tower crane over the x858 building (long jib + counter-jib + cables) -->
+<g stroke="#4a4e52" stroke-width="2" fill="none" opacity=".85" stroke-linecap="round">
+  <path d="M 888 222 L 886 170"/>
+  <path d="M 846 162 L 928 176" stroke-width="2.4"/>
+  <path d="M 886 170 L 854 164 M 886 170 L 920 175"/>
+  <path d="M 906 174 L 906 196" stroke-width="1.2"/><rect x="901" y="196" width="10" height="6" fill="#5c2410" stroke="none"/>
+</g>
+<!-- a dead billboard frame on the x284 tower -->
+<g><rect x="288" y="200" width="46" height="22" rx="1.5" fill="#1c2027" stroke="#3a3f45" stroke-width="1.4"/>
+  <path d="M 294 206 L 320 210 M 294 214 L 314 216" stroke="#39414c" stroke-width="1.2" opacity=".6"/>
+  <path d="M 296 222 L 296 232 M 326 222 L 326 232" stroke="#2c333d" stroke-width="2"/></g>
+
+<!-- WINDOWS — mostly dark, a scattered few catch light; a handful glow warm (other survivors / failing
+     power) and FLICKER. The cold city, with little embers of life still in it. -->
+<g fill="#11141a" opacity=".55">
+  <rect x="106" y="220" width="5" height="7"/><rect x="118" y="236" width="5" height="7"/><rect x="106" y="252" width="5" height="7"/>
+  <rect x="190" y="244" width="5" height="7"/><rect x="204" y="244" width="5" height="7"/><rect x="218" y="244" width="5" height="7"/>
+  <rect x="298" y="230" width="5" height="7"/><rect x="312" y="246" width="5" height="7"/>
+  <rect x="478" y="236" width="5" height="7"/><rect x="492" y="236" width="5" height="7"/><rect x="478" y="252" width="5" height="7"/>
+  <rect x="572" y="252" width="5" height="7"/><rect x="600" y="252" width="5" height="7"/>
+  <rect x="672" y="234" width="5" height="7"/><rect x="686" y="250" width="5" height="7"/>
+  <rect x="780" y="246" width="5" height="7"/><rect x="800" y="246" width="5" height="7"/>
+  <rect x="868" y="238" width="5" height="7"/><rect x="882" y="254" width="5" height="7"/>
+  <rect x="948" y="248" width="5" height="7"/><rect x="966" y="248" width="5" height="7"/>
+</g>
+<!-- the cold-blue ones (moonlit glass) -->
+<g fill="#5b7186" opacity=".4">
+  <rect x="118" y="220" width="5" height="7"/><rect x="312" y="230" width="5" height="7"/><rect x="492" y="252" width="5" height="7"/><rect x="686" y="234" width="5" height="7"/>
+</g>
+<!-- the warm-lit ones (a few flicker) — signs that someone, somewhere, still has power -->
+<g fill="#f6b53d">
+  <rect class="winflick" x="124" y="252" width="5" height="7"/>
+  <rect x="204" y="230" width="5" height="7" opacity=".8"/>
+  <rect class="winflick b" x="312" y="262" width="5" height="7"/>
+  <rect x="478" y="268" width="5" height="7" opacity=".85"/>
+  <rect class="winflick c" x="686" y="266" width="5" height="7"/>
+  <rect x="882" y="238" width="5" height="7" opacity=".8"/>
+</g>
+<!-- a far rooftop BEACON — slow red aircraft-warning pulse atop the tallest tower -->
+<circle class="beacon" cx="95" cy="166" r="2.4" fill="#ef4444"/>
+
+<!-- a DISTANT BUILDING ON FIRE — orange glow at the top + a thick smoke column climbing the sky -->
+<g>
+  <rect x="664" y="214" width="62" height="20" fill="#9a3412" opacity=".5"/>
+  <rect x="664" y="214" width="62" height="9" fill="#f97316" opacity=".55"/>
+  <ellipse cx="695" cy="216" rx="30" ry="9" fill="#fb923c" opacity=".35" filter="url(#soft-blur)"/>
+  <g opacity=".5">
+    <path class="smoke" d="M 690 214 Q 678 178 694 140 Q 702 116 692 88" stroke="#2c3137" stroke-width="11" fill="none" stroke-linecap="round"/>
+    <path class="smoke" d="M 700 214 Q 712 184 700 150" stroke="#3a3f45" stroke-width="7" fill="none" stroke-linecap="round" style="animation-delay:-3s"/>
+  </g>
+</g>
+<!-- the original distant fire's thin plume, kept (left side) -->
+<g opacity=".35"><path class="smoke" d="M 222 232 Q 214 196 226 156 Q 232 130 224 104" stroke="#3a3f45" stroke-width="5" fill="none" stroke-linecap="round" style="animation-delay:-5s"/></g>
+<ellipse cx="223" cy="244" rx="8" ry="4" fill="#9a3412" opacity=".3"/>
+<!-- DISTANT ROOFTOP DEAD — two figures stranded atop a far tower across the gap (unreachable) -->
+<g fill="#0e1116" opacity=".55">
+  <g class="shamble" style="animation-delay:-1.5s"><ellipse cx="566" cy="232" rx="2" ry="4.4"/><circle cx="566" cy="226" r="1.4"/></g>
+  <g class="shamble" style="animation-delay:-3.8s"><ellipse cx="578" cy="233" rx="1.8" ry="4"/><circle cx="578" cy="228" r="1.3"/></g>
+</g>
 <!-- aerial haze pooling at the skyline base so the city recedes -->
 <rect x="0" y="300" width="1000" height="74" fill="url(#depth-haze)" filter="url(#ray-blur)" opacity=".8"/>
 
 <!-- ══ THE STREET FAR BELOW (glimpsed beyond the rooftop ledge) + the DEAD ══ -->
 <rect x="0" y="338" width="1000" height="40" fill="#1c2027"/>
 <rect x="0" y="338" width="1000" height="40" fill="url(#depth-haze)" opacity=".5"/>
-<!-- tiny shambling horde silhouettes in the street -->
+<!-- the shambling horde in the street far below — a denser, restless crowd of the dead -->
 <g id="horde" fill="#0e1116" opacity=".7">
   <g class="shamble"><ellipse cx="120" cy="362" rx="2.2" ry="5"/><circle cx="120" cy="355" r="1.6"/></g>
   <g class="shamble" style="animation-delay:-2.2s"><ellipse cx="168" cy="366" rx="2" ry="4.6"/><circle cx="168" cy="360" r="1.5"/></g>
@@ -827,6 +900,19 @@ html,body{width:100%;height:100%;overflow:hidden;font-family:'Plus Jakarta Sans'
   <g class="shamble" style="animation-delay:-2.7s"><ellipse cx="700" cy="360" rx="2.2" ry="5"/><circle cx="700" cy="353" r="1.6"/></g>
   <g class="shamble" style="animation-delay:-4.5s"><ellipse cx="846" cy="366" rx="2" ry="4.6"/><circle cx="846" cy="360" r="1.5"/></g>
   <g class="shamble" style="animation-delay:-1.8s"><ellipse cx="908" cy="362" rx="2.2" ry="5"/><circle cx="908" cy="355" r="1.6"/></g>
+  <!-- extra stragglers, filling the street -->
+  <g class="shamble" style="animation-delay:-3.9s"><ellipse cx="92" cy="366" rx="2" ry="4.6"/><circle cx="92" cy="360" r="1.5"/></g>
+  <g class="shamble" style="animation-delay:-0.9s"><ellipse cx="200" cy="368" rx="2" ry="4.4"/><circle cx="200" cy="362" r="1.4"/></g>
+  <g class="shamble" style="animation-delay:-2.4s"><ellipse cx="288" cy="364" rx="2.1" ry="4.8"/><circle cx="288" cy="358" r="1.5"/></g>
+  <g class="shamble" style="animation-delay:-4.7s"><ellipse cx="392" cy="367" rx="2" ry="4.5"/><circle cx="392" cy="361" r="1.4"/></g>
+  <!-- a small CLUSTER drawn together (a noise, a body) -->
+  <g class="shamble" style="animation-delay:-1.4s"><ellipse cx="448" cy="364" rx="2.1" ry="4.8"/><circle cx="448" cy="358" r="1.5"/></g>
+  <g class="shamble" style="animation-delay:-2.9s"><ellipse cx="458" cy="366" rx="2" ry="4.6"/><circle cx="458" cy="360" r="1.4"/></g>
+  <g class="shamble" style="animation-delay:-0.4s"><ellipse cx="468" cy="363" rx="2.1" ry="4.9"/><circle cx="468" cy="357" r="1.5"/></g>
+  <g class="shamble" style="animation-delay:-3.6s"><ellipse cx="652" cy="366" rx="2" ry="4.6"/><circle cx="652" cy="360" r="1.5"/></g>
+  <g class="shamble" style="animation-delay:-1.0s"><ellipse cx="756" cy="364" rx="2.1" ry="4.8"/><circle cx="756" cy="358" r="1.5"/></g>
+  <g class="shamble" style="animation-delay:-4.2s"><ellipse cx="800" cy="367" rx="2" ry="4.5"/><circle cx="800" cy="361" r="1.4"/></g>
+  <g class="shamble" style="animation-delay:-2.0s"><ellipse cx="960" cy="365" rx="2.1" ry="4.7"/><circle cx="960" cy="359" r="1.5"/></g>
 </g>
 
 <!-- ══ THE CARPARK ROOFTOP DECK (concrete ground plane) ══ -->
@@ -857,6 +943,26 @@ html,body{width:100%;height:100%;overflow:hidden;font-family:'Plus Jakarta Sans'
   <!-- ramp mouth (dark opening going down) -->
   <path d="M 902 600 L 902 452 L 1000 452 L 1000 600 Z" fill="#1b1f25"/>
   <path d="M 902 452 L 1000 452 L 1000 478 L 902 470 Z" fill="#11141a"/>
+  <!-- THE DEAD MASSING AT THE FOOT OF THE RAMP — a crowd crammed in the opening, their HEADS and
+       clawing ARMS cresting the wreck (which renders AFTER, blocking their bodies). The one way up. -->
+  <g fill="#0c0f14" opacity=".92">
+    <!-- bodies packed in the dark mouth (mostly hidden behind the wreck = held back) -->
+    <ellipse cx="930" cy="478" rx="5" ry="11"/><ellipse cx="948" cy="482" rx="5" ry="11"/>
+    <ellipse cx="966" cy="479" rx="5" ry="11"/><ellipse cx="983" cy="483" rx="5" ry="11"/><ellipse cx="914" cy="482" rx="4.6" ry="10"/>
+    <!-- heads cresting the barricade -->
+    <g class="shamble" style="animation-delay:-0.7s"><circle cx="930" cy="441" r="3.2"/></g>
+    <g class="shamble" style="animation-delay:-2.6s"><circle cx="948" cy="438" r="3.3"/></g>
+    <g class="shamble" style="animation-delay:-1.3s"><circle cx="966" cy="442" r="3.1"/></g>
+    <g class="shamble" style="animation-delay:-3.4s"><circle cx="983" cy="439" r="3.3"/></g>
+    <g class="shamble" style="animation-delay:-1.9s"><circle cx="914" cy="444" r="3"/></g>
+  </g>
+  <!-- gaunt grey arms clawing up over the barricade toward the deck -->
+  <g stroke="#8a8f93" stroke-width="2.6" stroke-linecap="round" opacity=".82" fill="none">
+    <path class="shamble" style="animation-delay:-0.5s" d="M 936 446 Q 940 432 938 422"/>
+    <path class="shamble" style="animation-delay:-2.1s" d="M 958 444 Q 963 430 968 423"/>
+    <path class="shamble" style="animation-delay:-3.0s" d="M 977 447 Q 973 434 971 425"/>
+    <path class="shamble" style="animation-delay:-1.2s" d="M 922 448 Q 918 436 920 427"/>
+  </g>
   <!-- a wrecked car jammed across the mouth -->
   <g transform="translate(902 446)">
     <ellipse cx="48" cy="34" rx="56" ry="9" fill="#11141a" opacity=".6"/>
