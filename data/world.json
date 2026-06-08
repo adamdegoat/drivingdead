@@ -1,0 +1,43 @@
+{
+  "day": 1,
+  "cycle": "morning",
+  "weather": "clear",
+  "pending_events": [],
+  "started": "2026-06-08",
+  "structures": [
+    {
+      "id": "solar_rig",
+      "type": "solar_rig",
+      "level": 1,
+      "condition": 96,
+      "x": 50,
+      "y": 40,
+      "builder": "dan",
+      "day": 1,
+      "label": "Solar Rig",
+      "baked": true
+    }
+  ],
+  "fire": {
+    "lit": true,
+    "fuel": 39
+  },
+  "resources": {
+    "food": 43,
+    "water": 57,
+    "wood": 78,
+    "medicine": 18
+  },
+  "last_run_date": "2026-06-08",
+  "pulse": "The sun is bright and the battery holds, but Dan's eyes on the numbers make the silence between them grow deeper.",
+  "scene": "Morning sun on the deck, battery at 56%, panels clean. In the cab, Dan and Hui Ling hold hot water and watch the dead city below, her thoughts already on the food stores and how long they'll last.",
+  "resources_prev": {
+    "food": 40,
+    "water": 44,
+    "wood": 56,
+    "medicine": 18
+  },
+  "camp_climate": "steady",
+  "discoveries": [],
+  "last_cycle_key": "2026-06-08:morning"
+}

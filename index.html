@@ -1,0 +1,3063 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Driving Dead — a never-ending story</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='88'%3E%F0%9F%8C%BF%3C/text%3E%3C/svg%3E">
+<meta name="description" content="Driving Dead is a never-ending story — a couple dug in on a carpark rooftop in a zombie-overrun city, living out of a high-tech solar camper van, surviving four times a day. No script, no crew, no rescue.">
+<meta name="theme-color" content="#0a1410">
+<!-- Social share preview -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Never Ending Story Project">
+<meta property="og:title" content="Driving Dead — a never-ending story">
+<meta property="og:description" content="A couple in a solar camper van, hiding out on a rooftop in a dead city. Surviving four times a day. No script, no crew, no rescue.">
+<meta property="og:url" content="https://adamdegoat.github.io/drivingdead/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Driving Dead — a never-ending story">
+<meta name="twitter:description" content="A couple in a solar camper van, hiding out on a rooftop in a dead city. Surviving four times a day.">
+
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=VT323&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="theme.css"><!-- shared Never Ending Story house-style tokens -->
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--above-hud:62px;--stage-bottom:96px}
+html,body{width:100%;height:100%;overflow:hidden;font-family:'Plus Jakarta Sans',sans-serif;background:#020617}
+/* World renders ABOVE the fixed bottom bars (HUD + collapsed feed drawer) so the
+   beach + ocean band are never hidden behind them. --stage-bottom is measured live. */
+#world{position:relative;width:100vw;height:calc(100vh - var(--stage-bottom));overflow:hidden}
+#world-svg{position:absolute;inset:0;width:100%;height:100%;z-index:0;transform:translateY(calc(-1 * var(--world-shift,0px)))}
+#stars{position:absolute;inset:0;width:100%;height:34%;pointer-events:none;z-index:2;opacity:0;transition:opacity 3s}
+#world.night #stars,#world.dawn #stars{opacity:1}
+
+/* Cloud animations */
+@keyframes cloud-a{from{transform:translateX(0)}to{transform:translateX(1300px)}}
+.cl1{animation:cloud-a 90s linear infinite}
+.cl2{animation:cloud-a 115s linear infinite;animation-delay:-40s}
+.cl3{animation:cloud-a 72s linear infinite;animation-delay:-22s}
+
+/* Fire animations */
+@keyframes flk{0%,100%{transform:scaleY(1) scaleX(1)}50%{transform:scaleY(1.22) scaleX(.9)}}
+.fa{animation:flk .75s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}
+.fb{animation:flk .55s ease-in-out infinite reverse;transform-box:fill-box;transform-origin:50% 100%}
+.fc{animation:flk .42s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}
+
+/* Wave animations */
+@keyframes wv{from{transform:translateX(0)}to{transform:translateX(500px)}}
+.wa{animation:wv 13s linear infinite}
+.wb{animation:wv 19s linear infinite reverse}
+/* Gentle palm sway — pivots at each palm's crown (origin set inline, in viewBox units) */
+@keyframes palmsway{0%,100%{transform:rotate(-1.4deg)}50%{transform:rotate(1.4deg)}}
+.palm-sway{transform-box:view-box;animation:palmsway 5.5s ease-in-out infinite}
+/* Ambient birds drift slowly across the sky */
+@keyframes birddrift{0%{transform:translate(0,0)}50%{transform:translate(46px,-9px)}100%{transform:translate(0,0)}}
+.birds-drift{transform-box:view-box;animation:birddrift 24s ease-in-out infinite}
+/* Leaves drifting down through the scene */
+@keyframes leaffall{0%{transform:translate(0,0) rotate(0deg);opacity:0}8%{opacity:.9}90%{opacity:.85}100%{transform:translate(-46px,620px) rotate(240deg);opacity:0}}
+.leaf-fall{transform-box:view-box;animation:leaffall linear infinite}
+/* God-ray shafts breathe + sway very gently, as if the canopy stirs overhead */
+@keyframes raypulse{0%,100%{opacity:.48;transform:skewX(-0.7deg)}50%{opacity:.68;transform:skewX(0.9deg)}}
+#god-rays{transform-box:fill-box;transform-origin:50% 0;animation:raypulse 9s ease-in-out infinite}
+/* Dust / pollen motes drifting inside the sunbeams (parent group gates day-only) */
+@keyframes motedrift{0%{opacity:0;transform:translate(0,0)}18%{opacity:.7}50%{opacity:.4;transform:translate(7px,-15px)}82%{opacity:.6}100%{opacity:0;transform:translate(-4px,-30px)}}
+.mote{transform-box:view-box;animation:motedrift 11s ease-in-out infinite}
+/* Sun pools on the clearing floor breathe with the canopy (parent gates day-only) */
+@keyframes dapplebreathe{0%,100%{opacity:.6}50%{opacity:1}}
+.dapple{animation:dapplebreathe 9s ease-in-out infinite}
+/* Heat-haze ribbons shimmer low over the clearing on hot/humid days */
+@keyframes heatwobble{0%{opacity:0;transform:translateY(0)}30%{opacity:.16}50%{transform:translateY(-3px) scaleX(1.015)}70%{opacity:.13}100%{opacity:0;transform:translateY(-7px)}}
+.heat-ribbon{transform-box:view-box;animation:heatwobble 6s ease-in-out infinite}
+/* Fireflies near the firepit (parent group's opacity gates night-only visibility) */
+@keyframes firefly{0%,100%{opacity:0;transform:translate(0,0)}25%{opacity:.95}50%{opacity:.35;transform:translate(7px,-9px)}75%{opacity:.85}}
+.firefly{transform-box:view-box;animation:firefly 4.2s ease-in-out infinite}
+/* ── DRIVING DEAD scene motion ── */
+@keyframes shamble{0%,100%{transform:translateX(0)}50%{transform:translateX(5px)}}
+.shamble{transform-box:view-box;animation:shamble 6.5s ease-in-out infinite}
+@keyframes blink{0%,82%,100%{opacity:.25}88%{opacity:1}}
+.blink{animation:blink 3.4s ease-in-out infinite}
+@keyframes croworbit{0%{transform:translate(0,0)}25%{transform:translate(34px,-10px)}50%{transform:translate(58px,6px)}75%{transform:translate(24px,16px)}100%{transform:translate(0,0)}}
+.crow-orbit{transform-box:view-box;animation:croworbit 22s ease-in-out infinite}
+.van-glow{transition:fill .8s ease}
+/* Butterflies flutter (daytime ambient; group hidden at night via applySky) */
+@keyframes flutter{0%{transform:translate(0,0) rotate(-2deg)}25%{transform:translate(14px,-12px) rotate(3deg)}50%{transform:translate(30px,2px) rotate(-3deg)}75%{transform:translate(12px,14px) rotate(2deg)}100%{transform:translate(0,0) rotate(-2deg)}}
+.flutter{transform-box:view-box;animation:flutter 11s ease-in-out infinite}
+@keyframes wingbeat{0%,100%{transform:scaleX(1)}50%{transform:scaleX(.45)}}
+.fly-wing{transform-box:fill-box;transform-origin:50% 50%;animation:wingbeat .32s ease-in-out infinite}
+/* Distant waterfall cascade shimmer */
+@keyframes waterfall{from{transform:translateY(0);opacity:.8}to{transform:translateY(5px);opacity:1}}
+.fall1{transform-box:view-box;animation:waterfall .5s linear infinite alternate}
+.fall2{transform-box:view-box;animation:waterfall .5s linear infinite alternate-reverse}
+/* ── WEATHER: rain / storm + lightning, driven by S.world.weather ── */
+#rain-layer{position:fixed;inset:0;z-index:22;pointer-events:none;opacity:0;transition:opacity .7s ease}
+#rain-layer.on{opacity:1}
+#rain-layer::before,#rain-layer::after{content:"";position:absolute;inset:-60% -15% -15%;will-change:transform}
+#rain-layer::before{background-image:repeating-linear-gradient(100deg,rgba(200,222,236,.5) 0 1.5px,transparent 1.5px 10px);animation:rainfall .75s linear infinite}
+#rain-layer::after{background-image:repeating-linear-gradient(100deg,rgba(200,222,236,.28) 0 1px,transparent 1px 16px);animation:rainfall 1.15s linear infinite;opacity:.7}
+#rain-layer.storm{background:linear-gradient(rgba(9,18,26,.26),rgba(9,18,26,.34))}
+#rain-layer.storm::before{background-image:repeating-linear-gradient(104deg,rgba(212,230,242,.62) 0 2px,transparent 2px 8px);animation-duration:.42s}
+#rain-layer.storm::after{animation-duration:.66s;opacity:.85}
+@keyframes rainfall{from{transform:translateY(-14%)}to{transform:translateY(14%)}}
+#lightning{position:fixed;inset:0;z-index:23;pointer-events:none;background:#e6f0ff;opacity:0;mix-blend-mode:screen}
+#lightning.on{animation:lightning 8s steps(1) infinite}
+@keyframes lightning{0%,100%{opacity:0}2%{opacity:.62}2.6%{opacity:.06}3.2%{opacity:.5}3.8%{opacity:0}48.4%{opacity:.42}49%{opacity:0}}
+/* Campfire smoke rising + drifting (shown only when the fire is lit) */
+@keyframes smokerise{0%{transform:translate(0,0) scale(.45);opacity:0}18%{opacity:.5}100%{transform:translate(12px,-72px) scale(1.7);opacity:0}}
+.smoke-rise{transform-box:view-box;animation:smokerise 4s ease-out infinite}
+.smoke-rise.s2{animation-duration:5.4s;animation-delay:-1.8s}
+.smoke-rise.s3{animation-duration:4.6s;animation-delay:-3.1s}
+/* Fish/insect ripples on the river surface */
+@keyframes ripple{0%{transform:scale(.2);opacity:0}20%{opacity:.6}100%{transform:scale(1.5);opacity:0}}
+.ripple{transform-box:view-box;animation:ripple 4.5s ease-out infinite}
+/* Dog (puppy) ears + tail — driven by applyDogExtras; smooth transitions + tail wag */
+.dog-ear{transform-box:view-box;transition:transform .45s ease}
+.dog-tail{transform-box:view-box;transition:transform .45s ease}
+@keyframes tailwag{0%,100%{transform:rotate(-20deg)}50%{transform:rotate(20deg)}}
+.dog-tail.wag{animation:tailwag .45s ease-in-out infinite}
+.dog-tail.slow{animation:tailwag 1.5s ease-in-out infinite}
+
+/* SVG transitions */
+#sky-bg,#sun-group,#moon-group,#night-stars,#night-overlay,#sun-reflection{transition:opacity 2.5s ease}
+
+/* ── ATMOSPHERE OVERLAYS (pure CSS, no JS/engine) ── */
+/* Vignette: darken the corners to draw the eye to the centre of the island */
+#vignette{position:absolute;inset:0;z-index:6;pointer-events:none;
+  background:radial-gradient(120% 95% at 50% 42%,transparent 58%,rgba(2,6,23,.16) 84%,rgba(2,6,23,.42) 100%)}
+/* Time-of-day colour wash: a soft tint that shifts with the cycle for cohesion */
+#color-wash{position:absolute;inset:0;z-index:7;pointer-events:none;opacity:0;
+  mix-blend-mode:soft-light;transition:background 2.5s ease,opacity 2.5s ease}
+#world.evening #color-wash{background:#fb923c;opacity:.5}
+#world.morning #color-wash{background:#fdba74;opacity:.4}
+#world.dawn    #color-wash{background:#f9a8d4;opacity:.45}
+#world.night   #color-wash{background:#1e1b4b;opacity:.35}
+#world.midday  #color-wash,#world.afternoon #color-wash{opacity:0}
+
+/* ── DAY STAMP ── */
+/* ── DAY HISTORY ── */
+/* ── AUDIENCE VOTE PILL + PANEL ("sway, don't script") ── */
+#vote-pill{position:fixed;top:22px;right:108px;z-index:35;display:flex;align-items:center;gap:6px;
+  padding:7px 14px;border-radius:20px;cursor:pointer;white-space:nowrap;
+  background:linear-gradient(135deg,rgba(251,191,36,.24),rgba(244,114,182,.2));
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(251,191,36,.5);
+  font-family:'Plus Jakarta Sans',sans-serif;font-size:11px;font-weight:800;letter-spacing:.4px;color:#fde68a;
+  box-shadow:0 2px 14px rgba(0,0,0,.4);animation:votePulse 2.6s ease-in-out infinite;
+  transition:transform .15s,border-color .2s}
+#vote-pill:hover{transform:translateY(-1px);border-color:rgba(251,191,36,.85)}
+#vote-pill.active{animation:none;background:linear-gradient(135deg,rgba(251,191,36,.42),rgba(244,114,182,.34));border-color:rgba(251,191,36,.9)}
+@keyframes votePulse{0%,100%{box-shadow:0 2px 14px rgba(0,0,0,.4),0 0 0 0 rgba(251,191,36,.45)}
+  50%{box-shadow:0 2px 14px rgba(0,0,0,.4),0 0 0 5px rgba(251,191,36,0)}}
+#vote-pill .vp-dot{width:6px;height:6px;border-radius:50%;background:#fde68a;box-shadow:0 0 7px #fde68a}
+/* dropdown panel — anchored under the pill (like the Days panel), warm gold "sway the island" palette */
+#vote-panel{position:fixed;top:60px;right:108px;z-index:41;width:300px;max-width:calc(100vw - 24px);
+  background:linear-gradient(180deg,rgba(26,16,34,.6),rgba(12,9,22,.66));
+  backdrop-filter:blur(20px) saturate(1.2);-webkit-backdrop-filter:blur(20px) saturate(1.2);
+  border:1px solid rgba(251,191,36,.34);border-radius:16px;
+  box-shadow:0 20px 54px rgba(0,0,0,.6),0 0 26px rgba(251,191,36,.08);
+  max-height:0;overflow:hidden;opacity:0;pointer-events:none;
+  transition:max-height .34s cubic-bezier(.4,0,.2,1),opacity .22s ease}
+#vote-panel::before{content:'';position:absolute;left:0;right:0;top:0;height:2px;z-index:3;
+  background:linear-gradient(90deg,transparent,rgba(251,191,36,.7),rgba(244,114,182,.5),transparent)}
+#vote-panel.open{max-height:80vh;opacity:1;pointer-events:auto;overflow-y:auto}
+.vp-inner{padding:15px 16px 15px}
+.vp-eyebrow{font-family:'VT323',monospace;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:rgba(251,191,36,.62);margin-bottom:3px}
+.vp-head{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:16px;letter-spacing:.01em;line-height:1.1;
+  background:linear-gradient(180deg,#fff8ea 0%,#fde68a 58%,#f59e0b 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+.vp-tag{font-size:10.5px;color:rgba(255,255,255,.5);font-style:italic;margin:3px 0 13px;line-height:1.45}
+.vp-q{font-size:12px;font-weight:700;color:rgba(255,255,255,.92);margin-bottom:9px;letter-spacing:.01em}
+.vp-opt{position:relative;display:block;width:100%;text-align:left;margin-bottom:8px;padding:10px 12px;border-radius:12px;
+  border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.035);cursor:pointer;overflow:hidden;color:#fff;
+  transition:border-color .15s,background .15s,transform .12s}
+.vp-opt:hover{border-color:rgba(251,191,36,.55);transform:translateY(-1px)}
+.vp-opt:disabled{cursor:default;transform:none}
+.vp-opt.picked{border-color:rgba(251,191,36,.9);background:rgba(251,191,36,.09)}
+.vp-bar{position:absolute;left:0;top:0;bottom:0;width:0;z-index:0;transition:width .55s cubic-bezier(.4,0,.2,1);
+  background:linear-gradient(90deg,rgba(251,191,36,.22),rgba(244,114,182,.14))}
+.vp-opt-label{position:relative;z-index:1;font-weight:800;font-size:12.5px;color:#fff7e6}
+.vp-opt-desc{position:relative;z-index:1;font-size:10.5px;color:rgba(255,255,255,.55);margin-top:2px;line-height:1.35}
+.vp-opt-pct{position:absolute;right:11px;top:50%;transform:translateY(-50%);font-size:12px;font-weight:800;color:#fde68a;z-index:2}
+.vp-voted{font-size:10.5px;color:rgba(110,231,160,.92);margin-top:4px;letter-spacing:.2px;font-weight:600}
+.vp-hint{font-size:10.5px;color:rgba(255,255,255,.42);margin-top:4px}
+.vp-inplay{margin-top:13px;padding:11px 12px;border-radius:11px;background:rgba(251,191,36,.07);border:1px solid rgba(251,191,36,.18);
+  font-size:11px;color:rgba(255,255,255,.8);line-height:1.5}
+.vp-ip-eyebrow{font-family:'VT323',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(251,191,36,.6);display:block;margin-bottom:3px}
+.vp-inplay b{color:#fde68a;font-weight:800}
+#day-hist-btn{
+  position:fixed;top:22px;right:18px;z-index:35;
+  display:flex;align-items:center;gap:6px;
+  padding:7px 13px;border-radius:20px;
+  background:rgba(255,255,255,.09);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  border:1px solid rgba(255,255,255,.2);
+  font-family:'Plus Jakarta Sans',sans-serif;font-size:11px;font-weight:700;
+  color:rgba(255,255,255,.72);letter-spacing:.3px;
+  cursor:pointer;white-space:nowrap;
+  transition:background .2s,border-color .2s,color .2s,box-shadow .2s;
+  box-shadow:0 2px 12px rgba(0,0,0,.35);
+}
+#day-hist-btn:hover{background:rgba(255,255,255,.15);border-color:rgba(255,255,255,.38);color:#fff;box-shadow:0 2px 18px rgba(0,0,0,.45)}
+#day-hist-btn.active{background:rgba(255,255,255,.13);border-color:rgba(255,255,255,.35);color:#fff}
+#day-history-panel{
+  position:fixed;top:66px;right:18px;left:auto;z-index:40;width:244px;
+  background:rgba(4,8,22,.92);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+  border:1px solid rgba(255,255,255,.08);border-radius:14px;
+  max-height:0;overflow:hidden;opacity:0;pointer-events:none;
+  transition:max-height .32s cubic-bezier(.4,0,.2,1),opacity .2s ease;
+}
+#day-history-panel.open{max-height:400px;opacity:1;pointer-events:auto}
+.dhp-head{
+  font-family:'Plus Jakarta Sans',sans-serif;font-size:9px;font-weight:800;
+  letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.25);
+  padding:11px 14px 9px;border-bottom:1px solid rgba(255,255,255,.05);
+  display:flex;align-items:center;justify-content:space-between;flex-shrink:0;
+}
+.dhp-back{
+  background:none;border:none;font-family:'Plus Jakarta Sans',sans-serif;
+  font-size:9px;font-weight:700;color:rgba(255,255,255,.25);
+  cursor:pointer;letter-spacing:.5px;padding:0;transition:color .15s;
+}
+.dhp-back:hover{color:rgba(255,255,255,.6)}
+.dhp-scroll{overflow-y:auto;max-height:350px;scrollbar-width:thin;scrollbar-color:rgba(255,255,255,.06) transparent}
+.dhp-chips{padding:8px 10px 10px;display:flex;flex-direction:column;gap:5px}
+.dhp-chip{
+  display:flex;align-items:center;gap:7px;padding:7px 10px;border-radius:9px;
+  border:1px solid rgba(255,255,255,.07);background:rgba(255,255,255,.03);
+  font-family:'Plus Jakarta Sans',sans-serif;font-size:11px;font-weight:700;
+  color:rgba(255,255,255,.5);cursor:pointer;
+  transition:background .15s,border-color .15s;
+}
+.dhp-chip:hover{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.14);color:rgba(255,255,255,.8)}
+.dhp-chip.cur{border-color:rgba(34,197,94,.3);color:rgba(255,255,255,.75)}
+.dhp-dot{width:5px;height:5px;border-radius:50%;background:#22c55e;flex-shrink:0;animation:cdot 2s ease-in-out infinite}
+.dhp-chip-meta{font-size:10px;color:rgba(255,255,255,.28);font-weight:500;margin-left:auto;white-space:nowrap}
+.dhp-drama{font-size:13px;color:rgba(255,255,255,.7);line-height:1.57;font-style:italic;
+  padding:12px 14px 14px}
+.dhp-ongoing{font-size:12.5px;color:rgba(255,255,255,.5);line-height:1.55;font-style:italic;
+  padding:12px 14px 14px}
+
+#day-stamp{position:fixed;top:58px;left:16px;z-index:30;pointer-events:none;line-height:1.15}
+#pulse{position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:30;pointer-events:none;
+  font-family:'Plus Jakarta Sans',sans-serif;font-size:12px;font-style:italic;font-weight:500;
+  color:rgba(255,255,255,.78);letter-spacing:.2px;text-align:center;max-width:340px;line-height:1.4;
+  text-shadow:0 1px 3px rgba(0,0,0,.7),0 1px 3px rgba(0,0,0,.8),0 0 16px rgba(0,0,0,.6),0 0 30px rgba(0,0,0,.45)}
+#pulse:not(:empty)::before{content:'✦ LATEST FROM DRIVING DEAD';display:block;
+  font-family:'VT323',monospace;font-size:10px;font-style:normal;font-weight:400;
+  letter-spacing:2px;color:rgba(255,255,255,.5);text-transform:uppercase;margin-bottom:3px;
+  text-shadow:0 1px 3px rgba(0,0,0,.6)}
+#scene-line{position:fixed;left:50%;transform:translateX(-50%);z-index:30;pointer-events:none;
+  width:380px;max-width:88vw;
+  font-family:'Plus Jakarta Sans',sans-serif;font-size:11.5px;font-weight:500;
+  color:rgba(255,255,255,.82);letter-spacing:.2px;text-align:center;line-height:1.5;
+  text-shadow:0 1px 3px rgba(0,0,0,.7),0 1px 3px rgba(0,0,0,.85),0 0 16px rgba(0,0,0,.6),0 0 30px rgba(0,0,0,.45)}
+#ds-day{font-family:'Plus Jakarta Sans',sans-serif;font-size:38px;font-weight:800;
+  color:rgba(255,255,255,.1);letter-spacing:-1px}
+#ds-cycle{font-family:'Plus Jakarta Sans',sans-serif;font-size:11px;font-weight:700;
+  color:rgba(255,255,255,.07);letter-spacing:3.5px;text-transform:uppercase}
+
+/* ── CHARACTERS ── */
+.char{position:absolute;z-index:20;transform:translate(-50%,-100%);
+  transition:left 2.8s cubic-bezier(.4,0,.2,1),top 2.8s cubic-bezier(.4,0,.2,1)}
+.char-svg{display:block;margin:0 auto;filter:var(--cast-shadow,drop-shadow(0 6px 14px rgba(0,0,0,.65)));animation:bob 2.4s ease-in-out infinite}
+.char-svg.sad{animation:bob-slow 3.5s ease-in-out infinite}
+.char-svg.angry{animation:bob-tense .9s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+@keyframes bob-slow{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+@keyframes bob-tense{0%,100%{transform:translateY(0) rotate(-.5deg)}50%{transform:translateY(-3px) rotate(.5deg)}}
+/* ── INTERACTION OVERLAYS ── */
+.interact-overlay{position:absolute;z-index:19;transform:translate(-50%,-50%);pointer-events:none;transition:opacity .4s}
+.char.sitting{margin-top:10px}
+.nametag{font-size:7.5px;font-weight:800;letter-spacing:.4px;text-transform:uppercase;
+  margin:4px auto 0;padding:2px 6px;border-radius:20px;width:fit-content;white-space:nowrap;
+  background:rgba(0,0,0,.45);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}
+.nametag:empty{display:none}  /* unnamed stray: hide tag until it's named */
+
+/* ── SPEECH BUBBLES ── */
+.bubble{position:absolute;bottom:70px;left:50%;transform:translateX(-50%);
+  background:rgba(10,18,32,.82);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);
+  color:#f1f5f9;padding:3px 6px;border-radius:7px;
+  font-size:6.5px;font-weight:600;max-width:80px;min-width:48px;text-align:center;
+  line-height:1.4;pointer-events:none;white-space:normal;z-index:25;
+  border:1px solid rgba(255,255,255,.06);border-top-width:2px}
+.bubble::after{display:none}
+.bubble-name{font-size:6px;font-weight:800;letter-spacing:.9px;text-transform:uppercase;margin-bottom:2px}
+.bubble-text{font-size:6.5px}
+.bubble-text.dog-emote{font-size:15px;line-height:1}
+
+/* ── BOTTOM FEED DRAWER ── */
+#chat-panel{
+  position:fixed;left:0;right:0;bottom:52px;
+  height:44px;overflow:hidden;
+  background:rgba(10,14,24,.9);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  z-index:50;display:flex;flex-direction:column;
+  border-top:1px solid rgba(255,255,255,.1);
+  transition:height .38s cubic-bezier(.4,0,.2,1),
+             box-shadow .38s ease;
+}
+#chat-panel.feed-open{
+  height:52vh;
+  box-shadow:0 -12px 40px rgba(0,0,0,.55);
+  border-top-color:rgba(255,46,120,.35);
+}
+/* Drag pill */
+#feed-pill{
+  width:36px;height:4px;border-radius:4px;
+  background:rgba(255,255,255,.18);
+  margin:6px auto 0;flex-shrink:0;
+  transition:background .2s
+}
+#chat-panel:hover #feed-pill,
+#chat-panel.feed-open #feed-pill{background:rgba(255,46,120,.5)}
+#chat-header{
+  position:relative;
+  padding:5px 14px 5px;font-family:'VT323',monospace;font-size:16px;color:#ff2d78;
+  letter-spacing:2.5px;display:flex;align-items:center;justify-content:center;gap:7px;
+  cursor:pointer;flex-shrink:0;user-select:none;
+  border-bottom:1px solid rgba(255,255,255,.0);
+  transition:border-color .38s
+}
+#chat-panel.feed-open #chat-header{border-bottom-color:rgba(255,255,255,.07)}
+#chat-dot{width:6px;height:6px;border-radius:50%;background:#ff2d78;animation:cdot 2s ease-in-out infinite;flex-shrink:0}
+@keyframes cdot{0%,100%{opacity:1}50%{opacity:.2}}
+/* Absolutely center the ISLAND FEED label (on all widths) so the chevron's
+   margin-left:auto can't push it left under the Island Oracle widget. */
+#feed-label{display:inline-flex;align-items:center;gap:7px;position:absolute;left:50%;transform:translateX(-50%);pointer-events:none}
+#chat-chevron{
+  margin-left:auto;font-size:11px;color:rgba(255,255,255,.35);
+  transition:transform .35s cubic-bezier(.4,0,.2,1),color .2s
+}
+#chat-panel.feed-open #chat-chevron{transform:rotate(180deg);color:rgba(255,46,120,.7)}
+#chat-feed{flex:1;overflow-y:auto;padding:8px 12px 4px;display:flex;flex-direction:column;gap:5px;
+  scrollbar-width:thin;scrollbar-color:rgba(255,255,255,.1) transparent}
+#chat-feed::-webkit-scrollbar{width:3px}
+#chat-feed::-webkit-scrollbar-thumb{background:rgba(255,255,255,.1);border-radius:3px}
+.cl{font-family:'VT323',monospace;font-size:15px;line-height:1.3;word-break:break-word}
+.cl.marcus{color:#c084fc}
+.cl.ryan{color:#fb923c}
+.cl.jade{color:#f472b6}
+.cl.interaction{color:#fbbf24}
+.cl-label{font-size:11px;letter-spacing:.8px;opacity:.78;text-transform:uppercase}
+.cl-dialogue{color:#e2e8f0;font-size:13px;opacity:.9}
+.cl-ts{font-family:'VT323',monospace;font-size:12px;color:rgba(255,255,255,.45);letter-spacing:1.2px;text-align:center;padding:4px 0 2px;text-transform:uppercase;background:rgba(255,255,255,.03);border-radius:4px;margin:2px 0}
+.cl-msg{font-family:'VT323',monospace;font-size:14px;line-height:1.3;padding:1px 4px;word-break:break-word}
+.cl-spk{font-size:12px;font-weight:700;letter-spacing:.5px;text-transform:uppercase}
+.cl-line{color:#e2e8f0;opacity:.9}
+.cl-absent{font-family:'VT323',monospace;font-size:12px;padding:2px 4px;opacity:.55;font-style:italic;border-left:2px solid rgba(255,255,255,.08);margin:3px 0 4px;padding-left:7px}
+.cl-absent-txt{color:#94a3b8}
+.cl-time{font-family:'VT323',monospace;font-size:11px;color:rgba(255,255,255,.55);letter-spacing:.6px;float:right;margin-left:6px;white-space:nowrap}
+.cl-latest{background:rgba(255,45,120,.06);border-left:2px solid rgba(255,45,120,.32);padding-left:5px;margin-left:-2px;border-radius:0 4px 4px 0}
+.cl-ts-latest{background:rgba(255,45,120,.11)!important;color:rgba(255,160,200,.85)!important;border:1px solid rgba(255,45,120,.22);border-radius:5px;padding-left:8px;padding-right:8px}
+
+/* ── HUD ── */
+#hud{position:fixed;bottom:0;left:0;right:0;z-index:100;
+  background:rgba(2,6,23,.93);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+  border-top:1px solid rgba(255,255,255,.07);padding:0 1rem;
+  display:flex;align-items:center;gap:.6rem;height:52px}
+.hud-day{font-weight:800;color:rgba(255,255,255,.9);font-size:13px;flex-shrink:0}
+.hud-sep{color:rgba(255,255,255,.2);font-size:11px}
+#cycle-label{font-size:11px;color:rgba(255,255,255,.45);flex-shrink:0}
+
+/* Status strip */
+#status-strip{display:flex;align-items:center;gap:.3rem;font-size:10px;flex-shrink:0}
+.stp{display:inline-flex;align-items:center;padding:.15rem .5rem;border-radius:7px;
+  border:1px solid rgba(255,255,255,.08);color:rgba(255,255,255,.22);
+  font-weight:700;letter-spacing:.3px;text-transform:uppercase;transition:all .4s}
+.stp.running{color:#fbbf24;border-color:rgba(251,191,36,.5);background:rgba(251,191,36,.1);animation:spulse 1s ease-in-out infinite}
+.stp.done{color:#4ade80;border-color:rgba(74,222,128,.4);background:rgba(74,222,128,.07)}
+.stp.current{color:rgba(255,255,255,.75);border-color:rgba(255,255,255,.28);background:rgba(255,255,255,.09)}
+@keyframes spulse{0%,100%{opacity:1}50%{opacity:.5}}
+.stp-arr{color:rgba(255,255,255,.12);font-size:9px}
+
+/* Tiny status info */
+#status-info{font-size:9px;color:rgba(255,255,255,.6);white-space:nowrap;flex-shrink:0;line-height:1.3;letter-spacing:.2px}
+#status-info span{color:rgba(255,255,255,.85)}
+#status-msg{font-size:9px;color:rgba(255,255,255,.3);font-style:italic;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:120px}
+
+/* Buttons */
+.hud-actions{display:flex;align-items:center;gap:.45rem;margin-left:auto;flex-shrink:0}
+#story-btn{display:inline-flex;align-items:center;gap:.2rem;padding:.28rem .7rem;
+  border-radius:18px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.05);
+  color:rgba(255,255,255,.5);font-size:11px;font-weight:700;letter-spacing:.3px;
+  text-transform:uppercase;text-decoration:none;transition:all .2s;font-family:'Plus Jakarta Sans',sans-serif}
+#story-btn:hover{border-color:rgba(255,255,255,.2);color:rgba(255,255,255,.85);background:rgba(255,255,255,.09)}
+
+/* ── MOBILE ── */
+@media(max-width:768px){
+  html,body{overflow-x:auto;overflow-y:hidden}
+  /* Reserve the bottom bars here too: height drives width (10/6 aspect) for the
+     horizontal-scroll layout, so the beach/ocean clears the bottom UI on mobile. */
+  #world{width:calc((100dvh - var(--stage-bottom)) * 10 / 6);height:calc(100dvh - var(--stage-bottom))}
+  /* HUD: 3-row layout — cycle strip + timing visible on mobile */
+  #status-msg{display:none}
+  #hud{padding:5px .75rem 4px;height:auto;flex-wrap:wrap;align-content:flex-start;gap:3px .3rem}
+  .hud-actions{order:1}
+  #status-strip{display:flex;flex-basis:100%;order:10;gap:.2rem}
+  #status-info{display:block;flex-basis:100%;order:11}
+  .stp{font-size:8px;padding:.1rem .3rem}
+  .stp-arr{font-size:8px}
+  /* Push chat panel above the now-taller HUD. */
+  #chat-panel{bottom:var(--above-hud)}
+  #story-btn{padding:.28rem .55rem;font-size:10px}
+  .bubble{max-width:82px;padding:3px 6px}
+  .bubble-text{font-size:7.5px}
+  #pulse{top:78px;font-size:11px;max-width:78vw;color:rgba(255,255,255,.85)}
+  #scene-line{font-size:10.5px;width:78vw;color:rgba(255,255,255,.85)}
+  /* no hover on touch — show structure names faintly so they're not invisible */
+  .struct-label{color:rgba(255,255,255,.6)}
+  #day-hist-btn{top:14px;right:12px;padding:5px 10px;font-size:10px}
+  #vote-pill{top:14px;right:88px;padding:5px 11px;font-size:10px}
+  #vote-panel{top:48px;left:12px;right:12px;width:auto;max-width:none}
+  #day-stamp{left:13px;top:50px}
+  #day-history-panel{top:52px;right:12px;width:220px}
+  /* res-hud now anchors bottom-right via the base rule on all sizes */
+  .stat-card{display:none}
+  .stat-card.tap-open{display:block;opacity:1;transform:translateY(0)}
+  .stat-card.right,.stat-card.left{left:50%;transform:translateX(-50%);right:auto}
+  .stat-card.tap-open.right,.stat-card.tap-open.left{transform:translateX(-50%)}
+  .stat-card.tap-open.below{transform:translateX(-50%)}
+  /* Feed drawer taller on mobile */
+  #chat-panel.feed-open{height:62vh}
+}
+
+/* ── HOVER STAT CARD ── */
+.stat-card{
+  position:absolute;bottom:110%;pointer-events:none;z-index:80;
+  width:200px;background:rgba(0,0,0,.92);border-radius:12px;
+  padding:11px 13px;opacity:0;transform:translateY(6px);
+  transition:opacity .18s ease,transform .18s ease;
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  font-family:'VT323',monospace;line-height:1.4;white-space:nowrap
+}
+.char:hover .stat-card{opacity:1;transform:translateY(0)}
+.stat-card.right{left:90%;transform:translateY(6px)}
+.stat-card.left{right:90%;transform:translateY(6px)}
+.char:hover .stat-card.right{transform:translateY(0)}
+.char:hover .stat-card.left{transform:translateY(0)}
+/* below variant — card drops down when character is near top of screen */
+.stat-card.below{bottom:auto;top:105%;transform:translateY(-6px)}
+.char:hover .stat-card.below{transform:translateY(0)}
+.stat-card.below.right{transform:translateY(-6px)}
+.stat-card.below.left{transform:translateY(-6px)}
+.char:hover .stat-card.below.right,.char:hover .stat-card.below.left{transform:translateY(0)}
+.sc-name{font-size:17px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:2px}
+.sc-mood{font-size:13px;color:rgba(255,255,255,.45);letter-spacing:.5px;margin-bottom:8px;text-transform:uppercase}
+.sc-cond{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.4px;padding:2px 7px;border-radius:7px;margin-bottom:8px}
+.sc-cond-injured{background:rgba(248,113,113,.16);color:#fca5a5;border:1px solid rgba(248,113,113,.35)}
+.sc-cond-sick{background:rgba(192,132,252,.16);color:#d8b4fe;border:1px solid rgba(192,132,252,.35)}
+.sc-section{font-size:11px;color:rgba(255,255,255,.3);letter-spacing:2px;text-transform:uppercase;margin-bottom:4px;border-bottom:1px solid rgba(255,255,255,.06);padding-bottom:2px}
+.sc-row{display:flex;align-items:center;gap:6px;margin-bottom:3px}
+.sc-label{font-size:12px;color:rgba(255,255,255,.4);width:68px;text-transform:uppercase;letter-spacing:.3px;flex-shrink:0}
+.sc-bar{flex:1;height:3px;background:rgba(255,255,255,.08);border-radius:3px;overflow:hidden}
+.sc-fill{height:100%;border-radius:3px}
+.sc-val{font-size:12px;color:rgba(255,255,255,.5);width:22px;text-align:right;flex-shrink:0}
+.sc-bond{font-size:13px;margin-bottom:2px}
+
+/* ── STRUCTURES LAYER ── */
+#structures-layer{position:absolute;inset:0;pointer-events:none;z-index:5;transform:translateY(calc(-1 * var(--world-shift,0px)))}
+.struct{position:absolute;transform:translate(-50%,-50%);pointer-events:auto;text-align:center;line-height:1;cursor:default}
+.struct-svg{display:block;filter:var(--struct-shadow,drop-shadow(0 3px 8px rgba(0,0,0,.6)));transition:transform .2s ease}
+.struct:hover .struct-svg{transform:scale(1.12)}
+.struct-label{font-size:8px;color:rgba(255,255,255,.0);white-space:nowrap;margin-top:2px;
+  font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;letter-spacing:.3px;
+  text-shadow:0 1px 4px rgba(0,0,0,1);display:block;transition:color .18s ease;
+  background:rgba(0,0,0,.45);padding:1px 5px;border-radius:4px;backdrop-filter:blur(3px)}
+.struct:hover .struct-label{color:rgba(255,255,255,.75)}
+.struct-cond{width:30px;height:3px;border-radius:2px;background:rgba(0,0,0,.45);margin:1px auto 0;overflow:hidden}
+.struct-cond-fill{height:100%;border-radius:2px}
+.struct.discovery .struct-svg{filter:drop-shadow(0 0 6px rgba(251,191,36,.6)) drop-shadow(0 3px 8px rgba(0,0,0,.5))}
+
+/* ── RESOURCES HUD ── */
+#res-hud{position:fixed;bottom:calc(var(--stage-bottom) + 8px);right:12px;z-index:30;pointer-events:auto;display:flex;flex-direction:column;gap:3px;align-items:flex-end}
+#fire-chip{position:fixed;bottom:calc(var(--stage-bottom) + 118px);right:12px;z-index:30;pointer-events:none;display:none;align-items:center;gap:4px;
+  background:rgba(0,0,0,.38);border:1px solid rgba(255,255,255,.12);border-radius:9px;padding:3px 7px;font-family:'Plus Jakarta Sans',sans-serif;font-size:8px;font-weight:700;letter-spacing:.4px}
+#fire-chip.lit{color:#fbbf24;border-color:rgba(251,191,36,.35)}
+#fire-chip.out{color:#93a3b8}
+.res-pill{display:flex;align-items:center;gap:3px;background:rgba(0,0,0,.35);
+  backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);
+  border-radius:14px;padding:3px 7px 3px 6px;border:1px solid rgba(255,255,255,.06);
+  cursor:pointer;user-select:none;min-height:18px;
+  transition:background .15s,border-color .15s}
+.res-pill:hover,.res-pill.rp-active{background:rgba(255,255,255,.09);border-color:rgba(255,255,255,.18)}
+.res-pill-icon{font-size:9px}
+.res-pill-val{font-size:8px;font-weight:700;font-family:'Plus Jakarta Sans',sans-serif;min-width:13px;text-align:right}
+/* Resource detail card */
+#res-card{
+  width:min(220px,calc(100vw - 36px));
+  background:rgba(4,8,22,.92);border:1px solid rgba(255,255,255,.1);border-radius:12px;
+  overflow:hidden;max-height:0;opacity:0;pointer-events:none;
+  transition:max-height .32s cubic-bezier(.4,0,.2,1),opacity .22s ease;
+  backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+  box-shadow:0 8px 28px rgba(0,0,0,.6)}
+#res-card.open{max-height:240px;opacity:1;pointer-events:auto}
+.rc-inner{padding:13px 14px}
+.rc-header{display:flex;align-items:center;gap:7px;margin-bottom:8px}
+.rc-icon{font-size:18px}
+.rc-name{flex:1;font-size:10px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;color:rgba(255,255,255,.75)}
+.rc-val{font-size:16px;font-weight:800;font-family:'Plus Jakarta Sans',sans-serif}
+.rc-trend{font-size:14px;font-weight:700;margin-left:1px}
+.rc-bar-wrap{height:3px;background:rgba(255,255,255,.08);border-radius:3px;overflow:hidden;margin-bottom:10px}
+.rc-bar-fill{height:100%;border-radius:3px}
+.rc-status{font-size:11px;color:rgba(255,255,255,.62);line-height:1.55;margin-bottom:7px}
+.rc-mention{font-size:10px;color:rgba(255,255,255,.36);line-height:1.5;font-style:italic;
+  border-top:1px solid rgba(255,255,255,.06);padding-top:7px;
+  display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.rc-who{display:block;margin-top:3px;font-style:normal;font-size:9px;
+  letter-spacing:.6px;text-transform:uppercase;color:rgba(255,255,255,.22)}
+
+
+/* (Island Oracle widget styles removed — the Oracle runs in the engine but is no longer shown on screen.) */
+</style>
+</head>
+<body>
+<div id="world" class="afternoon">
+<canvas id="stars"></canvas>
+
+<!-- ══ BACK TO WORLD (self-contained, top-left) ════════════ -->
+<a id="back-to-world" href="https://adamdegoat.github.io/neverendingworld/" title="Back to World">
+  <span class="btw-globe">🌐</span><span class="btw-text">Back to World</span>
+</a>
+<style id="back-to-world-style">
+  #back-to-world{
+    position:fixed; top:12px; left:12px; z-index:99999;
+    display:flex; align-items:center; gap:0;
+    height:38px; max-width:38px; padding:0;
+    border-radius:19px; overflow:hidden;
+    background:rgba(12,18,32,.62); backdrop-filter:blur(7px); -webkit-backdrop-filter:blur(7px);
+    border:1px solid rgba(255,255,255,.18); box-shadow:0 4px 16px rgba(0,0,0,.32);
+    color:#eef3ff; text-decoration:none; font:600 13px/1 system-ui,-apple-system,sans-serif;
+    letter-spacing:.01em; white-space:nowrap;
+    transition:max-width .34s cubic-bezier(.2,.7,.2,1), background .25s, border-color .25s;
+    cursor:pointer;
+  }
+  #back-to-world .btw-globe{
+    flex:0 0 38px; width:38px; height:38px;
+    display:flex; align-items:center; justify-content:center; font-size:17px;
+  }
+  #back-to-world .btw-text{ opacity:0; padding-right:16px; transition:opacity .2s .08s; }
+  #back-to-world:hover, #back-to-world:focus-visible{
+    max-width:220px; background:rgba(20,28,46,.82); border-color:rgba(255,255,255,.34);
+  }
+  #back-to-world:hover .btw-text, #back-to-world:focus-visible .btw-text{ opacity:1; }
+  @media(max-width:680px){ #back-to-world{ top:9px; left:9px; height:34px; max-width:34px; border-radius:17px; }
+    #back-to-world .btw-globe{ flex-basis:34px; width:34px; height:34px; font-size:15px; } }
+</style>
+
+<!-- ══ DAY STAMP ══════════════════════════════════════════ -->
+<div id="day-stamp">
+  <div id="ds-day">Day 1</div>
+  <div id="ds-cycle">—</div>
+</div>
+<button id="day-hist-btn" onclick="toggleDayHistory()">📅 Days</button>
+<div id="day-history-panel" onclick="event.stopPropagation()"><div id="dhp-inner"></div></div>
+<div id="vote-pill" onclick="toggleVote()"><span class="vp-dot"></span> Vote</div>
+<div id="vote-panel" onclick="event.stopPropagation()">
+  <div class="vp-inner">
+    <div class="vp-eyebrow">✦ Cast your voice</div>
+    <div class="vp-head">Sway their fate</div>
+    <div class="vp-tag">You nudge how they lean — you never script them.</div>
+    <div id="vp-body">Loading the vote…</div>
+  </div>
+</div>
+<div id="pulse"></div>
+<div id="scene-line"></div>
+<div id="structures-layer"></div>
+<div id="vignette"></div>
+<div id="rain-layer"></div>
+<div id="lightning"></div>
+<div id="color-wash"></div>
+<div id="fire-chip"></div>
+<div id="res-hud"></div>
+
+<!-- ══ WORLD SVG ══════════════════════════════════════════ -->
+<svg id="world-svg" viewBox="0 0 1000 600" preserveAspectRatio="xMidYMin slice" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <!-- Sky gradients — muted, hazy, smoke-tinged dead-city skies -->
+  <linearGradient id="sky-morning" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#5a5560"/><stop offset="28%" stop-color="#9a8b7e"/>
+    <stop offset="58%" stop-color="#c2a98e"/><stop offset="100%" stop-color="#d9c4a4"/>
+  </linearGradient>
+  <linearGradient id="sky-midday" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#5b6b78"/><stop offset="40%" stop-color="#8a9aa3"/>
+    <stop offset="78%" stop-color="#b9c2c0"/><stop offset="100%" stop-color="#cdd2c8"/>
+  </linearGradient>
+  <linearGradient id="sky-afternoon" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#6b6f76"/><stop offset="42%" stop-color="#9a9890"/>
+    <stop offset="78%" stop-color="#c4b59a"/><stop offset="100%" stop-color="#d6c3a2"/>
+  </linearGradient>
+  <linearGradient id="sky-evening" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#2c2333"/><stop offset="26%" stop-color="#6e4248"/>
+    <stop offset="52%" stop-color="#b9622f"/><stop offset="76%" stop-color="#d98a3a"/>
+    <stop offset="100%" stop-color="#b89a72"/>
+  </linearGradient>
+  <linearGradient id="sky-night" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#070a12"/><stop offset="45%" stop-color="#0d121f"/>
+    <stop offset="80%" stop-color="#141b2c"/><stop offset="100%" stop-color="#1b2336"/>
+  </linearGradient>
+  <linearGradient id="sky-dawn" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#141b2c"/><stop offset="32%" stop-color="#34323f"/>
+    <stop offset="58%" stop-color="#6e5a52"/><stop offset="80%" stop-color="#b07a52"/>
+    <stop offset="100%" stop-color="#d9b27a"/>
+  </linearGradient>
+  <!-- (kept id) — a generic dark fill, unused at street level -->
+  <linearGradient id="ocean-g" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#2a2e36"/><stop offset="100%" stop-color="#16191f"/>
+  </linearGradient>
+  <!-- dead-city SKYLINE depth (far hazy → near dark towers) -->
+  <linearGradient id="skyline-far" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#7b828c"/><stop offset="100%" stop-color="#5e6670"/>
+  </linearGradient>
+  <linearGradient id="skyline-mid" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#4a525e"/><stop offset="100%" stop-color="#39414c"/>
+  </linearGradient>
+  <linearGradient id="skyline-near" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#2c333d"/><stop offset="100%" stop-color="#1c222b"/>
+  </linearGradient>
+  <!-- the carpark rooftop DECK (concrete, sun-warmed top → cooler foreground) -->
+  <radialGradient id="clearing-g" cx="50%" cy="34%" r="78%">
+    <stop offset="0%" stop-color="#8a8d8f"/><stop offset="52%" stop-color="#72767a"/>
+    <stop offset="100%" stop-color="#565a60"/>
+  </radialGradient>
+  <linearGradient id="mud-g" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#7a7e82"/><stop offset="100%" stop-color="#3e4248"/>
+  </linearGradient>
+  <!-- the SOLAR CAMPER VAN body (off-white panel, sun-lit top → shadow base) -->
+  <linearGradient id="van-body" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#eef0ee"/><stop offset="48%" stop-color="#d2d6d2"/>
+    <stop offset="100%" stop-color="#a7aca8"/>
+  </linearGradient>
+  <linearGradient id="van-stripe" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#f59e0b"/><stop offset="100%" stop-color="#b45309"/>
+  </linearGradient>
+  <linearGradient id="solar-g" x1="0" y1="0" x2="0.4" y2="1">
+    <stop offset="0%" stop-color="#1e3a5f"/><stop offset="55%" stop-color="#15293f"/>
+    <stop offset="100%" stop-color="#0c1827"/>
+  </linearGradient>
+  <linearGradient id="rust-g" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#9a3412"/><stop offset="100%" stop-color="#5c2410"/>
+  </linearGradient>
+  <linearGradient id="mist-g" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#c2cbd2" stop-opacity=".5"/>
+    <stop offset="100%" stop-color="#c2cbd2" stop-opacity="0"/>
+  </linearGradient>
+  <!-- soft sky-light wash from above (no canopy here — open sky) -->
+  <radialGradient id="canopy-light" cx="50%" cy="0%" r="80%">
+    <stop offset="0%" stop-color="#dfe6ec" stop-opacity=".22"/>
+    <stop offset="45%" stop-color="#cdd6dc" stop-opacity=".08"/>
+    <stop offset="100%" stop-color="#cdd6dc" stop-opacity="0"/>
+  </radialGradient>
+  <filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <radialGradient id="sun-halo" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" stop-color="#fde68a" stop-opacity=".55"/>
+    <stop offset="35%" stop-color="#fcd34d" stop-opacity=".28"/>
+    <stop offset="100%" stop-color="#fcd34d" stop-opacity="0"/>
+  </radialGradient>
+  <linearGradient id="sun-glint" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#fde68a" stop-opacity=".55"/>
+    <stop offset="100%" stop-color="#fde68a" stop-opacity="0"/>
+  </linearGradient>
+  <radialGradient id="fire-glow-g" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" stop-color="#fb923c" stop-opacity=".5"/>
+    <stop offset="45%" stop-color="#f97316" stop-opacity=".16"/>
+    <stop offset="100%" stop-color="#f97316" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="moon-halo" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" stop-color="#e2e8f0" stop-opacity=".35"/>
+    <stop offset="100%" stop-color="#cbd5e1" stop-opacity="0"/>
+  </radialGradient>
+  <filter id="soft-blur"><feGaussianBlur stdDeviation="2.6"/></filter>
+  <filter id="ray-blur"><feGaussianBlur stdDeviation="7"/></filter>
+  <filter id="leaf-blur"><feGaussianBlur stdDeviation="1.2"/></filter>
+  <!-- volumetric god-ray shaft (bright near canopy, fading to the floor) -->
+  <linearGradient id="god-ray" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#fde7b0" stop-opacity=".5"/>
+    <stop offset="55%" stop-color="#f3d488" stop-opacity=".18"/>
+    <stop offset="100%" stop-color="#f3d488" stop-opacity="0"/>
+  </linearGradient>
+  <!-- mid-distance aerial haze (separates background canopy from foreground) -->
+  <linearGradient id="depth-haze" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#cfe2cf" stop-opacity="0"/>
+    <stop offset="55%" stop-color="#d4e6cf" stop-opacity=".4"/>
+    <stop offset="100%" stop-color="#d4e6cf" stop-opacity="0"/>
+  </linearGradient>
+  <!-- puddle reflection (sky caught in wet mud) -->
+  <linearGradient id="puddle-g" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#bcd9c4" stop-opacity=".7"/>
+    <stop offset="100%" stop-color="#6e8f7e" stop-opacity=".35"/>
+  </linearGradient>
+  <!-- ── LUSH FOLIAGE gradients (overhead canopy, big tropical leaves, flowers) ── -->
+  <linearGradient id="canopy-ceiling-g" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#0f2417"/><stop offset="60%" stop-color="#14532d"/>
+    <stop offset="100%" stop-color="#1f6b3a"/>
+  </linearGradient>
+  <linearGradient id="vine-leaf-g" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#1f6b3a"/><stop offset="100%" stop-color="#14532d"/>
+  </linearGradient>
+  <linearGradient id="big-leaf-g" x1="0" y1="0" x2="0.4" y2="1">
+    <stop offset="0%" stop-color="#1f6b3a"/><stop offset="55%" stop-color="#14532d"/>
+    <stop offset="100%" stop-color="#0b1f12"/>
+  </linearGradient>
+  <linearGradient id="big-leaf-g2" x1="0" y1="0" x2="0.5" y2="1">
+    <stop offset="0%" stop-color="#2f8f4e"/><stop offset="60%" stop-color="#1f6b3a"/>
+    <stop offset="100%" stop-color="#0f2417"/>
+  </linearGradient>
+  <linearGradient id="elephant-leaf-g" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#2f8f4e"/><stop offset="100%" stop-color="#14532d"/>
+  </linearGradient>
+  <linearGradient id="fg-leaf-g" x1="0" y1="0" x2="0.3" y2="1">
+    <stop offset="0%" stop-color="#14532d"/><stop offset="100%" stop-color="#0b1f12"/>
+  </linearGradient>
+  <radialGradient id="heliconia-g" cx="40%" cy="35%" r="75%">
+    <stop offset="0%" stop-color="#f2b134"/><stop offset="50%" stop-color="#e58b4a"/>
+    <stop offset="100%" stop-color="#e0533a"/>
+  </radialGradient>
+  <radialGradient id="hibiscus-g" cx="50%" cy="42%" r="70%">
+    <stop offset="0%" stop-color="#f2b134"/><stop offset="45%" stop-color="#e0533a"/>
+    <stop offset="100%" stop-color="#9d2424"/>
+  </radialGradient>
+  <radialGradient id="orchid-g" cx="50%" cy="40%" r="70%">
+    <stop offset="0%" stop-color="#f5c4d6"/><stop offset="55%" stop-color="#d94f7a"/>
+    <stop offset="100%" stop-color="#a8325a"/>
+  </radialGradient>
+  <radialGradient id="vignette-g" cx="50%" cy="46%" r="62%">
+    <stop offset="0%" stop-color="#000000" stop-opacity="0"/>
+    <stop offset="78%" stop-color="#000000" stop-opacity="0"/>
+    <stop offset="100%" stop-color="#06120c" stop-opacity=".52"/>
+  </radialGradient>
+  <!-- warm pool where a sun shaft lands on the clearing floor -->
+  <radialGradient id="dapple-g" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" stop-color="#fff6d8" stop-opacity=".6"/>
+    <stop offset="52%" stop-color="#fde8a8" stop-opacity=".24"/>
+    <stop offset="100%" stop-color="#fde8a8" stop-opacity="0"/>
+  </radialGradient>
+</defs>
+
+<!-- SKY -->
+<rect id="sky-bg" width="1000" height="315" fill="url(#sky-afternoon)"/>
+
+<!-- SUN -->
+<g id="sun-group">
+  <circle cx="810" cy="88" r="155" fill="url(#sun-halo)"/>
+  <circle cx="810" cy="88" r="70" fill="#fbbf24" opacity=".1"/>
+  <circle cx="810" cy="88" r="48" fill="#fcd34d" opacity=".18"/>
+  <circle cx="810" cy="88" r="32" fill="#fde68a"/>
+  <circle cx="810" cy="88" r="26" fill="#fef3c7"/>
+</g>
+<!-- MOON -->
+<circle id="moon-halo-c" cx="810" cy="88" r="90" fill="url(#moon-halo)" opacity="0"/>
+<g id="moon-group" opacity="0" filter="url(#glow)">
+  <circle cx="810" cy="88" r="30" fill="#e2e8f0"/>
+  <circle cx="824" cy="80" r="24" fill="#0f172a"/>
+</g>
+<!-- STARS -->
+<g id="night-stars" opacity="0">
+  <circle cx="55" cy="28" r="1.4" fill="white" opacity=".9"/><circle cx="138" cy="48" r="1.1" fill="white" opacity=".7"/>
+  <circle cx="218" cy="18" r="1.6" fill="white" opacity=".85"/><circle cx="305" cy="55" r="1.2" fill="white" opacity=".9"/>
+  <circle cx="388" cy="22" r="1.5" fill="white" opacity=".65"/><circle cx="452" cy="46" r="1.1" fill="white" opacity=".8"/>
+  <circle cx="528" cy="14" r="1.3" fill="white" opacity=".75"/><circle cx="612" cy="38" r="1.4" fill="white" opacity=".8"/>
+  <circle cx="685" cy="60" r="1.2" fill="white" opacity=".7"/><circle cx="748" cy="20" r="1.5" fill="white" opacity=".9"/>
+  <circle cx="862" cy="44" r="1.2" fill="white" opacity=".75"/><circle cx="948" cy="26" r="1.6" fill="white" opacity=".85"/>
+  <circle cx="105" cy="75" r="1" fill="white" opacity=".6"/><circle cx="272" cy="82" r="1.2" fill="white" opacity=".7"/>
+  <circle cx="465" cy="78" r="1" fill="white" opacity=".65"/><circle cx="655" cy="85" r="1.3" fill="white" opacity=".6"/>
+  <circle cx="828" cy="70" r="1.1" fill="white" opacity=".75"/><circle cx="178" cy="96" r="1" fill="white" opacity=".5"/>
+  <circle cx="362" cy="94" r="1.2" fill="white" opacity=".6"/><circle cx="562" cy="100" r="1" fill="white" opacity=".55"/>
+</g>
+
+<!-- CLOUDS -->
+<g class="cl1" opacity=".88">
+  <ellipse cx="-180" cy="75" rx="68" ry="26" fill="white"/>
+  <ellipse cx="-140" cy="64" rx="50" ry="22" fill="white"/>
+  <ellipse cx="-215" cy="80" rx="42" ry="19" fill="white"/>
+</g>
+<g class="cl2" opacity=".72">
+  <ellipse cx="-480" cy="50" rx="55" ry="20" fill="white"/>
+  <ellipse cx="-445" cy="41" rx="40" ry="17" fill="white"/>
+  <ellipse cx="-510" cy="54" rx="35" ry="15" fill="white"/>
+</g>
+<g class="cl3" opacity=".6">
+  <ellipse cx="-720" cy="108" rx="62" ry="23" fill="white"/>
+  <ellipse cx="-682" cy="97" rx="46" ry="19" fill="white"/>
+  <ellipse cx="-752" cy="112" rx="38" ry="17" fill="white"/>
+</g>
+
+<!-- ══ SOFT SKY-LIGHT WASH (open sky over the rooftop) ══ -->
+<rect x="0" y="0" width="1000" height="360" fill="url(#canopy-light)" opacity=".7"/>
+
+<!-- ══ DEAD-CITY SKYLINE (far hazy → near dark towers, some broken) ══ -->
+<g fill="url(#skyline-far)" opacity=".7">
+  <rect x="20" y="196" width="44" height="160"/><rect x="78" y="168" width="34" height="188"/>
+  <rect x="128" y="210" width="50" height="146"/><rect x="250" y="180" width="40" height="176"/>
+  <rect x="300" y="206" width="58" height="150"/><rect x="430" y="172" width="36" height="184"/>
+  <rect x="480" y="200" width="48" height="156"/><rect x="640" y="186" width="42" height="170"/>
+  <rect x="700" y="210" width="54" height="146"/><rect x="868" y="178" width="38" height="178"/>
+  <rect x="916" y="206" width="46" height="150"/>
+</g>
+<!-- mid towers (darker) -->
+<g fill="url(#skyline-mid)">
+  <rect x="0" y="226" width="62" height="130"/><rect x="96" y="206" width="54" height="150"/>
+  <rect x="170" y="232" width="70" height="124"/><rect x="284" y="214" width="60" height="142"/>
+  <rect x="372" y="236" width="66" height="120"/><rect x="470" y="220" width="58" height="136"/>
+  <rect x="556" y="238" width="72" height="118"/><rect x="664" y="218" width="62" height="138"/>
+  <rect x="760" y="234" width="68" height="122"/><rect x="858" y="222" width="60" height="134"/>
+  <rect x="936" y="236" width="64" height="120"/>
+  <!-- a snapped / collapsed tower -->
+  <path d="M 372 236 L 438 236 L 438 300 L 410 280 L 372 296 Z" fill="#2c333d"/>
+</g>
+<!-- lit / broken windows scattered (mostly dark, a few catch light) -->
+<g fill="#4a525e" opacity=".5">
+  <rect x="108" y="222" width="6" height="8"/><rect x="120" y="240" width="6" height="8"/><rect x="300" y="232" width="6" height="8"/>
+  <rect x="478" y="238" width="6" height="8"/><rect x="676" y="236" width="6" height="8"/><rect x="870" y="240" width="6" height="8"/>
+</g>
+<!-- a thin smoke plume rising from a distant fire in the city -->
+<g opacity=".4"><path class="smoke" d="M 222 232 Q 214 196 226 156 Q 232 130 224 104" stroke="#3a3f45" stroke-width="6" fill="none" stroke-linecap="round"/></g>
+<ellipse cx="223" cy="244" rx="9" ry="5" fill="#9a3412" opacity=".35"/>
+<!-- aerial haze pooling at the skyline base so the city recedes -->
+<rect x="0" y="300" width="1000" height="74" fill="url(#depth-haze)" filter="url(#ray-blur)" opacity=".8"/>
+
+<!-- ══ THE STREET FAR BELOW (glimpsed beyond the rooftop ledge) + the DEAD ══ -->
+<rect x="0" y="338" width="1000" height="40" fill="#1c2027"/>
+<rect x="0" y="338" width="1000" height="40" fill="url(#depth-haze)" opacity=".5"/>
+<!-- tiny shambling horde silhouettes in the street -->
+<g id="horde" fill="#0e1116" opacity=".7">
+  <g class="shamble"><ellipse cx="120" cy="362" rx="2.2" ry="5"/><circle cx="120" cy="355" r="1.6"/></g>
+  <g class="shamble" style="animation-delay:-2.2s"><ellipse cx="168" cy="366" rx="2" ry="4.6"/><circle cx="168" cy="360" r="1.5"/></g>
+  <g class="shamble" style="animation-delay:-4s"><ellipse cx="246" cy="360" rx="2.2" ry="5"/><circle cx="246" cy="353" r="1.6"/></g>
+  <g class="shamble" style="animation-delay:-1.1s"><ellipse cx="330" cy="368" rx="2" ry="4.4"/><circle cx="330" cy="362" r="1.4"/></g>
+  <g class="shamble" style="animation-delay:-3.3s"><ellipse cx="560" cy="362" rx="2.2" ry="5"/><circle cx="560" cy="355" r="1.6"/></g>
+  <g class="shamble" style="animation-delay:-0.6s"><ellipse cx="612" cy="366" rx="2" ry="4.6"/><circle cx="612" cy="360" r="1.5"/></g>
+  <g class="shamble" style="animation-delay:-2.7s"><ellipse cx="700" cy="360" rx="2.2" ry="5"/><circle cx="700" cy="353" r="1.6"/></g>
+  <g class="shamble" style="animation-delay:-4.5s"><ellipse cx="846" cy="366" rx="2" ry="4.6"/><circle cx="846" cy="360" r="1.5"/></g>
+  <g class="shamble" style="animation-delay:-1.8s"><ellipse cx="908" cy="362" rx="2.2" ry="5"/><circle cx="908" cy="355" r="1.6"/></g>
+</g>
+
+<!-- ══ THE CARPARK ROOFTOP DECK (concrete ground plane) ══ -->
+<rect x="0" y="372" width="1000" height="228" fill="url(#clearing-g)"/>
+<!-- sun-warmed sheen near the back, cool toward the foreground -->
+<rect x="0" y="372" width="1000" height="30" fill="#9aa0a2" opacity=".18"/>
+<!-- expansion joints + faded parking-bay lines -->
+<g stroke="#4a4e52" stroke-width="2" opacity=".5"><path d="M 0 392 H 1000"/><path d="M 0 470 H 1000"/></g>
+<g stroke="#cdd2c8" stroke-width="2.4" opacity=".22">
+  <path d="M 90 470 L 70 600"/><path d="M 210 470 L 196 600"/><path d="M 330 470 L 322 600"/>
+  <path d="M 690 470 L 700 600"/><path d="M 810 470 L 826 600"/><path d="M 930 470 L 952 600"/>
+</g>
+<!-- oil stains + rubble patches -->
+<g fill="#3e4248" opacity=".4"><ellipse cx="240" cy="430" rx="44" ry="9"/><ellipse cx="560" cy="466" rx="60" ry="11"/><ellipse cx="820" cy="440" rx="40" ry="8"/></g>
+<g fill="#565a60"><ellipse cx="150" cy="500" rx="10" ry="4"/><ellipse cx="158" cy="497" rx="6" ry="3" fill="#6b6f74"/></g>
+<g fill="#565a60"><ellipse cx="660" cy="520" rx="9" ry="3.5"/><ellipse cx="654" cy="518" rx="5" ry="2.6" fill="#6b6f74"/></g>
+
+<!-- the deck's FRONT LEDGE / parapet wall (low concrete wall along the back edge, over the drop) -->
+<rect x="0" y="356" width="1000" height="20" fill="#7a7e82"/>
+<rect x="0" y="356" width="1000" height="5" fill="#9298a0"/>
+<rect x="0" y="372" width="1000" height="4" fill="#4a4e52"/>
+<!-- rebar + a chain-link panel poking up from the parapet -->
+<g stroke="#5c2410" stroke-width="2" opacity=".6"><line x1="120" y1="356" x2="120" y2="344"/><line x1="128" y1="356" x2="129" y2="346"/></g>
+<g stroke="#6b7078" stroke-width="1" opacity=".4" fill="none"><path d="M 740 356 L 740 338 L 812 338 L 812 356 M 740 338 L 812 356 M 812 338 L 740 356 M 758 338 L 758 356 M 776 338 L 776 356 M 794 338 L 794 356"/></g>
+
+<!-- ══ BARRICADED RAMP (the one way up — sealed with a wrecked car + debris), far right ══ -->
+<g>
+  <!-- ramp mouth (dark opening going down) -->
+  <path d="M 902 600 L 902 452 L 1000 452 L 1000 600 Z" fill="#1b1f25"/>
+  <path d="M 902 452 L 1000 452 L 1000 478 L 902 470 Z" fill="#11141a"/>
+  <!-- a wrecked car jammed across the mouth -->
+  <g transform="translate(902 446)">
+    <ellipse cx="48" cy="34" rx="56" ry="9" fill="#11141a" opacity=".6"/>
+    <path d="M 4 30 Q 10 14 30 12 L 78 12 Q 96 14 98 30 L 98 34 Q 70 38 50 38 Q 22 38 4 34 Z" fill="#5c2410"/>
+    <path d="M 18 12 L 24 -2 L 74 -2 L 84 12 Z" fill="#4a4e52"/>
+    <path d="M 30 0 L 50 0 L 50 11 L 28 11 Z" fill="#11141a" opacity=".7"/>
+    <path d="M 54 0 L 72 0 L 80 11 L 54 11 Z" fill="#11141a" opacity=".7"/>
+    <circle cx="26" cy="34" r="9" fill="#16191c"/><circle cx="78" cy="34" r="9" fill="#16191c"/>
+    <g fill="#9a3412" opacity=".5"><ellipse cx="40" cy="24" rx="14" ry="7"/><ellipse cx="68" cy="26" rx="9" ry="5"/></g>
+  </g>
+  <!-- piled debris + a warning -->
+  <g fill="#4a4e52"><rect x="876" y="500" width="40" height="14" rx="2" transform="rotate(-6 896 507)"/><rect x="884" y="486" width="30" height="10" rx="2" transform="rotate(8 899 491)"/></g>
+  <path d="M 884 466 L 906 466 L 906 478 L 884 478 Z" fill="#f59e0b" opacity=".85"/><path d="M 887 469 L 903 475 M 903 469 L 887 475" stroke="#1b1f25" stroke-width="1.4"/>
+</g>
+
+<!-- ══ ABANDONED CAR on the deck (frozen mid-escape, stripped) ══ -->
+<g transform="translate(96 470) scale(.9)">
+  <ellipse cx="60" cy="40" rx="66" ry="10" fill="#2a2e34" opacity=".5"/>
+  <path d="M 6 36 Q 12 18 34 16 L 96 16 Q 114 18 116 36 L 116 40 Q 82 44 60 44 Q 26 44 6 40 Z" fill="#475059"/>
+  <path d="M 22 16 L 28 0 L 92 0 L 102 16 Z" fill="#39414c"/>
+  <path d="M 34 2 L 58 2 L 58 15 L 32 15 Z" fill="#11141a" opacity=".7"/><path d="M 64 2 L 90 2 L 98 15 L 64 15 Z" fill="#11141a" opacity=".7"/>
+  <circle cx="30" cy="40" r="10" fill="#16191c"/><circle cx="94" cy="40" r="10" fill="#16191c"/>
+  <g fill="#5c2410" opacity=".55"><ellipse cx="50" cy="30" rx="18" ry="8"/><ellipse cx="90" cy="32" rx="12" ry="6"/></g>
+  <path d="M 96 16 L 116 18" stroke="#9298a0" stroke-width="1.2" opacity=".5"/>
+</g>
+
+<!-- ══ THE SOLAR CAMPER VAN — hero prop, dug in centre-left ══ -->
+<g id="van" transform="translate(300 392)">
+  <!-- ground shadow -->
+  <ellipse cx="92" cy="92" rx="120" ry="16" fill="#2a2e34" opacity=".5"/>
+  <!-- wheels (chocked, settled) -->
+  <g><circle cx="36" cy="86" r="17" fill="#16191c"/><circle cx="36" cy="86" r="8" fill="#4a4e52"/><circle cx="36" cy="86" r="3" fill="#6b7078"/></g>
+  <g><circle cx="150" cy="86" r="17" fill="#16191c"/><circle cx="150" cy="86" r="8" fill="#4a4e52"/><circle cx="150" cy="86" r="3" fill="#6b7078"/></g>
+  <!-- lower body / sill -->
+  <path d="M 8 78 Q 14 60 30 58 L 168 58 Q 184 60 186 78 L 186 84 Q 150 90 96 90 Q 40 90 8 84 Z" fill="#8a8f93"/>
+  <!-- main body (boxy camper) -->
+  <rect x="6" y="20" width="184" height="46" rx="8" fill="url(#van-body)"/>
+  <!-- cab (front, left) -->
+  <path d="M 6 30 Q 4 22 12 20 L 44 20 L 44 50 L 6 50 Z" fill="#c2c7c4"/>
+  <!-- amber accent stripe -->
+  <rect x="6" y="50" width="184" height="6" fill="url(#van-stripe)" opacity=".9"/>
+  <!-- windscreen + side windows (warm interior glow at night via #van-windows) -->
+  <path d="M 10 28 L 40 28 L 40 46 L 10 46 Z" fill="#1c2630"/>
+  <g id="van-windows">
+    <rect class="van-glow" x="58" y="26" width="34" height="20" rx="2" fill="#243038"/>
+    <rect class="van-glow" x="104" y="26" width="34" height="20" rx="2" fill="#243038"/>
+    <rect class="van-glow" x="150" y="26" width="30" height="20" rx="2" fill="#243038"/>
+  </g>
+  <!-- side door + handle -->
+  <line x1="96" y1="20" x2="96" y2="66" stroke="#9298a0" stroke-width="1.4" opacity=".7"/>
+  <rect x="84" y="44" width="9" height="3" rx="1.5" fill="#7a7e82"/>
+  <!-- roof rack + SOLAR PANELS on top -->
+  <rect x="14" y="16" width="168" height="4" rx="1.5" fill="#39414c"/>
+  <g id="van-roof-solar">
+    <rect x="22" y="8" width="68" height="9" rx="1.5" fill="url(#solar-g)" transform="skewX(-2)"/>
+    <rect x="100" y="8" width="78" height="9" rx="1.5" fill="url(#solar-g)" transform="skewX(-2)"/>
+    <g stroke="#2c5a8a" stroke-width=".5" opacity=".6"><path d="M 40 8 L 40 17 M 58 8 L 58 17 M 76 8 L 76 17 M 120 8 L 120 17 M 140 8 L 140 17 M 160 8 L 160 17"/></g>
+  </g>
+  <!-- a little antenna / radio mast + a blinking telltale -->
+  <line x1="178" y1="16" x2="184" y2="-8" stroke="#39414c" stroke-width="1.6"/><circle class="blink" cx="184" cy="-9" r="1.8" fill="#22d3ee"/>
+  <!-- a pull-out awning over the side door -->
+  <path d="M 96 20 L 168 20 L 176 6 L 104 6 Z" fill="#3a4a55"/><path d="M 96 20 L 168 20" stroke="#2a343c" stroke-width="1.4"/>
+  <!-- rust + grime streaks -->
+  <g fill="#5c2410" opacity=".4"><ellipse cx="20" cy="60" rx="8" ry="3"/><ellipse cx="120" cy="62" rx="7" ry="2.6"/><ellipse cx="184" cy="58" rx="6" ry="2.4"/></g>
+</g>
+
+<!-- ══ SOLAR ARRAY on a frame (extra panels facing the sun) ══ -->
+<g transform="translate(548 432)">
+  <line x1="14" y1="44" x2="14" y2="20" stroke="#39414c" stroke-width="3"/><line x1="74" y1="44" x2="74" y2="26" stroke="#39414c" stroke-width="3"/>
+  <rect x="-2" y="2" width="96" height="26" rx="2" fill="url(#solar-g)" transform="rotate(-8 44 15)"/>
+  <g stroke="#2c5a8a" stroke-width=".6" opacity=".6" transform="rotate(-8 44 15)"><path d="M 22 2 L 22 28 M 46 2 L 46 28 M 70 2 L 70 28 M -2 14 L 94 14"/></g>
+  <ellipse cx="44" cy="46" rx="40" ry="5" fill="#2a2e34" opacity=".4"/>
+</g>
+
+<!-- ══ WATER RIG — a rain tarp funnelling into a tank (rooftop water) ══ -->
+<g transform="translate(688 430)">
+  <!-- tarp funnel -->
+  <path d="M 0 6 L 70 0 L 58 26 L 14 30 Z" fill="#3a4a55" opacity=".85"/>
+  <path d="M 0 6 L 70 0" stroke="#5e6b75" stroke-width="1.4"/>
+  <line x1="0" y1="6" x2="-4" y2="36" stroke="#6b7078" stroke-width="2"/><line x1="70" y1="0" x2="74" y2="34" stroke="#6b7078" stroke-width="2"/>
+  <!-- downspout into a blue drum -->
+  <path d="M 36 28 L 38 44" stroke="#9298a0" stroke-width="2"/>
+  <rect x="28" y="44" width="22" height="30" rx="3" fill="#1e5a6e"/><rect x="28" y="44" width="22" height="6" rx="3" fill="#2a7d96"/>
+  <ellipse cx="39" cy="76" rx="13" ry="4" fill="#2a2e34" opacity=".4"/>
+</g>
+
+<!-- ══ ROOFTOP GARDEN — scavenged planters with something green growing ══ -->
+<g transform="translate(470 506)">
+  <rect x="0" y="6" width="40" height="18" rx="2" fill="#5c4327"/><rect x="0" y="6" width="40" height="5" rx="2" fill="#6b4f2a"/>
+  <g stroke="#3f6212" stroke-width="2" stroke-linecap="round" fill="none"><path d="M 8 6 Q 6 -4 4 -10 M 14 6 Q 14 -6 14 -12 M 20 6 Q 22 -4 24 -10 M 28 6 Q 28 -6 30 -12 M 34 6 Q 36 -3 38 -8"/></g>
+  <circle cx="14" cy="-12" r="2" fill="#e0533a" opacity=".8"/><circle cx="30" cy="-12" r="2" fill="#f2b134" opacity=".8"/>
+</g>
+
+<!-- soft cold ground-haze drifting low across the deck (re-skinned heat-haze id for applyWeather) -->
+<g id="heat-haze" display="none" style="mix-blend-mode:screen">
+  <ellipse class="heat-ribbon" cx="300" cy="500" rx="190" ry="9" fill="#cfe0ec" opacity=".4"/>
+  <ellipse class="heat-ribbon" cx="680" cy="494" rx="210" ry="10" fill="#cfe0ec" opacity=".4" style="animation-delay:-2s"/>
+</g>
+
+<!-- ══ CAMP STORES — live readouts of the survival sim (filled by renderCampStores) ══ -->
+<!-- gathered firewood (count tracks resources.wood) -->
+<g id="woodpile"></g>
+<!-- foraged/caught food on a drying line (count tracks resources.food) -->
+<g id="food-cache"></g>
+<!-- collected water vessel (fill level tracks resources.water) -->
+<g id="water-store"></g>
+
+<!-- ══ THE VAN'S SYSTEMS GLOW — warm interior light when POWER is on (= 'fire' lit; scales w/ battery) ══ -->
+<g id="fire-flames" display="none" style="mix-blend-mode:screen">
+  <!-- soft halo so the warmth punches through the night overlay -->
+  <ellipse cx="419" cy="428" rx="92" ry="40" fill="#f59e0b" opacity=".18"/>
+  <rect x="357" y="417" width="36" height="22" rx="2.5" fill="#fcd34d" opacity=".9"/>
+  <rect x="403" y="417" width="36" height="22" rx="2.5" fill="#fef3c7" opacity=".95"/>
+  <rect x="449" y="417" width="32" height="22" rx="2.5" fill="#fcd34d" opacity=".9"/>
+  <!-- light spill down onto the deck -->
+  <path d="M 396 438 L 320 600 L 300 600 L 380 438 Z" fill="#fde68a" opacity=".1"/>
+</g>
+<!-- a thin vent wisp from the van when the systems run -->
+<g id="fire-smoke" display="none" opacity=".4">
+  <ellipse class="smoke-rise s1" cx="478" cy="392" rx="4" ry="6" fill="#9298a0"/>
+  <ellipse class="smoke-rise s2" cx="478" cy="392" rx="5.5" ry="7" fill="#a7adb2"/>
+</g>
+<!-- warm pool of van-light on the deck at night (only when systems lit at night) -->
+<circle id="fire-glow" cx="416" cy="436" r="96" fill="url(#fire-glow-g)" opacity="0"/>
+<!-- faint warm motes in the van's glow (night only via applySky) -->
+<g id="fireflies" opacity="0" fill="#fde68a">
+  <circle class="firefly" cx="372" cy="420" r="1.4"/>
+  <circle class="firefly" cx="448" cy="412" r="1.2" style="animation-delay:-1.3s"/>
+  <circle class="firefly" cx="408" cy="404" r="1.3" style="animation-delay:-2.6s"/>
+  <circle class="firefly" cx="466" cy="430" r="1.2" style="animation-delay:-0.7s"/>
+  <circle class="firefly" cx="340" cy="426" r="1.3" style="animation-delay:-3.4s"/>
+</g>
+
+<!-- ══ COLD MIST drifting low across the deck (slow, grey) ══ -->
+<g opacity=".5">
+  <ellipse class="cl1" cx="220" cy="476" rx="150" ry="20" fill="url(#mist-g)"/>
+  <ellipse class="cl3" cx="640" cy="500" rx="180" ry="22" fill="url(#mist-g)" style="animation-delay:-30s"/>
+  <ellipse class="cl2" cx="860" cy="486" rx="130" ry="18" fill="url(#mist-g)" style="animation-delay:-55s"/>
+</g>
+
+<!-- ══ A CROW circling high over the dead city ══ -->
+<g class="crow-orbit" style="transform-origin:520px 150px">
+  <path d="M 512 150 Q 518 144 524 150 Q 530 144 536 150" fill="none" stroke="#11141a" stroke-width="2" stroke-linecap="round"/>
+</g>
+<g class="crow-orbit" style="transform-origin:520px 150px;animation-delay:-7s">
+  <path d="M 690 188 Q 695 183 700 188 Q 705 183 710 188" fill="none" stroke="#11141a" stroke-width="1.6" stroke-linecap="round" opacity=".7"/>
+</g>
+
+<!-- ══ DRIFTING ASH / embers (slow fall through the scene) ══ -->
+<g fill="#cdd2c8">
+  <circle class="leaf-fall" cx="160" cy="-10" r="1.3" opacity=".5" style="animation-duration:15s"/>
+  <circle class="leaf-fall" cx="430" cy="-30" r="1" opacity=".4" style="animation-duration:19s;animation-delay:-6s"/>
+  <circle class="leaf-fall" cx="720" cy="-20" r="1.4" opacity=".45" style="animation-duration:17s;animation-delay:-11s"/>
+  <circle class="leaf-fall" cx="880" cy="-40" r="1" opacity=".4" style="animation-duration:21s;animation-delay:-3s"/>
+</g>
+<g fill="#f59e0b">
+  <circle class="leaf-fall" cx="250" cy="-25" r=".9" opacity=".4" style="animation-duration:13s;animation-delay:-8s"/>
+  <circle class="leaf-fall" cx="600" cy="-15" r="1" opacity=".35" style="animation-duration:16s;animation-delay:-14s"/>
+</g>
+
+<!-- ══ FOREGROUND FRAMING — broken concrete pillar stubs + rebar (soft-focus depth) ══ -->
+<g opacity=".92" filter="url(#soft-blur)">
+  <!-- bottom-left pillar stub -->
+  <path d="M 0 600 L 0 470 L 46 462 L 58 600 Z" fill="#4a4e52"/>
+  <path d="M 0 470 L 46 462 L 40 480 L 0 486 Z" fill="#5c6066"/>
+  <g stroke="#5c2410" stroke-width="2.4" stroke-linecap="round" opacity=".7"><line x1="14" y1="466" x2="10" y2="446"/><line x1="26" y1="464" x2="28" y2="442"/><line x1="38" y1="463" x2="44" y2="448"/></g>
+  <!-- bottom-right pillar stub -->
+  <path d="M 1000 600 L 1000 452 L 950 446 L 940 600 Z" fill="#3e4248"/>
+  <path d="M 1000 452 L 950 446 L 956 466 L 1000 472 Z" fill="#52565c"/>
+  <g stroke="#5c2410" stroke-width="2.2" stroke-linecap="round" opacity=".7"><line x1="986" y1="450" x2="990" y2="430"/><line x1="972" y1="448" x2="968" y2="428"/></g>
+</g>
+
+
+<!-- ══ DAWN GROUND FOG (thickens at dawn, lingers into morning) ══ -->
+<g id="dawn-fog" opacity="0">
+  <ellipse class="cl1" cx="300" cy="452" rx="280" ry="34" fill="url(#mist-g)"/>
+  <ellipse class="cl3" cx="700" cy="468" rx="300" ry="36" fill="url(#mist-g)"/>
+  <ellipse class="cl2" cx="500" cy="486" rx="340" ry="30" fill="url(#mist-g)"/>
+</g>
+
+<!-- ══ CINEMATIC VIGNETTE (subtle edge darkening) ══ -->
+<rect width="1000" height="600" fill="url(#vignette-g)" pointer-events="none"/>
+
+<!-- NIGHT OVERLAY -->
+<rect id="night-overlay" width="1000" height="600" fill="#020617" opacity="0"/>
+</svg>
+
+<!-- ══ ORACLE WIDGET ═══════════════════════════════════════ -->
+<!-- Island Oracle widget removed from the UI on purpose — the Oracle still runs every
+     midnight in the engine and its fate still shapes the story; we just no longer reveal
+     the upcoming/active fate on screen, to keep the suspense for readers. -->
+
+
+<!-- ══ CHAT PANEL ══════════════════════════════════════════ -->
+<div id="chat-panel">
+  <div id="feed-pill"></div>
+  <div id="chat-header" onclick="toggleFeed()">
+    <span id="feed-label"><span id="chat-dot"></span>📻 THE FEED</span>
+    <span id="chat-chevron">▲</span>
+  </div>
+  <div id="chat-feed"></div>
+</div>
+
+<!-- ══ HUD ════════════════════════════════════════════════ -->
+<div id="hud">
+  <span class="hud-day" id="day-label">Day 1</span>
+  <span class="hud-sep">·</span>
+  <span id="cycle-label">—</span>
+  <span class="hud-sep">·</span>
+
+  <div id="status-strip">
+    <div class="stp" id="stp-morning">🌅 7am</div>
+    <span class="stp-arr">›</span>
+    <div class="stp" id="stp-midday">☀️ 12:30pm</div>
+    <span class="stp-arr">›</span>
+    <div class="stp" id="stp-evening">🌆 6pm</div>
+    <span class="stp-arr">›</span>
+    <div class="stp" id="stp-night">🌙 11pm</div>
+  </div>
+
+  <div id="status-info">
+    Last&nbsp;<span id="status-last">—</span>&nbsp;·&nbsp;Next&nbsp;<span id="status-next">—</span>&nbsp;(<span id="status-countdown">—</span>)
+  </div>
+  <span id="status-msg"></span>
+
+  <div class="hud-actions">
+    <a id="story-btn" href="story.html">📖 Story</a>
+  </div>
+</div>
+
+</div><!-- #world -->
+
+<script>
+// ── FACE DATA ─────────────────────────────────────────────
+const EYE_STATES = ['normal','wide','narrow','happy','bedroom','heart','teary']
+
+const FACES = {
+  happy:       { bl:'M -9 -79 Q -6 -81 -3 -79',      br:'M 3 -79 Q 6 -81 9 -79',      eyes:'happy',   blush:false,
+                 mouth:{marcus:'M -5 -64.5 Q 0 -59.5 5 -64.5',ryan:'M -5 -64.5 Q 0 -59 5 -64.5',jade:'M -4 -64.5 Q 0 -59.5 4 -64.5'}},
+  calm:        { bl:'M -9 -77.5 Q -6 -79.5 -3 -77.5', br:'M 3 -77.5 Q 6 -79.5 9 -77.5', eyes:'normal', blush:false,
+                 mouth:{marcus:'M -4 -64.5 Q 0 -62 4 -64.5',ryan:'M -4.5 -64.5 Q 0 -61.5 4.5 -64.5',jade:'M -3.5 -64.5 Q 0 -62 3.5 -64.5'}},
+  neutral:     { bl:'M -9 -77.5 L -3 -76',            br:'M 3 -76 L 9 -77.5',           eyes:'normal', blush:false,
+                 mouth:{marcus:'M -4 -64.5 L 4 -64.5',ryan:'M -4.5 -64.5 L 4.5 -64.5',jade:'M -3.5 -64.5 L 3.5 -64.5'}},
+  hopeful:     { bl:'M -9 -78.5 Q -6 -80 -3 -78',    br:'M 3 -78 Q 6 -80 9 -78.5',    eyes:'normal', blush:false,
+                 mouth:{marcus:'M -4 -64.5 Q 0 -61.5 4 -64.5',ryan:'M -4.5 -64.5 Q 0 -61.5 4.5 -64.5',jade:'M -3.5 -64.5 Q 0 -61.5 3.5 -64.5'}},
+  guarded:     { bl:'M -9 -77.5 Q -6 -78 -3 -77',    br:'M 3 -77 Q 6 -78 9 -77.5',    eyes:'narrow', blush:false,
+                 mouth:{marcus:'M -4 -64.5 Q 0 -65.5 4 -64.5',ryan:'M -4.5 -64.5 Q 0 -65.5 4.5 -64.5',jade:'M -3.5 -64.5 Q 0 -65.2 3.5 -64.5'}},
+  sad:         { bl:'M -9 -76 Q -6 -79 -3 -76',      br:'M 3 -76 Q 6 -79 9 -76',       eyes:'narrow', blush:false,
+                 mouth:{marcus:'M -4 -64.5 Q 0 -67.5 4 -64.5',ryan:'M -4.5 -64.5 Q 0 -67.5 4.5 -64.5',jade:'M -3.5 -64.5 Q 0 -67 3.5 -64.5'}},
+  heartbroken: { bl:'M -9 -76 Q -6 -79 -3 -76',      br:'M 3 -76 Q 6 -79 9 -76',       eyes:'teary',  blush:false,
+                 mouth:{marcus:'M -4 -64.5 Q -1 -66.5 0 -65 Q 1 -66.5 4 -64.5',ryan:'M -4.5 -64.5 Q -1 -66.5 0 -65 Q 1 -66.5 4.5 -64.5',jade:'M -3.5 -64.5 Q -1 -66 0 -65 Q 1 -66 3.5 -64.5'}},
+  angry:       { bl:'M -9 -76 L -3 -79',              br:'M 3 -79 L 9 -76',              eyes:'narrow', blush:false,
+                 mouth:{marcus:'M -4 -63.5 Q 0 -65.5 4 -63.5',ryan:'M -4.5 -63.5 Q 0 -65.5 4.5 -63.5',jade:'M -3.5 -63.5 Q 0 -65 3.5 -63.5'}},
+  shocked:     { bl:'M -9 -80 Q -6 -82.5 -3 -80',    br:'M 3 -80 Q 6 -82.5 9 -80',     eyes:'wide',   blush:false,
+                 mouth:{marcus:'M -4 -64.5 Q 0 -62 4 -64.5 Q 0 -67 -4 -64.5',ryan:'M -4 -64.5 Q 0 -62 4 -64.5 Q 0 -67 -4 -64.5',jade:'M -3.5 -64.5 Q 0 -62 3.5 -64.5 Q 0 -66.5 -3.5 -64.5'}},
+  flirtatious: { bl:'M -9 -77.5 L -3 -77',            br:'M 3 -80 Q 6 -82 9 -79',       eyes:'bedroom',blush:false,
+                 mouth:{marcus:'M -4 -64.5 Q 1 -62 4 -64',ryan:'M -4.5 -64.5 Q 1 -62 4 -63.5',jade:'M -3.5 -64.5 Q 1 -62 3.5 -63.5'}},
+  smitten:     { bl:'M -9 -79 Q -6 -81 -3 -79',      br:'M 3 -79 Q 6 -81 9 -79',       eyes:'heart',  blush:false,
+                 mouth:{marcus:'M -5 -64.5 Q 0 -59.5 5 -64.5',ryan:'M -5 -64.5 Q 0 -59 5 -64.5',jade:'M -4 -64.5 Q 0 -59.5 4 -64.5'}},
+  jealous:     { bl:'M -9 -76 L -3 -78.5',            br:'M 3 -77.5 L 9 -78',           eyes:'narrow', blush:false,
+                 mouth:{marcus:'M -4 -64.5 Q 0 -65.8 4 -64.5',ryan:'M -4.5 -64.5 Q 0 -65.8 4.5 -64.5',jade:'M -3.5 -64.5 Q 0 -65.5 3.5 -64.5'}},
+  embarrassed: { bl:'M -9 -78 Q -6 -79.5 -3 -77.5',  br:'M 3 -77.5 Q 6 -79.5 9 -78',  eyes:'normal', blush:true,
+                 mouth:{marcus:'M -3 -64.5 Q 0 -62.5 3 -64.5',ryan:'M -3.5 -64.5 Q 0 -62 3.5 -64.5',jade:'M -3 -64.5 Q 0 -62.5 3 -64.5'}},
+  lustful:     { bl:'M -9 -77 Q -6 -78 -3 -77',      br:'M 3 -77 Q 6 -78 9 -77',       eyes:'bedroom',blush:true,
+                 mouth:{marcus:'M -4 -64.5 Q 0 -62 4 -64.5',ryan:'M -4.5 -64.5 Q 0 -62 4.5 -64.5',jade:'M -3.5 -64.5 Q 0 -62 3.5 -64.5'}},
+}
+
+const MOOD_MAP = {
+  happy:'happy',cheerful:'happy',joyful:'happy',elated:'happy',excited:'happy',giddy:'happy',
+  calm:'calm',content:'calm',peaceful:'calm',serene:'calm',free:'calm',relaxed:'calm',warm:'calm',
+  neutral:'neutral',okay:'neutral',fine:'neutral',
+  hopeful:'hopeful',optimistic:'hopeful',curious:'hopeful',
+  guarded:'guarded',distant:'guarded',cold:'guarded',restless:'guarded',pensive:'guarded',
+  thoughtful:'neutral',reflective:'neutral',
+  sad:'sad',lonely:'sad',melancholy:'sad',down:'sad',gloomy:'sad',
+  heartbroken:'heartbroken',devastated:'heartbroken',grieving:'heartbroken',hurt:'heartbroken',
+  angry:'angry',frustrated:'angry',irritated:'angry',furious:'angry',annoyed:'angry',
+  shocked:'shocked',surprised:'shocked',stunned:'shocked',shaken:'shocked',overwhelmed:'shocked',terrified:'shocked',
+  flirtatious:'flirtatious',playful:'flirtatious',teasing:'flirtatious',coy:'flirtatious',mischievous:'flirtatious',
+  smitten:'smitten',lovestruck:'smitten',infatuated:'smitten',adoring:'smitten',tender:'smitten',
+  jealous:'jealous',envious:'jealous',possessive:'jealous',insecure:'jealous',
+  embarrassed:'embarrassed',flustered:'embarrassed',shy:'embarrassed',bashful:'embarrassed',sheepish:'embarrassed',
+  lustful:'lustful',seductive:'lustful',longing:'lustful',yearning:'lustful',
+  // ── extra vocabulary the narrator actually produces ──
+  grateful:'happy',thankful:'happy',eager:'happy',energetic:'happy',lively:'happy',delighted:'happy',
+  proud:'happy',relieved:'happy',upbeat:'happy',gleeful:'happy',
+  quiet:'calm',reserved:'calm',mellow:'calm',soothed:'calm',gentle:'calm',tranquil:'calm',
+  inspired:'hopeful',encouraged:'hopeful',expectant:'hopeful',
+  wary:'guarded',watchful:'guarded',alert:'guarded',vigilant:'guarded',cautious:'guarded',
+  determined:'guarded',focused:'guarded',resolute:'guarded',intent:'guarded',suspicious:'guarded',
+  defensive:'guarded',tense:'guarded',uneasy:'guarded',apprehensive:'guarded',nervous:'guarded',
+  concerned:'sad',worried:'sad',anxious:'sad',troubled:'sad',withdrawn:'sad',disheartened:'sad',
+  somber:'sad',wistful:'sad',forlorn:'sad',dejected:'sad',
+  scared:'shocked',afraid:'shocked',frightened:'shocked',alarmed:'shocked',startled:'shocked',panicked:'shocked',
+}
+
+// Fallback: map ANY unknown mood word to the closest expression by keyword stems,
+// so the AI's open-ended mood vocabulary always produces a real face (not blank neutral).
+const MOOD_KEYWORDS = [
+  [['terr','scare','afraid','fright','panic','horrif','alarm','startl'],'shocked'],
+  [['shock','stun','surpris','astonish'],'shocked'],
+  [['heartbr','devastat','griev','crush','anguish','despair','sorrow'],'heartbroken'],
+  [['angr','furious','rage','irrita','frustrat','annoy','resent','bitter','indignant','agitat'],'angry'],
+  [['jealous','envious','possess','insecur'],'jealous'],
+  [['lust','desire','yearn','crav'],'lustful'],
+  [['smitten','adore','infatuat','enamor','tender','lovestruck'],'smitten'],
+  [['flirt','tease','playful','coy','mischiev','flirta'],'flirtatious'],
+  [['embarrass','flus','bashful','sheepish','self-consc'],'embarrassed'],
+  [['worri','concern','anxious','nervous','troubl','uneas','apprehens','distress','dread'],'sad'],
+  [['sad','lonel','melanch','gloom','withdraw','somber','forlorn','wistful','deject','down','blue','heavy','exhaust','weary','tired','drain','spent','fatigu','numb','defeat','hopeless','vulnerable'],'sad'],
+  [['happy','joy','glad','cheer','eager','excit','elat','giddy','deligh','glee','energ','lively','upbeat','grate','thank','proud','reliev','content','warm'],'happy'],
+  [['calm','peace','seren','relax','quiet','mellow','tranquil','soothe','gentle','reserv','soft'],'calm'],
+  [['hope','optimis','curious','inspir','encourag','expect','wishful'],'hopeful'],
+  [['guard','wary','watch','caut','distant','cold','suspic','defensiv','vigil','tense','alert','determin','focus','resolv','intent','restless','closed','steel','firm','stoic','protect','steadfast','brace','grim','serious','reluctant'],'guarded'],
+  [['smug','smirk','cocky','sly','confiden','proud'],'flirtatious'],
+  [['shy','timid'],'embarrassed'],
+  [['thought','reflect','pensiv','contempl','wonder'],'neutral'],
+]
+function moodKeywordFace(mk){
+  for(const [stems,face] of MOOD_KEYWORDS){ if(stems.some(s=>mk.includes(s))) return face }
+  return null
+}
+
+// ── SGT TIME ─────────────────────────────────────────────
+const RUN_HOURS = [7,12,18,23]
+const CYCLE_NAMES = {7:'morning',12:'midday',18:'evening',23:'night'}
+
+function getSGT() {
+  const now = new Date()
+  return new Date(now.getTime() + now.getTimezoneOffset()*60000 + 8*3600000)
+}
+
+function skyFromHour(h) {
+  if(h>=23||h<7)  return 'night'
+  if(h<12) return 'morning'
+  if(h<18) return 'midday'
+  return 'evening'
+}
+
+function fmtTime(sgt) {
+  const h=sgt.getHours(), m=String(sgt.getMinutes()).padStart(2,'0')
+  const ap=h>=12?'pm':'am', dh=h%12||12
+  return `${dh}:${m}${ap}`
+}
+
+const RUN_MINUTES = [{h:7,m:0},{h:12,m:30},{h:18,m:0},{h:23,m:0}]
+function nextRun(sgt) {
+  const total=sgt.getHours()*60+sgt.getMinutes()
+  let nr=RUN_MINUTES.find(r=>r.h*60+r.m>total)
+  if(!nr) nr={h:RUN_MINUTES[0].h+24,m:RUN_MINUTES[0].m}
+  const diff=nr.h*60+nr.m-total, dh=Math.floor(diff/60), dm=diff%60
+  const h24=nr.h%24, ap=h24>=12?'pm':'am', h12=h24%12||12
+  const mStr=nr.m>0?`:${String(nr.m).padStart(2,'0')}`:':00'
+  return { time:`${h12}${mStr}${ap}`, cd:dh>0?`${dh}h ${dm}m`:`${dm}m` }
+}
+
+// ── Directional sun-shadows, tuned SOFT for the hazy dead-city light (zero engine cost) ──
+// Light filters down from the upper-right (matches the #color-wash + sun). Under canopy the
+// light is diffuse, so casts are shorter, blurrier and fainter than Tropicana's hard beach sun.
+function applySunShadow(sgt) {
+  const world = document.getElementById('world'); if (!world) return
+  const h = sgt.getHours() + sgt.getMinutes() / 60
+  const noon = 13, halfDay = 6.5
+  const isDay = h > 6.3 && h < 19.7
+  if (isDay) {
+    const alt = Math.max(0, 1 - Math.abs(h - noon) / halfDay)   // 0 at horizon → 1 at noon
+    const low = 1 - alt
+    const cdx = -(1 + low * 15), cdy = 5 + low * 2, cbl = 9 + low * 12, ca = (0.42 - low * 0.12).toFixed(2)
+    world.style.setProperty('--cast-shadow',
+      `drop-shadow(0 5px 6px rgba(0,0,0,.4)) drop-shadow(${cdx.toFixed(1)}px ${cdy.toFixed(1)}px ${cbl.toFixed(1)}px rgba(8,14,8,${ca}))`)
+    const sdx = -(1 + low * 13), sdy = 3 + low * 2, sbl = 7 + low * 10, sa = (0.44 - low * 0.1).toFixed(2)
+    world.style.setProperty('--struct-shadow',
+      `drop-shadow(${sdx.toFixed(1)}px ${sdy.toFixed(1)}px ${sbl.toFixed(1)}px rgba(8,14,8,${sa}))`)
+  } else {
+    world.style.setProperty('--cast-shadow', 'drop-shadow(0 5px 8px rgba(0,0,0,.5)) drop-shadow(0 3px 11px rgba(2,6,18,.32))')
+    world.style.setProperty('--struct-shadow', 'drop-shadow(0 3px 10px rgba(2,6,18,.48))')
+  }
+}
+
+function applySky(sky) {
+  document.getElementById('sky-bg')?.setAttribute('fill',`url(#sky-${sky})`)
+  const isNight=sky==='night'||sky==='dawn'
+  document.getElementById('sun-group')?.setAttribute('opacity',isNight?'0':'1')
+  document.getElementById('sun-reflection')?.setAttribute('opacity',isNight?'0':'.85')
+  document.getElementById('moon-group')?.setAttribute('opacity',isNight?'1':'0')
+  document.getElementById('moon-halo-c')?.setAttribute('opacity',isNight?'1':'0')
+  document.getElementById('night-stars')?.setAttribute('opacity',isNight?'1':'0')
+  const fireLit = !!(S.world && S.world.fire && S.world.fire.lit)
+  document.getElementById('fire-glow')?.setAttribute('opacity',(isNight && fireLit)?'1':'0')
+  document.getElementById('fireflies')?.setAttribute('opacity',isNight?'1':'0')
+  // Sun shafts only break through in daylight; soften the haze at night.
+  const gr=document.getElementById('god-rays'); if(gr) gr.style.display=isNight?'none':''
+  const isDusk=sky==='evening'; if(gr&&isDusk) gr.style.display=''
+  const dm=document.getElementById('dust-motes'); if(dm) dm.style.display=isNight?'none':''
+  const gd=document.getElementById('ground-dapple'); if(gd) gd.style.display=isNight?'none':''
+  // Butterflies only flit about in daylight
+  const bf=document.getElementById('butterflies'); if(bf) bf.style.display=isNight?'none':''
+  document.getElementById('night-overlay')?.setAttribute('opacity',isNight?'0.48':'0')
+  // Low ground fog thickens at dawn, lingers a little into morning
+  document.getElementById('dawn-fog')?.setAttribute('opacity', sky==='dawn'?'0.6':sky==='morning'?'0.32':'0')
+  drawStars(isNight)
+  document.getElementById('world').className=isNight?'night':sky
+}
+
+// Engine-driven weather: read S.world.weather (already produced each cycle) and show
+// rain / storm + lightning in the browser. Zero engine/Haiku cost.
+function applyWeather(weather){
+  const w=(weather||'').toLowerCase()
+  const storm=/storm|thunder|monsoon|squall|gale|deluge|lightning/.test(w)
+  const rain=storm||/rain|drizzle|shower|downpour|drip|pour|wet/.test(w)
+  const rl=document.getElementById('rain-layer'); const lg=document.getElementById('lightning')
+  if(rl){ rl.classList.toggle('on',rain); rl.classList.toggle('storm',storm) }
+  if(lg) lg.classList.toggle('on',storm)
+  // the river swells + muddies in a storm; the mud takes a wet sheen in any rain
+  const ff=document.getElementById('river-flood'); if(ff) ff.style.display=storm?'':'none'
+  document.getElementById('wet-ground')?.setAttribute('opacity', storm?'0.26':rain?'0.17':'0')
+  // Heat shimmer only on a hot/humid, dry, daylit clearing
+  const hot=/hot|heat|scorch|blazing|humid|sweltering|sultry|muggy/.test(w)
+  const hh=document.getElementById('heat-haze')
+  if(hh){
+    // gate off the actual rendered sky (applySky runs first this tick and sets the night class)
+    const night = document.getElementById('world')?.classList.contains('night')
+    hh.style.display = (hot && !rain && !night) ? 'inline' : 'none'
+  }
+}
+
+function updateStatusBar() {
+  const sgt=getSGT()
+  const {time,cd}=nextRun(sgt)
+  document.getElementById('status-next').textContent=time
+  document.getElementById('status-countdown').textContent=cd
+
+  let lastStr='—'
+  if(S.feed&&S.feed.length>0) {
+    const lastRun=[...S.feed].reverse().find(e=>e.type!=='birth')
+    const ts=lastRun?.timestamp
+    if(ts) {
+      const d=new Date(ts)
+      const sgtD=new Date(d.getTime()+d.getTimezoneOffset()*60000+8*3600000)
+      lastStr=fmtTime(sgtD)
+    }
+  }
+  document.getElementById('status-last').textContent=lastStr
+  applySky(skyFromHour(sgt.getHours()))
+  applySunShadow(sgt)
+  applyWeather(S.world && S.world.weather)
+  const completedToday = new Set(S.feed.filter(e=>e.day===(S.world?.day||1)&&e.type!=='birth').map(e=>e.cycle))
+  ALL_STEPS.forEach(s=>{
+    const el=document.getElementById('stp-'+s); if(!el) return
+    el.classList.remove('current','done')
+    if(completedToday.has(s)) el.classList.add('done')
+  })
+  if(S.world?.cycle && !completedToday.has(S.world.cycle))
+    document.getElementById('stp-'+S.world.cycle)?.classList.add('current')
+  if(typeof setHudVar==='function') setHudVar()  // HUD content just changed → re-measure clearance
+}
+
+// ── FACE/CHAR ─────────────────────────────────────────────
+const isMobile = () => window.innerWidth <= 768
+// Height of the world stage = viewport minus the reserved bottom bars. ALL world/character
+// layout uses this (not window.innerHeight) so everything fits above the bottom UI.
+function stageH() {
+  const w = document.getElementById('world')
+  return (w && w.clientHeight) || window.innerHeight
+}
+function getWorldWidth() {
+  if(!isMobile()) return window.innerWidth
+  return Math.round(stageH() * (1000/600))
+}
+// Horizontal cast-centering scroll. The scroll container varies by browser — when <body>
+// has overflow-x:auto IT becomes the scroller (and window.scrollTo is a no-op), so set the
+// scroll on window AND body AND html to cover every case.
+function scrollWorldX(x){
+  x=Math.max(0,Math.round(x))
+  try{ window.scrollTo(x, window.scrollY||0) }catch(e){}
+  document.body.scrollLeft=x; document.documentElement.scrollLeft=x
+}
+function currentWorldScrollX(){
+  return window.scrollX || document.body.scrollLeft || document.documentElement.scrollLeft || 0
+}
+let mobileScrollInited = false
+
+// ── WAYPOINTS (SVG native coords — feet anchor point) ─────────
+const WAYPOINTS = {
+  // ── the solar camper van (grounded ON the deck around it, never on the bodywork) ──
+  van_door:{sx:396,sy:492}, van_rear:{sx:512,sy:484}, van_front:{sx:288,sy:490},
+  // ── the rooftop deck ──
+  rooftop_mid:{sx:560,sy:470}, rooftop_edge:{sx:662,sy:404}, lookout:{sx:196,sy:410},
+  // ── the barricaded ramp (far right) ──
+  ramp_block:{sx:858,sy:498},
+  // ── power / water / food stations ──
+  solar_array:{sx:592,sy:476}, water_rig:{sx:706,sy:478}, garden_corner:{sx:500,sy:524}, storage_corner:{sx:150,sy:474},
+  // ── OFF the deck — a scavenge run into the dead city (shown at the ramp, heading down) ──
+  scavenge_run:{sx:888,sy:470},
+}
+
+// Waypoints that count as "physically together" for interaction rendering
+const WP_ADJACENT = {
+  van_door:['van_rear','van_front','rooftop_mid'], van_rear:['van_door','van_front','rooftop_mid'],
+  van_front:['van_door','van_rear'],               rooftop_mid:['van_door','van_rear','solar_array'],
+  rooftop_edge:['lookout'],                        lookout:['rooftop_edge'],
+  solar_array:['rooftop_mid','water_rig'],         water_rig:['solar_array'],
+  garden_corner:['rooftop_mid'],                   storage_corner:['van_front'],
+}
+
+// Vertical placement of the sliced world art. The art is wider-than-tall (10:6), so on
+// wide screens it overflows vertically and must be cropped. We push it UP to reveal the
+// beach/ocean at the bottom, but CAP the top crop at MOUNTAIN_SAFE (just above the NE
+// cliff peak at viewBox y≈160) so the mountain is never sliced off. Any leftover overflow
+// then trims a little ocean instead. Returns the screen-px offset of viewBox y=0.
+const MOUNTAIN_SAFE = 150
+function worldYOffset(vh, scale) {
+  const cropVB = Math.max(0, 600 - vh/scale)      // total vertical overflow, in viewBox units
+  return -Math.min(cropVB, MOUNTAIN_SAFE) * scale  // shift up, but never past the mountain peak
+}
+function svgToViewport(sx, sy) {
+  // On mobile the #world element is wider than the viewport (getWorldWidth, ~1190px) and
+  // scrolls horizontally; the SVG scene fills that full width. So the char's left% MUST be
+  // computed against the WORLD width it's positioned in — not window.innerWidth — or the
+  // coords desync from the scene art and separation inflates (characters fly off-screen).
+  const vw = isMobile() ? getWorldWidth() : window.innerWidth
+  const vh = stageH()
+  const scale=Math.max(vw/1000, vh/600)
+  const offX=(vw-1000*scale)/2, offY=worldYOffset(vh, scale)
+  return {left:((offX+sx*scale)/vw*100)+'%', top:((offY+sy*scale)/vh*100)+'%'}
+}
+
+function toPos(x, y, waypoint) {
+  if (waypoint && WAYPOINTS[waypoint]) {
+    const {sx,sy}=WAYPOINTS[waypoint]
+    return svgToViewport(sx, sy)
+  }
+  const safeMaxPct = 90
+  const leftPct = 5 + (x / 100) * (safeMaxPct - 5)
+  return {left: leftPct+'%', top:(48+(y/100)*32)+'%'}
+}
+
+function toggleFeed() {
+  const panel = document.getElementById('chat-panel')
+  panel.classList.toggle('feed-open')
+  const isOpen = panel.classList.contains('feed-open')
+  if(isOpen) {
+    setTimeout(()=>{ const f=document.getElementById('chat-feed'); if(f) f.scrollTop=f.scrollHeight }, 380)
+  }
+}
+
+// Tap character to show stat card
+function initTapStats() {
+  Object.keys(S.chars).forEach(cid => {
+    const el = document.getElementById('char-'+cid)
+    if(!el) return
+    el.addEventListener('click', () => {
+      const sc = document.getElementById('sc-'+cid)
+      if(!sc) return
+      const wasOpen = sc.classList.contains('tap-open')
+      document.querySelectorAll('.stat-card').forEach(c => c.classList.remove('tap-open'))
+      if(!wasOpen) sc.classList.add('tap-open')
+    })
+  })
+  document.getElementById('world')?.addEventListener('click', e => {
+    if(!e.target.closest('.char')) {
+      document.querySelectorAll('.stat-card').forEach(c => c.classList.remove('tap-open'))
+    }
+    if(!e.target.closest('#res-hud')) {
+      const card = document.getElementById('res-card')
+      if(card) card.classList.remove('open')
+      document.querySelectorAll('.res-pill').forEach(p=>p.classList.remove('rp-active'))
+      _activeRes = null
+    }
+    if(_dhpOpen && !e.target.closest('#day-history-panel') && !e.target.closest('#day-hist-btn')) {
+      _dhpOpen = false
+      document.getElementById('day-history-panel')?.classList.remove('open')
+      document.getElementById('day-hist-btn')?.classList.remove('active')
+    }
+  })
+}
+
+function applyFace(cid) {
+  const c=S.chars[cid]; if(!c) return
+  const mk=(c.mood||'neutral').toLowerCase()
+  const fk=MOOD_MAP[mk]||moodKeywordFace(mk)||'neutral'
+  const f=FACES[fk]||FACES.neutral
+
+  const bl=document.getElementById('brow-l-'+cid)
+  const br=document.getElementById('brow-r-'+cid)
+  if(bl) bl.setAttribute('d',f.bl)
+  if(br) br.setAttribute('d',f.br)
+
+  // mouth shapes are keyed by character; Judy + any generic/new character fall back to a
+  // shared shape (same face geometry) so their mouth still emotes instead of breaking.
+  document.getElementById('mouth-'+cid)?.setAttribute('d', f.mouth[cid] || f.mouth.jade)
+
+  EYE_STATES.forEach(s=>{
+    document.getElementById(`eyes-${s}-${cid}`)?.setAttribute('display',s===f.eyes?'':'none')
+  })
+  document.getElementById('blush-'+cid)?.setAttribute('display',f.blush?'':'none')
+
+  const svg=document.getElementById('svg-'+cid)
+  if(svg){
+    svg.classList.remove('sad','angry')
+    if(['sad','lonely','heartbroken','melancholy'].includes(mk)) svg.classList.add('sad')
+    if(['angry','frustrated','furious'].includes(mk)) svg.classList.add('angry')
+  }
+
+  // Animals: translate the expression into body language (ears + tail)
+  if((c.species||'human')!=='human') applyAnimalExtras(cid, fk)
+}
+
+// An animal can't talk — it only FEELS. Map its mood to an emotion emoji shown in its bubble.
+const ANIMAL_EMOTION = {
+  cautious:'😼', wary:'😼', nervous:'😟', uneasy:'😟', anxious:'😰', scared:'🙀', afraid:'🙀', frightened:'🙀',
+  happy:'😺', content:'😌', calm:'😌', peaceful:'😌', relaxed:'😌', safe:'😌',
+  playful:'😸', excited:'😸', eager:'😸', joyful:'😸',
+  sad:'😿', lonely:'🥺', hopeful:'🥹',
+  trusting:'😻', loving:'😻', grateful:'😻', affectionate:'😻',
+  tired:'😴', sleepy:'😴', hungry:'🐟', curious:'👀', alert:'👀'
+}
+function animalEmotion(c){
+  const m=(c.mood||'').toLowerCase()
+  for(const k in ANIMAL_EMOTION){ if(m.includes(k)) return ANIMAL_EMOTION[k] }
+  return '🐾'
+}
+function updateBubble(cid) {
+  const el=document.getElementById('thought-'+cid)
+  if(!el) return
+  const c=S.chars[cid]||{}
+  if((c.species||'human')!=='human'){   // emotion-only — never words
+    el.textContent=animalEmotion(c)
+    el.classList.add('dog-emote')
+    return
+  }
+  el.classList.remove('dog-emote')
+  const latest=[...S.feed].reverse().find(e=>e.character===cid&&(e.thought||e.action))
+  let t=latest?(latest.thought||latest.action||'…'):'…'
+  const words=t.split(' ')
+  if(words.length>9) t=words.slice(0,9).join(' ')+'…'
+  el.textContent=t
+}
+
+const CYCLE_HOUR = {morning:'7am',midday:'12:30pm',evening:'6pm',night:'11pm'}
+const CHAR_COLOR = {chills:'#6a994e',wesley:'#6ba3e0',mutu:'#d98a4a'}
+function getCharColor(cid){return CHAR_COLOR[cid]||S.chars[cid]?.color||'#e2e8f0'}
+
+function fmtSGT(ts) {
+  if(!ts) return ''
+  const t = ts.split('T')[1]
+  if(!t) return ''
+  const [hStr, mStr] = t.split(':')
+  let h = parseInt(hStr), m = parseInt(mStr)
+  const ap = h >= 12 ? 'PM' : 'AM'
+  h = h % 12 || 12
+  return `${h}:${String(m).padStart(2,'0')} ${ap}`
+}
+
+function cycleLabel(e) {
+  const time = fmtSGT(e.timestamp)
+  return `Day ${e.day||1} · ${time || CYCLE_HOUR[e.cycle]||e.cycle||''}`
+}
+
+function renderChat() {
+  const feed=document.getElementById('chat-feed')
+  if(!feed||!S.feed) return
+  const entries=S.feed.slice(-45)
+  // Find the latest cycle label so we can highlight it
+  let latestLbl=''
+  entries.forEach(e=>{ latestLbl=cycleLabel(e) })
+  let html=''
+  let lastLabel=''
+  entries.forEach(e=>{
+    const lbl=cycleLabel(e)
+    const isLatest = lbl===latestLbl
+    const lc = isLatest ? ' cl-latest' : ''
+    const msgTime = fmtSGT(e.timestamp) || CYCLE_HOUR[e.cycle] || ''
+    const timeTag = msgTime ? `<span class="cl-time">D${e.day||1}·${msgTime.replace(' ','')}</span>` : ''
+    if(lbl!==lastLabel){
+      html+=`<div class="cl-ts${isLatest?' cl-ts-latest':''}">${lbl}</div>`
+      lastLabel=lbl
+    }
+    if(e.type==='interaction'){
+      html+=`<div class="cl interaction${lc}">${timeTag}<span class="cl-label">${e.description||''}</span></div>`
+      // absent character context
+      const present=(e.characters||[]).map(c=>c.toLowerCase())
+      const absent=Object.keys(S.chars).filter(c=>!present.includes(c))
+      absent.forEach(cid=>{
+        const ctx=entries.find(x=>x.character===cid&&x.cycle===e.cycle&&x.day===e.day)
+        if(ctx&&(ctx.action||ctx.thought)){
+          const col=getCharColor(cid)
+          html+=`<div class="cl-absent${lc}"><span style="color:${col};opacity:.6">${cap(cid)}</span><span class="cl-absent-txt"> — ${ctx.action||ctx.thought}</span></div>`
+        }
+      })
+      const dlg=e.dialogue||[]
+      const arr=Array.isArray(dlg)?dlg:[{speaker:(e.characters||['?'])[0],line:dlg}]
+      arr.forEach(d=>{
+        const spk=(d.speaker||'').toLowerCase()
+        const col=getCharColor(spk)
+        html+=`<div class="cl-msg${lc}"><span class="cl-spk" style="color:${col}">${cap(spk)}</span> <span class="cl-line">${d.line||''}</span></div>`
+      })
+    }
+    // standalone character thought lines are intentionally not shown in the feed
+  })
+  feed.innerHTML=html
+  feed.scrollTop=feed.scrollHeight
+}
+
+function separateChars(positions) {
+  const MIN = 65
+  const SEAT = 28   // interacting couples stay intimate, but never perfectly stacked — seat them side-by-side
+  // Pairs with an active interaction are kept close (SEAT gap) instead of pushed fully apart (MIN).
+  // Without this they'd stack exactly when the narrator puts both at the same waypoint.
+  const interacting = new Set()
+  Object.keys(S.chars).forEach(cid=>{
+    const iw = S.chars[cid]?.interaction?.with
+    if (iw) interacting.add([cid,iw].sort().join('_'))
+  })
+  for(let iter=0; iter<25; iter++) {
+    for(let i=0; i<positions.length; i++) {
+      for(let j=i+1; j<positions.length; j++) {
+        if (Math.abs(positions[j].py - positions[i].py) > 45) continue   // different rows/levels — never shove vertically
+        const isPair = interacting.has([positions[i].id,positions[j].id].sort().join('_'))
+        const minDist = isPair ? SEAT : MIN
+        const dx=positions[j].px - positions[i].px
+        const adist=Math.abs(dx)
+        if(adist < minDist) {
+          // separate HORIZONTALLY only — never vertically — so each figure keeps its waypoint's
+          // grounded height and its feet can't drift off the ground when several cluster.
+          const push=(minDist-adist)/2
+          const dir=adist>0.5?(dx>0?1:-1):(isPair?1:(Math.cos(i*2.4)>=0?1:-1))
+          positions[i].px -= dir*push
+          positions[j].px += dir*push
+        }
+      }
+    }
+  }
+  // clamp to safe zone — x across island, y to ground band only
+  const W=getWorldWidth(), H=stageH()
+  positions.forEach(p=>{
+    p.px=Math.max(W*0.05, Math.min(W*0.90, p.px))
+    p.py=Math.max(H*0.40, Math.min(H*0.90, p.py))
+  })
+  return positions
+}
+
+function nudgeBubbles(positions) {
+  const GAP = 8           // min clear space between any two bubbles
+  const BODY_HALF = 10    // half-width of a character body
+  // Measure each bubble's REAL rendered size from the DOM (never guess a constant —
+  // the rendered width varies with text length and breakpoint, so a fixed value
+  // misses near-miss overlaps). Fall back only if the element isn't laid out yet.
+  const dim = {}
+  positions.forEach(p=>{
+    const el = document.getElementById('bubble-'+p.id)
+    dim[p.id] = { w: (el && el.offsetWidth) || 90, h: (el && el.offsetHeight) || 50 }
+  })
+  const offsets = {}
+  positions.forEach(p=>{ offsets[p.id] = 0 })
+  // Pass 1: bubble-vs-bubble horizontal separation, using each pair's true widths
+  for(let i=0; i<positions.length; i++) {
+    for(let j=i+1; j<positions.length; j++) {
+      const a = positions[i], b = positions[j]
+      const absDx = Math.abs(b.px - a.px)
+      const dy = Math.abs(b.py - a.py)
+      const needed = (dim[a.id].w + dim[b.id].w) / 2 + GAP
+      if(absDx < needed && dy < 80) {
+        const shift = (needed - absDx) / 2
+        const leftFirst = a.px <= b.px
+        offsets[a.id] += leftFirst ? -shift : shift
+        offsets[b.id] += leftFirst ? shift : -shift
+      }
+    }
+  }
+  // Pass 2: single pass — push each bubble clear of every other character's body
+  for(let i=0; i<positions.length; i++) {
+    for(let j=0; j<positions.length; j++) {
+      if(i===j) continue
+      const clear = dim[positions[i].id].w / 2 + BODY_HALF + 2  // bubble half + body half + gap
+      const bx = positions[i].px + offsets[positions[i].id]
+      const dist = bx - positions[j].px
+      if(Math.abs(dist) < clear) {
+        offsets[positions[i].id] += dist >= 0 ? (clear - dist) : -(clear + dist)
+      }
+    }
+  }
+  positions.forEach(p=>{
+    const b = document.getElementById('bubble-'+p.id)
+    if(b) b.style.marginLeft = offsets[p.id] + 'px'
+  })
+  // Vertical stagger: 2D collision avoidance using each bubble's real measured size.
+  // Horizontal overlap is a true rectangle test on measured widths, so two bubbles
+  // can never visually overlap regardless of where characters move next cycle.
+  // CRITICAL: each bubble's CSS bottom is relative to its OWN character's feet (py),
+  // so two characters at different py have different screen baselines. We must run the
+  // collision test in absolute SCREEN space — otherwise a stack offset can be cancelled
+  // out by the characters' py difference and the bubbles land at the same height.
+  const H = stageH()
+  const sorted = [...positions].sort((a,b) => (a.px+offsets[a.id]) - (b.px+offsets[b.id]))
+  const placed = []
+  sorted.forEach(p => {
+    const bx = p.px + offsets[p.id]
+    const el = document.getElementById('bubble-'+p.id)
+    const w = dim[p.id].w
+    const ph = dim[p.id].h + GAP
+    const ground = H - p.py          // char feet, measured from stage bottom (screen space)
+    let bot = ground + 70, clear = false  // bubble baseline in screen space
+    while(!clear) {
+      clear = true
+      for(const q of placed) {
+        const xOverlap = Math.abs(bx - q.bx) < (w + q.w) / 2 + GAP
+        // horizontal overlap + vertical overlap (rectangle test, screen space)
+        if(xOverlap && !(bot >= q.bot + q.h || bot + ph <= q.bot)) {
+          bot = q.bot + q.h   // jump directly above q
+          clear = false; break
+        }
+      }
+    }
+    placed.push({bx, bot, h: ph, w})
+    el.style.bottom = (bot - ground) + 'px'  // convert screen baseline back to per-character CSS bottom
+  })
+}
+
+// ── INTERACTION RENDERING ────────────────────────────────────
+function renderInteractions(positions) {
+  document.querySelectorAll('.interact-overlay').forEach(e=>e.remove())
+  const world = document.getElementById('world')
+  const processed = new Set()
+
+  Object.keys(S.chars).forEach(cid=>{
+    const c = S.chars[cid]
+    const el = document.getElementById('char-'+cid)
+    if (!el) return
+
+    // Reset state classes and inline transforms
+    el.classList.remove('sitting')
+    el.querySelector('.char-svg')?.style.removeProperty('transform')
+
+    const intr = c.interaction
+    if (!intr?.with || !intr?.state) return
+    const other = intr.with, state = intr.state
+    if (!S.chars[other]) return
+
+    const myPos  = positions.find(p=>p.id===cid)
+    const othPos = positions.find(p=>p.id===other)
+    if (!myPos || !othPos) return
+
+    const iAmLeft = myPos.px <= othPos.px
+
+    if (state === 'back_to_back') {
+      const svg = el.querySelector('.char-svg')
+      if (svg && iAmLeft) svg.style.transform = 'scaleX(-1)'
+    }
+    if (state === 'sitting_together') el.classList.add('sitting')
+    if (state === 'comforting') {
+      const svg = el.querySelector('.char-svg')
+      if (svg) svg.style.transform = iAmLeft ? 'rotate(7deg)' : 'rotate(-7deg)'
+    }
+
+    const pairKey = [cid,other].sort().join('_')
+    if (processed.has(pairKey)) return
+    processed.add(pairKey)
+
+    // Use the SAME world dimensions the character px/py were computed against in
+    // updateWorld (mobile world is wider than the viewport, H is the stage height),
+    // otherwise the hand/log overlay drifts off the couple on mobile.
+    const W=isMobile()?getWorldWidth():window.innerWidth, H=stageH()
+    const midX=(myPos.px+othPos.px)/2
+    const midY=(myPos.py+othPos.py)/2 - 34
+
+    let inner = ''
+    if (state === 'holding_hands') {
+      inner = `<svg width="22" height="20" viewBox="0 0 20 18" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10 16Q2 11 2 6Q2 2.5 5.5 2.5Q7.5 2.5 10 5.5Q12.5 2.5 14.5 2.5Q18 2.5 18 6Q18 11 10 16Z" fill="rgba(249,168,212,.92)"/>
+      </svg>`
+    } else if (state === 'sitting_together') {
+      inner = `<svg width="30" height="10" viewBox="0 0 30 10" xmlns="http://www.w3.org/2000/svg">
+        <rect x="1" y="2" width="28" height="6" rx="3" fill="rgba(146,64,14,.55)"/>
+        <ellipse cx="15" cy="8" rx="13" ry="3" fill="rgba(120,53,15,.35)"/>
+      </svg>`
+    }
+    if (inner) {
+      const div = document.createElement('div')
+      div.className = 'interact-overlay'
+      div.style.left = (midX/W*100)+'%'
+      div.style.top  = (midY/H*100)+'%'
+      div.innerHTML  = inner
+      world.appendChild(div)
+    }
+  })
+}
+
+// ── SVG TILE LIBRARY ──────────────────────────────────────
+const SEED_TILES = {
+  garden:`<ellipse cx="30" cy="44" rx="22" ry="8" fill="#78350f" opacity=".7"/>
+<rect x="8" y="37" width="44" height="9" rx="3" fill="#92400e"/>
+<line x1="22" y1="37" x2="22" y2="46" stroke="#78350f" stroke-width="1.5" opacity=".4"/>
+<line x1="38" y1="37" x2="38" y2="46" stroke="#78350f" stroke-width="1.5" opacity=".4"/>
+<line x1="15" y1="37" x2="15" y2="26" stroke="#15803d" stroke-width="2" stroke-linecap="round"/>
+<line x1="15" y1="30" x2="11" y2="25" stroke="#16a34a" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="15" y1="30" x2="19" y2="25" stroke="#16a34a" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="30" y1="37" x2="30" y2="24" stroke="#15803d" stroke-width="2" stroke-linecap="round"/>
+<ellipse cx="30" cy="22" rx="6" ry="4" fill="#16a34a"/>
+<line x1="45" y1="37" x2="45" y2="26" stroke="#15803d" stroke-width="2" stroke-linecap="round"/>
+<circle cx="45" cy="24" r="4" fill="#f9a8d4"/>`,
+
+  fish_trap:`<ellipse cx="30" cy="48" rx="20" ry="6" fill="#0284c7" opacity=".28"/>
+<path d="M 18 44 L 22 18 L 38 18 L 42 44 Z" fill="#92400e" opacity=".8"/>
+<line x1="19" y1="38" x2="41" y2="38" stroke="#78350f" stroke-width="1.2" opacity=".5"/>
+<line x1="20" y1="30" x2="40" y2="30" stroke="#78350f" stroke-width="1.2" opacity=".5"/>
+<line x1="21" y1="24" x2="39" y2="24" stroke="#78350f" stroke-width="1.2" opacity=".5"/>
+<path d="M 18 44 L 22 18 L 38 18 L 42 44 Z" fill="none" stroke="#78350f" stroke-width="1.5"/>
+<ellipse cx="30" cy="18" rx="8" ry="3" fill="#1c0a00"/>
+<line x1="30" y1="15" x2="30" y2="8" stroke="#a16207" stroke-width="2.5" stroke-linecap="round"/>`,
+
+  signal_fire:`<ellipse cx="30" cy="48" rx="16" ry="7" fill="#78716c"/>
+<line x1="22" y1="48" x2="26" y2="28" stroke="#78350f" stroke-width="4" stroke-linecap="round"/>
+<line x1="38" y1="48" x2="34" y2="28" stroke="#78350f" stroke-width="4" stroke-linecap="round"/>
+<line x1="22" y1="40" x2="38" y2="40" stroke="#78350f" stroke-width="3" stroke-linecap="round"/>
+<path d="M 26 30 Q 24 22 26 16 Q 28 10 30 6 Q 32 10 34 16 Q 36 22 34 30 Q 31 22 30 26 Q 29 22 26 30" fill="#dc2626"/>
+<path d="M 27 29 Q 26 22 28 17 Q 29 13 30 10 Q 31 13 32 17 Q 34 22 33 29 Q 31 22 30 26 Q 29 22 27 29" fill="#f97316"/>
+<path d="M 29 27 Q 29 21 29.5 17 Q 30 14 30 11 Q 30 14 30.5 17 Q 31 21 31 27 Q 30.5 22 30 25 Q 29.5 22 29 27" fill="#fbbf24"/>
+<path d="M 30 6 Q 28 -2 29 -8" stroke="#94a3b8" stroke-width="2.5" fill="none" stroke-linecap="round" opacity=".45"/>`,
+
+  watchtower:`<line x1="16" y1="52" x2="20" y2="24" stroke="#78350f" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="44" y1="52" x2="40" y2="24" stroke="#78350f" stroke-width="3.5" stroke-linecap="round"/>
+<rect x="14" y="22" width="32" height="5" rx="1.5" fill="#a16207"/>
+<line x1="14" y1="22" x2="46" y2="22" stroke="#92400e" stroke-width="2"/>
+<line x1="14" y1="16" x2="46" y2="16" stroke="#78350f" stroke-width="1.5"/>
+<line x1="14" y1="16" x2="14" y2="22" stroke="#78350f" stroke-width="1.5"/>
+<line x1="46" y1="16" x2="46" y2="22" stroke="#78350f" stroke-width="1.5"/>
+<line x1="22" y1="16" x2="22" y2="22" stroke="#78350f" stroke-width="1.2" opacity=".6"/>
+<line x1="30" y1="16" x2="30" y2="22" stroke="#78350f" stroke-width="1.2" opacity=".6"/>
+<line x1="38" y1="16" x2="38" y2="22" stroke="#78350f" stroke-width="1.2" opacity=".6"/>
+<line x1="26" y1="27" x2="26" y2="52" stroke="#92400e" stroke-width="2"/>
+<line x1="34" y1="27" x2="34" y2="52" stroke="#92400e" stroke-width="2"/>
+<line x1="26" y1="34" x2="34" y2="34" stroke="#92400e" stroke-width="1.5"/>
+<line x1="26" y1="41" x2="34" y2="41" stroke="#92400e" stroke-width="1.5"/>
+<line x1="26" y1="48" x2="34" y2="48" stroke="#92400e" stroke-width="1.5"/>`,
+
+  storage:`<rect x="36" y="18" width="20" height="14" rx="2" fill="#fef3c7" opacity=".85"/>
+<rect x="36" y="18" width="20" height="14" rx="2" fill="none" stroke="#a16207" stroke-width="1.5"/>
+<line x1="36" y1="24" x2="56" y2="24" stroke="#ca8a04" stroke-width="1" opacity=".4"/>
+<rect x="8" y="28" width="42" height="24" rx="2" fill="#fef3c7"/>
+<rect x="8" y="28" width="42" height="24" rx="2" fill="none" stroke="#a16207" stroke-width="2"/>
+<line x1="8" y1="37" x2="50" y2="37" stroke="#ca8a04" stroke-width="1.2" opacity=".4"/>
+<line x1="8" y1="44" x2="50" y2="44" stroke="#ca8a04" stroke-width="1.2" opacity=".4"/>
+<line x1="23" y1="28" x2="23" y2="52" stroke="#ca8a04" stroke-width="1.2" opacity=".35"/>
+<line x1="37" y1="28" x2="37" y2="52" stroke="#ca8a04" stroke-width="1.2" opacity=".35"/>
+<rect x="8" y="24" width="42" height="6" rx="2" fill="#a16207"/>
+<rect x="26" y="38" width="6" height="5" rx="1" fill="#ca8a04"/>
+<path d="M 28 38 Q 28 35 29 35 Q 30 35 30 38" fill="none" stroke="#ca8a04" stroke-width="1.5"/>`,
+
+  raft:`<ellipse cx="30" cy="50" rx="24" ry="6" fill="#0369a1" opacity=".2"/>
+<rect x="8" y="36" width="44" height="8" rx="2" fill="#a16207"/>
+<line x1="8" y1="40" x2="52" y2="40" stroke="#78350f" stroke-width="1.5" opacity=".35"/>
+<rect x="10" y="34" width="40" height="8" rx="2" fill="#92400e"/>
+<line x1="10" y1="38" x2="50" y2="38" stroke="#78350f" stroke-width="1.2" opacity=".3"/>
+<line x1="20" y1="34" x2="20" y2="44" stroke="#ca8a04" stroke-width="2" stroke-linecap="round"/>
+<line x1="30" y1="34" x2="30" y2="44" stroke="#ca8a04" stroke-width="2" stroke-linecap="round"/>
+<line x1="40" y1="34" x2="40" y2="44" stroke="#ca8a04" stroke-width="2" stroke-linecap="round"/>
+<line x1="30" y1="34" x2="30" y2="10" stroke="#78350f" stroke-width="3" stroke-linecap="round"/>
+<path d="M 30 12 L 30 32 L 48 26 Z" fill="#fef3c7" opacity=".82"/>`,
+
+  drying_rack:`<line x1="10" y1="50" x2="28" y2="18" stroke="#a16207" stroke-width="3" stroke-linecap="round"/>
+<line x1="50" y1="50" x2="32" y2="18" stroke="#a16207" stroke-width="3" stroke-linecap="round"/>
+<line x1="14" y1="37" x2="46" y2="37" stroke="#92400e" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="10" y1="50" x2="10" y2="56" stroke="#78350f" stroke-width="2"/>
+<line x1="50" y1="50" x2="50" y2="56" stroke="#78350f" stroke-width="2"/>
+<line x1="20" y1="37" x2="20" y2="37" stroke="#ca8a04" stroke-width="1"/>
+<line x1="20" y1="37" x2="20" y2="38" stroke="#ca8a04" stroke-width="1"/>
+<ellipse cx="20" cy="43" rx="2.5" ry="4.5" fill="#fef3c7" opacity=".8"/>
+<line x1="27" y1="37" x2="27" y2="38" stroke="#ca8a04" stroke-width="1"/>
+<ellipse cx="27" cy="44" rx="2.5" ry="4.5" fill="#fbbf24" opacity=".7"/>
+<line x1="34" y1="37" x2="34" y2="38" stroke="#ca8a04" stroke-width="1"/>
+<ellipse cx="34" cy="43" rx="2.5" ry="4.5" fill="#fef3c7" opacity=".8"/>
+<line x1="41" y1="37" x2="41" y2="38" stroke="#ca8a04" stroke-width="1"/>
+<ellipse cx="41" cy="44" rx="2.5" ry="4.5" fill="#fbbf24" opacity=".7"/>`,
+
+  bamboo_fence:`<line x1="5" y1="46" x2="55" y2="46" stroke="#78350f" stroke-width="2" opacity=".35"/>
+<rect x="5" y="20" width="5" height="28" rx="2" fill="#a16207"/>
+<rect x="14" y="18" width="5" height="30" rx="2" fill="#92400e"/>
+<rect x="23" y="20" width="5" height="28" rx="2" fill="#a16207"/>
+<rect x="32" y="18" width="5" height="30" rx="2" fill="#92400e"/>
+<rect x="41" y="20" width="5" height="28" rx="2" fill="#a16207"/>
+<rect x="50" y="18" width="5" height="30" rx="2" fill="#92400e"/>
+<line x1="4" y1="26" x2="56" y2="26" stroke="#78350f" stroke-width="2" stroke-linecap="round"/>
+<line x1="4" y1="36" x2="56" y2="36" stroke="#78350f" stroke-width="2" stroke-linecap="round"/>
+<line x1="7" y1="25" x2="11" y2="25" stroke="#78350f" stroke-width="1.5"/>
+<line x1="25" y1="25" x2="29" y2="25" stroke="#78350f" stroke-width="1.5"/>
+<line x1="43" y1="25" x2="47" y2="25" stroke="#78350f" stroke-width="1.5"/>`,
+
+  well:`<ellipse cx="30" cy="46" rx="18" ry="8" fill="#78716c"/>
+<rect x="12" y="30" width="36" height="18" rx="1" fill="#78716c"/>
+<rect x="12" y="30" width="36" height="18" fill="none" stroke="#57534e" stroke-width="2"/>
+<line x1="12" y1="37" x2="48" y2="37" stroke="#57534e" stroke-width="1" opacity=".4"/>
+<line x1="12" y1="43" x2="48" y2="43" stroke="#57534e" stroke-width="1" opacity=".4"/>
+<ellipse cx="30" cy="38" rx="14" ry="5" fill="#0369a1" opacity=".4"/>
+<line x1="16" y1="30" x2="16" y2="12" stroke="#a16207" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="44" y1="30" x2="44" y2="12" stroke="#a16207" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="14" y1="12" x2="46" y2="12" stroke="#92400e" stroke-width="3" stroke-linecap="round"/>
+<circle cx="44" cy="12" r="5" fill="none" stroke="#92400e" stroke-width="2"/>
+<line x1="30" y1="12" x2="30" y2="25" stroke="#ca8a04" stroke-width="1.5"/>
+<rect x="25" y="24" width="10" height="9" rx="2" fill="#92400e"/>
+<rect x="24" y="23" width="12" height="3" rx="1" fill="#a16207"/>`,
+
+  cave:`<path d="M 4 52 L 10 28 L 20 17 L 30 14 L 40 17 L 50 28 L 56 52 Z" fill="#78716c"/>
+<path d="M 14 52 L 14 34 Q 14 20 30 20 Q 46 20 46 34 L 46 52 Z" fill="#0f172a"/>
+<path d="M 18 52 L 18 34 Q 18 24 30 24 Q 42 24 42 34 L 42 52 Z" fill="#1e293b"/>
+<line x1="8" y1="44" x2="14" y2="36" stroke="#57534e" stroke-width="1.5" opacity=".4"/>
+<line x1="52" y1="44" x2="46" y2="36" stroke="#57534e" stroke-width="1.5" opacity=".4"/>
+<ellipse cx="10" cy="28" rx="5" ry="3" fill="#16a34a" opacity=".5"/>
+<ellipse cx="50" cy="28" rx="5" ry="3" fill="#16a34a" opacity=".5"/>
+<circle cx="25" cy="36" r="1.5" fill="#fbbf24" opacity=".5"/>
+<circle cx="35" cy="36" r="1.5" fill="#fbbf24" opacity=".5"/>`,
+
+  waterfall:`<path d="M 5 52 L 5 20 L 18 12 L 30 10 L 42 12 L 55 20 L 55 52 Z" fill="#78716c"/>
+<rect x="22" y="10" width="16" height="42" rx="4" fill="#38bdf8" opacity=".32"/>
+<rect x="25" y="10" width="10" height="40" rx="3" fill="#7dd3fc" opacity=".28"/>
+<ellipse cx="30" cy="52" rx="18" ry="6" fill="#0284c7" opacity=".28"/>
+<ellipse cx="30" cy="50" rx="10" ry="3" fill="white" opacity=".32"/>
+<line x1="27" y1="10" x2="24" y2="50" stroke="white" stroke-width="1" opacity=".22"/>
+<line x1="30" y1="10" x2="30" y2="48" stroke="white" stroke-width="1.5" opacity=".28"/>
+<line x1="33" y1="10" x2="36" y2="50" stroke="white" stroke-width="1" opacity=".22"/>
+<ellipse cx="8" cy="22" rx="6" ry="3" fill="#16a34a" opacity=".55"/>
+<ellipse cx="52" cy="22" rx="6" ry="3" fill="#16a34a" opacity=".55"/>`,
+
+  wreckage:`<ellipse cx="30" cy="54" rx="26" ry="7" fill="#fef3c7" opacity=".45"/>
+<path d="M 6 52 L 10 34 L 54 34 L 58 52 Z" fill="#78716c" opacity=".7"/>
+<path d="M 6 52 L 10 34 L 54 34 L 58 52 Z" fill="none" stroke="#57534e" stroke-width="2"/>
+<line x1="8" y1="44" x2="56" y2="44" stroke="#57534e" stroke-width="1.5" opacity=".4"/>
+<line x1="30" y1="34" x2="28" y2="14" stroke="#44403c" stroke-width="4" stroke-linecap="round"/>
+<line x1="28" y1="14" x2="18" y2="22" stroke="#44403c" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M 28 16 L 20 28 L 30 26 Z" fill="#fef3c7" opacity=".5"/>
+<rect x="42" y="30" width="8" height="4" rx="1" fill="#92400e" opacity=".7"/>
+<ellipse cx="12" cy="48" rx="4" ry="2" fill="#15803d" opacity=".45"/>`,
+
+  spring:`<circle cx="30" cy="36" r="18" fill="#78716c"/>
+<circle cx="30" cy="36" r="14" fill="#0369a1" opacity=".5"/>
+<circle cx="30" cy="36" r="10" fill="#38bdf8" opacity=".3"/>
+<circle cx="30" cy="36" r="14" fill="none" stroke="#38bdf8" stroke-width="1" opacity=".3"/>
+<circle cx="30" cy="36" r="9" fill="none" stroke="#7dd3fc" stroke-width="1" opacity=".25"/>
+<line x1="25" y1="31" x2="27" y2="28" stroke="white" stroke-width="1.5" opacity=".6"/>
+<line x1="35" y1="30" x2="33" y2="27" stroke="white" stroke-width="1.5" opacity=".6"/>
+<line x1="30" y1="28" x2="30" y2="25" stroke="white" stroke-width="1.5" opacity=".6"/>
+<ellipse cx="14" cy="32" rx="6" ry="3" fill="#15803d" opacity=".55"/>
+<ellipse cx="46" cy="32" rx="6" ry="3" fill="#15803d" opacity=".55"/>
+<ellipse cx="30" cy="20" rx="8" ry="3" fill="#16a34a" opacity=".45"/>`,
+
+  shelter:`<line x1="14" y1="50" x2="14" y2="24" stroke="#a16207" stroke-width="3" stroke-linecap="round"/>
+<line x1="46" y1="50" x2="46" y2="24" stroke="#a16207" stroke-width="3" stroke-linecap="round"/>
+<line x1="12" y1="24" x2="48" y2="24" stroke="#92400e" stroke-width="2.5"/>
+<path d="M 12 24 L 48 24 L 48 48 L 6 48 Z" fill="#92400e" opacity=".52"/>
+<path d="M 12 24 L 6 48 L 14 48 L 14 24 Z" fill="#a16207" opacity=".7"/>
+<line x1="12" y1="29" x2="48" y2="29" stroke="#78350f" stroke-width="1.5" opacity=".38"/>
+<line x1="12" y1="34" x2="48" y2="34" stroke="#78350f" stroke-width="1.5" opacity=".38"/>
+<line x1="12" y1="39" x2="48" y2="39" stroke="#78350f" stroke-width="1.5" opacity=".38"/>
+<line x1="12" y1="44" x2="48" y2="44" stroke="#78350f" stroke-width="1.5" opacity=".38"/>
+<path d="M 6 48 Q 16 52 26 48 Q 36 52 46 48 Q 48 52 48 48" fill="none" stroke="#16a34a" stroke-width="2.5" opacity=".7"/>`,
+
+  lean_to:`<ellipse cx="30" cy="50" rx="22" ry="6" fill="#3f2d18" opacity=".5"/>
+<path d="M 14 48 L 44 28 L 48 32 L 18 50 Z" fill="#6b4f2a"/>
+<path d="M 14 48 L 44 28 L 40 27 L 12 45 Z" fill="#7a5a32"/>
+<path d="M 16 36 L 46 28 M 17 42 L 44 33" stroke="#3f2d18" stroke-width="1.4" opacity=".5"/>
+<line x1="44" y1="28" x2="46" y2="50" stroke="#5c4327" stroke-width="3" stroke-linecap="round"/>
+<line x1="14" y1="48" x2="13" y2="52" stroke="#5c4327" stroke-width="2.5" stroke-linecap="round"/>`,
+
+  bamboo_shelter:`<ellipse cx="30" cy="52" rx="22" ry="6" fill="#3f2d18" opacity=".5"/>
+<rect x="16" y="30" width="28" height="22" rx="2" fill="#7a5a32"/>
+<g stroke="#b9d36a" stroke-width="2.4"><line x1="20" y1="32" x2="20" y2="50"/><line x1="26" y1="32" x2="26" y2="50"/><line x1="34" y1="32" x2="34" y2="50"/><line x1="40" y1="32" x2="40" y2="50"/></g>
+<path d="M 12 32 L 30 18 L 48 32 Z" fill="#a3884f"/>
+<path d="M 12 32 L 30 18 L 30 32 Z" fill="#8a7142"/>
+<line x1="30" y1="18" x2="30" y2="13" stroke="#6b4f2a" stroke-width="2"/>`,
+
+  campfire:`<ellipse cx="30" cy="46" rx="16" ry="6" fill="#1c0a00"/>
+<ellipse cx="30" cy="44" rx="13" ry="5" fill="none" stroke="#6b4f2a" stroke-width="4"/>
+<line x1="20" y1="46" x2="40" y2="42" stroke="#3f2d18" stroke-width="3" stroke-linecap="round"/>
+<line x1="40" y1="46" x2="20" y2="42" stroke="#3f2d18" stroke-width="3" stroke-linecap="round"/>
+<path d="M 25 40 Q 23 30 27 22 Q 30 16 30 12 Q 31 18 34 24 Q 37 32 35 40 Q 31 33 30 37 Q 28 33 25 40" fill="#f97316"/>
+<path d="M 27 39 Q 26 30 29 24 Q 30 20 30 17 Q 31 22 33 27 Q 35 33 33 39 Q 31 34 30 36 Q 29 34 27 39" fill="#fbbf24"/>`,
+
+  snare:`<ellipse cx="30" cy="50" rx="18" ry="5" fill="#3f2d18" opacity=".4"/>
+<path d="M 44 50 Q 46 30 38 20" stroke="#6b4f2a" stroke-width="3" fill="none" stroke-linecap="round"/>
+<path d="M 38 20 Q 30 18 24 24 Q 20 30 26 34 Q 32 36 32 30" stroke="#caa14a" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+<ellipse cx="27" cy="42" rx="9" ry="3" fill="none" stroke="#caa14a" stroke-width="1.4"/>
+<line x1="18" y1="50" x2="44" y2="50" stroke="#5c4327" stroke-width="2"/>`,
+
+  rain_catcher:`<ellipse cx="30" cy="52" rx="16" ry="5" fill="#3f2d18" opacity=".5"/>
+<path d="M 12 24 L 48 24 L 34 40 L 26 40 Z" fill="#2f8f4e"/>
+<path d="M 12 24 L 48 24 L 41 32 L 19 32 Z" fill="#1f6b3a" opacity=".5"/>
+<rect x="24" y="40" width="12" height="12" rx="2" fill="#6b4f2a"/>
+<ellipse cx="30" cy="40" rx="6" ry="2" fill="#22a3b3"/>
+<line x1="20" y1="14" x2="22" y2="22" stroke="#9ec3e8" stroke-width="1.4" opacity=".6"/><line x1="34" y1="12" x2="36" y2="22" stroke="#9ec3e8" stroke-width="1.4" opacity=".6"/>`,
+
+  rain_barrel:`<ellipse cx="30" cy="52" rx="16" ry="5" fill="#3f2d18" opacity=".5"/>
+<path d="M 12 24 L 48 24 L 34 38 L 26 38 Z" fill="#2f8f4e"/>
+<rect x="22" y="36" width="16" height="16" rx="2" fill="#6b4f2a"/>
+<ellipse cx="30" cy="36" rx="8" ry="2.5" fill="#22a3b3"/>
+<line x1="22" y1="44" x2="38" y2="44" stroke="#3f2d18" stroke-width="1.4" opacity=".5"/>`,
+
+  raised_platform:`<ellipse cx="30" cy="52" rx="22" ry="5" fill="#3f2d18" opacity=".5"/>
+<line x1="16" y1="50" x2="16" y2="34" stroke="#3f2d18" stroke-width="3"/><line x1="44" y1="50" x2="44" y2="34" stroke="#3f2d18" stroke-width="3"/><line x1="30" y1="51" x2="30" y2="35" stroke="#3f2d18" stroke-width="3"/>
+<rect x="12" y="30" width="36" height="6" rx="1.5" fill="#6b4f2a"/>
+<g stroke="#8a6a3a" stroke-width="1" opacity=".5"><line x1="18" y1="30" x2="18" y2="36"/><line x1="24" y1="30" x2="24" y2="36"/><line x1="36" y1="30" x2="36" y2="36"/><line x1="42" y1="30" x2="42" y2="36"/></g>
+<path d="M 16 30 L 30 22 L 44 30 Z" fill="#a3884f" opacity=".9"/>`,
+
+  watch_post:`<ellipse cx="30" cy="54" rx="14" ry="5" fill="#3f2d18" opacity=".5"/>
+<line x1="22" y1="52" x2="26" y2="22" stroke="#3f2d18" stroke-width="3"/><line x1="38" y1="52" x2="34" y2="22" stroke="#3f2d18" stroke-width="3"/>
+<line x1="24" y1="40" x2="36" y2="40" stroke="#6b4f2a" stroke-width="2"/><line x1="25" y1="32" x2="35" y2="32" stroke="#6b4f2a" stroke-width="2"/>
+<rect x="22" y="16" width="16" height="8" rx="1.5" fill="#6b4f2a"/>
+<path d="M 20 16 L 30 8 L 40 16 Z" fill="#a3884f"/>`,
+
+  smoke_rack:`<ellipse cx="30" cy="50" rx="20" ry="5" fill="#3f2d18" opacity=".5"/>
+<line x1="16" y1="50" x2="16" y2="22" stroke="#6b4f2a" stroke-width="3"/><line x1="44" y1="50" x2="44" y2="22" stroke="#6b4f2a" stroke-width="3"/>
+<line x1="14" y1="24" x2="46" y2="24" stroke="#6b4f2a" stroke-width="2.5"/>
+<g fill="#b5793f"><ellipse cx="24" cy="30" rx="4" ry="6"/><ellipse cx="36" cy="30" rx="4" ry="6"/></g>
+<path d="M 30 40 Q 28 34 30 30 Q 32 26 30 22" stroke="#94a3b8" stroke-width="2" fill="none" opacity=".4" stroke-linecap="round"/>
+<path d="M 30 48 Q 26 44 30 40" stroke="#f97316" stroke-width="2.5" fill="none" opacity=".6"/>`,
+
+  water_filter:`<ellipse cx="30" cy="52" rx="14" ry="5" fill="#3f2d18" opacity=".5"/>
+<path d="M 20 26 L 40 26 L 34 50 L 26 50 Z" fill="#6b4f2a"/>
+<path d="M 20 26 L 40 26 L 38 32 L 22 32 Z" fill="#3f2d18" opacity=".4"/>
+<rect x="24" y="33" width="12" height="4" fill="#cdd98a"/><rect x="25" y="38" width="10" height="4" fill="#86b04a"/><rect x="26" y="43" width="8" height="4" fill="#5c4327"/>
+<path d="M 30 50 Q 30 54 30 56" stroke="#22a3b3" stroke-width="2" fill="none" stroke-linecap="round"/>`,
+
+  hammock:`<ellipse cx="30" cy="52" rx="20" ry="5" fill="#3f2d18" opacity=".4"/>
+<line x1="14" y1="22" x2="14" y2="50" stroke="#6b4f2a" stroke-width="3"/><line x1="46" y1="22" x2="46" y2="50" stroke="#6b4f2a" stroke-width="3"/>
+<path d="M 14 28 Q 30 46 46 28" fill="none" stroke="#caa14a" stroke-width="4" stroke-linecap="round"/>
+<path d="M 14 26 Q 30 40 46 26" fill="none" stroke="#a3884f" stroke-width="2" opacity=".6"/>`,
+
+  discovery:`<circle cx="30" cy="30" r="16" fill="rgba(168,85,247,0.12)" stroke="#a855f7" stroke-width="1.5" opacity=".7"/>
+<path d="M 30 14 L 33.5 23 L 43 23 L 35.5 28.5 L 38.5 38 L 30 32 L 21.5 38 L 24.5 28.5 L 17 23 L 26.5 23 Z" fill="#fbbf24" opacity=".88"/>`,
+
+  default:`<circle cx="30" cy="30" r="12" fill="rgba(251,191,36,0.15)" stroke="#fbbf24" stroke-width="2" opacity=".7"/>
+<circle cx="30" cy="30" r="5" fill="#fbbf24" opacity=".8"/>`
+}
+
+let _dynamicTiles = {}
+
+async function loadDynamicTiles() {
+  try {
+    const r = await fetch('data/svg_library.json?v=' + Date.now())
+    if(r.ok) {
+      const lib = await r.json()
+      _dynamicTiles = lib.tiles || {}
+    }
+  } catch {}
+}
+
+function getTile(type) {
+  if(_dynamicTiles[type]) return _dynamicTiles[type]
+  if(SEED_TILES[type])    return SEED_TILES[type]
+  return SEED_TILES['default']
+}
+
+function updateFireChip() {
+  const el = document.getElementById('fire-chip'); if(!el) return
+  const fire = S.world?.fire
+  if(!fire){ el.style.display='none'; return }
+  const lit = !!fire.lit
+  el.style.display = 'flex'
+  el.className = lit ? 'lit' : 'out'
+  el.innerHTML = lit ? '⚡ POWER ON' : '🌑 DARK'
+  // Scene flames only burn when the fire is actually lit (the stone ring always stays).
+  // The night glow is handled in applySky (gated on fire.lit).
+  const ff = document.getElementById('fire-flames')
+  if(ff){
+    ff.setAttribute('display', lit ? '' : 'none')
+    // Flames scale with the real fuel level — a dying fire visibly shrinks.
+    const fuel = (typeof fire.fuel === 'number') ? fire.fuel : 8
+    ff.style.transformBox = 'fill-box'; ff.style.transformOrigin = '50% 100%'
+    ff.style.transform = lit ? `scale(${Math.max(0.5, Math.min(1.3, 0.5 + fuel / 14)).toFixed(2)})` : ''
+  }
+  document.getElementById('fire-smoke')?.setAttribute('display', lit ? '' : 'none')
+}
+
+// ── CAMP STORES: the clearing is an honest readout of the survival sim. Firewood, drying
+//    food, and the water vessel grow/shrink with the live resource numbers (zero engine cost). ──
+function renderCampStores() {
+  const R = (S.world && S.world.resources) || {}
+  // ── POWER: a battery-bank charge meter (tracks wood = the solar battery) ──
+  const power = Math.max(0, Math.min(100, R.wood ?? 0))
+  const nCells = Math.round((power / 100) * 6)
+  const bx = 540, by = 498
+  let bp = `<ellipse cx="${bx+24}" cy="${by+23}" rx="34" ry="5" fill="#11141a" opacity=".4"/>`
+  for (let i = 0; i < 6; i++) {
+    const cx = bx + i * 9, lit = i < nCells
+    bp += `<rect x="${cx}" y="${by}" width="7" height="20" rx="1.5" fill="#23272d"/>`
+       +  `<rect x="${cx}" y="${by}" width="7" height="20" rx="1.5" fill="none" stroke="#4a4e52" stroke-width=".8"/>`
+       +  (lit ? `<rect x="${cx+1.3}" y="${by+1.6}" width="4.4" height="16.8" rx="1" fill="#4ade80" opacity=".88"/>` : '')
+  }
+  bp += `<path d="M ${bx+24} ${by-7} l -4 9 l 4 0 l -3 7 l 8 -11 l -4 0 l 3 -5 Z" fill="#f59e0b" opacity=".85"/>`
+  const wpEl = document.getElementById('woodpile'); if (wpEl) wpEl.innerHTML = bp
+
+  // ── FOOD: scavenged cans / crates (tracks food) — at the storage corner ──
+  const food = Math.max(0, R.food ?? 0)
+  const nCans = Math.round(Math.min(6, food / 14))
+  const fx0 = 134, fy0 = 478
+  const slots = [[0,0],[9,0],[18,0],[4.5,-7],[13.5,-7],[9,-14]]
+  let fc = nCans > 0 ? `<ellipse cx="${fx0+9}" cy="${fy0+5}" rx="20" ry="4" fill="#11141a" opacity=".4"/>` : ''
+  for (let i = 0; i < nCans; i++) { const [dx,dy] = slots[i]
+    fc += `<g transform="translate(${fx0+dx} ${fy0+dy})"><rect x="-4" y="-6" width="8" height="7" rx="1" fill="#9aa3ac"/><rect x="-4" y="-6" width="8" height="2.4" rx="1" fill="#cdd2c8"/><rect x="-3" y="-3.4" width="6" height="2" fill="#9a3412" opacity=".7"/></g>`
+  }
+  const fcEl = document.getElementById('food-cache'); if (fcEl) fcEl.innerHTML = fc
+
+  // ── WATER: a collected-water drum, fill level tracks water — on the deck by the van ──
+  const water = Math.max(0, Math.min(100, R.water ?? 0))
+  const vx = 462, vy = 500, vw = 20, vh = 30, fillH = (vh - 4) * (water / 100)
+  const ws = `<ellipse cx="${vx+vw/2}" cy="${vy+vh+2}" rx="14" ry="4" fill="#11141a" opacity=".4"/>`
+    + `<rect x="${vx}" y="${vy}" width="${vw}" height="${vh}" rx="3" fill="#1e3a47"/>`
+    + (water > 1 ? `<rect x="${vx+2}" y="${(vy+vh-2-fillH).toFixed(1)}" width="${vw-4}" height="${fillH.toFixed(1)}" rx="2" fill="#22a3b3" opacity=".85"/>`
+                 + `<ellipse cx="${vx+vw/2}" cy="${(vy+vh-2-fillH).toFixed(1)}" rx="${(vw-4)/2}" ry="1.6" fill="#5fded6" opacity=".7"/>` : '')
+    + `<rect x="${vx}" y="${vy}" width="${vw}" height="${vh}" rx="3" fill="none" stroke="#2a7d96" stroke-width="1.5"/>`
+    + `<line x1="${vx}" y1="${vy+10}" x2="${vx+vw}" y2="${vy+10}" stroke="#2a7d96" stroke-width="1" opacity=".5"/>`
+    + `<text x="${vx+vw/2}" y="${vy+8}" text-anchor="middle" font-size="6" fill="#7fd8e6" opacity=".7" font-family="monospace">H₂O</text>`
+  const wsEl = document.getElementById('water-store'); if (wsEl) wsEl.innerHTML = ws
+}
+
+// ── VEHICLE STATE: the Cayenne is a finite reserve. As the story strips it for parts,
+//    the truck visibly dismantles — and it STAYS that way. The Onewheel vanishes if it's
+//    cannibalised for its battery. Reads world.cayenne.stripped[] + world.onewheel. ──
+function renderVehicleState() {
+  const cay = (S.world && S.world.cayenne) || {}
+  const stripped = Array.isArray(cay.stripped) ? cay.stripped : []
+  const has = k => stripped.includes(k)
+  // Use explicit 'inline'/'none' (not '') — the overlay groups carry a display="none" SVG
+  // attribute, and an empty inline style would let that attribute win and keep them hidden.
+  const show = (id, on) => { const el = document.getElementById(id); if (el) el.style.display = on ? 'inline' : 'none' }
+  // parts that simply disappear when taken
+  const HIDE = { mirror:'cay-mirror', snorkel:'cay-snorkel', lightbar:'cay-lightbar', tent:'cay-tent', spare:'cay-spare', wheel:'cay-wheel' }
+  for (const k in HIDE) show(HIDE[k], !has(k))
+  // a pulled wheel reveals the bare hub propped on logs
+  show('cay-wheel-gone', has('wheel'))
+  // overlays revealed when the engine bay or a door is opened up / stripped
+  show('cay-hood-open', has('hood') || has('battery'))
+  show('cay-door-removed', has('door') || has('seat'))
+  // the Onewheel is gone once cannibalised (battery taken) or otherwise removed
+  const ow = (S.world && S.world.onewheel) || {}
+  show('onewheel', !(ow.present === false || ow.stripped === true))
+}
+
+function renderStructures() {
+  const layer = document.getElementById('structures-layer')
+  if(!layer) return
+  const structs = [
+    ...(S.world.structures||[]).filter(s => !s.baked),
+    ...(S.world.discoveries||[]).map(d=>({...d, _isDisc:true}))
+  ]
+  layer.innerHTML = structs.map(s => {
+    const tileKey = s._isDisc ? 'discovery' : s.type
+    const tile    = getTile(tileKey)
+    const label   = s.label || s.name || ''
+    const cond = (!s._isDisc && typeof s.condition==='number') ? s.condition : null
+    const condBar = (cond!==null && cond < 95)
+      ? `<div class="struct-cond"><div class="struct-cond-fill" style="width:${Math.max(0,cond)}%;background:${cond>=60?'#4ade80':cond>=30?'#fbbf24':'#f87171'}"></div></div>`
+      : ''
+    return `<div class="struct${s._isDisc?' discovery':''}" style="left:${s.x}%;top:${s.y}%${cond!==null&&cond<40?';opacity:.7':''}">
+      <svg class="struct-svg" viewBox="0 0 60 60" width="44" height="44" xmlns="http://www.w3.org/2000/svg">${tile}</svg>
+      ${condBar}
+      <span class="struct-label">${label}</span>
+    </div>`
+  }).join('')
+}
+
+let _activeRes = null
+
+function buildResCardContent(k) {
+  const res  = S.world?.resources      || {}
+  const prev = S.world?.resources_prev || {}
+  const val  = typeof res[k]==='number' ? res[k] : 0
+  const prevVal = typeof prev[k]==='number' ? prev[k] : val
+
+  const STATUS = {
+    food:     ['Critically low — someone needs to hunt urgently.',   'Getting scarce. Finding food should be a priority.',  'Enough to keep everyone fed for now.'],
+    water:    ['Dangerously low. Dehydration is a real risk.',       'Running short. Fresh water needs to be found soon.',  'Enough fresh water for now.'],
+    wood:     ['Almost none left. No building until more is found.', 'Low supply. One build would nearly exhaust it.',      'Enough wood to build something if needed.'],
+    medicine: ['Critically low. One illness could be very serious.', 'Very little left. Use it carefully.',                'Enough to handle minor injuries for now.'],
+  }
+  const tier = val<=20 ? 0 : val<=40 ? 1 : 2
+  const statusLine = (STATUS[k]||['','Low.','Sufficient.'])[tier]
+
+  const diff = val - prevVal
+  const trend = diff>0 ? '↑' : diff<0 ? '↓' : '→'
+  const trendCol = diff>0 ? '#4ade80' : diff<0 ? '#f87171' : 'rgba(255,255,255,.28)'
+
+  const KEYS = {
+    food:['food','eat','hunt','fish','fruit','hungry','starv','meal'],
+    water:['water','drink','thirst','well','spring','rain','dehydr'],
+    wood:['wood','timber','build','chop','tree','log','plank'],
+    medicine:['medicine','heal','herb','sick','injur','hurt','wound'],
+  }
+  const kws = KEYS[k]||[]
+  const mention = [...(S.feed||[])].reverse().find(e=>{
+    const t=((e.thought||'')+(e.action||'')+(e.description||'')).toLowerCase()
+    return kws.some(w=>t.includes(w))
+  })
+  const mentionHtml = mention
+    ? `<div class="rc-mention">"${(mention.thought||mention.action||mention.description||'').slice(0,80)}"<span class="rc-who">${(mention.character||'someone')[0].toUpperCase()+(mention.character||'someone').slice(1)} · Day ${mention.day} ${mention.cycle||''}</span></div>`
+    : ''
+
+  const ICONS = {food:'🍖',water:'💧',wood:'🪵',medicine:'🌿'}
+  const NAMES = {food:'Food',water:'Water',wood:'Wood',medicine:'Medicine'}
+  const col = val<=20?'#ef4444':val<=40?'#f59e0b':'#4ade80'
+
+  return `<div class="rc-inner">
+    <div class="rc-header">
+      <span class="rc-icon">${ICONS[k]}</span>
+      <span class="rc-name">${NAMES[k]}</span>
+      <span class="rc-val" style="color:${col}">${val}</span>
+      <span class="rc-trend" style="color:${trendCol}">${trend}</span>
+    </div>
+    <div class="rc-bar-wrap"><div class="rc-bar-fill" style="width:${val}%;background:${col}"></div></div>
+    <div class="rc-status">${statusLine}</div>
+    ${mentionHtml}
+  </div>`
+}
+
+function toggleResCard(k) {
+  const card = document.getElementById('res-card')
+  if (!card) return
+  document.querySelectorAll('.res-pill').forEach(p=>p.classList.remove('rp-active'))
+  if (_activeRes === k) {
+    card.classList.remove('open')
+    _activeRes = null
+    return
+  }
+  _activeRes = k
+  document.querySelector(`.res-pill[data-key="${k}"]`)?.classList.add('rp-active')
+  card.innerHTML = buildResCardContent(k)
+  card.classList.add('open')
+}
+
+function renderResHud() {
+  const hud = document.getElementById('res-hud')
+  if(!hud) return
+  const res = S.world.resources || {}
+  const items = [
+    {k:'food', icon:'🍖'},
+    {k:'water', icon:'💧'},
+    {k:'wood', icon:'🪵'},
+    {k:'medicine', icon:'🌿'}
+  ]
+  hud.innerHTML = items.map(({k, icon}) => {
+    const v = res[k] ?? '—'
+    const col = typeof v==='number' ? (v<=20?'#ef4444':v<=40?'#f59e0b':'rgba(255,255,255,.55)') : 'rgba(255,255,255,.3)'
+    return `<div class="res-pill" data-key="${k}" onclick="toggleResCard('${k}')"><span class="res-pill-icon">${icon}</span><span class="res-pill-val" style="color:${col}">${v}</span></div>`
+  }).join('') + `<div id="res-card"></div>`
+  // Re-open active card if it was open before re-render
+  if (_activeRes) {
+    const card = document.getElementById('res-card')
+    if (card) { card.innerHTML = buildResCardContent(_activeRes); card.classList.add('open') }
+    document.querySelector(`.res-pill[data-key="${_activeRes}"]`)?.classList.add('rp-active')
+  }
+}
+
+// Generic human model — now carries the FULL expressive face rig (brows, 7 eye-states,
+// blush, mouth) with -${cid} ids matching the main characters' geometry, so applyFace
+// drives real expressions on any dynamically-added character (born child, etc.).
+// ── PERSON MODEL ────────────────────────────────────────────
+// Reads S.chars[cid].appearance { skin, hair{style,color}, accessory, outfit }
+// and renders a distinct little person. Falls back to sensible defaults so it
+// never throws when appearance is missing. The face rig (brows, eyes-*, blush,
+// mouth ids + geometry) is preserved verbatim so applyFace/FACES keep working,
+// and the feet ellipses (cy=-1) are untouched so characters stay grounded.
+
+// Hair shapes — drawn behind the head (back) and/or in front (front fringe),
+// sitting on the head ellipse (cx 0, cy -72, r 11.5; crown ~ -83).
+function hairSVG(style, hc){
+  const back = (d)=>`<path d="${d}" fill="${hc}"/>`
+  switch(style){
+    case 'bald':
+      return {back:'', front:''}
+    case 'buzz': // thin close cap hugging the crown
+      return {back:'', front:`<path d="M -11 -73.5 C -11.5 -84 -5 -84.5 0 -84.5 C 5 -84.5 11.5 -84 11 -73.5 C 8 -80 -8 -80 -11 -73.5 Z" fill="${hc}"/>`}
+    case 'short': // neat rounded cap with a side part
+      return {back:'', front:`<path d="M -11.3 -72 C -12 -86 -4 -86 0 -86.5 C 5 -86.5 12 -85.5 11.3 -72 C 9 -78 6 -79 2 -79 C 2 -82 -1 -82.5 -4 -81 C -7 -79.5 -9 -78 -11.3 -72 Z" fill="${hc}"/>`}
+    case 'bangs': // rounded cap + a clear scalloped fringe coming down over the forehead + length at the sides
+      return {
+        back: back('M -12 -80 C -14 -68 -13.5 -58 -12.5 -50 C -10.5 -52 -10 -64 -10 -73 Z M 12 -80 C 14 -68 13.5 -58 12.5 -50 C 10.5 -52 10 -64 10 -73 Z'),
+        front:`<path d="M -12 -74 C -13 -87 -4 -88 0 -88 C 4 -88 13 -87 12 -74 C 11 -71 9.5 -71 8.5 -73 C 7.5 -70.5 5.5 -70.5 4.5 -73 C 3.5 -70.5 1.5 -70.5 0.5 -73 C -0.5 -70.5 -2.5 -70.5 -3.5 -73 C -4.5 -70.5 -6.5 -70.5 -7.5 -73 C -8.5 -71 -11 -71 -12 -74 Z" fill="${hc}"/>`}
+    case 'long': // straight hair falling past the shoulders, behind the body
+      return {
+        back: back('M -12.5 -77 C -16 -64 -16 -44 -14 -30 C -11 -33 -10.5 -50 -10 -60 C -9 -52 -9 -40 -9 -33 L 9 -33 C 9 -40 9 -52 10 -60 C 10.5 -50 11 -33 14 -30 C 16 -44 16 -64 12.5 -77 C 11 -86 -11 -86 -12.5 -77 Z'),
+        front:`<path d="M -11.5 -72 C -12.5 -86 -4 -87 0 -87 C 5 -87 12.5 -86 11.5 -72 C 11.5 -76 9 -78 8 -75 C 8 -80 -8 -80 -8 -75 C -9 -78 -11.5 -76 -11.5 -72 Z" fill="${hc}"/>`}
+    case 'wavy': // long with wavy ends, behind the body
+      return {
+        back: back('M -12.5 -76 C -17 -62 -15 -46 -16 -34 C -13 -36 -12 -44 -11 -50 C -11 -42 -12 -36 -10 -33 C -9 -35 -9 -42 -9 -33 L 9 -33 C 9 -42 9 -35 10 -33 C 12 -36 11 -42 11 -50 C 12 -44 13 -36 16 -34 C 15 -46 17 -62 12.5 -76 C 11 -86 -11 -86 -12.5 -76 Z'),
+        front:`<path d="M -11.5 -72 C -12.5 -86 -4 -87 0 -87 C 5 -87 12.5 -86 11.5 -72 C 11 -76 9 -77 7 -76 C 8 -80 -8 -80 -7 -76 C -9 -77 -11 -76 -11.5 -72 Z" fill="${hc}"/>`}
+    case 'bun': // top knot + smooth sides pulled back
+      return {
+        back: back('M -11.5 -75 C -12 -84 -5 -85 0 -85 C 5 -85 12 -84 11.5 -75 C 11.5 -68 11 -64 10.5 -60 C 9 -64 9 -70 8.5 -74 C 8 -80 -8 -80 -8.5 -74 C -9 -70 -9 -64 -10.5 -60 C -11 -64 -11.5 -68 -11.5 -75 Z'),
+        front:`<ellipse cx="0" cy="-86" rx="5" ry="4.2" fill="${hc}"/><path d="M -11.5 -75 C -11 -83 -4 -84.5 0 -84.5 C 4 -84.5 11 -83 11.5 -75 C 8 -80 -8 -80 -11.5 -75 Z" fill="${hc}"/>`}
+    default: // 'long'-ish neutral fallback
+      return {back:'', front:`<path d="M -11.3 -72 C -12 -86 -4 -86 0 -86.5 C 5 -86.5 12 -85.5 11.3 -72 C 9 -78 -9 -78 -11.3 -72 Z" fill="${hc}"/>`}
+  }
+}
+
+// Accessories — front layer (over hair/face where appropriate).
+// `outfit` lets the hood/cap match the character's top.
+function accessorySVG(acc, hc, outfit, accColor){
+  const COL_HOOD = accColor || outfit || '#374151'
+  const COL_CAP  = accColor || outfit || '#1f2937'
+  switch(acc){
+    case 'sunglasses':
+      return `<g>
+        <rect x="-9.5" y="-74.5" width="7.5" height="5" rx="2" fill="#15171c"/>
+        <rect x="2" y="-74.5" width="7.5" height="5" rx="2" fill="#15171c"/>
+        <rect x="-2" y="-73.5" width="4" height="1.4" fill="#15171c"/>
+        <path d="M -9.5 -73.5 L -3.5 -73.5" stroke="#4b5563" stroke-width=".7" opacity=".8"/>
+        <path d="M 2.5 -73.5 L 8.5 -73.5" stroke="#4b5563" stroke-width=".7" opacity=".8"/>
+      </g>`
+    case 'hood': // raised hoodie hood: drapes down to the shoulders and frames the face
+      return `<g>
+        <path d="M -16 -55 C -18 -74 -10 -90 0 -90 C 10 -90 18 -74 16 -55 C 13 -58 11 -60 9 -61 C 11 -67 9 -73 4 -74.5 C 2 -78 -2 -78 -4 -74.5 C -9 -73 -11 -67 -9 -61 C -11 -60 -13 -58 -16 -55 Z" fill="${COL_HOOD}"/>
+        <path d="M -14 -58 C -15 -74 -8.5 -86 0 -86 C 8.5 -86 15 -74 14 -58" fill="none" stroke="#00000026" stroke-width="1"/>
+      </g>`
+    case 'cap': // baseball cap: rounded crown hugging the head + forward brim
+      return `<g>
+        <path d="M -11.8 -75 C -12.5 -90 12.5 -90 11.8 -75 C 8 -78 -8 -78 -11.8 -75 Z" fill="${COL_CAP}"/>
+        <path d="M -11.8 -75.5 L -18 -73.5 C -16.5 -70.5 -8.5 -71.5 -2.5 -74.5 Z" fill="${COL_CAP}"/>
+        <path d="M -10 -78 C -6 -86 6 -86 10 -78" fill="none" stroke="#00000022" stroke-width="1"/>
+      </g>`
+    case 'beanie': // knitted cap pulled low over the crown + fold band
+      return `<g>
+        <path d="M -12.2 -73.5 C -12.5 -90 12.5 -90 12.2 -73.5 Z" fill="${COL_CAP}"/>
+        <rect x="-12.2" y="-75.5" width="24.4" height="4" rx="2" fill="${COL_CAP}" stroke="#00000026" stroke-width=".7"/>
+      </g>`
+    case 'headphones': // band over the crown + ear cups
+      return `<g>
+        <path d="M -12 -72 C -13 -86 13 -86 12 -72" fill="none" stroke="#1f2430" stroke-width="2.4"/>
+        <rect x="-14" y="-75" width="4.5" height="7" rx="2" fill="#1f2430"/>
+        <rect x="9.5" y="-75" width="4.5" height="7" rx="2" fill="#1f2430"/>
+      </g>`
+    case 'earrings': // tiny studs at the jaw line
+      return `<g>
+        <circle cx="-10.5" cy="-65" r="1.3" fill="#fcd34d"/>
+        <circle cx="10.5" cy="-65" r="1.3" fill="#fcd34d"/>
+      </g>`
+    case 'none': default:
+      return ''
+  }
+}
+
+function makeGenericCharSVG(cid, color, skin) {
+  color = color || '#a78bfa'
+  const ap = (S.chars && S.chars[cid] && S.chars[cid].appearance) || {}
+  skin = ap.skin || skin || '#e3b68e'
+  const hc = (ap.hair && ap.hair.color) || '#2b2118'
+  const hairStyle = (ap.hair && ap.hair.style) || 'short'
+  const acc = ap.accessory || 'none'
+  const outfit = ap.outfit || color
+  const accColor = ap.accColor || ''
+  const pants = ap.pants || '#3c4150'      // trousers (data-driven per character)
+  const boots = ap.boots || '#2c2118'      // jungle boots
+  const hair = hairSVG(hairStyle, hc)
+  const accFront = accessorySVG(acc, hc, outfit, accColor)
+  // headwear replaces the hair-on-top look; keep front hair only when bare-headed
+  const hairFront = (acc === 'hood' || acc === 'cap' || acc === 'beanie') ? '' : hair.front
+  // soft skin shade (a touch darker) for cheek/jaw AO
+  const shade = '#00000016'
+
+  // ── LIVING WEAR: dirt, stubble, sweat, rips grow with days + condition ──
+  // All client-derived from data Haiku already produces (day + scores) — zero engine cost.
+  const day = (S.world && S.world.day) || 1
+  const sc = (S.chars && S.chars[cid] && S.chars[cid].scores) || {}
+  const condition = (S.chars && S.chars[cid] && (S.chars[cid].condition || S.chars[cid].ailment)) || 'healthy'
+  const injured = condition === 'injured' || condition === 'sick' || condition === 'hurt'
+  let wear = Math.min(1, (day - 1) / 11)                       // ramps over ~11 days
+  if ((sc.energy ?? 100) < 40) wear = Math.min(1, wear + .14)  // exhaustion shows
+  if ((sc.health ?? 100) < 60) wear = Math.min(1, wear + .20)  // run-down/sick shows
+  const beard = ap.beard ? Math.min(1, (day - 1) / 7) : 0      // stubble→beard (opt-in)
+  const gm = (b) => Math.max(0, Math.min(.82, b + wear * .58)).toFixed(2)  // grime opacity
+  const gl = Array.isArray(ap.gear) ? ap.gear : String(ap.gear || '').split('+').filter(Boolean)
+  const has = g => gl.includes(g)
+
+  // gear drawn BEHIND the torso (backpack hump peeking past the shoulders)
+  const gearBack = has('backpack') ? `
+    <ellipse cx="0" cy="-40" rx="15.5" ry="15" fill="#4a3a22"/>
+    <ellipse cx="0" cy="-40" rx="15.5" ry="15" fill="#000000" opacity=".18"/>
+    <rect x="-11" y="-52" width="22" height="10" rx="4" fill="#3a2c18"/>
+    <rect x="-11" y="-52" width="22" height="3" rx="1.5" fill="#ffffff14"/>` : ''
+  // gear drawn IN FRONT (straps, sheathed knife, rope coil, city sling-bag)
+  const gearFront =
+    (has('backpack') ? `
+      <path d="M -7.5 -56 L -4 -28" stroke="#2a1d10" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+      <path d="M 7.5 -56 L 4 -28" stroke="#2a1d10" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+      <rect x="-6" y="-43" width="12" height="2.8" rx="1.4" fill="#2a1d10"/>
+      <rect x="-2" y="-44" width="4" height="5" rx="1" fill="#caa14a"/>` : '') +
+    (has('rope') ? `
+      <g transform="translate(-12 -45)"><ellipse rx="5" ry="6.4" fill="none" stroke="#b89a52" stroke-width="2.3"/><ellipse rx="2.6" ry="3.6" fill="none" stroke="#b89a52" stroke-width="1.6"/></g>` : '') +
+    (has('knife') ? `
+      <g transform="translate(11 -26) rotate(8)"><rect x="-2.2" y="0" width="4.4" height="10" rx="1.6" fill="#3a2c18"/><rect x="-1.3" y="-3.4" width="2.6" height="4" rx=".6" fill="#1c1c1c"/></g>` : '') +
+    (has('slingbag') ? `
+      <path d="M -12 -54 L 9 -30" stroke="#2a3550" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+      <rect x="6.5" y="-31" width="11" height="11" rx="2.6" fill="#3a4768"/>
+      <rect x="6.5" y="-31" width="11" height="3.2" rx="1.4" fill="#00000038"/>
+      <rect x="9.5" y="-26" width="5" height="2" rx="1" fill="#ffffff22"/>` : '')
+  // grime smudges on clothing, forearms and cheek
+  const dirt = `<g fill="#36280f">
+    <ellipse cx="-6" cy="-30" rx="3.6" ry="2.1" opacity="${gm(-.12)}"/>
+    <ellipse cx="5.5" cy="-37" rx="3" ry="1.8" opacity="${gm(-.18)}"/>
+    <ellipse cx="-15.5" cy="-37" rx="2.4" ry="1.5" opacity="${gm(-.2)}"/>
+    <ellipse cx="3" cy="-13.5" rx="3.2" ry="1.7" opacity="${gm(-.18)}"/>
+    <ellipse cx="-5.5" cy="-12" rx="2.6" ry="1.5" opacity="${gm(-.22)}"/>
+    <ellipse cx="8.5" cy="-67" rx="2.3" ry="1.4" opacity="${gm(-.26)}"/>
+  </g>`
+  // frayed hem + small tears once they've been out a while
+  const rips = wear > .5 ? `<g stroke="#00000055" stroke-width="1" fill="none" stroke-linecap="round">
+    <path d="M -11 -20 l 2 3 l 1.4 -2.4 l 1.6 2.6"/><path d="M 8 -33 l -2.6 3.4"/><path d="M -9 -33 l 2.4 3.2"/>
+  </g>` : ''
+  // bandage on the forearm when actually injured/sick
+  const bandage = injured ? `<g transform="translate(-16.6 -40) rotate(-16)">
+    <rect x="-3" y="-1" width="6" height="8" rx="1.6" fill="#e7e3d6"/>
+    <line x1="-3" y1="1.4" x2="3" y2="1.4" stroke="#b9b3a2" stroke-width=".7"/><line x1="-3" y1="4" x2="3" y2="4" stroke="#b9b3a2" stroke-width=".7"/>
+    <circle cx="0" cy="2.6" r="1.1" fill="#b34a3a"/></g>` : ''
+  // stubble→beard on the chin/jaw (sits under the mouth, which draws on top)
+  const stubble = beard > .04 ? `<path d="M -9 -66 Q -8 -59.5 0 -58.5 Q 8 -59.5 9 -66 Q 4.5 -62.6 0 -62.6 Q -4.5 -62.6 -9 -66 Z" fill="${hc}" opacity="${(beard*.62).toFixed(2)}"/>` : ''
+  // sweat sheen at high wear
+  const sweat = wear > .5 ? `<g fill="#cdeaf2" opacity="${Math.min(.5, wear*.55).toFixed(2)}"><ellipse cx="-10" cy="-70" rx="1" ry="2.1"/><ellipse cx="10" cy="-71" rx=".9" ry="1.8"/></g>` : ''
+
+  return `<svg class="char-svg" id="svg-${cid}" width="19" height="45" viewBox="-20 -92 40 96" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="og-${cid}" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="${outfit}"/>
+        <stop offset="1" stop-color="#00000028"/>
+      </linearGradient>
+    </defs>
+    ${hair.back}
+    ${gearBack}
+    <!-- jungle boots (toe + sole) -->
+    <path d="M -9 -11 L -2.4 -11 L -2.4 -3 Q -2.4 0 -5 0 L -10.5 0 Q -11.5 0 -11.3 -1.6 L -10.5 -4 Z" fill="${boots}"/>
+    <path d="M 9 -11 L 2.4 -11 L 2.4 -3 Q 2.4 0 5 0 L 10.5 0 Q 11.5 0 11.3 -1.6 L 10.5 -4 Z" fill="${boots}"/>
+    <path d="M -11.5 -1.4 L -2.2 -1.4 M 2.2 -1.4 L 11.5 -1.4" stroke="#00000055" stroke-width="1.4" stroke-linecap="round"/>
+    <path d="M -8.6 -10 L -2.6 -10 M 2.6 -10 L 8.6 -10" stroke="#ffffff1f" stroke-width="1" stroke-linecap="round"/>
+    <!-- trousers -->
+    <path d="M -7.6 -20 L -0.8 -20 L -1.8 -10.5 L -8.4 -10.5 Z" fill="${pants}"/>
+    <path d="M 7.6 -20 L 0.8 -20 L 1.8 -10.5 L 8.4 -10.5 Z" fill="${pants}"/>
+    <path d="M -7.6 -20 L 7.6 -20 L 7.2 -17 L -7.2 -17 Z" fill="#0000002e"/>
+    <path d="M -4.8 -19 L -5.6 -11.5 M 4.8 -19 L 5.6 -11.5" stroke="#ffffff14" stroke-width="1.1"/>
+    <!-- torso / shirt -->
+    <path d="M -11 -56 C -13 -50 -14 -42 -13 -33 C -12.5 -26 -12 -22 -11 -19 L 11 -19 C 12 -22 12.5 -26 13 -33 C 14 -42 13 -50 11 -56 Z" fill="${outfit}"/>
+    <path d="M -11 -56 C -13 -50 -14 -42 -13 -33 C -12.5 -26 -12 -22 -11 -19 L 11 -19 C 12 -22 12.5 -26 13 -33 C 14 -42 13 -50 11 -56 Z" fill="url(#og-${cid})" opacity=".5"/>
+    <ellipse cx="-5.5" cy="-43" rx="3.4" ry="11" fill="#ffffff16"/>
+    <path d="M 0 -57 L 0 -20" stroke="#00000026" stroke-width="1.1"/>
+    <!-- collar -->
+    <path d="M -10 -56 C -8 -59 -3 -60 0 -59 C 3 -60 8 -59 10 -56 Z" fill="${outfit}"/>
+    <path d="M 0 -59 L -4.5 -49 M 0 -59 L 4.5 -49" stroke="#00000030" stroke-width="1.2" fill="none"/>
+    <!-- arms: short sleeve, skin forearm, hand -->
+    <path d="M -11 -55 C -16 -52 -18 -48 -17.5 -44" stroke="${outfit}" stroke-width="6.2" fill="none" stroke-linecap="round"/>
+    <path d="M 11 -55 C 16 -52 18 -48 17.5 -44" stroke="${outfit}" stroke-width="6.2" fill="none" stroke-linecap="round"/>
+    <path d="M -17.5 -44 C -18 -40 -17.5 -36 -16 -34" stroke="${skin}" stroke-width="4.6" fill="none" stroke-linecap="round"/>
+    <path d="M 17.5 -44 C 18 -40 17.5 -36 16 -34" stroke="${skin}" stroke-width="4.6" fill="none" stroke-linecap="round"/>
+    <ellipse cx="-15.6" cy="-32" rx="3.1" ry="3.5" fill="${skin}"/>
+    <ellipse cx="15.6" cy="-32" rx="3.1" ry="3.5" fill="${skin}"/>
+    ${dirt}${rips}${gearFront}${bandage}
+    <!-- neck -->
+    <rect x="-3.3" y="-64" width="6.6" height="9" rx="2" fill="${skin}"/>
+    <rect x="-3.3" y="-58" width="6.6" height="3" fill="${shade}"/>
+    <ellipse cx="0" cy="-72" rx="11.5" ry="11.5" fill="${skin}"/>
+    <path d="M -11.5 -72 C -11 -64 -7 -61 0 -61 C 7 -61 11 -64 11.5 -72 C 9 -65 -9 -65 -11.5 -72 Z" fill="${shade}"/>
+    ${stubble}${sweat}
+    ${hairFront}
+    <path id="brow-l-${cid}" d="M -9 -77.5 L -3 -76" stroke="#2b2118" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+    <path id="brow-r-${cid}" d="M 3 -76 L 9 -77.5" stroke="#2b2118" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+    <g id="eyes-normal-${cid}">
+      <ellipse cx="-4.5" cy="-72.5" rx="3.2" ry="2.8" fill="white"/><ellipse cx="4.5" cy="-72.5" rx="3.2" ry="2.8" fill="white"/>
+      <circle cx="-4.5" cy="-72.5" r="1.9" fill="#1a1a1a"/><circle cx="4.5" cy="-72.5" r="1.9" fill="#1a1a1a"/>
+    </g>
+    <g id="eyes-wide-${cid}" display="none">
+      <ellipse cx="-4.5" cy="-72.5" rx="3.9" ry="3.6" fill="white"/><ellipse cx="4.5" cy="-72.5" rx="3.9" ry="3.6" fill="white"/>
+      <circle cx="-4.5" cy="-72" r="2.3" fill="#1a1a1a"/><circle cx="4.5" cy="-72" r="2.3" fill="#1a1a1a"/>
+      <circle cx="-3.4" cy="-73.6" r=".8" fill="white"/><circle cx="5.6" cy="-73.6" r=".8" fill="white"/>
+    </g>
+    <g id="eyes-narrow-${cid}" display="none">
+      <path d="M -7.5 -72.5 Q -4.5 -70.5 -1.5 -72.5" stroke="#1a1a1a" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+      <path d="M 1.5 -72.5 Q 4.5 -70.5 7.5 -72.5" stroke="#1a1a1a" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+    </g>
+    <g id="eyes-happy-${cid}" display="none">
+      <path d="M -7.5 -72.5 Q -4.5 -69.5 -1.5 -72.5" stroke="#1a1a1a" stroke-width="2.5" fill="${skin}" stroke-linecap="round"/>
+      <path d="M 1.5 -72.5 Q 4.5 -69.5 7.5 -72.5" stroke="#1a1a1a" stroke-width="2.5" fill="${skin}" stroke-linecap="round"/>
+    </g>
+    <g id="eyes-bedroom-${cid}" display="none">
+      <ellipse cx="-4.5" cy="-71.5" rx="3.2" ry="1.9" fill="white"/><ellipse cx="4.5" cy="-71.5" rx="3.2" ry="1.9" fill="white"/>
+      <circle cx="-4.5" cy="-71.5" r="1.5" fill="#1a1a1a"/><circle cx="4.5" cy="-71.5" r="1.5" fill="#1a1a1a"/>
+      <path d="M -7.7 -71.5 Q -4.5 -74.8 -1.3 -71.5" fill="${skin}"/>
+      <path d="M 1.3 -71.5 Q 4.5 -74.8 7.7 -71.5" fill="${skin}"/>
+    </g>
+    <g id="eyes-heart-${cid}" display="none">
+      <path d="M -6.5 -73.5 Q -6.5 -76.5 -4.5 -75 Q -2.5 -76.5 -2.5 -73.5 Q -2.5 -71 -4.5 -69.5 Q -6.5 -71 -6.5 -73.5Z" fill="#f472b6"/>
+      <path d="M 2.5 -73.5 Q 2.5 -76.5 4.5 -75 Q 6.5 -76.5 6.5 -73.5 Q 6.5 -71 4.5 -69.5 Q 2.5 -71 2.5 -73.5Z" fill="#f472b6"/>
+    </g>
+    <g id="eyes-teary-${cid}" display="none">
+      <ellipse cx="-4.5" cy="-72.5" rx="3.2" ry="2.8" fill="white"/><ellipse cx="4.5" cy="-72.5" rx="3.2" ry="2.8" fill="white"/>
+      <circle cx="-4.5" cy="-72.5" r="1.9" fill="#1a1a1a"/><circle cx="4.5" cy="-72.5" r="1.9" fill="#1a1a1a"/>
+      <ellipse cx="-4.5" cy="-69" rx="1.2" ry="1.9" fill="#93c5fd" opacity=".88"/>
+      <ellipse cx="4.5" cy="-69" rx="1.2" ry="1.9" fill="#93c5fd" opacity=".88"/>
+    </g>
+    <g id="blush-${cid}" display="none">
+      <ellipse cx="-8.5" cy="-67.5" rx="5" ry="2.8" fill="#fda4af" opacity=".5"/>
+      <ellipse cx="8.5" cy="-67.5" rx="5" ry="2.8" fill="#fda4af" opacity=".5"/>
+    </g>
+    <path id="mouth-${cid}" d="M -4 -64.5 Q 0 -62 4 -64.5" stroke="#a85a4a" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+    ${accFront}
+  </svg>`
+}
+
+// ── ANIMAL MODEL (Mutu — a ginger tabby cat) ─────────────────
+// A sitting cat whose face uses the SAME rig geometry (eyes ~-72.5, mouth -64.5,
+// brows) so applyFace drives eyes/brows/mouth/blush unchanged. Cat-specific parts
+// (pointed ears + long tail) are animated by applyAnimalExtras from the mood. Coat
+// colours are data-driven from appearance{coat,belly,stripe,eye}.
+function makeAnimalSVG(cid){
+  const ap = (S.chars && S.chars[cid] && S.chars[cid].appearance) || {}
+  const coat=ap.coat||'#d98a4a', belly=ap.belly||'#f2c89a', stripe=ap.stripe||'#a8612a',
+        eye=ap.eye||'#5fa86b', nose='#b9696b'
+  return `<svg class="char-svg dog-svg" id="svg-${cid}" width="15" height="23" viewBox="-20 -92 40 96" xmlns="http://www.w3.org/2000/svg">
+    <g id="tail-${cid}" class="dog-tail" style="transform-box:view-box;transform-origin:11px -8px">
+      <path d="M 10 -8 Q 22 -10 24 -24 Q 25 -34 19 -39" stroke="${coat}" stroke-width="6.5" fill="none" stroke-linecap="round"/>
+      <path d="M 22 -16 Q 24.5 -22 23 -30 M 17 -10 Q 21 -12 23 -18" stroke="${stripe}" stroke-width="2" fill="none" stroke-linecap="round" opacity=".7"/>
+    </g>
+    <path d="M -12 -4 C -15 -22 -11 -44 0 -44 C 11 -44 15 -22 12 -4 C 11 -1 7 -1 0 -1 C -7 -1 -11 -1 -12 -4 Z" fill="${coat}"/>
+    <ellipse cx="0" cy="-19" rx="7" ry="14" fill="${belly}" opacity=".55"/>
+    <path d="M -11 -32 Q 0 -35 11 -32 M -11 -24 Q 0 -27 11 -24 M -10 -16 Q 0 -19 10 -16" stroke="${stripe}" stroke-width="1.7" fill="none" stroke-linecap="round" opacity=".55"/>
+    <rect x="-6" y="-22" width="5" height="21" rx="2.5" fill="${coat}"/>
+    <rect x="1" y="-22" width="5" height="21" rx="2.5" fill="${coat}"/>
+    <ellipse cx="-3.5" cy="-1" rx="4.6" ry="2.6" fill="${belly}"/>
+    <ellipse cx="3.5" cy="-1" rx="4.6" ry="2.6" fill="${belly}"/>
+    <g id="ear-l-${cid}" class="dog-ear" style="transform-box:view-box;transform-origin:-8px -79px">
+      <path d="M -12 -79 L -2 -78 L -9 -91 Z" fill="${coat}"/>
+      <path d="M -10 -80 L -4.5 -79 L -8.5 -87 Z" fill="${nose}" opacity=".55"/>
+    </g>
+    <g id="ear-r-${cid}" class="dog-ear" style="transform-box:view-box;transform-origin:8px -79px">
+      <path d="M 12 -79 L 2 -78 L 9 -91 Z" fill="${coat}"/>
+      <path d="M 10 -80 L 4.5 -79 L 8.5 -87 Z" fill="${nose}" opacity=".55"/>
+    </g>
+    <ellipse cx="0" cy="-70" rx="13" ry="11.5" fill="${coat}"/>
+    <path d="M -4 -80 L -3 -74 M 0 -81 L 0 -75 M 4 -80 L 3 -74" stroke="${stripe}" stroke-width="1.5" fill="none" stroke-linecap="round" opacity=".75"/>
+    <path d="M -13 -72 L -9 -71 M -13 -69 L -9.5 -68.5 M 13 -72 L 9 -71 M 13 -69 L 9.5 -68.5" stroke="${stripe}" stroke-width="1.4" fill="none" stroke-linecap="round" opacity=".6"/>
+    <ellipse cx="0" cy="-62.5" rx="8" ry="6" fill="${belly}"/>
+    <path d="M -3 -64 L -15 -66 M -3 -62.2 L -14 -60.5 M 3 -64 L 15 -66 M 3 -62.2 L 14 -60.5" stroke="#ffffffb0" stroke-width=".8" fill="none" stroke-linecap="round"/>
+    <path d="M -2.4 -67 L 2.4 -67 L 0 -64.4 Z" fill="${nose}"/>
+    <path id="brow-l-${cid}" d="M -9 -77.5 L -3 -76" stroke="${stripe}" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+    <path id="brow-r-${cid}" d="M 3 -76 L 9 -77.5" stroke="${stripe}" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+    <g id="eyes-normal-${cid}">
+      <ellipse cx="-4.5" cy="-72.5" rx="3.2" ry="3" fill="${eye}"/><ellipse cx="4.5" cy="-72.5" rx="3.2" ry="3" fill="${eye}"/>
+      <ellipse cx="-4.5" cy="-72.5" rx="1.1" ry="2.6" fill="#101010"/><ellipse cx="4.5" cy="-72.5" rx="1.1" ry="2.6" fill="#101010"/>
+      <circle cx="-3.6" cy="-73.8" r=".7" fill="#ffffffcc"/><circle cx="5.4" cy="-73.8" r=".7" fill="#ffffffcc"/>
+    </g>
+    <g id="eyes-wide-${cid}" display="none">
+      <ellipse cx="-4.5" cy="-72.5" rx="3.8" ry="3.6" fill="${eye}"/><ellipse cx="4.5" cy="-72.5" rx="3.8" ry="3.6" fill="${eye}"/>
+      <ellipse cx="-4.5" cy="-72" rx="1.4" ry="3" fill="#101010"/><ellipse cx="4.5" cy="-72" rx="1.4" ry="3" fill="#101010"/>
+      <circle cx="-3.3" cy="-73.6" r=".8" fill="white"/><circle cx="5.7" cy="-73.6" r=".8" fill="white"/>
+    </g>
+    <g id="eyes-narrow-${cid}" display="none">
+      <path d="M -7.5 -72.5 Q -4.5 -70.5 -1.5 -72.5" stroke="#1a1a1a" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+      <path d="M 1.5 -72.5 Q 4.5 -70.5 7.5 -72.5" stroke="#1a1a1a" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+    </g>
+    <g id="eyes-happy-${cid}" display="none">
+      <path d="M -7.5 -72.5 Q -4.5 -69.5 -1.5 -72.5" stroke="#1a1a1a" stroke-width="2.5" fill="${coat}" stroke-linecap="round"/>
+      <path d="M 1.5 -72.5 Q 4.5 -69.5 7.5 -72.5" stroke="#1a1a1a" stroke-width="2.5" fill="${coat}" stroke-linecap="round"/>
+    </g>
+    <g id="eyes-bedroom-${cid}" display="none">
+      <ellipse cx="-4.5" cy="-71.5" rx="3" ry="1.8" fill="${eye}"/><ellipse cx="4.5" cy="-71.5" rx="3" ry="1.8" fill="${eye}"/>
+      <ellipse cx="-4.5" cy="-71.5" rx="1" ry="1.6" fill="#101010"/><ellipse cx="4.5" cy="-71.5" rx="1" ry="1.6" fill="#101010"/>
+    </g>
+    <g id="eyes-heart-${cid}" display="none">
+      <path d="M -6.5 -73.5 Q -6.5 -76.5 -4.5 -75 Q -2.5 -76.5 -2.5 -73.5 Q -2.5 -71 -4.5 -69.5 Q -6.5 -71 -6.5 -73.5Z" fill="#f472b6"/>
+      <path d="M 2.5 -73.5 Q 2.5 -76.5 4.5 -75 Q 6.5 -76.5 6.5 -73.5 Q 6.5 -71 4.5 -69.5 Q 2.5 -71 2.5 -73.5Z" fill="#f472b6"/>
+    </g>
+    <g id="eyes-teary-${cid}" display="none">
+      <ellipse cx="-4.5" cy="-72.5" rx="3.2" ry="3" fill="${eye}"/><ellipse cx="4.5" cy="-72.5" rx="3.2" ry="3" fill="${eye}"/>
+      <ellipse cx="-4.5" cy="-72.5" rx="1.1" ry="2.6" fill="#101010"/><ellipse cx="4.5" cy="-72.5" rx="1.1" ry="2.6" fill="#101010"/>
+      <ellipse cx="-4.5" cy="-68.5" rx="1.2" ry="1.9" fill="#93c5fd" opacity=".88"/>
+      <ellipse cx="4.5" cy="-68.5" rx="1.2" ry="1.9" fill="#93c5fd" opacity=".88"/>
+    </g>
+    <g id="blush-${cid}" display="none">
+      <ellipse cx="-9" cy="-63" rx="4" ry="2.4" fill="#fda4af" opacity=".45"/>
+      <ellipse cx="9" cy="-63" rx="4" ry="2.4" fill="#fda4af" opacity=".45"/>
+    </g>
+    <path id="mouth-${cid}" d="M -3 -63.5 Q 0 -61.5 3 -63.5" stroke="${nose}" stroke-width="1.4" stroke-linecap="round" fill="none"/>
+  </svg>`
+}
+// Map each expression bucket -> cat body language (ear rotation, tail behaviour)
+const ANIMAL_POSE = {
+  happy:      {l:-14,r:14, tail:'wag'},
+  smitten:    {l:-14,r:14, tail:'wag'},
+  flirtatious:{l:-10,r:10, tail:'wag'},
+  hopeful:    {l:-12,r:12, tail:'slow'},
+  calm:       {l:-4, r:4,  tail:'slow'},
+  neutral:    {l:0,  r:0,  tail:'slow'},
+  guarded:    {l:14, r:-14,tail:'none'},
+  jealous:    {l:14, r:-14,tail:'none'},
+  embarrassed:{l:8,  r:-8, tail:'low'},
+  sad:        {l:20, r:-20,tail:'tuck'},
+  heartbroken:{l:24, r:-24,tail:'tuck'},
+  angry:      {l:28, r:-28,tail:'none'},
+  shocked:    {l:32, r:-32,tail:'tuck'},
+  lustful:    {l:-8, r:8,  tail:'slow'},
+}
+function applyAnimalExtras(cid, fk){
+  const p = ANIMAL_POSE[fk] || ANIMAL_POSE.neutral
+  const el = document.getElementById('ear-l-'+cid); const er = document.getElementById('ear-r-'+cid)
+  if(el) el.style.transform = `rotate(${p.l}deg)`
+  if(er) er.style.transform = `rotate(${p.r}deg)`
+  const tail = document.getElementById('tail-'+cid)
+  if(tail){
+    tail.classList.remove('wag','slow')
+    tail.style.transform = ''
+    if(p.tail==='wag') tail.classList.add('wag')
+    else if(p.tail==='slow') tail.classList.add('slow')
+    else if(p.tail==='tuck') tail.style.transform = 'rotate(48deg)'
+    else if(p.tail==='low') tail.style.transform = 'rotate(24deg)'
+  }
+}
+
+function ensureCharDom(cid) {
+  const c = S.chars[cid] || {}
+  const color = c.color || '#a78bfa'
+  const isDog = (c.species||'human') !== 'human'
+  // Signature of everything that affects the drawn art. If the avatar already exists
+  // but its look changed — or `appearance` only arrived AFTER the first build (a
+  // load-order / CDN race meant the first render had no appearance) — rebuild just
+  // the SVG art in place. Without this, the art is frozen at first creation and a
+  // later data update (e.g. Judy's beanie) never shows. updateWorld re-applies
+  // face/pose immediately after, so the rebuilt avatar picks those back up.
+  // Include day + condition + low-stat flags so living wear (dirt/stubble/sweat/bandage)
+  // re-renders the figure as the days pass or a character gets hurt/run-down.
+  const _sc = c.scores || {}
+  const wearSig = isDog ? '' : `|d${(S.world&&S.world.day)||1}|${c.condition||c.ailment||'ok'}|e${(_sc.energy??100)<40?1:0}|h${(_sc.health??100)<60?1:0}`
+  const sig = JSON.stringify(c.appearance || {}) + '|' + (isDog ? 'dog' : 'human') + wearSig
+  const existing = document.getElementById('char-'+cid)
+  if(existing){
+    if(existing.dataset.appSig === sig) return
+    const art = existing.querySelector('svg.char-svg')
+    const fresh = isDog ? makeAnimalSVG(cid) : makeGenericCharSVG(cid, color)
+    if(art) art.outerHTML = fresh
+    existing.dataset.appSig = sig
+    return
+  }
+  const firstName = c.name ? (c.tag || c.name.trim().split(' ')[0]).toUpperCase() : ''
+  const div = document.createElement('div')
+  div.className = 'char'
+  div.id = 'char-' + cid
+  div.dataset.appSig = sig
+  div.innerHTML =
+    (isDog ? makeAnimalSVG(cid) : makeGenericCharSVG(cid, color)) +
+    `<div class="nametag" id="nametag-${cid}" style="color:${color};border:1px solid ${color}33">${firstName}</div>` +
+    `<div class="bubble" id="bubble-${cid}" style="border-top:2px solid ${color}80">` +
+      (firstName ? `<div class="bubble-name" id="bubblename-${cid}" style="color:${color}">${firstName}</div>` : `<div class="bubble-name" id="bubblename-${cid}" style="color:${color}"></div>`) +
+      `<div class="bubble-text" id="thought-${cid}"></div>` +
+    `</div>`
+  document.getElementById('world').appendChild(div)
+  div.addEventListener('click', ()=>{
+    if(!isMobile()) return
+    document.querySelectorAll('.stat-card').forEach(c=>c.classList.remove('tap-open'))
+  })
+}
+
+function updateWorld() {
+  const w=S.world
+  document.getElementById('day-label').textContent='Day '+(w.day||1)
+  document.getElementById('cycle-label').textContent=cap(w.cycle||'')
+  document.getElementById('ds-day').textContent='Day '+(w.day||1)
+  document.getElementById('ds-cycle').textContent=cap(w.cycle||'')
+  if(w.pulse) document.getElementById('pulse').textContent=w.pulse
+  positionSceneLine()
+
+  const CHARS=Object.keys(S.chars)
+  CHARS.forEach(cid=>ensureCharDom(cid))
+  setHudVar()  // refresh --stage-bottom BEFORE laying out, so positions use the correct stage height
+  // Keep the background SVG + structures shifted in lock-step with the character math.
+  // The SVG element is sized to the FULL scaled art height (not just the stage) so its own
+  // viewport never clips the ocean; --world-shift then slides it up under #world's clip.
+  const _scale=Math.max(window.innerWidth/1000, stageH()/600)
+  const _svg=document.getElementById('world-svg')
+  if(_svg) _svg.style.height=(600*_scale)+'px'
+  document.documentElement.style.setProperty('--world-shift', (-worldYOffset(stageH(), _scale))+'px')
+  const W=isMobile()?getWorldWidth():window.innerWidth, H=stageH()
+  // compute raw pixel positions
+  const positions=CHARS.map(cid=>{
+    const c=S.chars[cid]||{}
+    const {left,top}=toPos(c.location?.x||50,c.location?.y||50,c.location?.waypoint)
+    const px=parseFloat(left)/100*W
+    const py=parseFloat(top)/100*H
+    return {id:cid, px, py}
+  })
+  separateChars(positions)
+
+  positions.forEach(p=>{
+    const el=document.getElementById('char-'+p.id); if(!el) return
+    el.style.left=(p.px/W*100)+'%'
+    el.style.top=(p.py/H*100)+'%'
+    applyFace(p.id)
+    updateBubble(p.id)
+    // keep nametag/bubble label in sync (so an unnamed stray's tag appears once it's named)
+    const _pc = S.chars[p.id]; const nm = _pc?.name ? (_pc.tag || _pc.name.trim().split(' ')[0]).toUpperCase() : ''
+    const ntag = document.getElementById('nametag-'+p.id); if(ntag && ntag.textContent!==nm) ntag.textContent = nm
+    const blab = document.getElementById('bubblename-'+p.id); if(blab && blab.textContent!==nm) blab.textContent = nm
+  })
+
+  nudgeBubbles(positions)
+  renderInteractions(positions)
+  renderChat()
+  updateStatusBar()
+  updateStatCards()
+  renderStructures()
+  renderResHud()
+  updateFireChip()
+  renderCampStores()
+  renderVehicleState()
+
+  if(isMobile() && !mobileScrollInited) {
+    mobileScrollInited = true
+    requestAnimationFrame(() => {
+      // Center the horizontal scroll on the CAST (their average position), not the world's
+      // geometric midpoint — so wherever the camp sits in the scene, the characters land in
+      // view. Falls back to the geometric center if no characters are positioned yet.
+      const W = getWorldWidth(), vw = window.innerWidth
+      const maxX = Math.max(0, W - vw)
+      const cs = Object.keys(S.chars||{}).map(cid=>{
+        const el=document.getElementById('char-'+cid)
+        return el ? el.offsetLeft + el.offsetWidth/2 : null
+      }).filter(v=>v!=null)
+      const focus = cs.length ? cs.reduce((a,b)=>a+b,0)/cs.length : W*0.5
+      const target = Math.round(Math.min(maxX, Math.max(0, focus - vw/2)))
+      // Scroll whichever element actually owns the horizontal overflow (window on real
+      // mobile; document.body when html isn't the scroller) so centering is browser-proof.
+      window.scrollTo(target, 0)
+      const se = document.scrollingElement || document.documentElement
+      if(se) se.scrollLeft = target
+      document.body.scrollLeft = target
+    })
+  }
+}
+
+// ── STARS CANVAS ─────────────────────────────────────────
+function drawStars(active) {
+  const c=document.getElementById('stars')
+  if(!active){c.style.opacity='0';return}
+  c.width=getWorldWidth();c.height=window.innerHeight*.34
+  const ctx=c.getContext('2d');ctx.clearRect(0,0,c.width,c.height)
+  for(let i=0;i<200;i++){
+    const x=(Math.sin(i*137.5)*.5+.5)*c.width
+    const y=(Math.sin(i*97.3)*.5+.5)*c.height
+    const r=Math.sin(i*43.1)*.4+1.1
+    const a=Math.sin(i*61.7)*.35+.75
+    ctx.beginPath();ctx.arc(x,y,r,0,Math.PI*2)
+    ctx.fillStyle=`rgba(255,255,255,${a})`;ctx.fill()
+  }
+}
+
+
+const ALL_STEPS=['morning','midday','evening','night']
+
+function cap(s){return s?s[0].toUpperCase()+s.slice(1):''}
+
+let S={chars:{},feed:[],world:{}}
+
+async function reloadData(){
+  const t=Date.now()
+  try {
+    const [c,f,w]=await Promise.all([
+      fetch('data/characters.json?t='+t).then(r=>r.json()),
+      fetch('data/feed.json?t='+t).then(r=>r.json()),
+      fetch('data/world.json?t='+t).then(r=>r.json()),
+    ])
+    // Only re-render when a NEW cycle has actually been written — avoids needless
+    // re-layout (and feed-scroll yanks) every poll when nothing changed.
+    const changed = !S.world || w.last_cycle_key !== S.world.last_cycle_key
+      || (f && S.feed && f.length !== S.feed.length)
+    S.chars=c;S.feed=f;S.world=w
+    if(changed) updateWorld()
+    // Even when no new cycle, pick up any changed character looks (cheap: ensureCharDom
+    // no-ops when the appearance signature is unchanged). Heals a first-render that
+    // happened before appearance data was available.
+    else Object.keys(S.chars).forEach(ensureCharDom)
+  } catch(e){ /* transient fetch error — keep showing current state, try again next poll */ }
+}
+// Pick up new cycles automatically (data changes ~5x/day; poll is cheap and no-op when unchanged)
+setInterval(reloadData, 120000)
+
+// Auto-update when a NEW build of this page is deployed. GitHub Pages caches the HTML
+// (max-age=600) so code/art changes (e.g. character looks) can otherwise sit behind a
+// stale tab until a manual hard-refresh. This records the served Last-Modified of the
+// page on load and reloads once if a newer build appears — no manual refresh needed.
+let _buildStamp = null
+async function checkForNewBuild(){
+  try{
+    const r = await fetch(location.pathname + '?_b=' + Date.now(), {method:'HEAD', cache:'no-store'})
+    const stamp = r.headers.get('last-modified') || r.headers.get('etag')
+    if(!stamp) return
+    if(_buildStamp && stamp !== _buildStamp){ location.reload() }
+    _buildStamp = _buildStamp || stamp
+  }catch(e){ /* offline / transient — try again next tick */ }
+}
+checkForNewBuild()
+setInterval(checkForNewBuild, 120000)
+
+async function init(){
+  await loadDynamicTiles()
+  try{
+    const t=Date.now()
+    const [c,f,w]=await Promise.all([
+      fetch('data/characters.json?t='+t).then(r=>r.json()),
+      fetch('data/feed.json?t='+t).then(r=>r.json()),
+      fetch('data/world.json?t='+t).then(r=>r.json()),
+    ])
+    S.chars=c;S.feed=f;S.world=w;updateWorld()
+  }catch(e){
+    document.getElementById('day-label').textContent='Error'
+    console.error(e)
+  }
+  return true
+}
+
+// ── STAT CARDS ───────────────────────────────────────────
+const SC_COLORS = {marcus:'#93c5fd',ryan:'#fde68a',jade:'#f9a8d4',judy:'#99f6e4'}
+const SC_FILL   = {marcus:'#60a5fa',ryan:'#fbbf24',jade:'#f472b6',judy:'#2dd4bf'}
+const SCORE_LABELS = ['trust','openness','loneliness','resilience','ambition']
+const SURVIVAL_LABELS = ['hunger','thirst','energy','health']
+// survival bars are colour-coded by level: green (ok) / amber (low) / red (critical)
+function survColor(v){ return v>=60?'#4ade80' : v>=30?'#fbbf24' : '#f87171' }
+function getScColor(cid){return SC_COLORS[cid]||(S.chars[cid]?.color||'#94a3b8')}
+function getScFill(cid){return SC_FILL[cid]||S.chars[cid]?.color||'#94a3b8'}
+
+function buildStatCard(cid) {
+  const el = document.getElementById('sc-'+cid)
+  if(!el || !S.chars[cid]) return
+  const c = S.chars[cid]
+  const col = getScColor(cid)
+  const fill = getScFill(cid)
+
+  const scoreRows = SCORE_LABELS.map(k => {
+    const v = c.scores?.[k] ?? 0
+    return `<div class="sc-row">
+      <span class="sc-label">${k}</span>
+      <div class="sc-bar"><div class="sc-fill" style="width:${v}%;background:${fill}88"></div></div>
+      <span class="sc-val">${v}</span>
+    </div>`
+  }).join('')
+
+  const survRows = SURVIVAL_LABELS.map(k => {
+    const v = c.scores?.[k] ?? (k==='health' ? 100 : 0)
+    const sc = survColor(v)
+    return `<div class="sc-row">
+      <span class="sc-label">${k}</span>
+      <div class="sc-bar"><div class="sc-fill" style="width:${v}%;background:${sc}"></div></div>
+      <span class="sc-val" style="color:${sc}">${v}</span>
+    </div>`
+  }).join('')
+
+  const others = Object.keys(S.chars).filter(k=>k!==cid)
+  const bondRows = others.map(oid => {
+    const rel = c.relationships?.[oid] || {}
+    const cl = rel.closeness ?? 0
+    const at = rel.attraction ?? 0
+    const heart = at >= 30 ? ' ❤' : at >= 10 ? ' ·' : ''
+    const oName = S.chars[oid]?.name?.split(' ')[0] || cap(oid)
+    const oCol = getScColor(oid)
+    return `<div class="sc-bond" style="color:rgba(255,255,255,.6)">
+      <span style="color:${oCol}">${oName}</span>
+      <span style="color:rgba(255,255,255,.3)"> — closeness </span>
+      <span style="color:${fill}">${cl}</span>${heart ? `<span style="color:#f43f5e;font-size:11px">${heart}</span>` : ''}
+    </div>`
+  }).join('')
+
+  el.style.borderColor = col+'44'
+  el.style.border = `1px solid ${col}33`
+  const condBadge = (c.condition && c.condition!=='healthy')
+    ? `<div class="sc-cond sc-cond-${c.condition}">${c.condition==='injured'?'🤕 INJURED':'🤒 SICK'}</div>` : ''
+  el.innerHTML = `
+    <div class="sc-name" style="color:${col}">${c.name||cap(cid)}</div>
+    <div class="sc-mood">${c.mood||'—'}</div>
+    ${condBadge}
+    <div class="sc-section">Stats</div>
+    ${scoreRows}
+    <div class="sc-section" style="margin-top:7px">Survival</div>
+    ${survRows}
+    <div class="sc-section" style="margin-top:7px">Bonds</div>
+    ${bondRows}
+  `
+
+  // auto-flip horizontal + vertical based on character screen position
+  const charEl = document.getElementById('char-'+cid)
+  if(charEl) {
+    const xPct = parseFloat(charEl.style.left||'50')
+    const yPct = parseFloat(charEl.style.top||'50')
+    el.classList.toggle('left', xPct > 55)
+    el.classList.toggle('right', xPct <= 55)
+    el.classList.toggle('below', yPct < 40)
+  }
+}
+
+function updateStatCards() {
+  Object.keys(S.chars).forEach(buildStatCard)
+}
+
+// ── DAY HISTORY ───────────────────────────────────────────
+let _dhpOpen = false
+
+function toggleDayHistory() {
+  _dhpOpen = !_dhpOpen
+  const panel = document.getElementById('day-history-panel')
+  const btn = document.getElementById('day-hist-btn')
+  if(!panel) return
+  if(_dhpOpen) { showDayHistoryChips(); panel.classList.add('open') }
+  else panel.classList.remove('open')
+  if(btn) btn.classList.toggle('active', _dhpOpen)
+}
+
+function showDayHistoryChips() {
+  const inner = document.getElementById('dhp-inner')
+  if(!inner || !S.world) return
+  const w = S.world
+  const WX = {clear:'☀️',rain:'🌧️',storm:'⛈️',overcast:'☁️',foggy:'🌫️'}
+  const CYNAME = {morning:'Morning',midday:'Midday',evening:'Evening',night:'Night'}
+  const allDays = [...new Set((S.feed||[]).map(e=>e.day))].sort((a,b)=>b-a)
+  if(!allDays.includes(w.day)) allDays.unshift(w.day)
+  inner.innerHTML = `
+    <div class="dhp-head">Rooftop History</div>
+    <div class="dhp-scroll"><div class="dhp-chips">
+      ${allDays.map(d => {
+        const isCur = d === w.day
+        const meta = isCur ? `${CYNAME[w.cycle]||''} ${WX[w.weather]||''}`.trim() : ''
+        return `<div class="dhp-chip${isCur?' cur':''}" onclick="showDayHistorySummary(${d})">
+          ${isCur?'<span class="dhp-dot"></span>':''}<span>Day ${d}</span>
+          ${meta?`<span class="dhp-chip-meta">${meta}</span>`:''}
+        </div>`
+      }).join('')}
+    </div></div>`
+}
+
+function showDayHistorySummary(day) {
+  const inner = document.getElementById('dhp-inner')
+  if(!inner) return
+  // Prefer the whole-day recap (written at the night cycle). If the day is still in
+  // progress, say so. Older days from before this feature fall back to the last event.
+  const summ = S.world?.day_summaries?.[day]
+  const isCurrent = day === (S.world?.day)
+  let bodyHtml
+  if (summ) {
+    bodyHtml = `<div class="dhp-drama">${summ}</div>`
+  } else if (isCurrent) {
+    bodyHtml = `<div class="dhp-ongoing">Day ${day} is still unfolding — the full recap arrives at day's end.</div>`
+  } else {
+    const entries = (S.feed||[]).filter(e=>e.day===day)
+    const interactions = entries.filter(e=>e.type==='interaction')
+    const lastIntr = interactions[interactions.length-1]
+    const dramaLine = lastIntr?.description
+      || [...entries].reverse().find(e=>e.thought)?.thought || '—'
+    bodyHtml = `<div class="dhp-drama">"${dramaLine}"</div>`
+  }
+  inner.innerHTML = `
+    <div class="dhp-head">
+      <span>Day ${day}</span>
+      <button class="dhp-back" onclick="showDayHistoryChips()">← all days</button>
+    </div>
+    <div class="dhp-scroll">
+      ${bodyHtml}
+    </div>`
+}
+
+// ── ORACLE ────────────────────────────────────────────────
+// (Island Oracle UI functions removed — the Oracle still runs in the engine and shapes
+//  the story; we just no longer reveal the upcoming/active fate on screen.)
+
+// Scene line: the "overnight → now" recap that sits directly under the LATEST headline.
+// Position is MEASURED from the headline's real rendered bottom (never hardcoded) so it
+// stays glued under it on every screen size and however many lines the headline wraps to.
+function positionSceneLine(){
+  const pulse = document.getElementById('pulse')
+  const pr = pulse?.getBoundingClientRect()
+  let blockBottom = (pr && pr.bottom) ? pr.bottom : 32
+  const el = document.getElementById('scene-line')
+  if(el){
+    const txt = (S && S.world && S.world.scene) || ''
+    el.textContent = txt
+    if(!txt){ el.style.display='none' }
+    else {
+      el.style.display=''
+      // sit just below the headline; fall back to a sane top if it isn't laid out yet
+      el.style.top = (blockBottom + 6) + 'px'
+    }
+  }
+  // (resource pills now live bottom-right via CSS — no headline-tucking needed)
+}
+
+function setHudVar(){
+  const hud = document.getElementById('hud')
+  const h = hud?.getBoundingClientRect().height
+  if(h) document.documentElement.style.setProperty('--above-hud', (Math.ceil(h)+12)+'px')
+  // --stage-bottom: the full-width bottom chrome (HUD + COLLAPSED feed drawer) the world
+  // must sit above so the beach/ocean stays visible. Always reserve the drawer's COLLAPSED
+  // footprint — even when it's expanded — so opening/closing the drawer never resizes the
+  // world (its CSS `bottom` offset is unchanged when open; only its height grows).
+  const DRAWER_COLLAPSED = 44
+  let top = window.innerHeight
+  if(hud) top = Math.min(top, hud.getBoundingClientRect().top)
+  const chat = document.getElementById('chat-panel')
+  if(chat){
+    const chatTop = chat.classList.contains('feed-open')
+      ? window.innerHeight - (parseFloat(getComputedStyle(chat).bottom)||0) - DRAWER_COLLAPSED
+      : chat.getBoundingClientRect().top
+    top = Math.min(top, chatTop)
+  }
+  const sb = Math.max(0, Math.round(window.innerHeight - top))
+  if(sb) document.documentElement.style.setProperty('--stage-bottom', sb+'px')
+}
+window.addEventListener('resize', ()=>{ setHudVar(); if(S && Object.keys(S.chars||{}).length) updateWorld() })
+
+// ── ZOOM-AWARE RE-SYNC (mobile pinch-zoom) ──────────────────────────────────
+// Mobile browsers (esp. iOS Safari) let users pinch-zoom even though our viewport asks them
+// not to. The fixed UI + horizontal map-scroll were built assuming no zoom, so after a zoom
+// in/out things could be left "stuck" (stale layout, scroll jammed past the world edge).
+// When a zoom settles (scale returns toward 1) — or on any visual-viewport change — we
+// re-measure + re-lay-out (same path as a resize) and clamp the map-scroll back into bounds,
+// so nothing stays stuck once the gesture ends. (Additive: only runs on visualViewport
+// events, so the normal no-zoom layout is untouched.)
+if (window.visualViewport) {
+  const vv = window.visualViewport
+  let vvRaf = null
+  const syncViewport = () => {
+    vvRaf = null
+    setHudVar()
+    if (S && Object.keys(S.chars||{}).length) updateWorld()
+    if (isMobile()) {
+      const maxX = Math.max(0, getWorldWidth() - window.innerWidth)
+      const x = Math.min(maxX, Math.max(0, currentWorldScrollX()))
+      if (x !== currentWorldScrollX()) scrollWorldX(x)
+    }
+  }
+  const onVV = () => { if (!vvRaf) vvRaf = requestAnimationFrame(syncViewport) }
+  vv.addEventListener('resize', onVV)
+  vv.addEventListener('scroll', onVV)
+}
+// Keep --above-hud and --stage-bottom in sync with the HUD's REAL height at all times.
+// On mobile the HUD wraps to extra rows (and grows as status text / fonts change), so a
+// one-time measure goes stale: the Oracle button (z-index 52) ends up under the HUD
+// (z-index 100) and the world stage height drifts. A ResizeObserver re-measures on every
+// HUD size change, then re-lays-out the world so characters track the new stage height.
+const _hudEl = document.getElementById('hud')
+if(_hudEl && window.ResizeObserver){
+  new ResizeObserver(()=>{ setHudVar(); if(S && Object.keys(S.chars||{}).length) updateWorld() }).observe(_hudEl)
+}
+
+setInterval(updateStatusBar,60000)
+init().then(()=>{ initTapStats(); setHudVar() })
+
+// ── AUDIENCE VOTING ("sway, don't script") ──────────────────────────────────
+const VOTE_URL='https://wuorljdhcucldqqeqlvy.supabase.co';
+const VOTE_KEY='sb_publishable_fUl9AURQ3Mp0OblCKoFkWQ_8qLW-UiA';
+const VOTE_WORLD='drivingdead';
+let _vote=null;
+function voterId(){let v=localStorage.getItem('drivingdead_voter');if(!v){v='v'+Math.random().toString(36).slice(2)+Date.now().toString(36);localStorage.setItem('drivingdead_voter',v);}return v;}
+async function loadVote(){ try{_vote=await fetch('data/vote.json?t='+Date.now()).then(r=>r.json());}catch{_vote=null;} renderVote(); }
+async function renderVote(){
+  const body=document.getElementById('vp-body'); if(!body) return;
+  if(!_vote||!_vote.poll){ body.innerHTML='<div style="color:rgba(255,255,255,.5);font-size:12px">No vote open right now — check back soon.</div>'; return; }
+  const poll=_vote.poll, opts=poll.options||[];
+  const myPick=localStorage.getItem('drivingdead_voted_'+poll.id);
+  let tally={};
+  try{ const rows=await fetch(VOTE_URL+'/rest/v1/rpc/tally',{method:'POST',headers:{apikey:VOTE_KEY,Authorization:'Bearer '+VOTE_KEY,'Content-Type':'application/json'},body:JSON.stringify({w:VOTE_WORLD,p:poll.id})}).then(r=>r.json()); rows.forEach(r=>tally[r.choice]=r.n); }catch{}
+  const total=Object.values(tally).reduce((a,b)=>a+(+b||0),0);
+  let html=`<div class="vp-q">${poll.question||'Which way should the camp lean?'}</div>`;
+  opts.forEach(o=>{
+    const n=+tally[o.id]||0, pct=total?Math.round(n/total*100):0, picked=myPick===o.id;
+    html+=`<button class="vp-opt${picked?' picked':''}" ${myPick?'disabled':''} onclick="castVote('${o.id}')">
+      <div class="vp-bar" style="width:${myPick?pct:0}%"></div>
+      <div class="vp-opt-label">${o.label}</div><div class="vp-opt-desc">${o.desc||''}</div>
+      ${myPick?`<div class="vp-opt-pct">${pct}%</div>`:''}</button>`;
+  });
+  html+= myPick
+    ? `<div class="vp-voted">✓ You leaned toward ${(opts.find(o=>o.id===myPick)||{}).label||myPick} · ${total} ${total===1?'voice':'voices'} so far</div>`
+    : `<div class="vp-hint">Tap to cast your one vote — it closes tonight.</div>`;
+  const ip=_vote.in_play;
+  if(ip) html+=`<div class="vp-inplay">In play now · <b>${ip.label}</b> — ${ip.desc}.${ip.votes?` Chosen by ${ip.votes} ${ip.votes===1?'watcher':'watchers'}.`:''} The camp leans this way today.</div>`;
+  else html+=`<div class="vp-inplay">No lean is in play yet — <b>tonight's vote sets tomorrow's mood.</b></div>`;
+  body.innerHTML=html;
+}
+async function castVote(choice){
+  const poll=_vote&&_vote.poll; if(!poll||localStorage.getItem('drivingdead_voted_'+poll.id)) return;
+  try{ const res=await fetch(VOTE_URL+'/rest/v1/votes',{method:'POST',headers:{apikey:VOTE_KEY,Authorization:'Bearer '+VOTE_KEY,'Content-Type':'application/json'},body:JSON.stringify({world:VOTE_WORLD,poll_id:poll.id,choice,voter:voterId()})});
+    if(res.ok||res.status===409) localStorage.setItem('drivingdead_voted_'+poll.id,choice); }catch{}
+  renderVote();
+}
+function toggleVote(){
+  const panel=document.getElementById('vote-panel'), pill=document.getElementById('vote-pill');
+  const willOpen=!panel.classList.contains('open');
+  // one corner-panel at a time: close the Days dropdown if it's open
+  if(willOpen && typeof _dhpOpen!=='undefined' && _dhpOpen){
+    _dhpOpen=false; document.getElementById('day-history-panel')?.classList.remove('open');
+    document.getElementById('day-hist-btn')?.classList.remove('active');
+  }
+  panel.classList.toggle('open', willOpen);
+  pill.classList.toggle('active', willOpen);
+  if(willOpen) loadVote();
+}
+// tap anywhere outside the dropdown (or the pill) closes it
+document.addEventListener('click', e=>{
+  const panel=document.getElementById('vote-panel');
+  if(panel && panel.classList.contains('open') && !e.target.closest('#vote-panel') && !e.target.closest('#vote-pill')){
+    panel.classList.remove('open'); document.getElementById('vote-pill')?.classList.remove('active');
+  }
+});
+loadVote();
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "world": "drivingdead",
+  "poll": {
+    "id": "2026-06-08",
+    "closes": "tonight",
+    "question": "A limping figure reaches the rooftop—alive, impossible to ignore. Hui Ling wants to help. Dan wants to stay sealed. What do they do?",
+    "options": [
+      {
+        "id": "open_ramp",
+        "label": "Open the ramp",
+        "desc": "Trust Hui Ling's heart, pull them up, gamble that hope beats caution"
+      },
+      {
+        "id": "stay_sealed",
+        "label": "Stay sealed tight",
+        "desc": "Honor Dan's survival instinct, protect the van, hold their line as two"
+      },
+      {
+        "id": "assess_first",
+        "label": "Signal first",
+        "desc": "Talk before opening—stay protected but stay human, gather intel before committing"
+      }
+    ]
+  }
+}

@@ -1,0 +1,47 @@
+/* ============================================================================
+   THE NEVER ENDING STORY PROJECT — shared house-style tokens
+   ----------------------------------------------------------------------------
+   This file is the canonical aesthetic spec every world inherits. It is what
+   keeps Tropicana, a snow world, a stranded ship, etc. feeling like ONE
+   universe. Copy this file into every new world's repo.
+
+   CONSTANT (never change per world): typography + craft tokens below.
+   PER-WORLD (override in each world): the --w-* palette block at the bottom.
+   The "one universe" feeling comes from shared CRAFT, not a shared climate —
+   so swap the palette freely, but keep the fonts and craft identical.
+   ============================================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=VT323&display=swap');
+
+:root{
+  /* ── Typography — CONSTANT across all worlds ───────────────────────────── */
+  --nes-font-display:'Cinzel',serif;            /* world / title signature      */
+  --nes-font-body:'Plus Jakarta Sans',sans-serif;
+  --nes-font-mono:'VT323',monospace;            /* stats / labels accent        */
+
+  /* ── Craft tokens — CONSTANT (the premium feel) ────────────────────────── */
+  --nes-blur:10px;                              /* glassmorphism blur amount    */
+  --nes-glass:rgba(20,20,20,.55);               /* frosted panel fill           */
+  --nes-glass-border:rgba(255,255,255,.12);     /* hairline panel border        */
+  --nes-vignette:rgba(2,6,23,.5);               /* scene edge darkening         */
+
+  /* ── Palette — PER-WORLD (override these in each new world) ─────────────── */
+  /* Rimba / World 03 — deep Malaysian rainforest. Dappled canopy gold over wet
+     emerald + earth; night falls to a near-black jungle green with firefly/ember
+     warmth and a teal river. Same craft as Tropicana, re-skinned for the jungle. */
+  /* DRIVING DEAD — a dead-city rooftop: weathered concrete + rust, the warm
+     amber/solar glow of the van against a cold-steel apocalypse. Same craft. */
+  --w-gold:#f59e0b;        /* solar / van amber — primary warm accent          */
+  --w-gold-soft:#fbbf24;   /* warm telltale amber                              */
+  --w-cream:#dfe6ec;       /* cold concrete-white (headlines on dark)          */
+  --w-sand:#7a7e82;        /* weathered concrete grey                          */
+  --w-amber:#5c2410;       /* rust                                             */
+  --w-amber-deep:#3e4248;  /* dark concrete                                    */
+  --w-brown:#1c2027;       /* asphalt black                                   */
+  --w-ink:#0a0d12;         /* near-black steel ink                            */
+  --w-night:#141b2c;       /* deep dead-city night                           */
+  --w-night-deep:#070a12;  /* black night sky                                */
+  --w-green:#4d7c0f;       /* creeping overgrowth green                       */
+  --w-accent-blue:#22d3ee; /* cold tech cyan (radio / Hui Ling)              */
+  --w-accent-pink:#f59e0b; /* van-glow warmth                                */
+}

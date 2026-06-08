@@ -1,0 +1,77 @@
+[
+  {
+    "day": 1,
+    "cycle": "morning",
+    "character": "dan",
+    "action": "He checks the solar battery readout in the cab, eyes tracking the voltage: 56%, steady, no drain overnight.",
+    "thought": "Systems are holding. We're still safe.",
+    "location": {
+      "waypoint": "van_front",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "focused",
+    "timestamp": "2026-06-08T22:38:00.426313"
+  },
+  {
+    "day": 1,
+    "cycle": "morning",
+    "character": "huiling",
+    "action": "She brings two cups of hot water to the cab, setting one beside Dan while her eyes settle on the food log open on the seat.",
+    "thought": "Sixty days. Maybe less if luck turns.",
+    "location": {
+      "waypoint": "van_front",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "weary",
+    "timestamp": "2026-06-08T22:38:00.426313"
+  },
+  {
+    "day": 1,
+    "cycle": "morning",
+    "type": "interaction",
+    "characters": [
+      "dan",
+      "huiling"
+    ],
+    "description": "In the cab of the van, Dan and Hui Ling stand with their cups in the morning sun, the rooftop spread bright behind them, the dead city visible far below in the clear light.",
+    "dialogue": [
+      {
+        "speaker": "dan",
+        "line": "Battery's at 56. Panels are good."
+      },
+      {
+        "speaker": "huiling",
+        "line": "How long on the food stores?"
+      },
+      {
+        "speaker": "dan",
+        "line": "Longer if we're careful."
+      },
+      {
+        "speaker": "huiling",
+        "line": "We've been careful for months, Dan."
+      },
+      {
+        "speaker": "dan",
+        "line": "And we're alive. That's the math."
+      },
+      {
+        "speaker": "huiling",
+        "line": "I know. I just feel it running down."
+      },
+      {
+        "speaker": "dan",
+        "line": "It's not. We're fine."
+      },
+      {
+        "speaker": "huiling",
+        "line": "For now."
+      }
+    ],
+    "timestamp": "2026-06-08T22:38:00.426313"
+  }
+]

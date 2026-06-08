@@ -1,0 +1,108 @@
+{
+  "dan": {
+    "name": "Dan Soh",
+    "age": 35,
+    "archetype": "builder",
+    "color": "#f59e0b",
+    "scores": {
+      "trust": 55,
+      "openness": 34,
+      "ambition": 62,
+      "loneliness": 22,
+      "resilience": 84,
+      "health": 100,
+      "hunger": 59,
+      "thirst": 56,
+      "energy": 63
+    },
+    "mood": "focused",
+    "location": {
+      "waypoint": "van_front",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "relationships": {
+      "huiling": {
+        "closeness": 78,
+        "tension": 12,
+        "attraction": 80
+      }
+    },
+    "bio": "35, an ex-solar and aircon technician who spent two years converting an old camper into a self-sufficient, solar-powered home before the world ended — the only reason they're still alive. Methodical and guarded, he plans every move down to the watt and the ration, keeps the van running and the ramp sealed, and would rather never open the gate than risk the two of them for a stranger. He fixes things instead of feeling them — and the dead city is wearing that down.",
+    "appearance": {
+      "skin": "#c8996a",
+      "hair": {
+        "style": "short",
+        "color": "#1a1410"
+      },
+      "accessory": "cap",
+      "accColor": "#f59e0b",
+      "outfit": "#3a4a55",
+      "pants": "#2b3138",
+      "boots": "#1b1e24",
+      "gear": [
+        "backpack",
+        "knife"
+      ],
+      "beard": true
+    },
+    "tag": "Dan",
+    "interaction": {
+      "with": "huiling",
+      "state": "talking"
+    }
+  },
+  "huiling": {
+    "name": "Hui Ling",
+    "age": 32,
+    "archetype": "healer",
+    "color": "#22d3ee",
+    "scores": {
+      "trust": 68,
+      "openness": 78,
+      "ambition": 45,
+      "loneliness": 39,
+      "resilience": 70,
+      "health": 100,
+      "hunger": 59,
+      "thirst": 56,
+      "energy": 63
+    },
+    "mood": "weary",
+    "location": {
+      "waypoint": "van_front",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "relationships": {
+      "dan": {
+        "closeness": 78,
+        "tension": 12,
+        "attraction": 80
+      }
+    },
+    "bio": "32, an ICU nurse who spent the first weeks of the outbreak watching people she couldn't save. Warm and stubborn, the conscience of the pair — and the only one with the hands to do field surgery if a bite ever gets through the barricade. She can't look away from a survivor down in the street the way Dan can; it costs her, and it scares him. She keeps them human; he keeps them alive. Five years together, and the dead city is testing every promise they made.",
+    "appearance": {
+      "skin": "#e3b890",
+      "hair": {
+        "style": "bun",
+        "color": "#241812"
+      },
+      "accessory": "earrings",
+      "outfit": "#14b8a6",
+      "accColor": "#5eead4",
+      "pants": "#0e7d72",
+      "boots": "#2a2a2e",
+      "gear": [
+        "slingbag"
+      ]
+    },
+    "tag": "Hui Ling",
+    "interaction": {
+      "with": "dan",
+      "state": "talking"
+    }
+  }
+}
