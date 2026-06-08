@@ -1,6 +1,7 @@
 {
   "dan": {
     "name": "Dan Soh",
+    "tag": "Dan",
     "age": 35,
     "archetype": "builder",
     "color": "#f59e0b",
@@ -8,24 +9,24 @@
       "trust": 55,
       "openness": 34,
       "ambition": 62,
-      "loneliness": 20,
+      "loneliness": 22,
       "resilience": 85,
       "health": 100,
-      "hunger": 48,
-      "thirst": 45,
-      "energy": 97
+      "hunger": 59,
+      "thirst": 56,
+      "energy": 63
     },
-    "mood": "focused",
+    "mood": "guarded",
     "location": {
-      "waypoint": "ramp_block",
+      "waypoint": "solar_array",
       "x": 42,
       "y": 52
     },
     "shelter": "van",
     "relationships": {
       "huiling": {
-        "closeness": 81,
-        "tension": 11,
+        "closeness": 78,
+        "tension": 12,
         "attraction": 80
       }
     },
@@ -47,36 +48,36 @@
       ],
       "beard": true
     },
-    "tag": "Dan",
     "interaction": null
   },
   "huiling": {
     "name": "Hui Ling",
+    "tag": "Hui Ling",
     "age": 32,
     "archetype": "healer",
     "color": "#22d3ee",
     "scores": {
       "trust": 68,
-      "openness": 78,
+      "openness": 79,
       "ambition": 45,
-      "loneliness": 36,
+      "loneliness": 39,
       "resilience": 70,
       "health": 100,
-      "hunger": 48,
-      "thirst": 45,
-      "energy": 97
+      "hunger": 59,
+      "thirst": 56,
+      "energy": 63
     },
     "mood": "weary",
     "location": {
-      "waypoint": "van_front",
+      "waypoint": "van_rear",
       "x": 64,
       "y": 44
     },
     "shelter": "van",
     "relationships": {
       "dan": {
-        "closeness": 81,
-        "tension": 11,
+        "closeness": 78,
+        "tension": 12,
         "attraction": 80
       }
     },
@@ -96,7 +97,6 @@
         "slingbag"
       ]
     },
-    "tag": "Hui Ling",
     "interaction": null
   }
 }

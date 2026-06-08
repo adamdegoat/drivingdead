@@ -3,31 +3,31 @@
     "day": 1,
     "cycle": "morning",
     "character": "dan",
-    "action": "He checks the solar battery readout in the cab, eyes tracking the voltage: 56%, steady, no drain overnight.",
-    "thought": "Systems are holding. We're still safe.",
+    "action": "Runs his hand across the solar panels, checking the readout on the van's console.",
+    "thought": "Battery's full. I can breathe today.",
     "location": {
-      "waypoint": "van_front",
+      "waypoint": "solar_array",
       "x": 42,
       "y": 52
     },
     "shelter": "van",
-    "mood": "focused",
-    "timestamp": "2026-06-08T22:38:00.426313"
+    "mood": "guarded",
+    "timestamp": "2026-06-08T23:33:57.022245"
   },
   {
     "day": 1,
     "cycle": "morning",
     "character": "huiling",
-    "action": "She brings two cups of hot water to the cab, setting one beside Dan while her eyes settle on the food log open on the seat.",
-    "thought": "Sixty days. Maybe less if luck turns.",
+    "action": "Pours hot water through the filter, listening to it hum in the morning light.",
+    "thought": "The sound won't leave my head.",
     "location": {
-      "waypoint": "van_front",
+      "waypoint": "van_rear",
       "x": 64,
       "y": 44
     },
     "shelter": "van",
     "mood": "weary",
-    "timestamp": "2026-06-08T22:38:00.426313"
+    "timestamp": "2026-06-08T23:33:57.022245"
   },
   {
     "day": 1,
@@ -37,128 +37,33 @@
       "dan",
       "huiling"
     ],
-    "description": "In the cab of the van, Dan and Hui Ling stand with their cups in the morning sun, the rooftop spread bright behind them, the dead city visible far below in the clear light.",
+    "description": "Inside the van's cab, Dan reports the battery while Hui Ling steams water; the morning sun glints off their faces as they settle into the day's rhythm.",
     "dialogue": [
       {
         "speaker": "dan",
-        "line": "Battery's at 56. Panels are good."
+        "line": "Battery's full. Panels are clean."
       },
       {
         "speaker": "huiling",
-        "line": "How long on the food stores?"
+        "line": "I heard something last night. Around two."
       },
       {
         "speaker": "dan",
-        "line": "Longer if we're careful."
+        "line": "Where?"
       },
       {
         "speaker": "huiling",
-        "line": "We've been careful for months, Dan."
+        "line": "East side. Probably just wind."
       },
       {
         "speaker": "dan",
-        "line": "And we're alive. That's the math."
+        "line": "Barricade held. Nothing's breached the ramp."
       },
       {
         "speaker": "huiling",
-        "line": "I know. I just feel it running down."
-      },
-      {
-        "speaker": "dan",
-        "line": "It's not. We're fine."
-      },
-      {
-        "speaker": "huiling",
-        "line": "For now."
+        "line": "I know. But I'm awake now."
       }
     ],
-    "timestamp": "2026-06-08T22:38:00.426313"
-  },
-  {
-    "day": 1,
-    "cycle": "night",
-    "character": "dan",
-    "action": "Checks the ramp barricade one final time, running his hands over the locks and frame before heading back into the van.",
-    "thought": "Barricade holds, we're secure for tonight.",
-    "location": {
-      "waypoint": "ramp_block",
-      "x": 42,
-      "y": 52
-    },
-    "shelter": "van",
-    "mood": "focused",
-    "timestamp": "2026-06-08T23:02:08.756720"
-  },
-  {
-    "day": 1,
-    "cycle": "night",
-    "character": "huiling",
-    "action": "Sits in the van's cab with a cup of water, listening to the dark streets settle into silence as she waits for Dan.",
-    "thought": "First night held. How many more?",
-    "location": {
-      "waypoint": "van_front",
-      "x": 64,
-      "y": 44
-    },
-    "shelter": "van",
-    "mood": "weary",
-    "timestamp": "2026-06-08T23:02:08.756720"
-  },
-  {
-    "day": 1,
-    "cycle": "night",
-    "type": "interaction",
-    "characters": [
-      "dan",
-      "huiling"
-    ],
-    "description": "In the van, Dan returns from checking the ramp to find Hui Ling waiting; together they settle into the first night.",
-    "dialogue": [
-      {
-        "speaker": "huiling",
-        "line": "Ramp's solid?"
-      },
-      {
-        "speaker": "dan",
-        "line": "Solid. Everything's locked."
-      },
-      {
-        "speaker": "huiling",
-        "line": "And the battery?"
-      },
-      {
-        "speaker": "dan",
-        "line": "Seventy-six. We're good."
-      },
-      {
-        "speaker": "huiling",
-        "line": "Then stop checking. Come sit."
-      },
-      {
-        "speaker": "dan",
-        "line": "I wasn't checking."
-      },
-      {
-        "speaker": "huiling",
-        "line": "You were. But I'm glad you're here."
-      },
-      {
-        "speaker": "dan",
-        "line": "Long day."
-      },
-      {
-        "speaker": "huiling",
-        "line": "Yeah. But we made it."
-      },
-      {
-        "speaker": "dan",
-        "line": "Tomorrow too."
-      },
-      {
-        "speaker": "huiling",
-        "line": "Tomorrow too."
-      }
-    ],
-    "timestamp": "2026-06-08T23:02:08.756720"
+    "timestamp": "2026-06-08T23:33:57.022245"
   }
 ]
