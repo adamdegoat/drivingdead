@@ -6,15 +6,15 @@
     "archetype": "builder",
     "color": "#f59e0b",
     "scores": {
-      "trust": 52,
-      "openness": 33,
-      "ambition": 63,
-      "loneliness": 12,
-      "resilience": 89,
+      "trust": 53,
+      "openness": 35,
+      "ambition": 62,
+      "loneliness": 9,
+      "resilience": 90,
       "health": 100,
       "hunger": 53,
       "thirst": 53,
-      "energy": 62
+      "energy": 96
     },
     "mood": "afraid",
     "location": {
@@ -25,8 +25,8 @@
     "shelter": "van",
     "relationships": {
       "huiling": {
-        "closeness": 79,
-        "tension": 19,
+        "closeness": 80,
+        "tension": 17,
         "attraction": 79
       }
     },
@@ -72,6 +72,11 @@
         "day": 2,
         "text": "I'm losing her because I won't let her out. That's the cage I built.",
         "weight": 2
+      },
+      {
+        "day": 2,
+        "text": "When she asked why I blocked the door, I told her the truth—I'm terrified she'll leave me.",
+        "weight": 3
       }
     ]
   },
@@ -82,15 +87,15 @@
     "archetype": "healer",
     "color": "#22d3ee",
     "scores": {
-      "trust": 64,
-      "openness": 84,
-      "ambition": 46,
-      "loneliness": 24,
-      "resilience": 67,
+      "trust": 65,
+      "openness": 85,
+      "ambition": 45,
+      "loneliness": 23,
+      "resilience": 65,
       "health": 100,
       "hunger": 53,
       "thirst": 53,
-      "energy": 62
+      "energy": 96
     },
     "mood": "trapped",
     "location": {
@@ -101,8 +106,8 @@
     "shelter": "van",
     "relationships": {
       "dan": {
-        "closeness": 79,
-        "tension": 19,
+        "closeness": 80,
+        "tension": 17,
         "attraction": 79
       }
     },
@@ -151,6 +156,11 @@
         "day": 2,
         "text": "He won't let me save anything. Even what already wants to die.",
         "weight": 2
+      },
+      {
+        "day": 2,
+        "text": "Dan's real fear isn't the dead—it's me leaving. We're both trapped in his terror now.",
+        "weight": 3
       }
     ]
   }

@@ -531,5 +531,92 @@
       }
     ],
     "timestamp": "2026-06-09T18:01:57.455768"
+  },
+  {
+    "day": 2,
+    "cycle": "night",
+    "character": "dan",
+    "action": "He stands at the van door, blocking the way, but as Hui Ling questions him in the dark, he finally admits the truth.",
+    "thought": "She's right. I can't cage her.",
+    "location": {
+      "waypoint": "van_door",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "afraid",
+    "timestamp": "2026-06-09T23:02:00.621832"
+  },
+  {
+    "day": 2,
+    "cycle": "night",
+    "character": "huiling",
+    "action": "She stands at the threshold, her hand reaching for the door, and waits for his answer as the night closes in.",
+    "thought": "He's afraid of losing me, not the dead.",
+    "location": {
+      "waypoint": "van_door",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "trapped",
+    "timestamp": "2026-06-09T23:02:00.621832"
+  },
+  {
+    "day": 2,
+    "cycle": "night",
+    "type": "interaction",
+    "characters": [
+      "dan",
+      "huiling"
+    ],
+    "description": "At the van door in the dark, Hui Ling reaches for the handle and Dan blocks it; when she questions why, he breaks—admitting he's terrified not of the dead, but of her leaving.",
+    "dialogue": [
+      {
+        "speaker": "huiling",
+        "line": "I'm not asking to go out. I just want to open the door."
+      },
+      {
+        "speaker": "dan",
+        "line": "Same thing at night. Sound carries."
+      },
+      {
+        "speaker": "huiling",
+        "line": "They're suffering. I can hear them."
+      },
+      {
+        "speaker": "dan",
+        "line": "Not our problem."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Says the man who built a van to help survive. Not hide."
+      },
+      {
+        "speaker": "dan",
+        "line": "I built it to keep us alive. That's what matters."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Keeping alive and living aren't the same thing."
+      },
+      {
+        "speaker": "huiling",
+        "line": "At first light, let me open the door."
+      },
+      {
+        "speaker": "dan",
+        "line": "First light, they go. That was the deal."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Then why are you still blocking the door?"
+      },
+      {
+        "speaker": "dan",
+        "line": "Because I'm afraid if I move, you will too."
+      }
+    ],
+    "timestamp": "2026-06-09T23:02:00.621832"
   }
 ]
