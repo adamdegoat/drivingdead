@@ -272,8 +272,8 @@ html,body{width:100%;height:100%;overflow:hidden;font-family:'Plus Jakarta Sans'
   text-shadow:0 1px 3px rgba(0,0,0,.7),0 1px 3px rgba(0,0,0,.8),0 0 16px rgba(0,0,0,.6),0 0 30px rgba(0,0,0,.45)}
 #pulse:not(:empty)::before{content:'✦ LATEST FROM DRIVING DEAD';display:block;
   font-family:'VT323',monospace;font-size:10px;font-style:normal;font-weight:400;
-  letter-spacing:2px;color:rgba(255,255,255,.5);text-transform:uppercase;margin-bottom:3px;
-  text-shadow:0 1px 3px rgba(0,0,0,.6)}
+  letter-spacing:2px;color:rgba(255,255,255,.62);text-transform:uppercase;margin-bottom:3px;
+  text-shadow:0 1px 3px rgba(0,0,0,.8),0 0 10px rgba(0,0,0,.6)}
 #scene-line{position:fixed;left:50%;transform:translateX(-50%);z-index:30;pointer-events:none;
   width:380px;max-width:88vw;
   font-family:'Plus Jakarta Sans',sans-serif;font-size:11.5px;font-weight:500;
@@ -285,9 +285,10 @@ html,body{width:100%;height:100%;overflow:hidden;font-family:'Plus Jakarta Sans'
   color:rgba(255,255,255,.07);letter-spacing:3.5px;text-transform:uppercase}
 
 /* ── CHARACTERS ── */
-.char{position:absolute;z-index:20;transform:translate(-50%,-100%);
+.char{position:absolute;z-index:20;transform:translate(-50%,-100%);cursor:pointer;
   transition:left 2.8s cubic-bezier(.4,0,.2,1),top 2.8s cubic-bezier(.4,0,.2,1)}
-.char-svg{display:block;margin:0 auto;filter:var(--cast-shadow,drop-shadow(0 6px 14px rgba(0,0,0,.65)));animation:bob 2.4s ease-in-out infinite}
+.char-svg{display:block;margin:0 auto;filter:var(--cast-shadow,drop-shadow(0 6px 14px rgba(0,0,0,.65)));animation:bob 2.4s ease-in-out infinite;transition:filter .18s ease}
+.char:hover .char-svg{filter:drop-shadow(0 0 9px rgba(255,255,255,.45)) drop-shadow(0 6px 14px rgba(0,0,0,.65))}
 .char-svg.sad{animation:bob-slow 3.5s ease-in-out infinite}
 .char-svg.angry{animation:bob-tense .9s ease-in-out infinite}
 @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
@@ -433,7 +434,10 @@ html,body{width:100%;height:100%;overflow:hidden;font-family:'Plus Jakarta Sans'
   .stp-arr{font-size:8px}
   /* Push chat panel above the now-taller HUD. */
   #chat-panel{bottom:var(--above-hud)}
-  #story-btn{padding:.28rem .55rem;font-size:10px}
+  /* roomier tap targets on touch screens (#3 in the UX audit) — #res-hud prefix beats the base .res-pill rule */
+  #story-btn{padding:.5rem .7rem;font-size:10px;min-height:38px}
+  #res-hud .res-pill{min-height:32px;padding:6px 8px}
+  #chat-header{min-height:44px}
   .bubble{max-width:82px;padding:3px 6px}
   .bubble-text{font-size:7.5px}
   #pulse{top:78px;font-size:11px;max-width:78vw;color:rgba(255,255,255,.85)}
@@ -574,8 +578,8 @@ html,body{width:100%;height:100%;overflow:hidden;font-family:'Plus Jakarta Sans'
     max-width:220px; background:rgba(20,28,46,.82); border-color:rgba(255,255,255,.34);
   }
   #back-to-world:hover .btw-text, #back-to-world:focus-visible .btw-text{ opacity:1; }
-  @media(max-width:680px){ #back-to-world{ top:9px; left:9px; height:34px; max-width:34px; border-radius:17px; }
-    #back-to-world .btw-globe{ flex-basis:34px; width:34px; height:34px; font-size:15px; } }
+  @media(max-width:680px){ #back-to-world{ top:9px; left:9px; height:40px; max-width:40px; border-radius:20px; }
+    #back-to-world .btw-globe{ flex-basis:40px; width:40px; height:40px; font-size:16px; } }
 </style>
 
 <!-- ══ DAY STAMP ══════════════════════════════════════════ -->
@@ -1852,21 +1856,19 @@ function toggleFeed() {
   }
 }
 
-// Tap character to show stat card
+// Tap a character to toggle their stat card. Event-DELEGATED on #world so it works for BOTH static
+// and dynamically-created characters (no per-char handlers to lose on recreation, no double-toggle).
+// Outside taps close the open stat card / resource card / day-history.
 function initTapStats() {
-  Object.keys(S.chars).forEach(cid => {
-    const el = document.getElementById('char-'+cid)
-    if(!el) return
-    el.addEventListener('click', () => {
-      const sc = document.getElementById('sc-'+cid)
-      if(!sc) return
-      const wasOpen = sc.classList.contains('tap-open')
-      document.querySelectorAll('.stat-card').forEach(c => c.classList.remove('tap-open'))
-      if(!wasOpen) sc.classList.add('tap-open')
-    })
-  })
   document.getElementById('world')?.addEventListener('click', e => {
-    if(!e.target.closest('.char')) {
+    const charEl = e.target.closest('.char')
+    if(charEl && isMobile()) {
+      const cid = charEl.id.replace('char-','')
+      const sc = document.getElementById('sc-'+cid)
+      const wasOpen = sc && sc.classList.contains('tap-open')
+      document.querySelectorAll('.stat-card').forEach(c => c.classList.remove('tap-open'))
+      if(sc && !wasOpen) sc.classList.add('tap-open')
+    } else if(!charEl) {
       document.querySelectorAll('.stat-card').forEach(c => c.classList.remove('tap-open'))
     }
     if(!e.target.closest('#res-hud')) {
@@ -3040,12 +3042,9 @@ function ensureCharDom(cid) {
     `<div class="bubble" id="bubble-${cid}" style="border-top:2px solid ${color}80">` +
       (firstName ? `<div class="bubble-name" id="bubblename-${cid}" style="color:${color}">${firstName}</div>` : `<div class="bubble-name" id="bubblename-${cid}" style="color:${color}"></div>`) +
       `<div class="bubble-text" id="thought-${cid}"></div>` +
-    `</div>`
+    `</div>` +
+    `<div class="stat-card" id="sc-${cid}"></div>`   // populated by buildStatCard; shown on hover (desktop) / tap (mobile, via the delegated handler in initTapStats)
   document.getElementById('world').appendChild(div)
-  div.addEventListener('click', ()=>{
-    if(!isMobile()) return
-    document.querySelectorAll('.stat-card').forEach(c=>c.classList.remove('tap-open'))
-  })
 }
 
 function updateWorld() {
@@ -3453,6 +3452,7 @@ init().then(()=>{ initTapStats(); setHudVar() });
   if(!localStorage.getItem(KEY)){ btn.classList.add('nudge'); setTimeout(()=>btn.classList.remove('nudge'),14000) }
   btn.addEventListener('click',()=>{ localStorage.setItem(KEY,'1'); btn.classList.remove('nudge') })
 })()
+
 
 // ── AUDIENCE VOTING ("sway, don't script") ──────────────────────────────────
 const VOTE_URL='https://wuorljdhcucldqqeqlvy.supabase.co';
