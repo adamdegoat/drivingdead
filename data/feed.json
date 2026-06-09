@@ -1,452 +1,452 @@
 [
-  {
-    "day": 1,
-    "cycle": "morning",
-    "character": "dan",
-    "action": "Runs his hand across the solar panels, checking the readout on the van's console.",
-    "thought": "Battery's full. I can breathe today.",
-    "location": {
-      "waypoint": "solar_array",
-      "x": 42,
-      "y": 52
-    },
-    "shelter": "van",
-    "mood": "guarded",
-    "timestamp": "2026-06-08T23:33:57.022245"
+ {
+  "day": 1,
+  "cycle": "morning",
+  "character": "dan",
+  "action": "Runs his hand across the solar panels, checking the readout on the van's console.",
+  "thought": "Battery's full. I can breathe today.",
+  "location": {
+   "waypoint": "solar_array",
+   "x": 42,
+   "y": 52
   },
-  {
-    "day": 1,
-    "cycle": "morning",
-    "character": "huiling",
-    "action": "Pours hot water through the filter, listening to it hum in the morning light.",
-    "thought": "The sound won't leave my head.",
-    "location": {
-      "waypoint": "van_rear",
-      "x": 64,
-      "y": 44
-    },
-    "shelter": "van",
-    "mood": "weary",
-    "timestamp": "2026-06-08T23:33:57.022245"
+  "shelter": "van",
+  "mood": "guarded",
+  "timestamp": "2026-06-08T23:33:57.022245"
+ },
+ {
+  "day": 1,
+  "cycle": "morning",
+  "character": "huiling",
+  "action": "Pours hot water through the filter, listening to it hum in the morning light.",
+  "thought": "The sound won't leave my head.",
+  "location": {
+   "waypoint": "van_rear",
+   "x": 64,
+   "y": 44
   },
-  {
-    "day": 1,
-    "cycle": "morning",
-    "type": "interaction",
-    "characters": [
-      "dan",
-      "huiling"
-    ],
-    "description": "Inside the van's cab, Dan reports the battery while Hui Ling steams water; the morning sun glints off their faces as they settle into the day's rhythm.",
-    "dialogue": [
-      {
-        "speaker": "dan",
-        "line": "Battery's full. Panels are clean."
-      },
-      {
-        "speaker": "huiling",
-        "line": "I heard something last night. Around two."
-      },
-      {
-        "speaker": "dan",
-        "line": "Where?"
-      },
-      {
-        "speaker": "huiling",
-        "line": "East side. Probably just wind."
-      },
-      {
-        "speaker": "dan",
-        "line": "Barricade held. Nothing's breached the ramp."
-      },
-      {
-        "speaker": "huiling",
-        "line": "I know. But I'm awake now."
-      }
-    ],
-    "timestamp": "2026-06-08T23:33:57.022245"
+  "shelter": "van",
+  "mood": "weary",
+  "timestamp": "2026-06-08T23:33:57.022245"
+ },
+ {
+  "day": 1,
+  "cycle": "morning",
+  "type": "interaction",
+  "characters": [
+   "dan",
+   "huiling"
+  ],
+  "description": "While Dan confirms the barricade held and battery's full, Hui remains unsettled by the sound she heard around two on the east side.",
+  "dialogue": [
+   {
+    "speaker": "dan",
+    "line": "Battery's full. Panels are clean."
+   },
+   {
+    "speaker": "huiling",
+    "line": "I heard something last night. Around two."
+   },
+   {
+    "speaker": "dan",
+    "line": "Where?"
+   },
+   {
+    "speaker": "huiling",
+    "line": "East side. Probably just wind."
+   },
+   {
+    "speaker": "dan",
+    "line": "Barricade held. Nothing's breached the ramp."
+   },
+   {
+    "speaker": "huiling",
+    "line": "I know. But I'm awake now."
+   }
+  ],
+  "timestamp": "2026-06-08T23:33:57.022245"
+ },
+ {
+  "day": 1,
+  "cycle": "midday",
+  "character": "dan",
+  "action": "Checks the solar array's connections and tightens a bolt, reads the battery status holding at ninety-six percent.",
+  "thought": "Battery's holding. The rig is clean.",
+  "location": {
+   "waypoint": "solar_array",
+   "x": 42,
+   "y": 52
   },
-  {
-    "day": 1,
-    "cycle": "midday",
-    "character": "dan",
-    "action": "Checks the solar array's connections and tightens a bolt, reads the battery status holding at ninety-six percent.",
-    "thought": "Battery's holding. The rig is clean.",
-    "location": {
-      "waypoint": "solar_array",
-      "x": 42,
-      "y": 52
-    },
-    "shelter": "van",
-    "mood": "steady",
-    "timestamp": "2026-06-08T23:35:50.855565"
+  "shelter": "van",
+  "mood": "steady",
+  "timestamp": "2026-06-08T23:35:50.855565"
+ },
+ {
+  "day": 1,
+  "cycle": "midday",
+  "character": "huiling",
+  "action": "Prepares canned food and bread in the van's cab, hands moving with purpose, mind still caught on the night's sound.",
+  "thought": "That sound last night. Still echoing.",
+  "location": {
+   "waypoint": "van_rear",
+   "x": 64,
+   "y": 44
   },
-  {
-    "day": 1,
-    "cycle": "midday",
-    "character": "huiling",
-    "action": "Prepares canned food and bread in the van's cab, hands moving with purpose, mind still caught on the night's sound.",
-    "thought": "That sound last night. Still echoing.",
-    "location": {
-      "waypoint": "van_rear",
-      "x": 64,
-      "y": 44
-    },
-    "shelter": "van",
-    "mood": "weary",
-    "timestamp": "2026-06-08T23:35:50.855565"
+  "shelter": "van",
+  "mood": "weary",
+  "timestamp": "2026-06-08T23:35:50.855565"
+ },
+ {
+  "day": 1,
+  "cycle": "midday",
+  "type": "interaction",
+  "characters": [
+   "dan",
+   "huiling"
+  ],
+  "description": "Dan runs through the rig's wins—battery, filter, heat—while Hui dwells on last night's mystery, and they both understand the same truth: being alive beats certainty.",
+  "dialogue": [
+   {
+    "speaker": "dan",
+    "line": "Battery's at ninety-six. Rig is solid."
+   },
+   {
+    "speaker": "huiling",
+    "line": "That's good."
+   },
+   {
+    "speaker": "dan",
+    "line": "Filter's running. We can eat hot for once."
+   },
+   {
+    "speaker": "huiling",
+    "line": "I'm still thinking about last night."
+   },
+   {
+    "speaker": "dan",
+    "line": "The barricade held. The ramp is still sealed."
+   },
+   {
+    "speaker": "huiling",
+    "line": "Did it? Or did we just not hear them?"
+   },
+   {
+    "speaker": "dan",
+    "line": "We're still here. That's what counts."
+   },
+   {
+    "speaker": "huiling",
+    "line": "Yeah. Yeah, we are."
+   }
+  ],
+  "timestamp": "2026-06-08T23:35:50.855565"
+ },
+ {
+  "day": 1,
+  "cycle": "evening",
+  "character": "dan",
+  "action": "He walks the perimeter of the solar array one last time as the light falls, checking the charge on the battery.",
+  "thought": "The day held. We held.",
+  "location": {
+   "waypoint": "solar_array",
+   "x": 42,
+   "y": 52
   },
-  {
-    "day": 1,
-    "cycle": "midday",
-    "type": "interaction",
-    "characters": [
-      "dan",
-      "huiling"
-    ],
-    "description": "In the van's cab at midday, Dan returns from checking the rig as Hui Ling sets out a hot meal. The battery is full and the systems are warm, but last night's sound still weighs on her.",
-    "dialogue": [
-      {
-        "speaker": "dan",
-        "line": "Battery's at ninety-six. Rig is solid."
-      },
-      {
-        "speaker": "huiling",
-        "line": "That's good."
-      },
-      {
-        "speaker": "dan",
-        "line": "Filter's running. We can eat hot for once."
-      },
-      {
-        "speaker": "huiling",
-        "line": "I'm still thinking about last night."
-      },
-      {
-        "speaker": "dan",
-        "line": "The barricade held. The ramp is still sealed."
-      },
-      {
-        "speaker": "huiling",
-        "line": "Did it? Or did we just not hear them?"
-      },
-      {
-        "speaker": "dan",
-        "line": "We're still here. That's what counts."
-      },
-      {
-        "speaker": "huiling",
-        "line": "Yeah. Yeah, we are."
-      }
-    ],
-    "timestamp": "2026-06-08T23:35:50.855565"
+  "shelter": "van",
+  "mood": "steady",
+  "timestamp": "2026-06-08T23:37:48.926215"
+ },
+ {
+  "day": 1,
+  "cycle": "evening",
+  "character": "huiling",
+  "action": "She heats water on the small stove inside the van, moving with the careful quiet that darkness brings.",
+  "thought": "The sound. Is it out there still?",
+  "location": {
+   "waypoint": "van_rear",
+   "x": 64,
+   "y": 44
   },
-  {
-    "day": 1,
-    "cycle": "evening",
-    "character": "dan",
-    "action": "He walks the perimeter of the solar array one last time as the light falls, checking the charge on the battery.",
-    "thought": "The day held. We held.",
-    "location": {
-      "waypoint": "solar_array",
-      "x": 42,
-      "y": 52
-    },
-    "shelter": "van",
-    "mood": "steady",
-    "timestamp": "2026-06-08T23:37:48.926215"
+  "shelter": "van",
+  "mood": "unsettled",
+  "timestamp": "2026-06-08T23:37:48.926215"
+ },
+ {
+  "day": 1,
+  "cycle": "evening",
+  "type": "interaction",
+  "characters": [
+   "dan",
+   "huiling"
+  ],
+  "description": "Hui's lingering fear about last night's sound resists Dan's practical answers—ninety-two percent battery, a sealed ramp, nothing heard in daylight.",
+  "dialogue": [
+   {
+    "speaker": "dan",
+    "line": "Ninety-two percent. The filter can run tonight."
+   },
+   {
+    "speaker": "huiling",
+    "line": "That's good. Did you hear anything? During the day?"
+   },
+   {
+    "speaker": "dan",
+    "line": "Nothing. Why."
+   },
+   {
+    "speaker": "huiling",
+    "line": "Last night's sound. Still in my head."
+   },
+   {
+    "speaker": "dan",
+    "line": "The one in the street? Probably just the dead wandering."
+   },
+   {
+    "speaker": "huiling",
+    "line": "Yeah. Probably."
+   },
+   {
+    "speaker": "dan",
+    "line": "The ramp's tight. We're sealed."
+   },
+   {
+    "speaker": "huiling",
+    "line": "I know. I know."
+   }
+  ],
+  "timestamp": "2026-06-08T23:37:48.926215"
+ },
+ {
+  "day": 1,
+  "cycle": "night",
+  "character": "dan",
+  "action": "He checks the ramp's barricade as dusk darkens when Hui Ling appears with injured birds.",
+  "thought": "She's going to break my rules again.",
+  "location": {
+   "waypoint": "ramp_block",
+   "x": 42,
+   "y": 52
   },
-  {
-    "day": 1,
-    "cycle": "evening",
-    "character": "huiling",
-    "action": "She heats water on the small stove inside the van, moving with the careful quiet that darkness brings.",
-    "thought": "The sound. Is it out there still?",
-    "location": {
-      "waypoint": "van_rear",
-      "x": 64,
-      "y": 44
-    },
-    "shelter": "van",
-    "mood": "unsettled",
-    "timestamp": "2026-06-08T23:37:48.926215"
+  "shelter": "van",
+  "mood": "wary",
+  "timestamp": "2026-06-08T23:40:14.224873"
+ },
+ {
+  "day": 1,
+  "cycle": "night",
+  "character": "huiling",
+  "action": "She carries two injured sparrows in a cloth to the van, resolved to shelter them.",
+  "thought": "People died because I did nothing. Not again.",
+  "location": {
+   "waypoint": "ramp_block",
+   "x": 64,
+   "y": 44
   },
-  {
-    "day": 1,
-    "cycle": "evening",
-    "type": "interaction",
-    "characters": [
-      "dan",
-      "huiling"
-    ],
-    "description": "In the van's cab as dusk thickens, they eat a hot meal together—Dan reports the battery while Hui Ling listens, both aware of the city darkening beyond the windscreen.",
-    "dialogue": [
-      {
-        "speaker": "dan",
-        "line": "Ninety-two percent. The filter can run tonight."
-      },
-      {
-        "speaker": "huiling",
-        "line": "That's good. Did you hear anything? During the day?"
-      },
-      {
-        "speaker": "dan",
-        "line": "Nothing. Why."
-      },
-      {
-        "speaker": "huiling",
-        "line": "Last night's sound. Still in my head."
-      },
-      {
-        "speaker": "dan",
-        "line": "The one in the street? Probably just the dead wandering."
-      },
-      {
-        "speaker": "huiling",
-        "line": "Yeah. Probably."
-      },
-      {
-        "speaker": "dan",
-        "line": "The ramp's tight. We're sealed."
-      },
-      {
-        "speaker": "huiling",
-        "line": "I know. I know."
-      }
-    ],
-    "timestamp": "2026-06-08T23:37:48.926215"
+  "shelter": "van",
+  "mood": "unsettled",
+  "timestamp": "2026-06-08T23:40:14.224873"
+ },
+ {
+  "day": 1,
+  "cycle": "night",
+  "type": "interaction",
+  "characters": [
+   "dan",
+   "huiling"
+  ],
+  "description": "When Hui insists on sheltering injured birds in the van, Dan surrenders argument but holds the line—the sheltered corner, nowhere else, released by first light.",
+  "dialogue": [
+   {
+    "speaker": "huiling",
+    "line": "I found injured birds on the ramp. I'm bringing them up."
+   },
+   {
+    "speaker": "dan",
+    "line": "That's a risk we can't carry, Hui."
+   },
+   {
+    "speaker": "huiling",
+    "line": "I know what we carry. I'm doing it anyway."
+   },
+   {
+    "speaker": "dan",
+    "line": "And if noise draws them? The dead are close."
+   },
+   {
+    "speaker": "huiling",
+    "line": "They won't make noise. And if they do, I accept that."
+   },
+   {
+    "speaker": "dan",
+    "line": "You don't accept for both of us."
+   },
+   {
+    "speaker": "huiling",
+    "line": "Then I won't ask permission again. But I'm doing it."
+   },
+   {
+    "speaker": "dan",
+    "line": "The corner, then. Sheltered, away from the door. Gone at first light."
+   },
+   {
+    "speaker": "huiling",
+    "line": "Thank you."
+   },
+   {
+    "speaker": "dan",
+    "line": "I'm not thanking you for this."
+   }
+  ],
+  "timestamp": "2026-06-08T23:40:14.224873"
+ },
+ {
+  "day": 2,
+  "cycle": "morning",
+  "character": "dan",
+  "action": "Checks the solar panel readings—77% charge, stable—and braces for what's coming.",
+  "thought": "She's going to push again.",
+  "location": {
+   "waypoint": "van_front",
+   "x": 42,
+   "y": 52
   },
-  {
-    "day": 1,
-    "cycle": "night",
-    "character": "dan",
-    "action": "He checks the ramp's barricade as dusk darkens when Hui Ling appears with injured birds.",
-    "thought": "She's going to break my rules again.",
-    "location": {
-      "waypoint": "ramp_block",
-      "x": 42,
-      "y": 52
-    },
-    "shelter": "van",
-    "mood": "wary",
-    "timestamp": "2026-06-08T23:40:14.224873"
+  "shelter": "van",
+  "mood": "wary",
+  "timestamp": "2026-06-09T07:02:29.283460"
+ },
+ {
+  "day": 2,
+  "cycle": "morning",
+  "character": "huiling",
+  "action": "Heats water for tea and listens—the birds are still out there, still calling.",
+  "thought": "I can't watch people die again.",
+  "location": {
+   "waypoint": "van_front",
+   "x": 64,
+   "y": 44
   },
-  {
-    "day": 1,
-    "cycle": "night",
-    "character": "huiling",
-    "action": "She carries two injured sparrows in a cloth to the van, resolved to shelter them.",
-    "thought": "People died because I did nothing. Not again.",
-    "location": {
-      "waypoint": "ramp_block",
-      "x": 64,
-      "y": 44
-    },
-    "shelter": "van",
-    "mood": "unsettled",
-    "timestamp": "2026-06-08T23:40:14.224873"
+  "shelter": "van",
+  "mood": "unsettled",
+  "timestamp": "2026-06-09T07:02:29.283460"
+ },
+ {
+  "day": 2,
+  "cycle": "morning",
+  "type": "interaction",
+  "characters": [
+   "huiling",
+   "dan"
+  ],
+  "description": "A moral line emerges in the bird argument: Hui won't be someone who merely watches others die, and Dan's objection shows the accusation has struck.",
+  "dialogue": [
+   {
+    "speaker": "huiling",
+    "line": "They're still out there."
+   },
+   {
+    "speaker": "dan",
+    "line": "You were outside at dawn, then."
+   },
+   {
+    "speaker": "huiling",
+    "line": "Just listening. They need help, Dan."
+   },
+   {
+    "speaker": "dan",
+    "line": "We don't know what that is. Could be fever, infection."
+   },
+   {
+    "speaker": "huiling",
+    "line": "Or a broken wing. Something we could fix."
+   },
+   {
+    "speaker": "dan",
+    "line": "Once you open that door—"
+   },
+   {
+    "speaker": "huiling",
+    "line": "Once I stop being someone who watches them die, you mean."
+   },
+   {
+    "speaker": "dan",
+    "line": "That's not fair."
+   }
+  ],
+  "timestamp": "2026-06-09T07:02:29.283460"
+ },
+ {
+  "day": 2,
+  "cycle": "midday",
+  "character": "dan",
+  "action": "Dan stands at the van window, arms crossed, watching the battery readout as Hui Ling moves in the cab below—the argument still burning in the space between them.",
+  "thought": "She won't back down. Neither can I.",
+  "location": {
+   "waypoint": "van_front",
+   "x": 42,
+   "y": 52
   },
-  {
-    "day": 1,
-    "cycle": "night",
-    "type": "interaction",
-    "characters": [
-      "dan",
-      "huiling"
-    ],
-    "description": "In the van's dim cab at nightfall, Hui Ling tells Dan she found injured birds on the ramp and intends to shelter them — a collision between his fear and her conscience.",
-    "dialogue": [
-      {
-        "speaker": "huiling",
-        "line": "I found injured birds on the ramp. I'm bringing them up."
-      },
-      {
-        "speaker": "dan",
-        "line": "That's a risk we can't carry, Hui."
-      },
-      {
-        "speaker": "huiling",
-        "line": "I know what we carry. I'm doing it anyway."
-      },
-      {
-        "speaker": "dan",
-        "line": "And if noise draws them? The dead are close."
-      },
-      {
-        "speaker": "huiling",
-        "line": "They won't make noise. And if they do, I accept that."
-      },
-      {
-        "speaker": "dan",
-        "line": "You don't accept for both of us."
-      },
-      {
-        "speaker": "huiling",
-        "line": "Then I won't ask permission again. But I'm doing it."
-      },
-      {
-        "speaker": "dan",
-        "line": "The corner, then. Sheltered, away from the door. Gone at first light."
-      },
-      {
-        "speaker": "huiling",
-        "line": "Thank you."
-      },
-      {
-        "speaker": "dan",
-        "line": "I'm not thanking you for this."
-      }
-    ],
-    "timestamp": "2026-06-08T23:40:14.224873"
+  "shelter": "van",
+  "mood": "wary",
+  "timestamp": "2026-06-09T12:31:42.406458"
+ },
+ {
+  "day": 2,
+  "cycle": "midday",
+  "character": "huiling",
+  "action": "Hui Ling sits in the van's cab, heating water on the camp stove, her movements careful and deliberate—she's not giving in, but she's also not walking out.",
+  "thought": "He's afraid. More than of the dead.",
+  "location": {
+   "waypoint": "van_front",
+   "x": 64,
+   "y": 44
   },
-  {
-    "day": 2,
-    "cycle": "morning",
-    "character": "dan",
-    "action": "Checks the solar panel readings—77% charge, stable—and braces for what's coming.",
-    "thought": "She's going to push again.",
-    "location": {
-      "waypoint": "van_front",
-      "x": 42,
-      "y": 52
-    },
-    "shelter": "van",
-    "mood": "wary",
-    "timestamp": "2026-06-09T07:02:29.283460"
-  },
-  {
-    "day": 2,
-    "cycle": "morning",
-    "character": "huiling",
-    "action": "Heats water for tea and listens—the birds are still out there, still calling.",
-    "thought": "I can't watch people die again.",
-    "location": {
-      "waypoint": "van_front",
-      "x": 64,
-      "y": 44
-    },
-    "shelter": "van",
-    "mood": "unsettled",
-    "timestamp": "2026-06-09T07:02:29.283460"
-  },
-  {
-    "day": 2,
-    "cycle": "morning",
-    "type": "interaction",
-    "characters": [
-      "huiling",
-      "dan"
-    ],
-    "description": "In the cabin at first light, Hui Ling heats water and Dan checks the battery; the subject they've been avoiding since last night finally surfaces.",
-    "dialogue": [
-      {
-        "speaker": "huiling",
-        "line": "They're still out there."
-      },
-      {
-        "speaker": "dan",
-        "line": "You were outside at dawn, then."
-      },
-      {
-        "speaker": "huiling",
-        "line": "Just listening. They need help, Dan."
-      },
-      {
-        "speaker": "dan",
-        "line": "We don't know what that is. Could be fever, infection."
-      },
-      {
-        "speaker": "huiling",
-        "line": "Or a broken wing. Something we could fix."
-      },
-      {
-        "speaker": "dan",
-        "line": "Once you open that door—"
-      },
-      {
-        "speaker": "huiling",
-        "line": "Once I stop being someone who watches them die, you mean."
-      },
-      {
-        "speaker": "dan",
-        "line": "That's not fair."
-      }
-    ],
-    "timestamp": "2026-06-09T07:02:29.283460"
-  },
-  {
-    "day": 2,
-    "cycle": "midday",
-    "character": "dan",
-    "action": "Dan stands at the van window, arms crossed, watching the battery readout as Hui Ling moves in the cab below—the argument still burning in the space between them.",
-    "thought": "She won't back down. Neither can I.",
-    "location": {
-      "waypoint": "van_front",
-      "x": 42,
-      "y": 52
-    },
-    "shelter": "van",
-    "mood": "wary",
-    "timestamp": "2026-06-09T12:31:42.406458"
-  },
-  {
-    "day": 2,
-    "cycle": "midday",
-    "character": "huiling",
-    "action": "Hui Ling sits in the van's cab, heating water on the camp stove, her movements careful and deliberate—she's not giving in, but she's also not walking out.",
-    "thought": "He's afraid. More than of the dead.",
-    "location": {
-      "waypoint": "van_front",
-      "x": 64,
-      "y": 44
-    },
-    "shelter": "van",
-    "mood": "unsettled",
-    "timestamp": "2026-06-09T12:31:42.406458"
-  },
-  {
-    "day": 2,
-    "cycle": "midday",
-    "type": "interaction",
-    "characters": [
-      "dan",
-      "huiling"
-    ],
-    "description": "In the van's cab at midday, they finally confront the thing they've been avoiding—the birds, safety, what they're willing to risk for each other.",
-    "dialogue": [
-      {
-        "speaker": "huiling",
-        "line": "We need to talk about the birds."
-      },
-      {
-        "speaker": "dan",
-        "line": "There's nothing to talk about. It's not safe."
-      },
-      {
-        "speaker": "huiling",
-        "line": "Locking out the world won't keep us alive either."
-      },
-      {
-        "speaker": "dan",
-        "line": "It's kept us alive so far."
-      },
-      {
-        "speaker": "huiling",
-        "line": "What if I promise to be careful? To keep them contained?"
-      },
-      {
-        "speaker": "dan",
-        "line": "You can't promise that. Nothing's contained in a dead city."
-      },
-      {
-        "speaker": "huiling",
-        "line": "Then what do you want me to do? Watch them die?"
-      },
-      {
-        "speaker": "dan",
-        "line": "I want you safe. That's what I want."
-      }
-    ],
-    "timestamp": "2026-06-09T12:31:42.406458"
-  }
+  "shelter": "van",
+  "mood": "unsettled",
+  "timestamp": "2026-06-09T12:31:42.406458"
+ },
+ {
+  "day": 2,
+  "cycle": "midday",
+  "type": "interaction",
+  "characters": [
+   "dan",
+   "huiling"
+  ],
+  "description": "Dan won't budge on the birds—nothing can be contained in a dead city—leaving Hui facing an impossible choice: comply with his caution or become the person who watches things die.",
+  "dialogue": [
+   {
+    "speaker": "huiling",
+    "line": "We need to talk about the birds."
+   },
+   {
+    "speaker": "dan",
+    "line": "There's nothing to talk about. It's not safe."
+   },
+   {
+    "speaker": "huiling",
+    "line": "Locking out the world won't keep us alive either."
+   },
+   {
+    "speaker": "dan",
+    "line": "It's kept us alive so far."
+   },
+   {
+    "speaker": "huiling",
+    "line": "What if I promise to be careful? To keep them contained?"
+   },
+   {
+    "speaker": "dan",
+    "line": "You can't promise that. Nothing's contained in a dead city."
+   },
+   {
+    "speaker": "huiling",
+    "line": "Then what do you want me to do? Watch them die?"
+   },
+   {
+    "speaker": "dan",
+    "line": "I want you safe. That's what I want."
+   }
+  ],
+  "timestamp": "2026-06-09T12:31:42.406458"
+ }
 ]
