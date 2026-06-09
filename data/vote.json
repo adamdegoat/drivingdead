@@ -1,35 +1,35 @@
 {
   "world": "drivingdead",
   "poll": {
-    "id": "2026-06-09",
+    "id": "2026-06-10",
     "closes": "tonight",
-    "question": "Should Dan open the ramp for Hui Ling's injured birds, or hold the seal tight?",
+    "question": "At the van door, Dan blocks Hui's path. She can't leave those birds to die outside. Who gives?",
     "options": [
       {
-        "id": "open_the_ramp",
-        "label": "Open the ramp",
-        "desc": "Trust her instinct. What she's choosing to be matters more than his protocols."
+        "id": "hui_backs_down",
+        "label": "Hui steps back",
+        "desc": "Survival means holding the line, together."
       },
       {
-        "id": "hold_the_seal",
-        "label": "Hold the seal",
-        "desc": "Keep it locked. Survival means the hard no—even to her."
+        "id": "dan_steps_aside",
+        "label": "Dan moves aside",
+        "desc": "Caging her will cost him far more than the birds ever will."
       },
       {
-        "id": "negotiate",
-        "label": "Make a deal",
-        "desc": "Both their instincts are right. Help the birds without breaking the seal."
+        "id": "tend_from_ramp",
+        "label": "Tend them on the ramp",
+        "desc": "She acts; the van stays sealed. A way through neither has named yet."
       }
     ]
   },
   "in_play": {
-    "id": "talk_first",
-    "label": "Talk before opening",
-    "desc": "Neither fully wins — one tense conversation through the door to decide",
-    "decided": "2026-06-09",
-    "votes": 1,
+    "id": "negotiate",
+    "label": "Make a deal",
+    "desc": "Both their instincts are right. Help the birds without breaking the seal.",
+    "decided": "2026-06-10",
+    "votes": 2,
     "tally": {
-      "talk_first": 1
+      "negotiate": 2
     }
   }
 }

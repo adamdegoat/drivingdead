@@ -6,17 +6,17 @@
     "archetype": "builder",
     "color": "#f59e0b",
     "scores": {
-      "trust": 53,
-      "openness": 35,
+      "trust": 55,
+      "openness": 36,
       "ambition": 62,
-      "loneliness": 9,
+      "loneliness": 6,
       "resilience": 90,
       "health": 100,
       "hunger": 53,
       "thirst": 53,
-      "energy": 96
+      "energy": 89
     },
-    "mood": "afraid",
+    "mood": "careful",
     "location": {
       "waypoint": "van_door",
       "x": 42,
@@ -25,8 +25,8 @@
     "shelter": "van",
     "relationships": {
       "huiling": {
-        "closeness": 80,
-        "tension": 17,
+        "closeness": 83,
+        "tension": 14,
         "attraction": 79
       }
     },
@@ -77,6 +77,11 @@
         "day": 2,
         "text": "When she asked why I blocked the door, I told her the truth—I'm terrified she'll leave me.",
         "weight": 3
+      },
+      {
+        "day": 3,
+        "text": "I said I'd set out water for the birds. That meant I was listening.",
+        "weight": 2
       }
     ]
   },
@@ -87,17 +92,17 @@
     "archetype": "healer",
     "color": "#22d3ee",
     "scores": {
-      "trust": 65,
+      "trust": 66,
       "openness": 85,
       "ambition": 45,
-      "loneliness": 23,
+      "loneliness": 20,
       "resilience": 65,
       "health": 100,
       "hunger": 53,
       "thirst": 53,
-      "energy": 96
+      "energy": 89
     },
-    "mood": "trapped",
+    "mood": "hopeful",
     "location": {
       "waypoint": "van_door",
       "x": 64,
@@ -106,8 +111,8 @@
     "shelter": "van",
     "relationships": {
       "dan": {
-        "closeness": 80,
-        "tension": 17,
+        "closeness": 83,
+        "tension": 14,
         "attraction": 79
       }
     },
@@ -161,6 +166,11 @@
         "day": 2,
         "text": "Dan's real fear isn't the dead—it's me leaving. We're both trapped in his terror now.",
         "weight": 3
+      },
+      {
+        "day": 3,
+        "text": "Dan finally opened up. He's not less afraid, but he's trying.",
+        "weight": 2
       }
     ]
   }

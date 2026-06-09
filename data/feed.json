@@ -618,5 +618,84 @@
       }
     ],
     "timestamp": "2026-06-09T23:02:00.621832"
+  },
+  {
+    "day": 3,
+    "cycle": "morning",
+    "character": "dan",
+    "action": "He wakes before her and moves quietly about the van, making water for tea while the morning light spills through the window.",
+    "thought": "She's leaving if I don't give something.",
+    "location": {
+      "waypoint": "van_door",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "careful",
+    "timestamp": "2026-06-10T07:02:30.815966"
+  },
+  {
+    "day": 3,
+    "cycle": "morning",
+    "character": "huiling",
+    "action": "She stirs as the kettle hisses and watches him through the dawn haze, waiting.",
+    "thought": "Maybe this is how he loves me.",
+    "location": {
+      "waypoint": "van_door",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "hopeful",
+    "timestamp": "2026-06-10T07:02:30.815966"
+  },
+  {
+    "day": 3,
+    "cycle": "morning",
+    "type": "interaction",
+    "characters": [
+      "dan",
+      "huiling"
+    ],
+    "description": "Steam rises from the kettle; Dan pours tea and finally breaks the silence with a compromise — water on the ledge for the birds.",
+    "dialogue": [
+      {
+        "speaker": "dan",
+        "line": "I've been thinking about the birds."
+      },
+      {
+        "speaker": "dan",
+        "line": "We could set out water. On the ledge, not in here."
+      },
+      {
+        "speaker": "huiling",
+        "line": "They're dying, Dan. Not drinking."
+      },
+      {
+        "speaker": "dan",
+        "line": "I know. But I don't want you going down for them. That's my line."
+      },
+      {
+        "speaker": "huiling",
+        "line": "So that's it. We just watch?"
+      },
+      {
+        "speaker": "dan",
+        "line": "No. We help them the way we can. Here."
+      },
+      {
+        "speaker": "huiling",
+        "line": "That's not the same."
+      },
+      {
+        "speaker": "dan",
+        "line": "I know. But it's what I can do."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Then I'll do it with you."
+      }
+    ],
+    "timestamp": "2026-06-10T07:02:30.815966"
   }
 ]
