@@ -1,6 +1,6 @@
 {
   "day": 2,
-  "cycle": "midday",
+  "cycle": "evening",
   "weather": "clear",
   "pending_events": [],
   "started": "2026-06-08",
@@ -9,7 +9,7 @@
       "id": "solar_rig",
       "type": "solar_rig",
       "level": 1,
-      "condition": 76,
+      "condition": 72,
       "x": 50,
       "y": 40,
       "builder": "dan",
@@ -20,26 +20,26 @@
   ],
   "fire": {
     "lit": true,
-    "fuel": 10
+    "fuel": 15
   },
   "last_run_date": "2026-06-09",
-  "pulse": "The morning's argument about the birds surfaces at midday: they finally talk, but she won't shrink to fit his fear, and he won't risk what she's asking.",
-  "scene": "The morning's conflict about the birds had become a sullen standoff by midday: Dan at the van window, Hui Ling in the cab with the camp stove, the battery charging strong on a clear day.",
+  "pulse": "For the first time, staying safe with him feels like dying to her. For the first time, he's afraid she'll leave.",
+  "scene": "Hui Ling kept the birds in the van despite Dan's refusal all day; by evening she's at the door, he's blocking it, neither one able to move.",
   "resources_prev": {
-    "food": 28,
-    "water": 86,
-    "wood": 96,
-    "medicine": 20
-  },
-  "resources": {
     "food": 23,
     "water": 91,
     "wood": 96,
     "medicine": 20
   },
+  "resources": {
+    "food": 20,
+    "water": 93,
+    "wood": 96,
+    "medicine": 20
+  },
   "camp_climate": "steady",
   "discoveries": [],
-  "last_cycle_key": "2026-06-09:midday",
+  "last_cycle_key": "2026-06-09:evening",
   "day_summaries": {
     "1": "Day 1 was clear and warm — good charging, hot meals in the cab, the systems steady. At dusk, Hui Ling found injured birds on the ramp and sheltered them on the van's corner despite Dan's strong refusal. By nightfall, they were sitting together in guarded silence, both aware that the cost of survival might exceed what they could afford to become."
   },

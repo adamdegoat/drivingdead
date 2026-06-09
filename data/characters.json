@@ -6,28 +6,28 @@
     "archetype": "builder",
     "color": "#f59e0b",
     "scores": {
-      "trust": 53,
-      "openness": 34,
+      "trust": 52,
+      "openness": 33,
       "ambition": 63,
       "loneliness": 12,
       "resilience": 89,
       "health": 100,
       "hunger": 53,
       "thirst": 53,
-      "energy": 69
+      "energy": 62
     },
-    "mood": "wary",
+    "mood": "afraid",
     "location": {
-      "waypoint": "van_front",
+      "waypoint": "van_door",
       "x": 42,
       "y": 52
     },
     "shelter": "van",
     "relationships": {
       "huiling": {
-        "closeness": 81,
-        "tension": 16,
-        "attraction": 80
+        "closeness": 79,
+        "tension": 19,
+        "attraction": 79
       }
     },
     "bio": "35, an ex-solar and aircon technician who spent two years converting an old camper into a self-sufficient, solar-powered home before the world ended — the only reason they're still alive. Methodical and guarded, he plans every move down to the watt and the ration, keeps the van running and the ramp sealed, and would rather never open the gate than risk the two of them for a stranger. He fixes things instead of feeling them — and the dead city is wearing that down.",
@@ -67,6 +67,11 @@
         "day": 2,
         "text": "She asked what I want. I said safe. She meant something else entirely.",
         "weight": 2
+      },
+      {
+        "day": 2,
+        "text": "I'm losing her because I won't let her out. That's the cage I built.",
+        "weight": 2
       }
     ]
   },
@@ -77,28 +82,28 @@
     "archetype": "healer",
     "color": "#22d3ee",
     "scores": {
-      "trust": 66,
+      "trust": 64,
       "openness": 84,
-      "ambition": 45,
-      "loneliness": 27,
-      "resilience": 68,
+      "ambition": 46,
+      "loneliness": 24,
+      "resilience": 67,
       "health": 100,
       "hunger": 53,
       "thirst": 53,
-      "energy": 69
+      "energy": 62
     },
-    "mood": "unsettled",
+    "mood": "trapped",
     "location": {
-      "waypoint": "van_front",
+      "waypoint": "van_door",
       "x": 64,
       "y": 44
     },
     "shelter": "van",
     "relationships": {
       "dan": {
-        "closeness": 81,
-        "tension": 16,
-        "attraction": 80
+        "closeness": 79,
+        "tension": 19,
+        "attraction": 79
       }
     },
     "bio": "32, an ICU nurse who spent the first weeks of the outbreak watching people she couldn't save. Warm and stubborn, the conscience of the pair — and the only one with the hands to do field surgery if a bite ever gets through the barricade. She can't look away from a survivor down in the street the way Dan can; it costs her, and it scares him. She keeps them human; he keeps them alive. Five years together, and the dead city is testing every promise they made.",
@@ -140,6 +145,11 @@
       {
         "day": 2,
         "text": "Dan said he wants me safe. But safe isn't the same as alive.",
+        "weight": 2
+      },
+      {
+        "day": 2,
+        "text": "He won't let me save anything. Even what already wants to die.",
         "weight": 2
       }
     ]
