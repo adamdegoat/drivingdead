@@ -859,5 +859,84 @@
       }
     ],
     "timestamp": "2026-06-10T15:01:38.613770"
+  },
+  {
+    "day": 3,
+    "cycle": "evening",
+    "character": "dan",
+    "action": "He settles at the van door with a cup of tea, the fire warm inside.",
+    "thought": "She was right. We didn't break.",
+    "location": {
+      "waypoint": "van_door",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "warm",
+    "timestamp": "2026-06-10T18:31:59.995500"
+  },
+  {
+    "day": 3,
+    "cycle": "evening",
+    "character": "huiling",
+    "action": "She joins him at the door with her own cup, the city darkening beyond the ledge.",
+    "thought": "The silence is soft now, not sharp.",
+    "location": {
+      "waypoint": "van_door",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "light",
+    "timestamp": "2026-06-10T18:31:59.995500"
+  },
+  {
+    "day": 3,
+    "cycle": "evening",
+    "type": "interaction",
+    "characters": [
+      "dan",
+      "huiling"
+    ],
+    "description": "Evening settles over the rooftop—the fire warm inside the van, and they settle at the door with tea as the city darkens and the birds tuck away.",
+    "dialogue": [
+      {
+        "speaker": "huiling",
+        "line": "You watched the birds all afternoon."
+      },
+      {
+        "speaker": "dan",
+        "line": "You notice everything, don't you."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Especially you. When you're thinking hard."
+      },
+      {
+        "speaker": "dan",
+        "line": "About how you were right. About living."
+      },
+      {
+        "speaker": "huiling",
+        "line": "And?"
+      },
+      {
+        "speaker": "dan",
+        "line": "We can't be just careful. We have to be both."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Both scared and trying?"
+      },
+      {
+        "speaker": "dan",
+        "line": "Yeah."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Then we're going to be okay."
+      }
+    ],
+    "timestamp": "2026-06-10T18:31:59.995500"
   }
 ]

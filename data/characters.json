@@ -6,27 +6,27 @@
     "archetype": "builder",
     "color": "#f59e0b",
     "scores": {
-      "trust": 59,
-      "openness": 39,
+      "trust": 61,
+      "openness": 41,
       "ambition": 62,
-      "loneliness": 2,
-      "resilience": 90,
+      "loneliness": 0,
+      "resilience": 91,
       "health": 100,
       "hunger": 53,
       "thirst": 53,
-      "energy": 75
+      "energy": 68
     },
-    "mood": "steady",
+    "mood": "warm",
     "location": {
-      "waypoint": "van_rear",
+      "waypoint": "van_door",
       "x": 42,
       "y": 52
     },
     "shelter": "van",
     "relationships": {
       "huiling": {
-        "closeness": 89,
-        "tension": 10,
+        "closeness": 90,
+        "tension": 8,
         "attraction": 80
       }
     },
@@ -50,7 +50,7 @@
     },
     "interaction": {
       "with": "huiling",
-      "state": "talking"
+      "state": "sitting_together"
     },
     "memories": [
       {
@@ -92,6 +92,11 @@
         "day": 3,
         "text": "She asked what happens if we keep caring. I said we do it anyway.",
         "weight": 2
+      },
+      {
+        "day": 3,
+        "text": "I thought letting go meant losing her. It meant saving us.",
+        "weight": 3
       }
     ]
   },
@@ -102,27 +107,27 @@
     "archetype": "healer",
     "color": "#22d3ee",
     "scores": {
-      "trust": 70,
+      "trust": 71,
       "openness": 85,
       "ambition": 45,
-      "loneliness": 14,
-      "resilience": 66,
+      "loneliness": 11,
+      "resilience": 67,
       "health": 100,
       "hunger": 53,
       "thirst": 53,
-      "energy": 75
+      "energy": 68
     },
-    "mood": "warm",
+    "mood": "light",
     "location": {
-      "waypoint": "van_rear",
+      "waypoint": "van_door",
       "x": 64,
       "y": 44
     },
     "shelter": "van",
     "relationships": {
       "dan": {
-        "closeness": 89,
-        "tension": 10,
+        "closeness": 90,
+        "tension": 8,
         "attraction": 80
       }
     },
@@ -144,7 +149,7 @@
     },
     "interaction": {
       "with": "dan",
-      "state": "talking"
+      "state": "sitting_together"
     },
     "memories": [
       {
@@ -190,6 +195,11 @@
       {
         "day": 3,
         "text": "Dan finally said the thing. We don't stop caring just because we can lose.",
+        "weight": 2
+      },
+      {
+        "day": 3,
+        "text": "He opened up and the silence between us finally broke.",
         "weight": 2
       }
     ]
