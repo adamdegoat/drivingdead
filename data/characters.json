@@ -6,27 +6,27 @@
     "archetype": "builder",
     "color": "#f59e0b",
     "scores": {
-      "trust": 62,
-      "openness": 43,
+      "trust": 63,
+      "openness": 44,
       "ambition": 62,
       "loneliness": 0,
       "resilience": 92,
       "health": 100,
       "hunger": 53,
       "thirst": 53,
-      "energy": 100
+      "energy": 93
     },
     "mood": "warm",
     "location": {
-      "waypoint": "van_door",
+      "waypoint": "van_front",
       "x": 42,
       "y": 52
     },
     "shelter": "van",
     "relationships": {
       "huiling": {
-        "closeness": 94,
-        "tension": 5,
+        "closeness": 97,
+        "tension": 4,
         "attraction": 80
       }
     },
@@ -48,10 +48,7 @@
       ],
       "beard": true
     },
-    "interaction": {
-      "with": "huiling",
-      "state": "sitting_together"
-    },
+    "interaction": null,
     "memories": [
       {
         "day": 1,
@@ -102,6 +99,11 @@
         "day": 3,
         "text": "I promised to keep listening. Tonight I meant it.",
         "weight": 2
+      },
+      {
+        "day": 4,
+        "text": "She wants to grow things. Letting go doesn't break us the way I thought.",
+        "weight": 2
       }
     ]
   },
@@ -113,26 +115,26 @@
     "color": "#22d3ee",
     "scores": {
       "trust": 72,
-      "openness": 86,
+      "openness": 87,
       "ambition": 45,
-      "loneliness": 8,
+      "loneliness": 5,
       "resilience": 68,
       "health": 100,
       "hunger": 53,
       "thirst": 53,
-      "energy": 100
+      "energy": 93
     },
     "mood": "light",
     "location": {
-      "waypoint": "van_door",
+      "waypoint": "van_rear",
       "x": 64,
       "y": 44
     },
     "shelter": "van",
     "relationships": {
       "dan": {
-        "closeness": 94,
-        "tension": 5,
+        "closeness": 97,
+        "tension": 4,
         "attraction": 80
       }
     },
@@ -152,10 +154,7 @@
         "slingbag"
       ]
     },
-    "interaction": {
-      "with": "dan",
-      "state": "sitting_together"
-    },
+    "interaction": null,
     "memories": [
       {
         "day": 1,
@@ -210,6 +209,11 @@
       {
         "day": 3,
         "text": "He promised to listen. Tonight I believe him.",
+        "weight": 2
+      },
+      {
+        "day": 4,
+        "text": "He asked what I wanted. He wasn't afraid to say yes.",
         "weight": 2
       }
     ]

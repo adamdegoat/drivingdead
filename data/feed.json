@@ -1029,5 +1029,80 @@
       }
     ],
     "timestamp": "2026-06-10T22:31:47.802971"
+  },
+  {
+    "day": 4,
+    "cycle": "morning",
+    "character": "dan",
+    "action": "Wakes to clear light and checks the van's power systems—batteries holding steady, the fire still warm.",
+    "thought": "Clear day. Systems are solid.",
+    "location": {
+      "waypoint": "van_front",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "warm",
+    "timestamp": "2026-06-11T07:02:27.637336"
+  },
+  {
+    "day": 4,
+    "cycle": "morning",
+    "character": "huiling",
+    "action": "Rises and moves to the van's rear window, looking out at the bright morning and the quiet streets below.",
+    "thought": "He didn't pull the door shut last night.",
+    "location": {
+      "waypoint": "van_rear",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "light",
+    "timestamp": "2026-06-11T07:02:27.637336"
+  },
+  {
+    "day": 4,
+    "cycle": "morning",
+    "type": "interaction",
+    "characters": [
+      "dan",
+      "huiling"
+    ],
+    "description": "Morning light spills through the van as they stand in the common space—Dan checking the panel readout, Hui Ling watching the bright city below and thinking about the work ahead.",
+    "dialogue": [
+      {
+        "speaker": "huiling",
+        "line": "Clear sky. Panels will charge fast."
+      },
+      {
+        "speaker": "dan",
+        "line": "Food's getting low."
+      },
+      {
+        "speaker": "huiling",
+        "line": "I want to start a garden. Seeds, though."
+      },
+      {
+        "speaker": "dan",
+        "line": "I'll get seeds on the next run."
+      },
+      {
+        "speaker": "huiling",
+        "line": "You will?"
+      },
+      {
+        "speaker": "dan",
+        "line": "Yeah. If you want to do it, I'm in."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Okay. Thank you, Dan."
+      },
+      {
+        "speaker": "dan",
+        "line": "Don't thank me. Just grow something."
+      }
+    ],
+    "timestamp": "2026-06-11T07:02:27.637336"
   }
 ]

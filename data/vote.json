@@ -1,35 +1,35 @@
 {
   "world": "drivingdead",
   "poll": {
-    "id": "2026-06-10",
+    "id": "2026-06-11",
     "closes": "tonight",
-    "question": "At the van door, Dan blocks Hui's path. She can't leave those birds to die outside. Who gives?",
+    "question": "Dan and Hui Ling sit by the fire as dusk settles. The first quiet moment without fighting between them. The battery is at 45%. Does the fire burn warm through the night, ",
     "options": [
       {
-        "id": "hui_backs_down",
-        "label": "Hui steps back",
-        "desc": "Survival means holding the line, together."
+        "id": "warm_tonight",
+        "label": "Keep the fire warm",
+        "desc": "Hold this moment—the warmth, the peace, each other. Tomorrow is tomorrow."
       },
       {
-        "id": "dan_steps_aside",
-        "label": "Dan moves aside",
-        "desc": "Caging her will cost him far more than the birds ever will."
+        "id": "save_power",
+        "label": "Bank the fire now",
+        "desc": "Survival first. The harder nights are coming. They'll need the charge."
       },
       {
-        "id": "tend_from_ramp",
-        "label": "Tend them on the ramp",
-        "desc": "She acts; the van stays sealed. A way through neither has named yet."
+        "id": "low_embers",
+        "label": "Embers, not flames",
+        "desc": "Warmth without waste. They can stay close. That's enough."
       }
     ]
   },
   "in_play": {
-    "id": "negotiate",
-    "label": "Make a deal",
-    "desc": "Both their instincts are right. Help the birds without breaking the seal.",
-    "decided": "2026-06-10",
-    "votes": 2,
+    "id": "dan_steps_aside",
+    "label": "Dan moves aside",
+    "desc": "Caging her will cost him far more than the birds ever will.",
+    "decided": "2026-06-11",
+    "votes": 1,
     "tally": {
-      "negotiate": 2
+      "dan_steps_aside": 1
     }
   }
 }
