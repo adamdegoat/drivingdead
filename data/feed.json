@@ -780,5 +780,84 @@
       }
     ],
     "timestamp": "2026-06-10T11:31:49.379796"
+  },
+  {
+    "day": 3,
+    "cycle": "afternoon",
+    "character": "dan",
+    "action": "Refills the water container on the van's ledge, checking the level with a thumb and watching a sparrow land to drink.",
+    "thought": "She was right. This costs almost nothing.",
+    "location": {
+      "waypoint": "van_rear",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "steady",
+    "timestamp": "2026-06-10T15:01:38.613770"
+  },
+  {
+    "day": 3,
+    "cycle": "afternoon",
+    "character": "huiling",
+    "action": "Stands beside him, hands wrapped around a mug of tea, watching the birds flit in and out without flinching.",
+    "thought": "He's really trying now. That matters.",
+    "location": {
+      "waypoint": "van_rear",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "warm",
+    "timestamp": "2026-06-10T15:01:38.613770"
+  },
+  {
+    "day": 3,
+    "cycle": "afternoon",
+    "type": "interaction",
+    "characters": [
+      "dan",
+      "huiling"
+    ],
+    "description": "At the van's rear in the afternoon sun, Dan refills the water dish while birds dart in unafraid; Hui Ling stands close, watching him tend it without complaint, something shifted between them.",
+    "dialogue": [
+      {
+        "speaker": "huiling",
+        "line": "You keep checking the level like it matters."
+      },
+      {
+        "speaker": "dan",
+        "line": "It does. They'll come back if it's full."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Not what I meant."
+      },
+      {
+        "speaker": "dan",
+        "line": "I know."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Do you know what happens if we keep doing this? If we start caring?"
+      },
+      {
+        "speaker": "dan",
+        "line": "We get attached to things we can't keep. I know."
+      },
+      {
+        "speaker": "huiling",
+        "line": "And?"
+      },
+      {
+        "speaker": "dan",
+        "line": "And maybe that's the deal. We don't stop doing it anyway."
+      },
+      {
+        "speaker": "huiling",
+        "line": "That's all I needed you to say."
+      }
+    ],
+    "timestamp": "2026-06-10T15:01:38.613770"
   }
 ]
