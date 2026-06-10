@@ -938,5 +938,96 @@
       }
     ],
     "timestamp": "2026-06-10T18:31:59.995500"
+  },
+  {
+    "day": 3,
+    "cycle": "night",
+    "character": "dan",
+    "action": "He settles inside the van by the fire, checking that the door is secure before sitting down beside her.",
+    "thought": "She didn't leave. I opened the door.",
+    "location": {
+      "waypoint": "van_door",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "warm",
+    "timestamp": "2026-06-10T22:31:47.802971"
+  },
+  {
+    "day": 3,
+    "cycle": "night",
+    "character": "huiling",
+    "action": "She pours two cups of tea and settles by the fire, leaving space for him on the bench without pushing.",
+    "thought": "He's sitting with me. That's the shift.",
+    "location": {
+      "waypoint": "van_door",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "light",
+    "timestamp": "2026-06-10T22:31:47.802971"
+  },
+  {
+    "day": 3,
+    "cycle": "night",
+    "type": "interaction",
+    "characters": [
+      "dan",
+      "huiling"
+    ],
+    "description": "By the fire in the van, Dan and Hui Ling sit close without flinching — the city dark outside, something between them finally untensed after days of cages.",
+    "dialogue": [
+      {
+        "speaker": "huiling",
+        "line": "The fire's good."
+      },
+      {
+        "speaker": "dan",
+        "line": "Yeah. Better than it's been."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Everything's better."
+      },
+      {
+        "speaker": "dan",
+        "line": "Some things. This one especially."
+      },
+      {
+        "speaker": "huiling",
+        "line": "The birds will come back tomorrow?"
+      },
+      {
+        "speaker": "dan",
+        "line": "They never left. Just like us."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Just like us."
+      },
+      {
+        "speaker": "dan",
+        "line": "I'm going to try. Keep listening."
+      },
+      {
+        "speaker": "huiling",
+        "line": "That's all I need."
+      },
+      {
+        "speaker": "dan",
+        "line": "Then we're okay?"
+      },
+      {
+        "speaker": "huiling",
+        "line": "We're getting there."
+      },
+      {
+        "speaker": "dan",
+        "line": "That's enough for tonight."
+      }
+    ],
+    "timestamp": "2026-06-10T22:31:47.802971"
   }
 ]

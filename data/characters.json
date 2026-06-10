@@ -6,15 +6,15 @@
     "archetype": "builder",
     "color": "#f59e0b",
     "scores": {
-      "trust": 61,
-      "openness": 41,
+      "trust": 62,
+      "openness": 43,
       "ambition": 62,
       "loneliness": 0,
-      "resilience": 91,
+      "resilience": 92,
       "health": 100,
       "hunger": 53,
       "thirst": 53,
-      "energy": 68
+      "energy": 100
     },
     "mood": "warm",
     "location": {
@@ -25,8 +25,8 @@
     "shelter": "van",
     "relationships": {
       "huiling": {
-        "closeness": 90,
-        "tension": 8,
+        "closeness": 94,
+        "tension": 5,
         "attraction": 80
       }
     },
@@ -97,6 +97,11 @@
         "day": 3,
         "text": "I thought letting go meant losing her. It meant saving us.",
         "weight": 3
+      },
+      {
+        "day": 3,
+        "text": "I promised to keep listening. Tonight I meant it.",
+        "weight": 2
       }
     ]
   },
@@ -107,15 +112,15 @@
     "archetype": "healer",
     "color": "#22d3ee",
     "scores": {
-      "trust": 71,
-      "openness": 85,
+      "trust": 72,
+      "openness": 86,
       "ambition": 45,
-      "loneliness": 11,
-      "resilience": 67,
+      "loneliness": 8,
+      "resilience": 68,
       "health": 100,
       "hunger": 53,
       "thirst": 53,
-      "energy": 68
+      "energy": 100
     },
     "mood": "light",
     "location": {
@@ -126,8 +131,8 @@
     "shelter": "van",
     "relationships": {
       "dan": {
-        "closeness": 90,
-        "tension": 8,
+        "closeness": 94,
+        "tension": 5,
         "attraction": 80
       }
     },
@@ -200,6 +205,11 @@
       {
         "day": 3,
         "text": "He opened up and the silence between us finally broke.",
+        "weight": 2
+      },
+      {
+        "day": 3,
+        "text": "He promised to listen. Tonight I believe him.",
         "weight": 2
       }
     ]

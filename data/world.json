@@ -1,6 +1,6 @@
 {
   "day": 3,
-  "cycle": "evening",
+  "cycle": "night",
   "weather": "clear",
   "pending_events": [],
   "started": "2026-06-08",
@@ -9,7 +9,7 @@
       "id": "solar_rig",
       "type": "solar_rig",
       "level": 1,
-      "condition": 52,
+      "condition": 48,
       "x": 50,
       "y": 40,
       "builder": "dan",
@@ -20,29 +20,30 @@
   ],
   "fire": {
     "lit": true,
-    "fuel": 4
+    "fuel": 9
   },
   "last_run_date": "2026-06-10",
-  "pulse": "After days of gridlock, Dan is finally listening—afraid still but trying—and the air between them has stopped being a fight.",
-  "scene": "Dan's water dish holds—the birds came back all day—and by evening they sit at the van door with tea, the fire warm inside.",
+  "pulse": "Dan opened the door a crack and Hui Ling stopped pushing — the fragile compromise holding them together for now.",
+  "scene": "After Dan finally heard her this morning and opened the door on his fear, the day slowly softened; by nightfall the fire is warm inside the van and they are sitting together, something untensed between them.",
   "resources_prev": {
-    "food": 12,
-    "water": 93,
-    "wood": 96,
-    "medicine": 20
-  },
-  "resources": {
     "food": 10,
     "water": 93,
     "wood": 100,
     "medicine": 20
   },
-  "camp_climate": "steady",
+  "resources": {
+    "food": 8,
+    "water": 94,
+    "wood": 96,
+    "medicine": 20
+  },
+  "camp_climate": "content",
   "discoveries": [],
-  "last_cycle_key": "2026-06-10:evening",
+  "last_cycle_key": "2026-06-10:night",
   "day_summaries": {
     "1": "Day 1 was clear and warm — good charging, hot meals in the cab, the systems steady. At dusk, Hui Ling found injured birds on the ramp and sheltered them on the van's corner despite Dan's strong refusal. By nightfall, they were sitting together in guarded silence, both aware that the cost of survival might exceed what they could afford to become.",
-    "2": "Day 2 escalated from injured birds to a moral standoff: Dan refused shelter, and by nightfall, he blocked the van door as Hui Ling reached for it. When she asked why, he finally broke—not afraid of the dead, but of her leaving. The night left them both caged, one by the city, one by his terror."
+    "2": "Day 2 escalated from injured birds to a moral standoff: Dan refused shelter, and by nightfall, he blocked the van door as Hui Ling reached for it. When she asked why, he finally broke—not afraid of the dead, but of her leaving. The night left them both caged, one by the city, one by his terror.",
+    "3": "Day 3 started hard — Dan locked down, Hui Ling grieving, the cage between them closing. By midday he heard her and opened the door a crack: water on the ledge for the birds. By nightfall the fire burned warm and they sat together, the tension finally giving way — not solved, but held."
   },
   "lean": {
     "id": "negotiate",
