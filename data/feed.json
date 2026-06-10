@@ -697,5 +697,88 @@
       }
     ],
     "timestamp": "2026-06-10T07:02:30.815966"
+  },
+  {
+    "day": 3,
+    "cycle": "midday",
+    "character": "dan",
+    "action": "Checks the solar panels—fully lit and charging—and finds Hui Ling at the van's rear window, watching the water ledge.",
+    "thought": "She stops fighting when I listen.",
+    "location": {
+      "waypoint": "van_rear",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "steady",
+    "timestamp": "2026-06-10T11:31:49.379796"
+  },
+  {
+    "day": 3,
+    "cycle": "midday",
+    "character": "huiling",
+    "action": "Refills the water cup on the narrow ledge and watches the birds dart in and out of the gap.",
+    "thought": "He finally heard me. He's trying now.",
+    "location": {
+      "waypoint": "van_rear",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "warm",
+    "timestamp": "2026-06-10T11:31:49.379796"
+  },
+  {
+    "day": 3,
+    "cycle": "midday",
+    "type": "interaction",
+    "characters": [
+      "huiling",
+      "dan"
+    ],
+    "description": "At the van's rear window midday, Hui Ling refills water on the ledge as birds dart in; Dan finds her there, and for once neither is braced for a fight.",
+    "dialogue": [
+      {
+        "speaker": "huiling",
+        "line": "The water's gone."
+      },
+      {
+        "speaker": "dan",
+        "line": "Good, then."
+      },
+      {
+        "speaker": "huiling",
+        "line": "You mean it, didn't you. Last night."
+      },
+      {
+        "speaker": "dan",
+        "line": "About what?"
+      },
+      {
+        "speaker": "huiling",
+        "line": "That I mattered more than the seal."
+      },
+      {
+        "speaker": "dan",
+        "line": "The seal doesn't matter if you're not inside it."
+      },
+      {
+        "speaker": "huiling",
+        "line": "So the birds stay?"
+      },
+      {
+        "speaker": "dan",
+        "line": "The water stays. That's the deal."
+      },
+      {
+        "speaker": "huiling",
+        "line": "That's more than water, Dan."
+      },
+      {
+        "speaker": "dan",
+        "line": "I know."
+      }
+    ],
+    "timestamp": "2026-06-10T11:31:49.379796"
   }
 ]

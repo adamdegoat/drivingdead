@@ -1,6 +1,6 @@
 {
   "day": 3,
-  "cycle": "morning",
+  "cycle": "midday",
   "weather": "clear",
   "pending_events": [],
   "started": "2026-06-08",
@@ -9,7 +9,7 @@
       "id": "solar_rig",
       "type": "solar_rig",
       "level": 1,
-      "condition": 64,
+      "condition": 60,
       "x": 50,
       "y": 40,
       "builder": "dan",
@@ -20,26 +20,26 @@
   ],
   "fire": {
     "lit": true,
-    "fuel": 7
+    "fuel": 12
   },
   "last_run_date": "2026-06-10",
-  "pulse": "After last night's admission, Dan moves toward her, but the cost of his compromise weighs on him still.",
-  "scene": "The van was warm and the fire burning when he woke; Dan made tea and opened the conversation she'd been waiting for, offering to set out water for the birds on the ledge.",
+  "pulse": "Dan is stepping up, Hui Ling is finally leaning in—after days of pushing, the tension between them has space to breathe.",
+  "scene": "After last night's agreement, Hui Ling refills the water on the ledge this midday while Dan watches from the window; the birds come and go, and for the first time neither of them is tensed.",
   "resources_prev": {
-    "food": 18,
-    "water": 94,
-    "wood": 99,
+    "food": 16,
+    "water": 93,
+    "wood": 96,
     "medicine": 20
   },
   "resources": {
-    "food": 16,
+    "food": 14,
     "water": 93,
     "wood": 96,
     "medicine": 20
   },
   "camp_climate": "content",
   "discoveries": [],
-  "last_cycle_key": "2026-06-10:morning",
+  "last_cycle_key": "2026-06-10:midday",
   "day_summaries": {
     "1": "Day 1 was clear and warm — good charging, hot meals in the cab, the systems steady. At dusk, Hui Ling found injured birds on the ramp and sheltered them on the van's corner despite Dan's strong refusal. By nightfall, they were sitting together in guarded silence, both aware that the cost of survival might exceed what they could afford to become.",
     "2": "Day 2 escalated from injured birds to a moral standoff: Dan refused shelter, and by nightfall, he blocked the van door as Hui Ling reached for it. When she asked why, he finally broke—not afraid of the dead, but of her leaving. The night left them both caged, one by the city, one by his terror."

@@ -6,27 +6,27 @@
     "archetype": "builder",
     "color": "#f59e0b",
     "scores": {
-      "trust": 55,
-      "openness": 36,
+      "trust": 57,
+      "openness": 37,
       "ambition": 62,
-      "loneliness": 6,
+      "loneliness": 4,
       "resilience": 90,
       "health": 100,
       "hunger": 53,
       "thirst": 53,
-      "energy": 89
+      "energy": 82
     },
-    "mood": "careful",
+    "mood": "steady",
     "location": {
-      "waypoint": "van_door",
+      "waypoint": "van_rear",
       "x": 42,
       "y": 52
     },
     "shelter": "van",
     "relationships": {
       "huiling": {
-        "closeness": 83,
-        "tension": 14,
+        "closeness": 87,
+        "tension": 12,
         "attraction": 79
       }
     },
@@ -50,7 +50,7 @@
     },
     "interaction": {
       "with": "huiling",
-      "state": "talking"
+      "state": "sitting_together"
     },
     "memories": [
       {
@@ -82,6 +82,11 @@
         "day": 3,
         "text": "I said I'd set out water for the birds. That meant I was listening.",
         "weight": 2
+      },
+      {
+        "day": 3,
+        "text": "She stopped fighting. I heard her. That changes things.",
+        "weight": 2
       }
     ]
   },
@@ -92,27 +97,27 @@
     "archetype": "healer",
     "color": "#22d3ee",
     "scores": {
-      "trust": 66,
+      "trust": 68,
       "openness": 85,
       "ambition": 45,
-      "loneliness": 20,
+      "loneliness": 17,
       "resilience": 65,
       "health": 100,
       "hunger": 53,
       "thirst": 53,
-      "energy": 89
+      "energy": 82
     },
-    "mood": "hopeful",
+    "mood": "warm",
     "location": {
-      "waypoint": "van_door",
+      "waypoint": "van_rear",
       "x": 64,
       "y": 44
     },
     "shelter": "van",
     "relationships": {
       "dan": {
-        "closeness": 83,
-        "tension": 14,
+        "closeness": 87,
+        "tension": 12,
         "attraction": 79
       }
     },
@@ -134,7 +139,7 @@
     },
     "interaction": {
       "with": "dan",
-      "state": "talking"
+      "state": "sitting_together"
     },
     "memories": [
       {
@@ -170,6 +175,11 @@
       {
         "day": 3,
         "text": "Dan finally opened up. He's not less afraid, but he's trying.",
+        "weight": 2
+      },
+      {
+        "day": 3,
+        "text": "Dan set out the water. He heard me, finally.",
         "weight": 2
       }
     ]
