@@ -1104,5 +1104,80 @@
       }
     ],
     "timestamp": "2026-06-11T07:02:27.637336"
+  },
+  {
+    "day": 4,
+    "cycle": "midday",
+    "character": "dan",
+    "action": "At the garden corner in the clear sun, Dan listens as Hui Ling outlines the planter expansion, then gathers wood and tools to build the new beds.",
+    "thought": "She sees clearer than I do. I'm learning.",
+    "location": {
+      "waypoint": "garden_corner",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "warm",
+    "timestamp": "2026-06-11T11:32:20.591818"
+  },
+  {
+    "day": 4,
+    "cycle": "midday",
+    "character": "huiling",
+    "action": "Seeing the food at seven days, Hui Ling moves to the garden corner and proposes a clear plan to expand the planter beds, then pulls Dan in to help build.",
+    "thought": "He heard me the first time. That's new.",
+    "location": {
+      "waypoint": "garden_corner",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "light",
+    "timestamp": "2026-06-11T11:32:20.591818"
+  },
+  {
+    "day": 4,
+    "cycle": "midday",
+    "type": "interaction",
+    "characters": [
+      "dan",
+      "huiling"
+    ],
+    "description": "With the food down to seven days, Hui Ling pitches a garden expansion at the garden corner in the bright sun; Dan listens without resistance and by midday they're building a new planter bed frame together, her planning and his hands aligned.",
+    "dialogue": [
+      {
+        "speaker": "huiling",
+        "line": "Food's down to seven days. We need more plants."
+      },
+      {
+        "speaker": "dan",
+        "line": "The garden's producing."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Not fast enough. Help me expand it today?"
+      },
+      {
+        "speaker": "dan",
+        "line": "You've already planned it."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Double the corner planter. I can manage it with your help."
+      },
+      {
+        "speaker": "dan",
+        "line": "Okay. Where do we start?"
+      },
+      {
+        "speaker": "huiling",
+        "line": "Corner bed. More space, better soil."
+      },
+      {
+        "speaker": "dan",
+        "line": "Then let's build it."
+      }
+    ],
+    "timestamp": "2026-06-11T11:32:20.591818"
   }
 ]

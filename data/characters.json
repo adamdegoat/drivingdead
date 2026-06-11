@@ -6,28 +6,28 @@
     "archetype": "builder",
     "color": "#f59e0b",
     "scores": {
-      "trust": 63,
-      "openness": 44,
+      "trust": 65,
+      "openness": 45,
       "ambition": 62,
       "loneliness": 0,
       "resilience": 92,
       "health": 100,
       "hunger": 53,
       "thirst": 53,
-      "energy": 93
+      "energy": 86
     },
     "mood": "warm",
     "location": {
-      "waypoint": "van_front",
+      "waypoint": "garden_corner",
       "x": 42,
       "y": 52
     },
     "shelter": "van",
     "relationships": {
       "huiling": {
-        "closeness": 97,
-        "tension": 4,
-        "attraction": 80
+        "closeness": 100,
+        "tension": 3,
+        "attraction": 81
       }
     },
     "bio": "35, an ex-solar and aircon technician who spent two years converting an old camper into a self-sufficient, solar-powered home before the world ended — the only reason they're still alive. Methodical and guarded, he plans every move down to the watt and the ration, keeps the van running and the ramp sealed, and would rather never open the gate than risk the two of them for a stranger. He fixes things instead of feeling them — and the dead city is wearing that down.",
@@ -48,7 +48,10 @@
       ],
       "beard": true
     },
-    "interaction": null,
+    "interaction": {
+      "with": "huiling",
+      "state": "working_together"
+    },
     "memories": [
       {
         "day": 1,
@@ -104,6 +107,11 @@
         "day": 4,
         "text": "She wants to grow things. Letting go doesn't break us the way I thought.",
         "weight": 2
+      },
+      {
+        "day": 4,
+        "text": "She took the lead on the garden. I didn't fight it.",
+        "weight": 2
       }
     ]
   },
@@ -114,28 +122,28 @@
     "archetype": "healer",
     "color": "#22d3ee",
     "scores": {
-      "trust": 72,
-      "openness": 87,
-      "ambition": 45,
-      "loneliness": 5,
+      "trust": 73,
+      "openness": 88,
+      "ambition": 47,
+      "loneliness": 3,
       "resilience": 68,
       "health": 100,
       "hunger": 53,
       "thirst": 53,
-      "energy": 93
+      "energy": 86
     },
     "mood": "light",
     "location": {
-      "waypoint": "van_rear",
+      "waypoint": "garden_corner",
       "x": 64,
       "y": 44
     },
     "shelter": "van",
     "relationships": {
       "dan": {
-        "closeness": 97,
-        "tension": 4,
-        "attraction": 80
+        "closeness": 100,
+        "tension": 3,
+        "attraction": 81
       }
     },
     "bio": "32, an ICU nurse who spent the first weeks of the outbreak watching people she couldn't save. Warm and stubborn, the conscience of the pair — and the only one with the hands to do field surgery if a bite ever gets through the barricade. She can't look away from a survivor down in the street the way Dan can; it costs her, and it scares him. She keeps them human; he keeps them alive. Five years together, and the dead city is testing every promise they made.",
@@ -154,7 +162,10 @@
         "slingbag"
       ]
     },
-    "interaction": null,
+    "interaction": {
+      "with": "dan",
+      "state": "working_together"
+    },
     "memories": [
       {
         "day": 1,
@@ -214,6 +225,11 @@
       {
         "day": 4,
         "text": "He asked what I wanted. He wasn't afraid to say yes.",
+        "weight": 2
+      },
+      {
+        "day": 4,
+        "text": "He said yes and started working. No argument.",
         "weight": 2
       }
     ]
