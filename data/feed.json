@@ -1254,5 +1254,88 @@
       }
     ],
     "timestamp": "2026-06-11T15:02:10.822667"
+  },
+  {
+    "day": 4,
+    "cycle": "evening",
+    "character": "dan",
+    "action": "He checks the battery readout by the fire, listening to the city darkening outside.",
+    "thought": "Maybe seeing further matters more than control.",
+    "location": {
+      "waypoint": "van_door",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "settled",
+    "timestamp": "2026-06-11T18:31:50.484811"
+  },
+  {
+    "day": 4,
+    "cycle": "evening",
+    "character": "huiling",
+    "action": "She watches the windows fade from orange to purple, then turns to him with the first honest question.",
+    "thought": "He came around. What does that mean tomorrow?",
+    "location": {
+      "waypoint": "van_door",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "hopeful",
+    "timestamp": "2026-06-11T18:31:50.484811"
+  },
+  {
+    "day": 4,
+    "cycle": "evening",
+    "type": "interaction",
+    "characters": [
+      "dan",
+      "huiling"
+    ],
+    "description": "By the fire in the van as evening settles, with food now at five days, Dan asks about the garden's timeline—she feels him taking her vision seriously.",
+    "dialogue": [
+      {
+        "speaker": "huiling",
+        "line": "Five days if we're careful. We need to think about a run soon."
+      },
+      {
+        "speaker": "dan",
+        "line": "The garden beds you started—how long before they're producing?"
+      },
+      {
+        "speaker": "huiling",
+        "line": "Three weeks at minimum. Four if it's slow."
+      },
+      {
+        "speaker": "dan",
+        "line": "Then we go by day six. I'll take it."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Alone again?"
+      },
+      {
+        "speaker": "dan",
+        "line": "Safer. You hold the deck."
+      },
+      {
+        "speaker": "huiling",
+        "line": "I didn't like it last time."
+      },
+      {
+        "speaker": "dan",
+        "line": "I know you didn't."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Come back."
+      },
+      {
+        "speaker": "dan",
+        "line": "I will."
+      }
+    ],
+    "timestamp": "2026-06-11T18:31:50.484811"
   }
 ]

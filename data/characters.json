@@ -6,19 +6,19 @@
     "archetype": "builder",
     "color": "#f59e0b",
     "scores": {
-      "trust": 67,
-      "openness": 46,
-      "ambition": 62,
+      "trust": 68,
+      "openness": 47,
+      "ambition": 61,
       "loneliness": 0,
       "resilience": 92,
       "health": 100,
       "hunger": 53,
       "thirst": 53,
-      "energy": 79
+      "energy": 72
     },
-    "mood": "warm",
+    "mood": "settled",
     "location": {
-      "waypoint": "garden_corner",
+      "waypoint": "van_door",
       "x": 42,
       "y": 52
     },
@@ -26,7 +26,7 @@
     "relationships": {
       "huiling": {
         "closeness": 100,
-        "tension": 2,
+        "tension": 1,
         "attraction": 81
       }
     },
@@ -50,7 +50,7 @@
     },
     "interaction": {
       "with": "huiling",
-      "state": "working_together"
+      "state": "talking"
     },
     "memories": [
       {
@@ -117,6 +117,11 @@
         "day": 4,
         "text": "I let her lead and nothing broke.",
         "weight": 3
+      },
+      {
+        "day": 4,
+        "text": "She was afraid of me going alone. I said I'd come back.",
+        "weight": 1
       }
     ]
   },
@@ -127,19 +132,19 @@
     "archetype": "healer",
     "color": "#22d3ee",
     "scores": {
-      "trust": 74,
+      "trust": 76,
       "openness": 88,
       "ambition": 48,
-      "loneliness": 1,
+      "loneliness": 0,
       "resilience": 68,
       "health": 100,
       "hunger": 53,
       "thirst": 53,
-      "energy": 79
+      "energy": 72
     },
-    "mood": "light",
+    "mood": "hopeful",
     "location": {
-      "waypoint": "garden_corner",
+      "waypoint": "van_door",
       "x": 64,
       "y": 44
     },
@@ -147,7 +152,7 @@
     "relationships": {
       "dan": {
         "closeness": 100,
-        "tension": 2,
+        "tension": 1,
         "attraction": 81
       }
     },
@@ -169,7 +174,7 @@
     },
     "interaction": {
       "with": "dan",
-      "state": "working_together"
+      "state": "talking"
     },
     "memories": [
       {
@@ -181,6 +186,11 @@
         "day": 1,
         "text": "I sheltered the birds. Dan refused. We're not the same people on this anymore.",
         "weight": 2
+      },
+      {
+        "day": 2,
+        "text": "Dan's real fear isn't the dead—it's me leaving. We're both trapped in his terror now.",
+        "weight": 3
       },
       {
         "day": 2,
@@ -196,11 +206,6 @@
         "day": 2,
         "text": "He won't let me save anything. Even what already wants to die.",
         "weight": 2
-      },
-      {
-        "day": 2,
-        "text": "Dan's real fear isn't the dead—it's me leaving. We're both trapped in his terror now.",
-        "weight": 3
       },
       {
         "day": 3,
