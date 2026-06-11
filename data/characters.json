@@ -6,15 +6,15 @@
     "archetype": "builder",
     "color": "#f59e0b",
     "scores": {
-      "trust": 65,
-      "openness": 45,
+      "trust": 67,
+      "openness": 46,
       "ambition": 62,
       "loneliness": 0,
       "resilience": 92,
       "health": 100,
       "hunger": 53,
       "thirst": 53,
-      "energy": 86
+      "energy": 79
     },
     "mood": "warm",
     "location": {
@@ -26,7 +26,7 @@
     "relationships": {
       "huiling": {
         "closeness": 100,
-        "tension": 3,
+        "tension": 2,
         "attraction": 81
       }
     },
@@ -112,6 +112,11 @@
         "day": 4,
         "text": "She took the lead on the garden. I didn't fight it.",
         "weight": 2
+      },
+      {
+        "day": 4,
+        "text": "I let her lead and nothing broke.",
+        "weight": 3
       }
     ]
   },
@@ -122,15 +127,15 @@
     "archetype": "healer",
     "color": "#22d3ee",
     "scores": {
-      "trust": 73,
+      "trust": 74,
       "openness": 88,
-      "ambition": 47,
-      "loneliness": 3,
+      "ambition": 48,
+      "loneliness": 1,
       "resilience": 68,
       "health": 100,
       "hunger": 53,
       "thirst": 53,
-      "energy": 86
+      "energy": 79
     },
     "mood": "light",
     "location": {
@@ -142,7 +147,7 @@
     "relationships": {
       "dan": {
         "closeness": 100,
-        "tension": 3,
+        "tension": 2,
         "attraction": 81
       }
     },
@@ -230,6 +235,11 @@
       {
         "day": 4,
         "text": "He said yes and started working. No argument.",
+        "weight": 2
+      },
+      {
+        "day": 4,
+        "text": "He stepped back and let me breathe.",
         "weight": 2
       }
     ]

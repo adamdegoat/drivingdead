@@ -1179,5 +1179,80 @@
       }
     ],
     "timestamp": "2026-06-11T11:32:20.591818"
+  },
+  {
+    "day": 4,
+    "cycle": "afternoon",
+    "character": "dan",
+    "action": "He stands beside Hui Ling at the corner bed, handing her the seedling tray and tools as she directs the spacing of the first seeds.",
+    "thought": "She sees clearer than I do.",
+    "location": {
+      "waypoint": "garden_corner",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "warm",
+    "timestamp": "2026-06-11T15:02:10.822667"
+  },
+  {
+    "day": 4,
+    "cycle": "afternoon",
+    "character": "huiling",
+    "action": "She kneels at the corner bed, turning the soil and beginning to space the first seeds, her hands steady in the afternoon light as Dan watches without pushing back.",
+    "thought": "He's stepping back. That's everything.",
+    "location": {
+      "waypoint": "garden_corner",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "light",
+    "timestamp": "2026-06-11T15:02:10.822667"
+  },
+  {
+    "day": 4,
+    "cycle": "afternoon",
+    "type": "interaction",
+    "characters": [
+      "dan",
+      "huiling"
+    ],
+    "description": "In the bright afternoon, Hui Ling works the corner bed while Dan stands beside her, handing seeds and soil—watching her lead, his hands serving her vision for the first time.",
+    "dialogue": [
+      {
+        "speaker": "huiling",
+        "line": "We should plant before the week's out. You with me?"
+      },
+      {
+        "speaker": "dan",
+        "line": "Those seeds are old. Might not take."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Then they're stubborn. Maybe they'll surprise us."
+      },
+      {
+        "speaker": "dan",
+        "line": "What layout are you thinking?"
+      },
+      {
+        "speaker": "huiling",
+        "line": "Corner bed first. You turn soil, I'll space the seeds."
+      },
+      {
+        "speaker": "dan",
+        "line": "Not the other way?"
+      },
+      {
+        "speaker": "huiling",
+        "line": "I need to see it as we go."
+      },
+      {
+        "speaker": "dan",
+        "line": "Then that's how we do it."
+      }
+    ],
+    "timestamp": "2026-06-11T15:02:10.822667"
   }
 ]
