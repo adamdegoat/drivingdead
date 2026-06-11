@@ -6,19 +6,19 @@
     "archetype": "builder",
     "color": "#f59e0b",
     "scores": {
-      "trust": 68,
-      "openness": 47,
+      "trust": 70,
+      "openness": 48,
       "ambition": 61,
       "loneliness": 0,
       "resilience": 92,
       "health": 100,
       "hunger": 53,
       "thirst": 53,
-      "energy": 72
+      "energy": 100
     },
-    "mood": "settled",
+    "mood": "resigned",
     "location": {
-      "waypoint": "van_door",
+      "waypoint": "van_rear",
       "x": 42,
       "y": 52
     },
@@ -26,7 +26,7 @@
     "relationships": {
       "huiling": {
         "closeness": 100,
-        "tension": 1,
+        "tension": 0,
         "attraction": 81
       }
     },
@@ -50,13 +50,18 @@
     },
     "interaction": {
       "with": "huiling",
-      "state": "talking"
+      "state": "working_together"
     },
     "memories": [
       {
         "day": 1,
         "text": "She defied me on the birds. I let her. That changes things.",
         "weight": 2
+      },
+      {
+        "day": 2,
+        "text": "When she asked why I blocked the door, I told her the truth—I'm terrified she'll leave me.",
+        "weight": 3
       },
       {
         "day": 2,
@@ -74,8 +79,8 @@
         "weight": 2
       },
       {
-        "day": 2,
-        "text": "When she asked why I blocked the door, I told her the truth—I'm terrified she'll leave me.",
+        "day": 3,
+        "text": "I thought letting go meant losing her. It meant saving us.",
         "weight": 3
       },
       {
@@ -95,13 +100,18 @@
       },
       {
         "day": 3,
-        "text": "I thought letting go meant losing her. It meant saving us.",
+        "text": "I promised to keep listening. Tonight I meant it.",
+        "weight": 2
+      },
+      {
+        "day": 4,
+        "text": "I let her lead and nothing broke.",
         "weight": 3
       },
       {
-        "day": 3,
-        "text": "I promised to keep listening. Tonight I meant it.",
-        "weight": 2
+        "day": 4,
+        "text": "I let her go when it mattered most. Scared I'll lose her, but not scared enough to lock her in.",
+        "weight": 3
       },
       {
         "day": 4,
@@ -112,16 +122,6 @@
         "day": 4,
         "text": "She took the lead on the garden. I didn't fight it.",
         "weight": 2
-      },
-      {
-        "day": 4,
-        "text": "I let her lead and nothing broke.",
-        "weight": 3
-      },
-      {
-        "day": 4,
-        "text": "She was afraid of me going alone. I said I'd come back.",
-        "weight": 1
       }
     ]
   },
@@ -132,19 +132,19 @@
     "archetype": "healer",
     "color": "#22d3ee",
     "scores": {
-      "trust": 76,
+      "trust": 77,
       "openness": 88,
       "ambition": 48,
       "loneliness": 0,
-      "resilience": 68,
+      "resilience": 69,
       "health": 100,
       "hunger": 53,
       "thirst": 53,
-      "energy": 72
+      "energy": 100
     },
-    "mood": "hopeful",
+    "mood": "focused",
     "location": {
-      "waypoint": "van_door",
+      "waypoint": "van_rear",
       "x": 64,
       "y": 44
     },
@@ -152,7 +152,7 @@
     "relationships": {
       "dan": {
         "closeness": 100,
-        "tension": 1,
+        "tension": 0,
         "attraction": 81
       }
     },
@@ -174,17 +174,12 @@
     },
     "interaction": {
       "with": "dan",
-      "state": "talking"
+      "state": "working_together"
     },
     "memories": [
       {
         "day": 1,
         "text": "The sound stays with me. Dan says it's probably the dead.",
-        "weight": 2
-      },
-      {
-        "day": 1,
-        "text": "I sheltered the birds. Dan refused. We're not the same people on this anymore.",
         "weight": 2
       },
       {
@@ -245,6 +240,11 @@
       {
         "day": 4,
         "text": "He stepped back and let me breathe.",
+        "weight": 2
+      },
+      {
+        "day": 4,
+        "text": "He said yes when it counted. Maybe he really is becoming who I need him to be.",
         "weight": 2
       }
     ]

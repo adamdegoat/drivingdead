@@ -1337,5 +1337,96 @@
       }
     ],
     "timestamp": "2026-06-11T18:31:50.484811"
+  },
+  {
+    "day": 4,
+    "cycle": "night",
+    "character": "dan",
+    "action": "He checks the battery readout and pulls the radio forward, preparing to keep her in contact tomorrow.",
+    "thought": "I'm letting her walk into the dead.",
+    "location": {
+      "waypoint": "van_rear",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "resigned",
+    "timestamp": "2026-06-11T22:32:56.597935"
+  },
+  {
+    "day": 4,
+    "cycle": "night",
+    "character": "huiling",
+    "action": "She empties a satchel and lays out what she'll need for the morning run into the city.",
+    "thought": "Tomorrow I feed us both. I have to.",
+    "location": {
+      "waypoint": "van_rear",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "focused",
+    "timestamp": "2026-06-11T22:32:56.597935"
+  },
+  {
+    "day": 4,
+    "cycle": "night",
+    "type": "interaction",
+    "characters": [
+      "huiling",
+      "dan",
+      "huiling",
+      "dan",
+      "huiling",
+      "dan",
+      "huiling",
+      "dan",
+      "huiling",
+      "dan"
+    ],
+    "description": "Inside the van at night, with three days of food left, Hui Ling decides she'll scavenge tomorrow—and Dan, struggling, finally says yes.",
+    "dialogue": [
+      {
+        "speaker": "huiling",
+        "line": "Three days of food."
+      },
+      {
+        "speaker": "dan",
+        "line": "We ration harder."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Someone has to scavenge tomorrow."
+      },
+      {
+        "speaker": "dan",
+        "line": "I'll go. Clear morning."
+      },
+      {
+        "speaker": "huiling",
+        "line": "I'm going."
+      },
+      {
+        "speaker": "dan",
+        "line": "No. Too risky."
+      },
+      {
+        "speaker": "huiling",
+        "line": "You don't trust me?"
+      },
+      {
+        "speaker": "dan",
+        "line": "I'm scared."
+      },
+      {
+        "speaker": "huiling",
+        "line": "So am I. But I'm going."
+      },
+      {
+        "speaker": "dan",
+        "line": "Okay. Take the radio."
+      }
+    ],
+    "timestamp": "2026-06-11T22:32:56.597935"
   }
 ]
