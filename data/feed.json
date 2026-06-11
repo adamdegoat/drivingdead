@@ -1428,5 +1428,88 @@
       }
     ],
     "timestamp": "2026-06-11T22:32:56.597935"
+  },
+  {
+    "day": 5,
+    "cycle": "morning",
+    "character": "dan",
+    "action": "He fills two flasks at the water rig and hands them to Hui Ling at the van door, watching her check her blade.",
+    "thought": "She walks toward the dead, and I let her.",
+    "location": {
+      "waypoint": "van_door",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "anxious",
+    "timestamp": "2026-06-12T07:03:39.108613"
+  },
+  {
+    "day": 5,
+    "cycle": "morning",
+    "character": "huiling",
+    "action": "She checks her blade at the van door, shoulders her pack, and takes the flasks from Dan—ready to head into the streets.",
+    "thought": "Two days of food. I have to try.",
+    "location": {
+      "waypoint": "scavenge_run",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "determined",
+    "timestamp": "2026-06-12T07:03:39.108613"
+  },
+  {
+    "day": 5,
+    "cycle": "morning",
+    "type": "interaction",
+    "characters": [
+      "dan",
+      "huiling"
+    ],
+    "description": "Clear morning, perfect for scavenging—Hui Ling shoulders her pack at the van door while Dan hands over the filled flasks, their goodbye loaded with words left unspoken.",
+    "dialogue": [
+      {
+        "speaker": "huiling",
+        "line": "Clear morning—best light for scavenging we've had."
+      },
+      {
+        "speaker": "dan",
+        "line": "You have the route?"
+      },
+      {
+        "speaker": "huiling",
+        "line": "Corner shops, quick, back in two hours."
+      },
+      {
+        "speaker": "dan",
+        "line": "Radio charged?"
+      },
+      {
+        "speaker": "huiling",
+        "line": "Charged. You'll hear me if I need you."
+      },
+      {
+        "speaker": "dan",
+        "line": "Hui Ling."
+      },
+      {
+        "speaker": "huiling",
+        "line": "I know. I'm coming back."
+      },
+      {
+        "speaker": "dan",
+        "line": "Every time?"
+      },
+      {
+        "speaker": "huiling",
+        "line": "Every time. That's the deal between us."
+      },
+      {
+        "speaker": "dan",
+        "line": "Then go."
+      }
+    ],
+    "timestamp": "2026-06-12T07:03:39.108613"
   }
 ]

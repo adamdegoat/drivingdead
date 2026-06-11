@@ -7,18 +7,18 @@
     "color": "#f59e0b",
     "scores": {
       "trust": 70,
-      "openness": 48,
+      "openness": 49,
       "ambition": 61,
       "loneliness": 0,
-      "resilience": 92,
+      "resilience": 93,
       "health": 100,
       "hunger": 53,
       "thirst": 53,
-      "energy": 100
+      "energy": 93
     },
-    "mood": "resigned",
+    "mood": "anxious",
     "location": {
-      "waypoint": "van_rear",
+      "waypoint": "van_door",
       "x": 42,
       "y": 52
     },
@@ -50,14 +50,9 @@
     },
     "interaction": {
       "with": "huiling",
-      "state": "working_together"
+      "state": "talking"
     },
     "memories": [
-      {
-        "day": 1,
-        "text": "She defied me on the birds. I let her. That changes things.",
-        "weight": 2
-      },
       {
         "day": 2,
         "text": "When she asked why I blocked the door, I told her the truth—I'm terrified she'll leave me.",
@@ -122,6 +117,11 @@
         "day": 4,
         "text": "She took the lead on the garden. I didn't fight it.",
         "weight": 2
+      },
+      {
+        "day": 5,
+        "text": "She needed food and I prepared her supplies without fighting.",
+        "weight": 2
       }
     ]
   },
@@ -132,7 +132,7 @@
     "archetype": "healer",
     "color": "#22d3ee",
     "scores": {
-      "trust": 77,
+      "trust": 78,
       "openness": 88,
       "ambition": 48,
       "loneliness": 0,
@@ -140,11 +140,11 @@
       "health": 100,
       "hunger": 53,
       "thirst": 53,
-      "energy": 100
+      "energy": 93
     },
-    "mood": "focused",
+    "mood": "determined",
     "location": {
-      "waypoint": "van_rear",
+      "waypoint": "scavenge_run",
       "x": 64,
       "y": 44
     },
@@ -174,14 +174,9 @@
     },
     "interaction": {
       "with": "dan",
-      "state": "working_together"
+      "state": "talking"
     },
     "memories": [
-      {
-        "day": 1,
-        "text": "The sound stays with me. Dan says it's probably the dead.",
-        "weight": 2
-      },
       {
         "day": 2,
         "text": "Dan's real fear isn't the dead—it's me leaving. We're both trapped in his terror now.",
@@ -245,6 +240,11 @@
       {
         "day": 4,
         "text": "He said yes when it counted. Maybe he really is becoming who I need him to be.",
+        "weight": 2
+      },
+      {
+        "day": 5,
+        "text": "He handed over the flasks like he trusted me completely.",
         "weight": 2
       }
     ]
