@@ -1756,5 +1756,96 @@
       }
     ],
     "timestamp": "2026-06-12T18:32:12.036242"
+  },
+  {
+    "day": 5,
+    "cycle": "night",
+    "character": "dan",
+    "action": "He sits beside her by the fire, listening while she speaks about the woman with the bitten arm, not offering solutions or consolation.",
+    "thought": "She's carrying more than I measured for.",
+    "location": {
+      "waypoint": "van_rear",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "somber",
+    "timestamp": "2026-06-12T22:31:58.028664"
+  },
+  {
+    "day": 5,
+    "cycle": "night",
+    "character": "huiling",
+    "action": "She sits close to the fire, telling Dan for the first time about the woman she had to leave behind, her hands still trembling.",
+    "thought": "I saved us. It doesn't feel like saving.",
+    "location": {
+      "waypoint": "van_rear",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "haunted",
+    "timestamp": "2026-06-12T22:31:58.028664"
+  },
+  {
+    "day": 5,
+    "cycle": "night",
+    "type": "interaction",
+    "characters": [
+      "dan",
+      "huiling"
+    ],
+    "description": "By the fire in the van, Hui Ling finally tells Dan about the bitten woman she passed; he listens without consoling, and she grieves the impossible choice that kept them both alive.",
+    "dialogue": [
+      {
+        "speaker": "huiling",
+        "line": "There was a woman. Three blocks past. Bitten arm."
+      },
+      {
+        "speaker": "dan",
+        "line": "You didn't stop."
+      },
+      {
+        "speaker": "huiling",
+        "line": "If I had, I wouldn't have come back."
+      },
+      {
+        "speaker": "dan",
+        "line": "That's what saved us both."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Her eyes, Dan. She knew I was leaving her there."
+      },
+      {
+        "speaker": "dan",
+        "line": "I'm sorry you had to see that."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Am I still nursing if I walk past the dying?"
+      },
+      {
+        "speaker": "dan",
+        "line": "You were never going to save her. But you saved us."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Feels like I chose myself over her life."
+      },
+      {
+        "speaker": "dan",
+        "line": "You chose both of us. That's the whole thing—you couldn't have both."
+      },
+      {
+        "speaker": "huiling",
+        "line": "How do you live with that? The impossible choices?"
+      },
+      {
+        "speaker": "dan",
+        "line": "One night at a time. Stop thinking past tomorrow."
+      }
+    ],
+    "timestamp": "2026-06-12T22:31:58.028664"
   }
 ]

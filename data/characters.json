@@ -6,19 +6,19 @@
     "archetype": "builder",
     "color": "#f59e0b",
     "scores": {
-      "trust": 75,
-      "openness": 52,
+      "trust": 76,
+      "openness": 53,
       "ambition": 61,
       "loneliness": 0,
       "resilience": 94,
       "health": 100,
       "hunger": 53,
       "thirst": 53,
-      "energy": 48
+      "energy": 82
     },
-    "mood": "relieved",
+    "mood": "somber",
     "location": {
-      "waypoint": "rooftop_mid",
+      "waypoint": "van_rear",
       "x": 42,
       "y": 52
     },
@@ -50,7 +50,7 @@
     },
     "interaction": {
       "with": "huiling",
-      "state": "sitting_together"
+      "state": "talking"
     },
     "memories": [
       {
@@ -76,11 +76,6 @@
       {
         "day": 3,
         "text": "She asked what happens if we keep caring. I said we do it anyway.",
-        "weight": 2
-      },
-      {
-        "day": 3,
-        "text": "I promised to keep listening. Tonight I meant it.",
         "weight": 2
       },
       {
@@ -122,6 +117,11 @@
         "day": 5,
         "text": "I learned what she saw out there. More real than my fears.",
         "weight": 2
+      },
+      {
+        "day": 5,
+        "text": "She came back changed. I finally saw the cost she carries.",
+        "weight": 2
       }
     ]
   },
@@ -132,19 +132,19 @@
     "archetype": "healer",
     "color": "#22d3ee",
     "scores": {
-      "trust": 81,
+      "trust": 82,
       "openness": 90,
       "ambition": 49,
       "loneliness": 0,
-      "resilience": 68,
+      "resilience": 67,
       "health": 100,
       "hunger": 53,
       "thirst": 53,
-      "energy": 48
+      "energy": 82
     },
-    "mood": "triumphant",
+    "mood": "haunted",
     "location": {
-      "waypoint": "rooftop_mid",
+      "waypoint": "van_rear",
       "x": 64,
       "y": 44
     },
@@ -174,7 +174,7 @@
     },
     "interaction": {
       "with": "dan",
-      "state": "sitting_together"
+      "state": "talking"
     },
     "memories": [
       {
@@ -203,11 +203,6 @@
         "weight": 2
       },
       {
-        "day": 3,
-        "text": "He promised to listen. Tonight I believe him.",
-        "weight": 2
-      },
-      {
         "day": 4,
         "text": "He asked what I wanted. He wasn't afraid to say yes.",
         "weight": 2
@@ -226,6 +221,11 @@
         "day": 4,
         "text": "He said yes when it counted. Maybe he really is becoming who I need him to be.",
         "weight": 2
+      },
+      {
+        "day": 5,
+        "text": "I left her to die and Dan didn't judge me for it.",
+        "weight": 3
       },
       {
         "day": 5,
