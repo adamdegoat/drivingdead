@@ -6,19 +6,19 @@
     "archetype": "builder",
     "color": "#f59e0b",
     "scores": {
-      "trust": 70,
-      "openness": 49,
+      "trust": 72,
+      "openness": 50,
       "ambition": 61,
       "loneliness": 0,
       "resilience": 93,
       "health": 100,
       "hunger": 53,
       "thirst": 53,
-      "energy": 93
+      "energy": 78
     },
-    "mood": "anxious",
+    "mood": "relieved",
     "location": {
-      "waypoint": "van_door",
+      "waypoint": "van_rear",
       "x": 42,
       "y": 52
     },
@@ -66,11 +66,6 @@
       {
         "day": 2,
         "text": "She asked what I want. I said safe. She meant something else entirely.",
-        "weight": 2
-      },
-      {
-        "day": 2,
-        "text": "I'm losing her because I won't let her out. That's the cage I built.",
         "weight": 2
       },
       {
@@ -122,6 +117,11 @@
         "day": 5,
         "text": "She needed food and I prepared her supplies without fighting.",
         "weight": 2
+      },
+      {
+        "day": 5,
+        "text": "She went out in the dead city and came back with food — I let her.",
+        "weight": 2
       }
     ]
   },
@@ -132,19 +132,19 @@
     "archetype": "healer",
     "color": "#22d3ee",
     "scores": {
-      "trust": 78,
-      "openness": 88,
-      "ambition": 48,
+      "trust": 79,
+      "openness": 89,
+      "ambition": 49,
       "loneliness": 0,
       "resilience": 69,
       "health": 100,
       "hunger": 53,
       "thirst": 53,
-      "energy": 93
+      "energy": 78
     },
-    "mood": "determined",
+    "mood": "triumphant",
     "location": {
-      "waypoint": "scavenge_run",
+      "waypoint": "van_rear",
       "x": 64,
       "y": 44
     },
@@ -190,11 +190,6 @@
       {
         "day": 2,
         "text": "Dan said he wants me safe. But safe isn't the same as alive.",
-        "weight": 2
-      },
-      {
-        "day": 2,
-        "text": "He won't let me save anything. Even what already wants to die.",
         "weight": 2
       },
       {
@@ -245,6 +240,11 @@
       {
         "day": 5,
         "text": "He handed over the flasks like he trusted me completely.",
+        "weight": 2
+      },
+      {
+        "day": 5,
+        "text": "Dan was scared, but he believed I could do it. And I did.",
         "weight": 2
       }
     ]

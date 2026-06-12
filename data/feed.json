@@ -1511,5 +1511,88 @@
       }
     ],
     "timestamp": "2026-06-12T07:03:39.108613"
+  },
+  {
+    "day": 5,
+    "cycle": "midday",
+    "character": "dan",
+    "action": "He steps out to meet her as she climbs the ramp, hands checking her over before pulling her close.",
+    "thought": "Fear breaks into something softer now.",
+    "location": {
+      "waypoint": "van_rear",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "relieved",
+    "timestamp": "2026-06-12T11:32:06.812020"
+  },
+  {
+    "day": 5,
+    "cycle": "midday",
+    "character": "huiling",
+    "action": "She comes up the ramp with her pack heavy, breathing hard but steady, ready to show him what she found.",
+    "thought": "He believed I could do it. I did.",
+    "location": {
+      "waypoint": "van_rear",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "triumphant",
+    "timestamp": "2026-06-12T11:32:06.812020"
+  },
+  {
+    "day": 5,
+    "cycle": "midday",
+    "type": "interaction",
+    "characters": [
+      "dan",
+      "huiling"
+    ],
+    "description": "Hui Ling returns from the streets below with supplies in her pack; Dan meets her at the van door, checking her over before they sit together sorting through what she found.",
+    "dialogue": [
+      {
+        "speaker": "huiling",
+        "line": "Found a pharmacy three streets over, mostly picked. We have food."
+      },
+      {
+        "speaker": "dan",
+        "line": "You're okay?"
+      },
+      {
+        "speaker": "huiling",
+        "line": "Fine. And there was medicine on one shelf, still sealed."
+      },
+      {
+        "speaker": "dan",
+        "line": "How much total?"
+      },
+      {
+        "speaker": "huiling",
+        "line": "Two days of food, some antibiotics. It worked, Dan."
+      },
+      {
+        "speaker": "dan",
+        "line": "You did good. Really good."
+      },
+      {
+        "speaker": "huiling",
+        "line": "I was scared the whole time. But I knew I could do it."
+      },
+      {
+        "speaker": "dan",
+        "line": "I knew you could. I was just scared you wouldn't come back."
+      },
+      {
+        "speaker": "huiling",
+        "line": "I'm back. We're okay now."
+      },
+      {
+        "speaker": "dan",
+        "line": "Yeah. We're okay."
+      }
+    ],
+    "timestamp": "2026-06-12T11:32:06.812020"
   }
 ]
