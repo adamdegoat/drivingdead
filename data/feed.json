@@ -1594,5 +1594,92 @@
       }
     ],
     "timestamp": "2026-06-12T11:32:06.812020"
+  },
+  {
+    "day": 5,
+    "cycle": "afternoon",
+    "character": "dan",
+    "action": "He settles by the fire as Hui Ling spreads the pharmacy supplies, checking each item.",
+    "thought": "She made it. She's really back.",
+    "location": {
+      "waypoint": "rooftop_mid",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "relieved",
+    "timestamp": "2026-06-12T15:02:23.915216"
+  },
+  {
+    "day": 5,
+    "cycle": "afternoon",
+    "character": "huiling",
+    "action": "She arranges the pharmacy supplies on a cloth, precise and careful, weariness showing at the edges.",
+    "thought": "Food in our hands. Fear in mine.",
+    "location": {
+      "waypoint": "rooftop_mid",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "triumphant",
+    "timestamp": "2026-06-12T15:02:23.915216"
+  },
+  {
+    "day": 5,
+    "cycle": "afternoon",
+    "type": "interaction",
+    "characters": [
+      "huiling",
+      "dan"
+    ],
+    "description": "Hui Ling spreads the pharmacy haul—tins, dried goods, fruit—by the fire while Dan joins her; the relief of her return and the weight of what she saw shape the afternoon.",
+    "dialogue": [
+      {
+        "speaker": "huiling",
+        "line": "There's tinned fruit. Real fruit."
+      },
+      {
+        "speaker": "dan",
+        "line": "Where did you find that?"
+      },
+      {
+        "speaker": "huiling",
+        "line": "Basement of the old pharmacy, two blocks south. The storeroom was sealed."
+      },
+      {
+        "speaker": "dan",
+        "line": "Two blocks. That's—"
+      },
+      {
+        "speaker": "huiling",
+        "line": "I marked the route. No dead around the building."
+      },
+      {
+        "speaker": "dan",
+        "line": "You came back. That's what matters."
+      },
+      {
+        "speaker": "huiling",
+        "line": "I saw someone on the way back. Woman with a bitten arm."
+      },
+      {
+        "speaker": "dan",
+        "line": "You couldn't reach her."
+      },
+      {
+        "speaker": "huiling",
+        "line": "No. But we have food now. We have time."
+      },
+      {
+        "speaker": "dan",
+        "line": "Eat with me while it's warm?"
+      },
+      {
+        "speaker": "huiling",
+        "line": "Yeah. Let's."
+      }
+    ],
+    "timestamp": "2026-06-12T15:02:23.915216"
   }
 ]
