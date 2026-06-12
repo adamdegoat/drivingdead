@@ -6,15 +6,15 @@
     "archetype": "builder",
     "color": "#f59e0b",
     "scores": {
-      "trust": 73,
-      "openness": 51,
+      "trust": 75,
+      "openness": 52,
       "ambition": 61,
       "loneliness": 0,
       "resilience": 94,
       "health": 100,
       "hunger": 53,
       "thirst": 53,
-      "energy": 63
+      "energy": 48
     },
     "mood": "relieved",
     "location": {
@@ -57,11 +57,6 @@
         "day": 2,
         "text": "When she asked why I blocked the door, I told her the truth—I'm terrified she'll leave me.",
         "weight": 3
-      },
-      {
-        "day": 2,
-        "text": "She's already gone outside to listen. I know before she says it.",
-        "weight": 2
       },
       {
         "day": 3,
@@ -122,6 +117,11 @@
         "day": 5,
         "text": "She came back safe. That's better than me trying to keep her locked in.",
         "weight": 2
+      },
+      {
+        "day": 5,
+        "text": "I learned what she saw out there. More real than my fears.",
+        "weight": 2
       }
     ]
   },
@@ -132,15 +132,15 @@
     "archetype": "healer",
     "color": "#22d3ee",
     "scores": {
-      "trust": 80,
-      "openness": 89,
+      "trust": 81,
+      "openness": 90,
       "ambition": 49,
       "loneliness": 0,
-      "resilience": 69,
+      "resilience": 68,
       "health": 100,
       "hunger": 53,
       "thirst": 53,
-      "energy": 63
+      "energy": 48
     },
     "mood": "triumphant",
     "location": {
@@ -181,11 +181,6 @@
         "day": 2,
         "text": "Dan's real fear isn't the dead—it's me leaving. We're both trapped in his terror now.",
         "weight": 3
-      },
-      {
-        "day": 2,
-        "text": "Dan won't budge, and I can't just watch them die.",
-        "weight": 2
       },
       {
         "day": 3,
@@ -245,6 +240,11 @@
       {
         "day": 5,
         "text": "I saw a woman with a bitten arm on the way back. I had to keep moving.",
+        "weight": 2
+      },
+      {
+        "day": 5,
+        "text": "He didn't ask me to relive it. Just checked if we were safe.",
         "weight": 2
       }
     ]

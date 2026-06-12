@@ -1681,5 +1681,80 @@
       }
     ],
     "timestamp": "2026-06-12T15:02:23.915216"
+  },
+  {
+    "day": 5,
+    "cycle": "evening",
+    "character": "dan",
+    "action": "He tends the fire, warming the evening meal from Hui Ling's haul, watching her carefully as she begins to speak about the streets below.",
+    "thought": "She came back and I let her.",
+    "location": {
+      "waypoint": "rooftop_mid",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "relieved",
+    "timestamp": "2026-06-12T18:32:12.036242"
+  },
+  {
+    "day": 5,
+    "cycle": "evening",
+    "character": "huiling",
+    "action": "She settles by the fire, spreading the tins and supplies across the deck, her triumph mixing with something she's struggling not to carry alone.",
+    "thought": "I made it back. Can't unsee her arm.",
+    "location": {
+      "waypoint": "rooftop_mid",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "triumphant",
+    "timestamp": "2026-06-12T18:32:12.036242"
+  },
+  {
+    "day": 5,
+    "cycle": "evening",
+    "type": "interaction",
+    "characters": [
+      "dan",
+      "huiling"
+    ],
+    "description": "By the fire as dusk held, Hui Ling spreads the pharmacy haul while Dan tends the flames, their conversation moving from her triumph to the weight she carried back from the streets below.",
+    "dialogue": [
+      {
+        "speaker": "huiling",
+        "line": "The pharmacy haul alone could stretch us weeks."
+      },
+      {
+        "speaker": "dan",
+        "line": "You came back whole. That's what matters."
+      },
+      {
+        "speaker": "huiling",
+        "line": "My hands were shaking the entire way down."
+      },
+      {
+        "speaker": "dan",
+        "line": "But you kept moving. Came back with this."
+      },
+      {
+        "speaker": "huiling",
+        "line": "There was a woman down there. Bitten arm."
+      },
+      {
+        "speaker": "dan",
+        "line": "How close? Did she see you?"
+      },
+      {
+        "speaker": "huiling",
+        "line": "Two blocks away. She didn't see me."
+      },
+      {
+        "speaker": "dan",
+        "line": "Then sit. Eat. You're safe now."
+      }
+    ],
+    "timestamp": "2026-06-12T18:32:12.036242"
   }
 ]
