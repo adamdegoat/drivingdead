@@ -1,27 +1,27 @@
 {
   "world": "drivingdead",
   "poll": {
-    "id": "2026-06-12",
+    "id": "2026-06-13",
     "closes": "tonight",
-    "question": "With five days of food left, does Dan trust Hui Ling's garden plan and hold back, or push for a scavenging run tomorrow?",
+    "question": "She came back from the streets, changed. Tomorrow's weather is perfect. Do you send Hui Ling back out, or hold her here to rest?",
     "options": [
       {
-        "id": "hold_back",
-        "label": "Hold back, trust",
-        "desc": "Dan keeps his hands serving her vision. The breakthrough holds."
+        "id": "send_her_back",
+        "label": "Send her back",
+        "desc": "Risk her. Supplies mean survival."
       },
       {
-        "id": "push_scavenge",
-        "label": "Push to scavenge",
-        "desc": "Survival pressure tests their new trust. Dan's instinct resurfaces."
+        "id": "hold_her_here",
+        "label": "Hold her here",
+        "desc": "Protect her. She's earned rest."
       }
     ]
   },
   "in_play": {
-    "id": "warm_tonight",
-    "label": "Keep the fire warm",
-    "desc": "Hold this moment—the warmth, the peace, each other. Tomorrow is tomorrow.",
-    "decided": "2026-06-12",
+    "id": "hold_back",
+    "label": "Hold back, trust",
+    "desc": "Dan keeps his hands serving her vision. The breakthrough holds.",
+    "decided": "2026-06-13",
     "votes": 0,
     "tally": {}
   }

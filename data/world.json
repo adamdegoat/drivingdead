@@ -1,6 +1,6 @@
 {
-  "day": 5,
-  "cycle": "night",
+  "day": 6,
+  "cycle": "morning",
   "weather": "clear",
   "pending_events": [],
   "started": "2026-06-08",
@@ -9,7 +9,7 @@
       "id": "solar_rig",
       "type": "solar_rig",
       "level": 1,
-      "condition": 8,
+      "condition": 4,
       "x": 50,
       "y": 40,
       "builder": "dan",
@@ -20,26 +20,26 @@
   ],
   "fire": {
     "lit": true,
-    "fuel": 5
+    "fuel": 10
   },
-  "last_run_date": "2026-06-12",
-  "pulse": "She's back safe, but haunted—and Dan finally understands the real cost of survival isn't measured in batteries.",
-  "scene": "She returned with supplies but passed a bitten survivor and had to keep moving; by nightfall she's haunted, and Dan sits with her by the fire, just listening.",
+  "last_run_date": "2026-06-13",
+  "pulse": "Hui Ling grieves quietly while Dan finally learns not to fix it — and that strange acceptance is where they're strongest.",
+  "scene": "The woman from yesterday haunts Hui Ling's morning, but she's steady; Dan brings tea and sits by the fire, just listening and following her lead as they plan the day.",
   "resources_prev": {
-    "food": 11,
-    "water": 93,
-    "wood": 96,
-    "medicine": 26
-  },
-  "resources": {
     "food": 14,
     "water": 94,
     "wood": 94,
     "medicine": 28
   },
-  "camp_climate": "content",
+  "resources": {
+    "food": 10,
+    "water": 93,
+    "wood": 96,
+    "medicine": 28
+  },
+  "camp_climate": "steady",
   "discoveries": [],
-  "last_cycle_key": "2026-06-12:night",
+  "last_cycle_key": "2026-06-13:morning",
   "day_summaries": {
     "1": "Day 1 was clear and warm — good charging, hot meals in the cab, the systems steady. At dusk, Hui Ling found injured birds on the ramp and sheltered them on the van's corner despite Dan's strong refusal. By nightfall, they were sitting together in guarded silence, both aware that the cost of survival might exceed what they could afford to become.",
     "2": "Day 2 escalated from injured birds to a moral standoff: Dan refused shelter, and by nightfall, he blocked the van door as Hui Ling reached for it. When she asked why, he finally broke—not afraid of the dead, but of her leaving. The night left them both caged, one by the city, one by his terror.",
@@ -48,8 +48,8 @@
     "5": "Day 5 shattered Dan's control: he let Hui Ling into the dead city for supplies, and she returned with food but haunted by a dying woman she couldn't save. They have weeks of rations now, but the real cost was in her eyes—Dan finally understood that survival takes more than he could measure."
   },
   "lean": {
-    "id": "warm_tonight",
-    "label": "Keep the fire warm",
-    "desc": "Hold this moment—the warmth, the peace, each other. Tomorrow is tomorrow."
+    "id": "hold_back",
+    "label": "Hold back, trust",
+    "desc": "Dan keeps his hands serving her vision. The breakthrough holds."
   }
 }

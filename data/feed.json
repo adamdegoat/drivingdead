@@ -1847,5 +1847,84 @@
       }
     ],
     "timestamp": "2026-06-12T22:31:58.028664"
+  },
+  {
+    "day": 6,
+    "cycle": "morning",
+    "character": "dan",
+    "action": "Dan stirs the fire and pours tea for both of them, waiting for her to speak.",
+    "thought": "She knows what she needs; I just listen.",
+    "location": {
+      "waypoint": "van_rear",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "patient",
+    "timestamp": "2026-06-13T07:02:20.357170"
+  },
+  {
+    "day": 6,
+    "cycle": "morning",
+    "character": "huiling",
+    "action": "Hui Ling wraps her hands around the warm cup and lets the quiet settle between them.",
+    "thought": "Yesterday happened. I came back anyway.",
+    "location": {
+      "waypoint": "van_rear",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "quiet",
+    "timestamp": "2026-06-13T07:02:20.357170"
+  },
+  {
+    "day": 6,
+    "cycle": "morning",
+    "type": "interaction",
+    "characters": [
+      "dan",
+      "huiling"
+    ],
+    "description": "The woman from yesterday haunts Hui Ling's morning, but she's steady; Dan brings tea and sits by the fire, just listening and following her lead as they plan the day.",
+    "dialogue": [
+      {
+        "speaker": "dan",
+        "line": "How'd you sleep?"
+      },
+      {
+        "speaker": "huiling",
+        "line": "Off and on. Kept replaying yesterday."
+      },
+      {
+        "speaker": "dan",
+        "line": "The good part or the hard part?"
+      },
+      {
+        "speaker": "huiling",
+        "line": "Both. The woman's arm — I can't unsee it."
+      },
+      {
+        "speaker": "dan",
+        "line": "But you came back. You did what we needed."
+      },
+      {
+        "speaker": "huiling",
+        "line": "I did. It doesn't feel like it yet."
+      },
+      {
+        "speaker": "dan",
+        "line": "What would help?"
+      },
+      {
+        "speaker": "huiling",
+        "line": "Checking the garden. Making sure things are growing, not dying."
+      },
+      {
+        "speaker": "dan",
+        "line": "Let's do that."
+      }
+    ],
+    "timestamp": "2026-06-13T07:02:20.357170"
   }
 ]

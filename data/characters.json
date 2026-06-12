@@ -6,17 +6,17 @@
     "archetype": "builder",
     "color": "#f59e0b",
     "scores": {
-      "trust": 76,
-      "openness": 53,
+      "trust": 77,
+      "openness": 54,
       "ambition": 61,
       "loneliness": 0,
       "resilience": 94,
       "health": 100,
       "hunger": 53,
       "thirst": 53,
-      "energy": 82
+      "energy": 75
     },
-    "mood": "somber",
+    "mood": "patient",
     "location": {
       "waypoint": "van_rear",
       "x": 42,
@@ -50,7 +50,7 @@
     },
     "interaction": {
       "with": "huiling",
-      "state": "talking"
+      "state": "sitting_together"
     },
     "memories": [
       {
@@ -132,17 +132,17 @@
     "archetype": "healer",
     "color": "#22d3ee",
     "scores": {
-      "trust": 82,
+      "trust": 83,
       "openness": 90,
       "ambition": 49,
       "loneliness": 0,
-      "resilience": 67,
+      "resilience": 68,
       "health": 100,
       "hunger": 53,
       "thirst": 53,
-      "energy": 82
+      "energy": 75
     },
-    "mood": "haunted",
+    "mood": "quiet",
     "location": {
       "waypoint": "van_rear",
       "x": 64,
@@ -174,7 +174,7 @@
     },
     "interaction": {
       "with": "dan",
-      "state": "talking"
+      "state": "sitting_together"
     },
     "memories": [
       {
