@@ -2080,5 +2080,92 @@
       }
     ],
     "timestamp": "2026-06-13T15:02:13.883966"
+  },
+  {
+    "day": 6,
+    "cycle": "evening",
+    "character": "dan",
+    "action": "He sits by the fire, helping her repack without argument, his hands steady though his face is tight.",
+    "thought": "She's stronger than I am. Accepting that.",
+    "location": {
+      "waypoint": "van_rear",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "steady",
+    "timestamp": "2026-06-13T18:31:50.270306"
+  },
+  {
+    "day": 6,
+    "cycle": "evening",
+    "character": "huiling",
+    "action": "She lays out tomorrow's gear by the fire, speaking the route aloud, watching his face for the fight that doesn't come.",
+    "thought": "He's really letting me go this time.",
+    "location": {
+      "waypoint": "van_rear",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "quiet",
+    "timestamp": "2026-06-13T18:31:50.270306"
+  },
+  {
+    "day": 6,
+    "cycle": "evening",
+    "type": "interaction",
+    "characters": [
+      "dan",
+      "huiling"
+    ],
+    "description": "By evening with food at three days, they sit by the fire naming tomorrow's run aloud—Hui Ling steady, Dan finally letting her lead.",
+    "dialogue": [
+      {
+        "speaker": "huiling",
+        "line": "Tomorrow. I'm going tomorrow."
+      },
+      {
+        "speaker": "dan",
+        "line": "South?"
+      },
+      {
+        "speaker": "huiling",
+        "line": "Hospital district. It still has what we need."
+      },
+      {
+        "speaker": "dan",
+        "line": "Riskier. More dead that way now."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Everywhere's risky now."
+      },
+      {
+        "speaker": "dan",
+        "line": "I know."
+      },
+      {
+        "speaker": "huiling",
+        "line": "And you're still letting me go."
+      },
+      {
+        "speaker": "dan",
+        "line": "I am."
+      },
+      {
+        "speaker": "huiling",
+        "line": "I wasn't sure you would."
+      },
+      {
+        "speaker": "dan",
+        "line": "Neither was I. But you know what you're doing."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Help me check the pack, then?"
+      }
+    ],
+    "timestamp": "2026-06-13T18:31:50.270306"
   }
 ]

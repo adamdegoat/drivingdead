@@ -6,15 +6,15 @@
     "archetype": "builder",
     "color": "#f59e0b",
     "scores": {
-      "trust": 79,
-      "openness": 55,
+      "trust": 80,
+      "openness": 56,
       "ambition": 61,
       "loneliness": 0,
       "resilience": 95,
       "health": 100,
       "hunger": 53,
       "thirst": 53,
-      "energy": 61
+      "energy": 54
     },
     "mood": "steady",
     "location": {
@@ -50,7 +50,7 @@
     },
     "interaction": {
       "with": "huiling",
-      "state": "sitting_together"
+      "state": "working_together"
     },
     "memories": [
       {
@@ -66,11 +66,6 @@
       {
         "day": 3,
         "text": "I said I'd set out water for the birds. That meant I was listening.",
-        "weight": 2
-      },
-      {
-        "day": 3,
-        "text": "She stopped fighting. I heard her. That changes things.",
         "weight": 2
       },
       {
@@ -122,6 +117,11 @@
         "day": 6,
         "text": "She named the hard thing and I didn't turn away. That's enough.",
         "weight": 2
+      },
+      {
+        "day": 6,
+        "text": "She's going tomorrow and I'm not fighting it. That's proof.",
+        "weight": 2
       }
     ]
   },
@@ -132,15 +132,15 @@
     "archetype": "healer",
     "color": "#22d3ee",
     "scores": {
-      "trust": 85,
+      "trust": 86,
       "openness": 89,
       "ambition": 49,
       "loneliness": 0,
-      "resilience": 69,
+      "resilience": 68,
       "health": 100,
       "hunger": 53,
       "thirst": 53,
-      "energy": 61
+      "energy": 54
     },
     "mood": "quiet",
     "location": {
@@ -174,7 +174,7 @@
     },
     "interaction": {
       "with": "dan",
-      "state": "sitting_together"
+      "state": "working_together"
     },
     "memories": [
       {
@@ -190,11 +190,6 @@
       {
         "day": 3,
         "text": "Dan set out the water. He heard me, finally.",
-        "weight": 2
-      },
-      {
-        "day": 3,
-        "text": "Dan finally said the thing. We don't stop caring just because we can lose.",
         "weight": 2
       },
       {
@@ -245,6 +240,11 @@
       {
         "day": 6,
         "text": "Dan didn't try to make the guilt smaller. He just stayed there.",
+        "weight": 2
+      },
+      {
+        "day": 6,
+        "text": "He's really letting me choose this time. I wasn't sure he would.",
         "weight": 2
       }
     ]

@@ -1,6 +1,6 @@
 {
   "day": 6,
-  "cycle": "afternoon",
+  "cycle": "evening",
   "weather": "clear",
   "pending_events": [],
   "started": "2026-06-08",
@@ -9,7 +9,7 @@
       "id": "solar_rig",
       "type": "solar_rig",
       "level": 1,
-      "condition": 96,
+      "condition": 92,
       "x": 50,
       "y": 55,
       "builder": null,
@@ -20,26 +20,26 @@
   ],
   "fire": {
     "lit": true,
-    "fuel": 17
+    "fuel": 4
   },
   "last_run_date": "2026-06-13",
-  "pulse": "Dan trusts her to decide; Hui Ling rests before the next run—both know fear's just below the surface, waiting.",
-  "scene": "Food runs out in two days. By the fire in the van, they plan the next run—Hui Ling resting first, Dan holding the ramp.",
+  "pulse": "Dan is holding back his fear so she can lead; Hui Ling is steady but testing whether he truly means it.",
+  "scene": "By evening, Hui Ling named tomorrow's run south and Dan agreed to help without a fight; they're by the fire in the van, checking gear together.",
   "resources_prev": {
-    "food": 4,
+    "food": 3,
     "water": 93,
     "wood": 100,
     "medicine": 28
   },
   "resources": {
-    "food": 3,
+    "food": 2,
     "water": 93,
     "wood": 100,
     "medicine": 28
   },
   "camp_climate": "steady",
   "discoveries": [],
-  "last_cycle_key": "2026-06-13:afternoon",
+  "last_cycle_key": "2026-06-13:evening",
   "day_summaries": {
     "1": "Day 1 was clear and warm — good charging, hot meals in the cab, the systems steady. At dusk, Hui Ling found injured birds on the ramp and sheltered them on the van's corner despite Dan's strong refusal. By nightfall, they were sitting together in guarded silence, both aware that the cost of survival might exceed what they could afford to become.",
     "2": "Day 2 escalated from injured birds to a moral standoff: Dan refused shelter, and by nightfall, he blocked the van door as Hui Ling reached for it. When she asked why, he finally broke—not afraid of the dead, but of her leaving. The night left them both caged, one by the city, one by his terror.",
