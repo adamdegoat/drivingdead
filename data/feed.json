@@ -2001,5 +2001,84 @@
       }
     ],
     "timestamp": "2026-06-13T11:31:33.022926"
+  },
+  {
+    "day": 6,
+    "cycle": "afternoon",
+    "character": "dan",
+    "action": "He tends the fire while Hui Ling sorts the pharmacy haul by its warmth.",
+    "thought": "Not fighting her. That's new.",
+    "location": {
+      "waypoint": "van_rear",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "steady",
+    "timestamp": "2026-06-13T15:02:13.883966"
+  },
+  {
+    "day": 6,
+    "cycle": "afternoon",
+    "character": "huiling",
+    "action": "She sorts the pharmacy haul by the fire, steady-handed despite yesterday's pull.",
+    "thought": "He's trusting me. Really trusting.",
+    "location": {
+      "waypoint": "van_rear",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "quiet",
+    "timestamp": "2026-06-13T15:02:13.883966"
+  },
+  {
+    "day": 6,
+    "cycle": "afternoon",
+    "type": "interaction",
+    "characters": [
+      "huiling",
+      "dan"
+    ],
+    "description": "Food runs out in two days. By the fire in the van, they plan the next run—Hui Ling resting first, Dan holding the ramp.",
+    "dialogue": [
+      {
+        "speaker": "huiling",
+        "line": "Food's gone in two days."
+      },
+      {
+        "speaker": "dan",
+        "line": "I know."
+      },
+      {
+        "speaker": "huiling",
+        "line": "I can go tomorrow."
+      },
+      {
+        "speaker": "dan",
+        "line": "What do you need?"
+      },
+      {
+        "speaker": "huiling",
+        "line": "A day. Sleep, and to not think about yesterday."
+      },
+      {
+        "speaker": "dan",
+        "line": "Then we take a day."
+      },
+      {
+        "speaker": "huiling",
+        "line": "You could come with me."
+      },
+      {
+        "speaker": "dan",
+        "line": "Someone has to keep the ramp."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Yeah. I know."
+      }
+    ],
+    "timestamp": "2026-06-13T15:02:13.883966"
   }
 ]
