@@ -6,17 +6,17 @@
     "archetype": "builder",
     "color": "#f59e0b",
     "scores": {
-      "trust": 77,
-      "openness": 54,
+      "trust": 78,
+      "openness": 55,
       "ambition": 61,
       "loneliness": 0,
       "resilience": 94,
       "health": 100,
       "hunger": 53,
       "thirst": 53,
-      "energy": 75
+      "energy": 68
     },
-    "mood": "patient",
+    "mood": "steady",
     "location": {
       "waypoint": "van_rear",
       "x": 42,
@@ -50,7 +50,7 @@
     },
     "interaction": {
       "with": "huiling",
-      "state": "sitting_together"
+      "state": "working_together"
     },
     "memories": [
       {
@@ -71,11 +71,6 @@
       {
         "day": 3,
         "text": "She stopped fighting. I heard her. That changes things.",
-        "weight": 2
-      },
-      {
-        "day": 3,
-        "text": "She asked what happens if we keep caring. I said we do it anyway.",
         "weight": 2
       },
       {
@@ -122,6 +117,11 @@
         "day": 5,
         "text": "She came back changed. I finally saw the cost she carries.",
         "weight": 2
+      },
+      {
+        "day": 6,
+        "text": "She named the hard thing and I didn't turn away. That's enough.",
+        "weight": 2
       }
     ]
   },
@@ -132,15 +132,15 @@
     "archetype": "healer",
     "color": "#22d3ee",
     "scores": {
-      "trust": 83,
-      "openness": 90,
+      "trust": 84,
+      "openness": 89,
       "ambition": 49,
       "loneliness": 0,
       "resilience": 68,
       "health": 100,
       "hunger": 53,
       "thirst": 53,
-      "energy": 75
+      "energy": 68
     },
     "mood": "quiet",
     "location": {
@@ -174,7 +174,7 @@
     },
     "interaction": {
       "with": "dan",
-      "state": "sitting_together"
+      "state": "working_together"
     },
     "memories": [
       {
@@ -195,11 +195,6 @@
       {
         "day": 3,
         "text": "Dan finally said the thing. We don't stop caring just because we can lose.",
-        "weight": 2
-      },
-      {
-        "day": 3,
-        "text": "He opened up and the silence between us finally broke.",
         "weight": 2
       },
       {
@@ -245,6 +240,11 @@
       {
         "day": 5,
         "text": "He didn't ask me to relive it. Just checked if we were safe.",
+        "weight": 2
+      },
+      {
+        "day": 6,
+        "text": "Dan didn't try to make the guilt smaller. He just stayed there.",
         "weight": 2
       }
     ]

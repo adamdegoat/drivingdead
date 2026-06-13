@@ -1926,5 +1926,80 @@
       }
     ],
     "timestamp": "2026-06-13T07:02:20.357170"
+  },
+  {
+    "day": 6,
+    "cycle": "midday",
+    "character": "huiling",
+    "action": "Spreads the last of the fresh food from yesterday's haul and begins sorting it by shelf life, working slow and methodical.",
+    "thought": "Can't stop seeing that arm.",
+    "location": {
+      "waypoint": "van_rear",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "quiet",
+    "timestamp": "2026-06-13T11:31:33.022926"
+  },
+  {
+    "day": 6,
+    "cycle": "midday",
+    "character": "dan",
+    "action": "Joins her by the fire, watching her sort, his hands idle but ready, just following her lead.",
+    "thought": "She's carrying more than the haul.",
+    "location": {
+      "waypoint": "van_rear",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "steady",
+    "timestamp": "2026-06-13T11:31:33.022926"
+  },
+  {
+    "day": 6,
+    "cycle": "midday",
+    "type": "interaction",
+    "characters": [
+      "huiling",
+      "dan"
+    ],
+    "description": "By midday, they sort the pharmacy haul by the fire — Hui Ling quieter than yesterday, Dan present and steady, not pushing, trusting her with the weight she carries.",
+    "dialogue": [
+      {
+        "speaker": "huiling",
+        "line": "Fruit first. Everything else after."
+      },
+      {
+        "speaker": "dan",
+        "line": "You sleep okay?"
+      },
+      {
+        "speaker": "huiling",
+        "line": "Not really."
+      },
+      {
+        "speaker": "dan",
+        "line": "Yeah."
+      },
+      {
+        "speaker": "huiling",
+        "line": "There was a woman with a bitten arm."
+      },
+      {
+        "speaker": "dan",
+        "line": "And you still came back."
+      },
+      {
+        "speaker": "huiling",
+        "line": "We needed the food more."
+      },
+      {
+        "speaker": "dan",
+        "line": "You did what you had to."
+      }
+    ],
+    "timestamp": "2026-06-13T11:31:33.022926"
   }
 ]
