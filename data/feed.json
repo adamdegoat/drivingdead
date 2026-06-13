@@ -2242,5 +2242,96 @@
       }
     ],
     "timestamp": "2026-06-13T22:31:33.357788"
+  },
+  {
+    "day": 7,
+    "cycle": "morning",
+    "character": "dan",
+    "action": "He wakes early and sits by the fire, checking the empty food stores while waiting for her.",
+    "thought": "The food's gone. Time to let her go.",
+    "location": {
+      "waypoint": "van_rear",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "steady",
+    "timestamp": "2026-06-14T07:02:38.442279"
+  },
+  {
+    "day": 7,
+    "cycle": "morning",
+    "character": "huiling",
+    "action": "She wakes haunted by yesterday's bitten arm but joins him by the fire, steady to plan the run.",
+    "thought": "That woman's arm haunts me. But I'll go.",
+    "location": {
+      "waypoint": "van_rear",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "resolute",
+    "timestamp": "2026-06-14T07:02:38.442279"
+  },
+  {
+    "day": 7,
+    "cycle": "morning",
+    "type": "interaction",
+    "characters": [
+      "dan",
+      "huiling"
+    ],
+    "description": "One tin remains; Hui Ling wakes haunted but resolves to run again, and Dan sits by the fire steady, learning not to seal them in.",
+    "dialogue": [
+      {
+        "speaker": "dan",
+        "line": "You're quiet this morning."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Couldn't stop seeing that woman's arm."
+      },
+      {
+        "speaker": "dan",
+        "line": "I know. You don't have to go today."
+      },
+      {
+        "speaker": "huiling",
+        "line": "One tin. I have to."
+      },
+      {
+        "speaker": "dan",
+        "line": "Eat first. Then go careful."
+      },
+      {
+        "speaker": "huiling",
+        "line": "I will. Where should I look?"
+      },
+      {
+        "speaker": "dan",
+        "line": "Apartments three blocks east. Should be untouched stock."
+      },
+      {
+        "speaker": "huiling",
+        "line": "I'll move fast. Back before dark."
+      },
+      {
+        "speaker": "dan",
+        "line": "You will be. I'm holding the ramp."
+      },
+      {
+        "speaker": "huiling",
+        "line": "You're trusting me."
+      },
+      {
+        "speaker": "dan",
+        "line": "Yeah. I am."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Don't let me lose myself out there."
+      }
+    ],
+    "timestamp": "2026-06-14T07:02:38.442279"
   }
 ]

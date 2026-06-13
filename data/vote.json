@@ -1,27 +1,32 @@
 {
   "world": "drivingdead",
   "poll": {
-    "id": "2026-06-13",
+    "id": "2026-06-14",
     "closes": "tonight",
-    "question": "She came back from the streets, changed. Tomorrow's weather is perfect. Do you send Hui Ling back out, or hold her here to rest?",
+    "question": "Hui Ling's haunted by yesterday's arm. Food's at two days. Does Dan let her run tomorrow, ask her to rest, or go instead?",
     "options": [
       {
-        "id": "send_her_back",
-        "label": "Send her back",
-        "desc": "Risk her. Supplies mean survival."
+        "id": "she_runs",
+        "label": "She runs tomorrow",
+        "desc": "She's steady enough. Trust the plan."
       },
       {
-        "id": "hold_her_here",
-        "label": "Hold her here",
-        "desc": "Protect her. She's earned rest."
+        "id": "she_rests",
+        "label": "She rests first",
+        "desc": "She needs rest. You can wait one day."
+      },
+      {
+        "id": "he_runs",
+        "label": "Dan goes instead",
+        "desc": "Let her tend the fire. You take the ramp."
       }
     ]
   },
   "in_play": {
-    "id": "hold_back",
-    "label": "Hold back, trust",
-    "desc": "Dan keeps his hands serving her vision. The breakthrough holds.",
-    "decided": "2026-06-13",
+    "id": "send_her_back",
+    "label": "Send her back",
+    "desc": "Risk her. Supplies mean survival.",
+    "decided": "2026-06-14",
     "votes": 0,
     "tally": {}
   }

@@ -1,6 +1,6 @@
 {
-  "day": 6,
-  "cycle": "night",
+  "day": 7,
+  "cycle": "morning",
   "weather": "clear",
   "pending_events": [],
   "started": "2026-06-08",
@@ -9,7 +9,7 @@
       "id": "solar_rig",
       "type": "solar_rig",
       "level": 1,
-      "condition": 88,
+      "condition": 84,
       "x": 50,
       "y": 55,
       "builder": null,
@@ -20,26 +20,26 @@
   ],
   "fire": {
     "lit": true,
-    "fuel": 9
+    "fuel": 14
   },
-  "last_run_date": "2026-06-13",
-  "pulse": "Hui Ling carries the haunting from yesterday, but Dan's learning to hold it with her—not fix it, just be there. The trust is fragile but real.",
-  "scene": "By nightfall, Hui Ling is haunted by yesterday's bitten woman, but Dan sits by the fire listening without turning away. The breakthrough held fragile: he's learning to serve her vision instead of control it, and she believes him.",
+  "last_run_date": "2026-06-14",
+  "pulse": "Food runs out today; Hui Ling is ready to go back down, but the bitten woman she saw haunts her still.",
+  "scene": "Food nearly gone; Hui Ling prepares to scavenge, and by the fire Dan holds steady, learning to let her go rather than seal them in.",
   "resources_prev": {
-    "food": 2,
-    "water": 93,
-    "wood": 100,
-    "medicine": 28
-  },
-  "resources": {
     "food": 1,
     "water": 94,
     "wood": 96,
     "medicine": 28
   },
+  "resources": {
+    "food": 1,
+    "water": 93,
+    "wood": 96,
+    "medicine": 28
+  },
   "camp_climate": "content",
   "discoveries": [],
-  "last_cycle_key": "2026-06-13:night",
+  "last_cycle_key": "2026-06-14:morning",
   "day_summaries": {
     "1": "Day 1 was clear and warm — good charging, hot meals in the cab, the systems steady. At dusk, Hui Ling found injured birds on the ramp and sheltered them on the van's corner despite Dan's strong refusal. By nightfall, they were sitting together in guarded silence, both aware that the cost of survival might exceed what they could afford to become.",
     "2": "Day 2 escalated from injured birds to a moral standoff: Dan refused shelter, and by nightfall, he blocked the van door as Hui Ling reached for it. When she asked why, he finally broke—not afraid of the dead, but of her leaving. The night left them both caged, one by the city, one by his terror.",
@@ -49,8 +49,8 @@
     "6": "Day 6: food dwindling to two days, Hui Ling haunted by a woman's bitten arm she couldn't save yesterday. Dan stopped fighting her choice to go back out tomorrow and held the ramp instead. By nightfall, the breakthrough held fragile but real—he listened, she was vulnerable, and neither turned away."
   },
   "lean": {
-    "id": "hold_back",
-    "label": "Hold back, trust",
-    "desc": "Dan keeps his hands serving her vision. The breakthrough holds."
+    "id": "send_her_back",
+    "label": "Send her back",
+    "desc": "Risk her. Supplies mean survival."
   }
 }

@@ -7,14 +7,14 @@
     "color": "#f59e0b",
     "scores": {
       "trust": 81,
-      "openness": 57,
+      "openness": 59,
       "ambition": 61,
       "loneliness": 0,
       "resilience": 95,
       "health": 100,
       "hunger": 53,
       "thirst": 53,
-      "energy": 88
+      "energy": 81
     },
     "mood": "steady",
     "location": {
@@ -50,7 +50,7 @@
     },
     "interaction": {
       "with": "huiling",
-      "state": "sitting_together"
+      "state": "talking"
     },
     "memories": [
       {
@@ -133,16 +133,16 @@
     "color": "#22d3ee",
     "scores": {
       "trust": 88,
-      "openness": 89,
+      "openness": 90,
       "ambition": 49,
       "loneliness": 0,
-      "resilience": 68,
+      "resilience": 67,
       "health": 100,
       "hunger": 53,
       "thirst": 53,
-      "energy": 88
+      "energy": 81
     },
-    "mood": "quiet",
+    "mood": "resolute",
     "location": {
       "waypoint": "van_rear",
       "x": 64,
@@ -174,7 +174,7 @@
     },
     "interaction": {
       "with": "dan",
-      "state": "sitting_together"
+      "state": "talking"
     },
     "memories": [
       {
