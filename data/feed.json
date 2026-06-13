@@ -2167,5 +2167,80 @@
       }
     ],
     "timestamp": "2026-06-13T18:31:50.270306"
+  },
+  {
+    "day": 6,
+    "cycle": "night",
+    "character": "dan",
+    "action": "Sits by the fire in the van, listening as Hui Ling names what haunts her, his hands steady on his knees instead of reaching to fix or turn away.",
+    "thought": "Serving her vision is simpler than I thought.",
+    "location": {
+      "waypoint": "van_rear",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "steady",
+    "timestamp": "2026-06-13T22:31:33.357788"
+  },
+  {
+    "day": 6,
+    "cycle": "night",
+    "character": "huiling",
+    "action": "Sits across from him by the fire, naming the bitten arm that won't leave her mind, but stays steady in the knowledge that he's listening without turning away.",
+    "thought": "He's holding the line with me, not for me.",
+    "location": {
+      "waypoint": "van_rear",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "quiet",
+    "timestamp": "2026-06-13T22:31:33.357788"
+  },
+  {
+    "day": 6,
+    "cycle": "night",
+    "type": "interaction",
+    "characters": [
+      "dan",
+      "huiling"
+    ],
+    "description": "By nightfall, Hui Ling is haunted by yesterday's bitten woman—her arm won't leave—but Dan sits by the fire listening without turning away, learning to hold the weight with her instead of sealing them against it.",
+    "dialogue": [
+      {
+        "speaker": "huiling",
+        "line": "That arm keeps coming back."
+      },
+      {
+        "speaker": "dan",
+        "line": "I know."
+      },
+      {
+        "speaker": "huiling",
+        "line": "I don't know how to stop seeing it."
+      },
+      {
+        "speaker": "dan",
+        "line": "You don't have to."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Tomorrow I go back out there."
+      },
+      {
+        "speaker": "dan",
+        "line": "You do what you need to do."
+      },
+      {
+        "speaker": "huiling",
+        "line": "And you hold the ramp."
+      },
+      {
+        "speaker": "dan",
+        "line": "Always."
+      }
+    ],
+    "timestamp": "2026-06-13T22:31:33.357788"
   }
 ]
