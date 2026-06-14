@@ -2578,5 +2578,80 @@
       }
     ],
     "timestamp": "2026-06-14T18:33:44.470459"
+  },
+  {
+    "day": 7,
+    "cycle": "night",
+    "character": "dan",
+    "action": "He builds up the fire and sits beside her in the van's rear, listening to the night press against the barricade.",
+    "thought": "She came back. I can hold this.",
+    "location": {
+      "waypoint": "van_rear",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "calm",
+    "timestamp": "2026-06-14T22:32:12.259791"
+  },
+  {
+    "day": 7,
+    "cycle": "night",
+    "character": "huiling",
+    "action": "She watches the flames while speaking the day's horror aloud, naming the arm and the fear, and lets him sit with both.",
+    "thought": "He's not turning away from it.",
+    "location": {
+      "waypoint": "van_rear",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "haunted",
+    "timestamp": "2026-06-14T22:32:12.259791"
+  },
+  {
+    "day": 7,
+    "cycle": "night",
+    "type": "interaction",
+    "characters": [
+      "dan",
+      "huiling"
+    ],
+    "description": "By the fire in the van's rear, Hui Ling names the severed arm haunting her from the dead streets while Dan sits beside her without flinching; three tins sit packed in the storage corner, a mercy and a question about how long it will last.",
+    "dialogue": [
+      {
+        "speaker": "huiling",
+        "line": "The arm won't stop being there, even when I close my eyes."
+      },
+      {
+        "speaker": "dan",
+        "line": "I know. You did good today."
+      },
+      {
+        "speaker": "huiling",
+        "line": "I should have to live with that. I chose to go."
+      },
+      {
+        "speaker": "dan",
+        "line": "Three tins bought us maybe five more days."
+      },
+      {
+        "speaker": "huiling",
+        "line": "If that's all we've got, I'll go again."
+      },
+      {
+        "speaker": "dan",
+        "line": "Not for a few days. Rest first."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Okay. Thank you for letting me go."
+      },
+      {
+        "speaker": "dan",
+        "line": "Thank you for coming back."
+      }
+    ],
+    "timestamp": "2026-06-14T22:32:12.259791"
   }
 ]

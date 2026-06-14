@@ -6,17 +6,17 @@
     "archetype": "builder",
     "color": "#f59e0b",
     "scores": {
-      "trust": 82,
-      "openness": 60,
+      "trust": 83,
+      "openness": 62,
       "ambition": 61,
       "loneliness": 0,
       "resilience": 96,
       "health": 100,
       "hunger": 53,
       "thirst": 53,
-      "energy": 52
+      "energy": 86
     },
-    "mood": "steady",
+    "mood": "calm",
     "location": {
       "waypoint": "van_rear",
       "x": 42,
@@ -94,11 +94,6 @@
         "weight": 2
       },
       {
-        "day": 5,
-        "text": "She came back changed. I finally saw the cost she carries.",
-        "weight": 2
-      },
-      {
         "day": 6,
         "text": "She named the hard thing and I didn't turn away. That's enough.",
         "weight": 2
@@ -112,6 +107,11 @@
         "day": 6,
         "text": "She wouldn't let me go because the ramp needs me. She led.",
         "weight": 2
+      },
+      {
+        "day": 7,
+        "text": "She came back carrying what she saw, and I held it with her.",
+        "weight": 3
       },
       {
         "day": 7,
@@ -132,15 +132,15 @@
     "archetype": "healer",
     "color": "#22d3ee",
     "scores": {
-      "trust": 88,
+      "trust": 89,
       "openness": 91,
       "ambition": 49,
       "loneliness": 0,
-      "resilience": 67,
+      "resilience": 68,
       "health": 100,
       "hunger": 53,
       "thirst": 53,
-      "energy": 52
+      "energy": 86
     },
     "mood": "haunted",
     "location": {
@@ -193,11 +193,6 @@
         "weight": 2
       },
       {
-        "day": 4,
-        "text": "He stepped back and let me breathe.",
-        "weight": 2
-      },
-      {
         "day": 5,
         "text": "I left her to die and Dan didn't judge me for it.",
         "weight": 3
@@ -236,6 +231,11 @@
         "day": 6,
         "text": "Dan heard about the arm and didn't look away. He's holding steady.",
         "weight": 2
+      },
+      {
+        "day": 7,
+        "text": "I came back haunted. Dan held that weight without flinching.",
+        "weight": 3
       },
       {
         "day": 7,
