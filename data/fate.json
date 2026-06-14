@@ -1,10 +1,10 @@
 {
-  "day": 6,
-  "text": "Dan's careless repair breaks the solar rig; Hui Ling rations power while he rebuilds.",
-  "flavor": "a costly mistake",
+  "day": 7,
+  "text": "Hui Ling's scope finds a working greenhouse on the next roof—plants, water, hope.",
+  "flavor": "a hard-won find",
   "cycle": "morning",
   "happens_at": "7am",
   "status": "upcoming",
-  "revealed_at": "2026-06-14T00:00:36.700985",
+  "revealed_at": "2026-06-15T00:00:47.036202",
   "activated_at": null
 }
