@@ -14,11 +14,11 @@
       "health": 100,
       "hunger": 53,
       "thirst": 53,
-      "energy": 81
+      "energy": 74
     },
     "mood": "steady",
     "location": {
-      "waypoint": "van_rear",
+      "waypoint": "ramp_block",
       "x": 42,
       "y": 52
     },
@@ -48,10 +48,7 @@
       ],
       "beard": true
     },
-    "interaction": {
-      "with": "huiling",
-      "state": "talking"
-    },
+    "interaction": null,
     "memories": [
       {
         "day": 2,
@@ -76,11 +73,6 @@
       {
         "day": 4,
         "text": "She wants to grow things. Letting go doesn't break us the way I thought.",
-        "weight": 2
-      },
-      {
-        "day": 4,
-        "text": "She took the lead on the garden. I didn't fight it.",
         "weight": 2
       },
       {
@@ -122,6 +114,11 @@
         "day": 6,
         "text": "She wouldn't let me go because the ramp needs me. She led.",
         "weight": 2
+      },
+      {
+        "day": 7,
+        "text": "I watched her head down without locking the gate behind her.",
+        "weight": 2
       }
     ]
   },
@@ -140,11 +137,11 @@
       "health": 100,
       "hunger": 53,
       "thirst": 53,
-      "energy": 81
+      "energy": 74
     },
     "mood": "resolute",
     "location": {
-      "waypoint": "van_rear",
+      "waypoint": "scavenge_run",
       "x": 64,
       "y": 44
     },
@@ -172,20 +169,12 @@
         "slingbag"
       ]
     },
-    "interaction": {
-      "with": "dan",
-      "state": "talking"
-    },
+    "interaction": null,
     "memories": [
       {
         "day": 2,
         "text": "Dan's real fear isn't the dead—it's me leaving. We're both trapped in his terror now.",
         "weight": 3
-      },
-      {
-        "day": 3,
-        "text": "Dan finally opened up. He's not less afraid, but he's trying.",
-        "weight": 2
       },
       {
         "day": 4,
@@ -245,6 +234,11 @@
       {
         "day": 6,
         "text": "Dan heard about the arm and didn't look away. He's holding steady.",
+        "weight": 2
+      },
+      {
+        "day": 7,
+        "text": "He let me go when it would have been easy to hold on.",
         "weight": 2
       }
     ]

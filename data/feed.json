@@ -2333,5 +2333,88 @@
       }
     ],
     "timestamp": "2026-06-14T07:02:38.442279"
+  },
+  {
+    "day": 7,
+    "cycle": "midday",
+    "character": "dan",
+    "action": "Dan packs her supplies, hands over the rope, and positions himself at the ramp block—holding steady while she heads for the ledge.",
+    "thought": "She trusts me to hold steady.",
+    "location": {
+      "waypoint": "ramp_block",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "steady",
+    "timestamp": "2026-06-14T11:32:57.056394"
+  },
+  {
+    "day": 7,
+    "cycle": "midday",
+    "character": "huiling",
+    "action": "Hui Ling shoulders the supplies and makes for the rooftop edge, carrying yesterday's haunting with her into the city.",
+    "thought": "The arm won't let me forget.",
+    "location": {
+      "waypoint": "scavenge_run",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "resolute",
+    "timestamp": "2026-06-14T11:32:57.056394"
+  },
+  {
+    "day": 7,
+    "cycle": "midday",
+    "type": "interaction",
+    "characters": [
+      "dan",
+      "huiling"
+    ],
+    "description": "With one tin left and daylight burning, Hui Ling prepares to run while Dan steadies her—no fighting it now, just the weight they share.",
+    "dialogue": [
+      {
+        "speaker": "huiling",
+        "line": "I'm going to move now. While I'm steady."
+      },
+      {
+        "speaker": "dan",
+        "line": "Okay. Same routes as yesterday?"
+      },
+      {
+        "speaker": "huiling",
+        "line": "Pharmacy on the south side. If it's still there."
+      },
+      {
+        "speaker": "dan",
+        "line": "Full flask, the rope, whistle if the ramp needs you."
+      },
+      {
+        "speaker": "huiling",
+        "line": "That woman's arm won't leave me."
+      },
+      {
+        "speaker": "dan",
+        "line": "You did what you could. That's all."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Is it enough?"
+      },
+      {
+        "speaker": "dan",
+        "line": "You come back, and we figure out the rest."
+      },
+      {
+        "speaker": "huiling",
+        "line": "I won't be long."
+      },
+      {
+        "speaker": "dan",
+        "line": "I'll be at the ramp."
+      }
+    ],
+    "timestamp": "2026-06-14T11:32:57.056394"
   }
 ]
