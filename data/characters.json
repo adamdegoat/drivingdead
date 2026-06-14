@@ -7,14 +7,14 @@
     "color": "#f59e0b",
     "scores": {
       "trust": 83,
-      "openness": 62,
+      "openness": 64,
       "ambition": 61,
       "loneliness": 0,
       "resilience": 96,
       "health": 100,
       "hunger": 53,
       "thirst": 53,
-      "energy": 86
+      "energy": 79
     },
     "mood": "calm",
     "location": {
@@ -50,7 +50,7 @@
     },
     "interaction": {
       "with": "huiling",
-      "state": "sitting_together"
+      "state": "talking"
     },
     "memories": [
       {
@@ -89,11 +89,6 @@
         "weight": 2
       },
       {
-        "day": 5,
-        "text": "I learned what she saw out there. More real than my fears.",
-        "weight": 2
-      },
-      {
         "day": 6,
         "text": "She named the hard thing and I didn't turn away. That's enough.",
         "weight": 2
@@ -122,6 +117,11 @@
         "day": 7,
         "text": "I stopped sealing myself against her grief. I said I'd carry it.",
         "weight": 2
+      },
+      {
+        "day": 8,
+        "text": "I'm not the man who locks gates anymore.",
+        "weight": 2
       }
     ]
   },
@@ -136,13 +136,13 @@
       "openness": 91,
       "ambition": 49,
       "loneliness": 0,
-      "resilience": 68,
+      "resilience": 70,
       "health": 100,
       "hunger": 53,
       "thirst": 53,
-      "energy": 86
+      "energy": 79
     },
-    "mood": "haunted",
+    "mood": "resolute",
     "location": {
       "waypoint": "van_rear",
       "x": 64,
@@ -174,7 +174,7 @@
     },
     "interaction": {
       "with": "dan",
-      "state": "sitting_together"
+      "state": "talking"
     },
     "memories": [
       {
@@ -185,11 +185,6 @@
       {
         "day": 4,
         "text": "He asked what I wanted. He wasn't afraid to say yes.",
-        "weight": 2
-      },
-      {
-        "day": 4,
-        "text": "He said yes and started working. No argument.",
         "weight": 2
       },
       {
@@ -245,6 +240,11 @@
       {
         "day": 7,
         "text": "He opened and said he'd carry it with me. I didn't expect that.",
+        "weight": 2
+      },
+      {
+        "day": 8,
+        "text": "He let me choose without fear.",
         "weight": 2
       }
     ]

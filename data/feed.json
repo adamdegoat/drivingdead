@@ -2653,5 +2653,84 @@
       }
     ],
     "timestamp": "2026-06-14T22:32:12.259791"
+  },
+  {
+    "day": 8,
+    "cycle": "morning",
+    "character": "dan",
+    "action": "He poured hot water for tea and laid out the day's rations, watching her face across the van's rear table.",
+    "thought": "She's steady. I can release my grip.",
+    "location": {
+      "waypoint": "van_rear",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "calm",
+    "timestamp": "2026-06-15T07:01:48.722159"
+  },
+  {
+    "day": 8,
+    "cycle": "morning",
+    "character": "huiling",
+    "action": "She sipped the tea slowly, checking her pack and her hands—preparing for the run without the old dread now.",
+    "thought": "The arm is still there. So is he.",
+    "location": {
+      "waypoint": "van_rear",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "resolute",
+    "timestamp": "2026-06-15T07:01:48.722159"
+  },
+  {
+    "day": 8,
+    "cycle": "morning",
+    "type": "interaction",
+    "characters": [
+      "dan",
+      "huiling"
+    ],
+    "description": "Morning sun charges the panels; Dan steadies Hui Ling with tea while she preps for a run, the haunting still present but no longer keeping her paralyzed.",
+    "dialogue": [
+      {
+        "speaker": "huiling",
+        "line": "Sun's good. The panels are climbing already."
+      },
+      {
+        "speaker": "dan",
+        "line": "You slept. That matters."
+      },
+      {
+        "speaker": "huiling",
+        "line": "You were holding steady beside me. That's why."
+      },
+      {
+        "speaker": "dan",
+        "line": "The tins are holding?"
+      },
+      {
+        "speaker": "huiling",
+        "line": "Four days, maybe five if we're careful. Enough to run again."
+      },
+      {
+        "speaker": "dan",
+        "line": "You want to go?"
+      },
+      {
+        "speaker": "huiling",
+        "line": "Yeah. The arm's still there, but I can move through it now."
+      },
+      {
+        "speaker": "dan",
+        "line": "I'll check the ramp. Gate stays solid."
+      },
+      {
+        "speaker": "huiling",
+        "line": "I know. That's why I can go."
+      }
+    ],
+    "timestamp": "2026-06-15T07:01:48.722159"
   }
 ]

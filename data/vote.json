@@ -1,32 +1,32 @@
 {
   "world": "drivingdead",
   "poll": {
-    "id": "2026-06-14",
+    "id": "2026-06-15",
     "closes": "tonight",
-    "question": "Hui Ling's haunted by yesterday's arm. Food's at two days. Does Dan let her run tomorrow, ask her to rest, or go instead?",
+    "question": "Tomorrow at the ramp—does Hui Ling run for supplies, or do they rest here?",
     "options": [
       {
-        "id": "she_runs",
-        "label": "She runs tomorrow",
-        "desc": "She's steady enough. Trust the plan."
+        "id": "run_alone",
+        "label": "She runs",
+        "desc": "One tin left. Push through the haunting."
       },
       {
-        "id": "she_rests",
-        "label": "She rests first",
-        "desc": "She needs rest. You can wait one day."
+        "id": "rest_together",
+        "label": "They rest",
+        "desc": "One quiet day by the fire. Let the weight settle."
       },
       {
-        "id": "he_runs",
-        "label": "Dan goes instead",
-        "desc": "Let her tend the fire. You take the ramp."
+        "id": "run_together",
+        "label": "Go together",
+        "desc": "Dan walks the dead streets beside her this time."
       }
     ]
   },
   "in_play": {
-    "id": "send_her_back",
-    "label": "Send her back",
-    "desc": "Risk her. Supplies mean survival.",
-    "decided": "2026-06-14",
+    "id": "she_runs",
+    "label": "She runs tomorrow",
+    "desc": "She's steady enough. Trust the plan.",
+    "decided": "2026-06-15",
     "votes": 0,
     "tally": {}
   }
