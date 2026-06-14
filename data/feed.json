@@ -2503,5 +2503,80 @@
       }
     ],
     "timestamp": "2026-06-14T15:02:27.579996"
+  },
+  {
+    "day": 7,
+    "cycle": "evening",
+    "character": "dan",
+    "action": "He heard her at the ramp and went down to meet her, carrying the supplies back as she climbed into the van to rest.",
+    "thought": "She made it back alive.",
+    "location": {
+      "waypoint": "van_rear",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "steady",
+    "timestamp": "2026-06-14T18:33:44.470459"
+  },
+  {
+    "day": 7,
+    "cycle": "evening",
+    "character": "huiling",
+    "action": "She collapsed by the fire with exhaustion and relief, the haunting weight of the arm she couldn't save still pressing against her mind.",
+    "thought": "The arm's still there. But so is he.",
+    "location": {
+      "waypoint": "van_rear",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "haunted",
+    "timestamp": "2026-06-14T18:33:44.470459"
+  },
+  {
+    "day": 7,
+    "cycle": "evening",
+    "type": "interaction",
+    "characters": [
+      "huiling",
+      "dan"
+    ],
+    "description": "She returned from the scavenge with tins to stretch their days and a haunting she couldn't leave behind; by evening Dan was holding that weight with her, both warming by the fire as darkness claimed the city below.",
+    "dialogue": [
+      {
+        "speaker": "huiling",
+        "line": "I found four days, maybe. Pharmacy two blocks over."
+      },
+      {
+        "speaker": "dan",
+        "line": "You hurt?"
+      },
+      {
+        "speaker": "huiling",
+        "line": "No. But when I came back up, she was still there—that arm, Dan, it was just—"
+      },
+      {
+        "speaker": "dan",
+        "line": "You made it back. That's what matters now."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Is it? She didn't."
+      },
+      {
+        "speaker": "dan",
+        "line": "You can't carry that up here."
+      },
+      {
+        "speaker": "huiling",
+        "line": "I can't stop carrying it."
+      },
+      {
+        "speaker": "dan",
+        "line": "Then I'll carry it with you."
+      }
+    ],
+    "timestamp": "2026-06-14T18:33:44.470459"
   }
 ]

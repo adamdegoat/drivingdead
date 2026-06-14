@@ -7,18 +7,18 @@
     "color": "#f59e0b",
     "scores": {
       "trust": 82,
-      "openness": 59,
+      "openness": 60,
       "ambition": 61,
       "loneliness": 0,
       "resilience": 96,
       "health": 100,
       "hunger": 53,
       "thirst": 53,
-      "energy": 67
+      "energy": 52
     },
     "mood": "steady",
     "location": {
-      "waypoint": "ramp_block",
+      "waypoint": "van_rear",
       "x": 42,
       "y": 52
     },
@@ -50,7 +50,7 @@
     },
     "interaction": {
       "with": "huiling",
-      "state": "helping"
+      "state": "sitting_together"
     },
     "memories": [
       {
@@ -72,11 +72,6 @@
         "day": 4,
         "text": "I let her go when it mattered most. Scared I'll lose her, but not scared enough to lock her in.",
         "weight": 3
-      },
-      {
-        "day": 4,
-        "text": "She wants to grow things. Letting go doesn't break us the way I thought.",
-        "weight": 2
       },
       {
         "day": 5,
@@ -122,6 +117,11 @@
         "day": 7,
         "text": "I watched her head down without locking the gate behind her.",
         "weight": 2
+      },
+      {
+        "day": 7,
+        "text": "I stopped sealing myself against her grief. I said I'd carry it.",
+        "weight": 2
       }
     ]
   },
@@ -136,15 +136,15 @@
       "openness": 91,
       "ambition": 49,
       "loneliness": 0,
-      "resilience": 66,
+      "resilience": 67,
       "health": 100,
       "hunger": 53,
       "thirst": 53,
-      "energy": 67
+      "energy": 52
     },
-    "mood": "resolute",
+    "mood": "haunted",
     "location": {
-      "waypoint": "scavenge_run",
+      "waypoint": "van_rear",
       "x": 64,
       "y": 44
     },
@@ -174,7 +174,7 @@
     },
     "interaction": {
       "with": "dan",
-      "state": "helping"
+      "state": "sitting_together"
     },
     "memories": [
       {
@@ -195,11 +195,6 @@
       {
         "day": 4,
         "text": "He stepped back and let me breathe.",
-        "weight": 2
-      },
-      {
-        "day": 4,
-        "text": "He said yes when it counted. Maybe he really is becoming who I need him to be.",
         "weight": 2
       },
       {
@@ -245,6 +240,11 @@
       {
         "day": 7,
         "text": "He let me go when it would have been easy to hold on.",
+        "weight": 2
+      },
+      {
+        "day": 7,
+        "text": "He opened and said he'd carry it with me. I didn't expect that.",
         "weight": 2
       }
     ]
