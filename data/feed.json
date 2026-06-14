@@ -2416,5 +2416,92 @@
       }
     ],
     "timestamp": "2026-06-14T11:32:57.056394"
+  },
+  {
+    "day": 7,
+    "cycle": "afternoon",
+    "character": "dan",
+    "action": "He checks the barricaded ramp one final time, running his hands over the reinforcement, listening for any sound from below.",
+    "thought": "Let her go. She's stronger than me.",
+    "location": {
+      "waypoint": "ramp_block",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "steady",
+    "timestamp": "2026-06-14T15:02:27.579996"
+  },
+  {
+    "day": 7,
+    "cycle": "afternoon",
+    "character": "huiling",
+    "action": "She fills three water flasks from the tank, checks the straps on her pack, and shoulders it with the last tin inside.",
+    "thought": "The arm is still there. Go anyway.",
+    "location": {
+      "waypoint": "scavenge_run",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "resolute",
+    "timestamp": "2026-06-14T15:02:27.579996"
+  },
+  {
+    "day": 7,
+    "cycle": "afternoon",
+    "type": "interaction",
+    "characters": [
+      "dan",
+      "huiling"
+    ],
+    "description": "With the last tin packed and power steady, Hui Ling gears up at the barricaded ramp for the afternoon run.",
+    "dialogue": [
+      {
+        "speaker": "huiling",
+        "line": "One tin left."
+      },
+      {
+        "speaker": "dan",
+        "line": "Flasks full?"
+      },
+      {
+        "speaker": "huiling",
+        "line": "Yeah. Filter's clean. I'm ready."
+      },
+      {
+        "speaker": "dan",
+        "line": "Pharmacy, then clinic, back?"
+      },
+      {
+        "speaker": "huiling",
+        "line": "That's the plan."
+      },
+      {
+        "speaker": "dan",
+        "line": "Two hours max."
+      },
+      {
+        "speaker": "huiling",
+        "line": "I know."
+      },
+      {
+        "speaker": "dan",
+        "line": "The arm from yesterday—it's still there."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Every time I close my eyes."
+      },
+      {
+        "speaker": "dan",
+        "line": "And you're going anyway."
+      },
+      {
+        "speaker": "huiling",
+        "line": "We don't eat otherwise."
+      }
+    ],
+    "timestamp": "2026-06-14T15:02:27.579996"
   }
 ]

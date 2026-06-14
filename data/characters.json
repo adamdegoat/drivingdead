@@ -6,15 +6,15 @@
     "archetype": "builder",
     "color": "#f59e0b",
     "scores": {
-      "trust": 81,
+      "trust": 82,
       "openness": 59,
       "ambition": 61,
       "loneliness": 0,
-      "resilience": 95,
+      "resilience": 96,
       "health": 100,
       "hunger": 53,
       "thirst": 53,
-      "energy": 74
+      "energy": 67
     },
     "mood": "steady",
     "location": {
@@ -48,7 +48,10 @@
       ],
       "beard": true
     },
-    "interaction": null,
+    "interaction": {
+      "with": "huiling",
+      "state": "helping"
+    },
     "memories": [
       {
         "day": 2,
@@ -130,14 +133,14 @@
     "color": "#22d3ee",
     "scores": {
       "trust": 88,
-      "openness": 90,
+      "openness": 91,
       "ambition": 49,
       "loneliness": 0,
-      "resilience": 67,
+      "resilience": 66,
       "health": 100,
       "hunger": 53,
       "thirst": 53,
-      "energy": 74
+      "energy": 67
     },
     "mood": "resolute",
     "location": {
@@ -169,7 +172,10 @@
         "slingbag"
       ]
     },
-    "interaction": null,
+    "interaction": {
+      "with": "dan",
+      "state": "helping"
+    },
     "memories": [
       {
         "day": 2,
