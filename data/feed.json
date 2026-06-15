@@ -2969,5 +2969,88 @@
       }
     ],
     "timestamp": "2026-06-15T18:32:19.110531"
+  },
+  {
+    "day": 8,
+    "cycle": "night",
+    "character": "dan",
+    "action": "Dan checked Hui Ling's rope and pack one final time, then sat beside her by the fire.",
+    "thought": "Fear fades when I stop holding on.",
+    "location": {
+      "waypoint": "van_rear",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "calm",
+    "timestamp": "2026-06-15T22:32:01.446923"
+  },
+  {
+    "day": 8,
+    "cycle": "night",
+    "character": "huiling",
+    "action": "Hui Ling rested by the fire, pack ready by the door, while Dan sat close without words needed.",
+    "thought": "Ready now, and he won't hold back.",
+    "location": {
+      "waypoint": "van_rear",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "steady",
+    "timestamp": "2026-06-15T22:32:01.446923"
+  },
+  {
+    "day": 8,
+    "cycle": "night",
+    "type": "interaction",
+    "characters": [
+      "dan",
+      "huiling"
+    ],
+    "description": "Dan checked the rope one final time while Hui Ling rested by the fire in the van's rear; both quiet and ready, her pack set by the door for tomorrow.",
+    "dialogue": [
+      {
+        "speaker": "huiling",
+        "line": "You've checked that rope seven times."
+      },
+      {
+        "speaker": "dan",
+        "line": "Eight. I wasn't keeping count."
+      },
+      {
+        "speaker": "huiling",
+        "line": "And?"
+      },
+      {
+        "speaker": "dan",
+        "line": "It's perfect. You're ready."
+      },
+      {
+        "speaker": "huiling",
+        "line": "So why keep checking?"
+      },
+      {
+        "speaker": "dan",
+        "line": "Because I'm scared of losing you."
+      },
+      {
+        "speaker": "huiling",
+        "line": "But you're letting me go anyway."
+      },
+      {
+        "speaker": "dan",
+        "line": "Yeah. Because you need to. I'm done holding on."
+      },
+      {
+        "speaker": "huiling",
+        "line": "That's new."
+      },
+      {
+        "speaker": "dan",
+        "line": "Everything's new now."
+      }
+    ],
+    "timestamp": "2026-06-15T22:32:01.446923"
   }
 ]

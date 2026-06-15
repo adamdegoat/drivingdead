@@ -6,17 +6,17 @@
     "archetype": "builder",
     "color": "#f59e0b",
     "scores": {
-      "trust": 86,
-      "openness": 67,
+      "trust": 88,
+      "openness": 69,
       "ambition": 61,
       "loneliness": 0,
       "resilience": 99,
       "health": 100,
       "hunger": 53,
       "thirst": 53,
-      "energy": 58
+      "energy": 92
     },
-    "mood": "anxious",
+    "mood": "calm",
     "location": {
       "waypoint": "van_rear",
       "x": 42,
@@ -50,7 +50,7 @@
     },
     "interaction": {
       "with": "huiling",
-      "state": "sitting_together"
+      "state": "talking"
     },
     "memories": [
       {
@@ -76,11 +76,6 @@
       {
         "day": 5,
         "text": "She needed food and I prepared her supplies without fighting.",
-        "weight": 2
-      },
-      {
-        "day": 5,
-        "text": "She went out in the dead city and came back with food — I let her.",
         "weight": 2
       },
       {
@@ -115,6 +110,11 @@
       },
       {
         "day": 8,
+        "text": "I finally let her go and survived.",
+        "weight": 3
+      },
+      {
+        "day": 8,
         "text": "I'm not the man who locks gates anymore.",
         "weight": 2
       },
@@ -133,14 +133,14 @@
     "color": "#22d3ee",
     "scores": {
       "trust": 90,
-      "openness": 93,
+      "openness": 94,
       "ambition": 49,
       "loneliness": 0,
-      "resilience": 71,
+      "resilience": 73,
       "health": 100,
       "hunger": 53,
       "thirst": 53,
-      "energy": 58
+      "energy": 92
     },
     "mood": "steady",
     "location": {
@@ -174,7 +174,7 @@
     },
     "interaction": {
       "with": "dan",
-      "state": "sitting_together"
+      "state": "talking"
     },
     "memories": [
       {
@@ -200,11 +200,6 @@
       {
         "day": 5,
         "text": "I saw a woman with a bitten arm on the way back. I had to keep moving.",
-        "weight": 2
-      },
-      {
-        "day": 5,
-        "text": "He didn't ask me to relive it. Just checked if we were safe.",
         "weight": 2
       },
       {
@@ -236,6 +231,11 @@
         "day": 7,
         "text": "He opened and said he'd carry it with me. I didn't expect that.",
         "weight": 2
+      },
+      {
+        "day": 8,
+        "text": "Dan stopped holding me like I'd run. He let me be.",
+        "weight": 3
       },
       {
         "day": 8,
