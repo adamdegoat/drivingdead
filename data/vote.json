@@ -1,32 +1,32 @@
 {
   "world": "drivingdead",
   "poll": {
-    "id": "2026-06-15",
+    "id": "2026-06-16",
     "closes": "tonight",
-    "question": "Tomorrow at the ramp—does Hui Ling run for supplies, or do they rest here?",
+    "question": "Hui Ling scavenges tomorrow. Dan's finally letting her go. Should she pack light and get back before dark—or take extra rations to stay longer and push deeper into the bu",
     "options": [
       {
-        "id": "run_alone",
-        "label": "She runs",
-        "desc": "One tin left. Push through the haunting."
+        "id": "go_deep",
+        "label": "Take extra rations",
+        "desc": "Stay longer, push deeper; weeks of food if the building yields"
       },
       {
-        "id": "rest_together",
-        "label": "They rest",
-        "desc": "One quiet day by the fire. Let the weight settle."
+        "id": "move_fast",
+        "label": "Travel light",
+        "desc": "Fast in and out, back before dark; he watches from the roof"
       },
       {
-        "id": "run_together",
-        "label": "Go together",
-        "desc": "Dan walks the dead streets beside her this time."
+        "id": "gauge",
+        "label": "Gauge it on the way",
+        "desc": "Light pack first; push deeper only if storage yields and time allows"
       }
     ]
   },
   "in_play": {
-    "id": "she_runs",
-    "label": "She runs tomorrow",
-    "desc": "She's steady enough. Trust the plan.",
-    "decided": "2026-06-15",
+    "id": "run_alone",
+    "label": "She runs",
+    "desc": "One tin left. Push through the haunting.",
+    "decided": "2026-06-16",
     "votes": 0,
     "tally": {}
   }

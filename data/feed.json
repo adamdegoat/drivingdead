@@ -3052,5 +3052,92 @@
       }
     ],
     "timestamp": "2026-06-15T22:32:01.446923"
+  },
+  {
+    "day": 9,
+    "cycle": "morning",
+    "character": "dan",
+    "action": "He sits by the fire checking her rope one last time, hands slow and careful.",
+    "thought": "If I let go, we both survive this.",
+    "location": {
+      "waypoint": "van_rear",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "steady",
+    "timestamp": "2026-06-16T07:02:50.513408"
+  },
+  {
+    "day": 9,
+    "cycle": "morning",
+    "character": "huiling",
+    "action": "She eats the last tin slowly, watching him work, pack ready by the door.",
+    "thought": "He's scared. He's letting me go anyway.",
+    "location": {
+      "waypoint": "van_rear",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "resolved",
+    "timestamp": "2026-06-16T07:02:50.513408"
+  },
+  {
+    "day": 9,
+    "cycle": "morning",
+    "type": "interaction",
+    "characters": [
+      "dan",
+      "huiling"
+    ],
+    "description": "By the fire in the van's rear, they split the last tin; she eats and he checks her rope, pack ready by the door, knowing she goes this morning.",
+    "dialogue": [
+      {
+        "speaker": "huiling",
+        "line": "The rope's set."
+      },
+      {
+        "speaker": "dan",
+        "line": "I checked every knot three times."
+      },
+      {
+        "speaker": "huiling",
+        "line": "I watched you check twice."
+      },
+      {
+        "speaker": "dan",
+        "line": "Come back."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Always."
+      },
+      {
+        "speaker": "dan",
+        "line": "Two hours down?"
+      },
+      {
+        "speaker": "huiling",
+        "line": "Down and back the same, three if I find something good."
+      },
+      {
+        "speaker": "dan",
+        "line": "The pharmacy first."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Then the clinic if it sounds clear."
+      },
+      {
+        "speaker": "dan",
+        "line": "Don't go in alone if you hear them."
+      },
+      {
+        "speaker": "huiling",
+        "line": "I know the signs."
+      }
+    ],
+    "timestamp": "2026-06-16T07:02:50.513408"
   }
 ]
