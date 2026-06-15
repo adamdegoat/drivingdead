@@ -2894,5 +2894,80 @@
       }
     ],
     "timestamp": "2026-06-15T15:02:30.722150"
+  },
+  {
+    "day": 8,
+    "cycle": "evening",
+    "character": "dan",
+    "action": "Sits by the fire in the van's rear, watching Hui Ling's pack and the rope coiled by the door, listening to the city beyond the barricade.",
+    "thought": "She's ready. I'm not holding her back.",
+    "location": {
+      "waypoint": "van_rear",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "anxious",
+    "timestamp": "2026-06-15T18:32:19.110531"
+  },
+  {
+    "day": 8,
+    "cycle": "evening",
+    "character": "huiling",
+    "action": "Finishes her meal by firelight, running through tomorrow's route in her head, the pack at the door holding her plan.",
+    "thought": "He's letting me go. That changes everything.",
+    "location": {
+      "waypoint": "van_rear",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "steady",
+    "timestamp": "2026-06-15T18:32:19.110531"
+  },
+  {
+    "day": 8,
+    "cycle": "evening",
+    "type": "interaction",
+    "characters": [
+      "dan",
+      "huiling"
+    ],
+    "description": "Battery full from a clear day; Dan and Hui Ling sit by the fire in the van's rear, her pack ready by the door, tomorrow's run hours away.",
+    "dialogue": [
+      {
+        "speaker": "dan",
+        "line": "Pack's by the door. Rope's set."
+      },
+      {
+        "speaker": "huiling",
+        "line": "I'm going to sleep soon. Need to be sharp."
+      },
+      {
+        "speaker": "dan",
+        "line": "Eat a bit more before you sleep."
+      },
+      {
+        "speaker": "huiling",
+        "line": "We should save it for after."
+      },
+      {
+        "speaker": "dan",
+        "line": "You won't come back light. Just eat."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Okay."
+      },
+      {
+        "speaker": "dan",
+        "line": "And tie the rope twice if you find anything."
+      },
+      {
+        "speaker": "huiling",
+        "line": "I will, Dan."
+      }
+    ],
+    "timestamp": "2026-06-15T18:32:19.110531"
   }
 ]

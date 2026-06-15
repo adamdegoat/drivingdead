@@ -1,6 +1,6 @@
 {
   "day": 8,
-  "cycle": "afternoon",
+  "cycle": "evening",
   "weather": "clear",
   "pending_events": [],
   "started": "2026-06-08",
@@ -9,7 +9,7 @@
       "id": "solar_rig",
       "type": "solar_rig",
       "level": 1,
-      "condition": 56,
+      "condition": 52,
       "x": 50,
       "y": 55,
       "builder": null,
@@ -20,26 +20,26 @@
   ],
   "fire": {
     "lit": true,
-    "fuel": 13
+    "fuel": 18
   },
   "last_run_date": "2026-06-15",
-  "pulse": "He frets because he can't hold her, and she prepares because he lets her go.",
-  "scene": "Clear sun charged the battery all morning; by afternoon Hui Ling was sorting supplies at the storage corner while Dan checked her rope and knots, both quiet with the weight of tomorrow.",
+  "pulse": "Dan fears tomorrow but doesn't say it; Hui Ling's ready and he's learned not to hold her back.",
+  "scene": "With the battery full from a sunny day, Dan and Hui Ling ate and sat by the fire in the van's rear, her pack ready by the door.",
   "resources_prev": {
-    "food": 3,
+    "food": 2,
     "water": 93,
     "wood": 96,
     "medicine": 30
   },
   "resources": {
-    "food": 2,
+    "food": 1,
     "water": 93,
     "wood": 96,
     "medicine": 30
   },
   "camp_climate": "steady",
   "discoveries": [],
-  "last_cycle_key": "2026-06-15:afternoon",
+  "last_cycle_key": "2026-06-15:evening",
   "day_summaries": {
     "1": "Day 1 was clear and warm — good charging, hot meals in the cab, the systems steady. At dusk, Hui Ling found injured birds on the ramp and sheltered them on the van's corner despite Dan's strong refusal. By nightfall, they were sitting together in guarded silence, both aware that the cost of survival might exceed what they could afford to become.",
     "2": "Day 2 escalated from injured birds to a moral standoff: Dan refused shelter, and by nightfall, he blocked the van door as Hui Ling reached for it. When she asked why, he finally broke—not afraid of the dead, but of her leaving. The night left them both caged, one by the city, one by his terror.",
