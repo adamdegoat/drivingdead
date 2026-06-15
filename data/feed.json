@@ -2732,5 +2732,88 @@
       }
     ],
     "timestamp": "2026-06-15T07:01:48.722159"
+  },
+  {
+    "day": 8,
+    "cycle": "midday",
+    "character": "dan",
+    "action": "He's sorting through tomorrow's pack, counting the tins with methodical precision, his focus absolute.",
+    "thought": "I can't hold her and survive.",
+    "location": {
+      "waypoint": "storage_corner",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "careful",
+    "timestamp": "2026-06-15T11:31:44.174181"
+  },
+  {
+    "day": 8,
+    "cycle": "midday",
+    "character": "huiling",
+    "action": "She watches the pile of supplies, her mind already mapping the streets below: how far to push, where to look first.",
+    "thought": "The fear doesn't stop the needing.",
+    "location": {
+      "waypoint": "storage_corner",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "resolved",
+    "timestamp": "2026-06-15T11:31:44.174181"
+  },
+  {
+    "day": 8,
+    "cycle": "midday",
+    "type": "interaction",
+    "characters": [
+      "dan",
+      "huiling"
+    ],
+    "description": "With food down to three tins, they finalize tomorrow's run at the storage corner—Dan afraid but asking what she needs, Hui Ling steady and clear.",
+    "dialogue": [
+      {
+        "speaker": "huiling",
+        "line": "South again, or should we push further?"
+      },
+      {
+        "speaker": "dan",
+        "line": "South's pretty clean now. Further means hours out."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Three tins won't stretch anymore."
+      },
+      {
+        "speaker": "dan",
+        "line": "How far would you go?"
+      },
+      {
+        "speaker": "huiling",
+        "line": "As far as I need to find something."
+      },
+      {
+        "speaker": "dan",
+        "line": "And if you don't find anything?"
+      },
+      {
+        "speaker": "huiling",
+        "line": "Then I keep looking."
+      },
+      {
+        "speaker": "dan",
+        "line": "Okay. I believe you."
+      },
+      {
+        "speaker": "huiling",
+        "line": "You're really okay with this?"
+      },
+      {
+        "speaker": "dan",
+        "line": "I'm terrified. But I'm okay with it."
+      }
+    ],
+    "timestamp": "2026-06-15T11:31:44.174181"
   }
 ]

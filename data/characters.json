@@ -6,19 +6,19 @@
     "archetype": "builder",
     "color": "#f59e0b",
     "scores": {
-      "trust": 83,
-      "openness": 64,
+      "trust": 85,
+      "openness": 65,
       "ambition": 61,
       "loneliness": 0,
-      "resilience": 96,
+      "resilience": 97,
       "health": 100,
       "hunger": 53,
       "thirst": 53,
-      "energy": 79
+      "energy": 72
     },
-    "mood": "calm",
+    "mood": "careful",
     "location": {
-      "waypoint": "van_rear",
+      "waypoint": "storage_corner",
       "x": 42,
       "y": 52
     },
@@ -84,11 +84,6 @@
         "weight": 2
       },
       {
-        "day": 5,
-        "text": "She came back safe. That's better than me trying to keep her locked in.",
-        "weight": 2
-      },
-      {
         "day": 6,
         "text": "She named the hard thing and I didn't turn away. That's enough.",
         "weight": 2
@@ -122,6 +117,11 @@
         "day": 8,
         "text": "I'm not the man who locks gates anymore.",
         "weight": 2
+      },
+      {
+        "day": 8,
+        "text": "I told her I'm terrified and let her go.",
+        "weight": 2
       }
     ]
   },
@@ -132,7 +132,7 @@
     "archetype": "healer",
     "color": "#22d3ee",
     "scores": {
-      "trust": 89,
+      "trust": 90,
       "openness": 91,
       "ambition": 49,
       "loneliness": 0,
@@ -140,11 +140,11 @@
       "health": 100,
       "hunger": 53,
       "thirst": 53,
-      "energy": 79
+      "energy": 72
     },
-    "mood": "resolute",
+    "mood": "resolved",
     "location": {
-      "waypoint": "van_rear",
+      "waypoint": "storage_corner",
       "x": 64,
       "y": 44
     },
@@ -181,11 +181,6 @@
         "day": 2,
         "text": "Dan's real fear isn't the dead—it's me leaving. We're both trapped in his terror now.",
         "weight": 3
-      },
-      {
-        "day": 4,
-        "text": "He asked what I wanted. He wasn't afraid to say yes.",
-        "weight": 2
       },
       {
         "day": 5,
@@ -245,6 +240,11 @@
       {
         "day": 8,
         "text": "He let me choose without fear.",
+        "weight": 2
+      },
+      {
+        "day": 8,
+        "text": "He asked how far and he meant it.",
         "weight": 2
       }
     ]
