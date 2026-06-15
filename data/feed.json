@@ -2815,5 +2815,84 @@
       }
     ],
     "timestamp": "2026-06-15T11:31:44.174181"
+  },
+  {
+    "day": 8,
+    "cycle": "afternoon",
+    "character": "dan",
+    "action": "He checks the solar battery meter and her pack knots, moving between them like one confirms the other will hold.",
+    "thought": "I can't control her. Only myself.",
+    "location": {
+      "waypoint": "storage_corner",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "anxious",
+    "timestamp": "2026-06-15T15:02:30.722150"
+  },
+  {
+    "day": 8,
+    "cycle": "afternoon",
+    "character": "huiling",
+    "action": "She sorts the rations into her pack and pulls the light rope from storage, moving with the calm of someone who has decided.",
+    "thought": "His fear is how he loves me.",
+    "location": {
+      "waypoint": "storage_corner",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "steady",
+    "timestamp": "2026-06-15T15:02:30.722150"
+  },
+  {
+    "day": 8,
+    "cycle": "afternoon",
+    "type": "interaction",
+    "characters": [
+      "dan",
+      "huiling"
+    ],
+    "description": "Clear sun charged the battery all morning; by afternoon Hui Ling was sorting supplies at the storage corner while Dan checked her rope and knots, both quiet with the weight of tomorrow.",
+    "dialogue": [
+      {
+        "speaker": "huiling",
+        "line": "The pack's ready. Light rope, full load."
+      },
+      {
+        "speaker": "dan",
+        "line": "How far down the grid?"
+      },
+      {
+        "speaker": "huiling",
+        "line": "Far enough to count. Not far enough to get trapped."
+      },
+      {
+        "speaker": "dan",
+        "line": "That's still vague."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Because I don't know yet. Won't know until I'm moving."
+      },
+      {
+        "speaker": "dan",
+        "line": "Then let's get the battery to full before you go."
+      },
+      {
+        "speaker": "huiling",
+        "line": "It's fine now."
+      },
+      {
+        "speaker": "dan",
+        "line": "It's better full. And it keeps my hands busy."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Fair."
+      }
+    ],
+    "timestamp": "2026-06-15T15:02:30.722150"
   }
 ]
