@@ -6,19 +6,19 @@
     "archetype": "builder",
     "color": "#f59e0b",
     "scores": {
-      "trust": 88,
-      "openness": 70,
+      "trust": 89,
+      "openness": 71,
       "ambition": 61,
       "loneliness": 0,
       "resilience": 98,
       "health": 100,
       "hunger": 53,
       "thirst": 53,
-      "energy": 85
+      "energy": 78
     },
-    "mood": "steady",
+    "mood": "vigilant",
     "location": {
-      "waypoint": "van_rear",
+      "waypoint": "ramp_block",
       "x": 42,
       "y": 52
     },
@@ -48,10 +48,7 @@
       ],
       "beard": true
     },
-    "interaction": {
-      "with": "huiling",
-      "state": "sitting_together"
-    },
+    "interaction": null,
     "memories": [
       {
         "day": 2,
@@ -72,11 +69,6 @@
         "day": 4,
         "text": "I let her go when it mattered most. Scared I'll lose her, but not scared enough to lock her in.",
         "weight": 3
-      },
-      {
-        "day": 5,
-        "text": "She needed food and I prepared her supplies without fighting.",
-        "weight": 2
       },
       {
         "day": 6,
@@ -122,6 +114,11 @@
         "day": 8,
         "text": "I told her I'm terrified and let her go.",
         "weight": 2
+      },
+      {
+        "day": 9,
+        "text": "I let her go. She's not locked in anymore.",
+        "weight": 2
       }
     ]
   },
@@ -132,19 +129,19 @@
     "archetype": "healer",
     "color": "#22d3ee",
     "scores": {
-      "trust": 90,
+      "trust": 91,
       "openness": 94,
       "ambition": 49,
       "loneliness": 0,
-      "resilience": 74,
+      "resilience": 75,
       "health": 100,
       "hunger": 53,
       "thirst": 53,
-      "energy": 85
+      "energy": 78
     },
     "mood": "resolved",
     "location": {
-      "waypoint": "van_rear",
+      "waypoint": "scavenge_run",
       "x": 64,
       "y": 44
     },
@@ -172,10 +169,7 @@
         "slingbag"
       ]
     },
-    "interaction": {
-      "with": "dan",
-      "state": "sitting_together"
-    },
+    "interaction": null,
     "memories": [
       {
         "day": 2,
@@ -195,11 +189,6 @@
       {
         "day": 5,
         "text": "Dan was scared, but he believed I could do it. And I did.",
-        "weight": 2
-      },
-      {
-        "day": 5,
-        "text": "I saw a woman with a bitten arm on the way back. I had to keep moving.",
         "weight": 2
       },
       {
@@ -245,6 +234,11 @@
       {
         "day": 8,
         "text": "He asked how far and he meant it.",
+        "weight": 2
+      },
+      {
+        "day": 9,
+        "text": "He stopped holding me back. I can go.",
         "weight": 2
       }
     ]

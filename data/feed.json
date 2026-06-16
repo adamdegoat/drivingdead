@@ -3139,5 +3139,80 @@
       }
     ],
     "timestamp": "2026-06-16T07:02:50.513408"
+  },
+  {
+    "day": 9,
+    "cycle": "midday",
+    "character": "dan",
+    "action": "He stood at the ramp barricade as she disappeared into the street, listening for movement, rope gripped tight against any sign of the dead rising.",
+    "thought": "I'm terrified. I trust her anyway.",
+    "location": {
+      "waypoint": "ramp_block",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "vigilant",
+    "timestamp": "2026-06-16T11:32:28.960170"
+  },
+  {
+    "day": 9,
+    "cycle": "midday",
+    "character": "huiling",
+    "action": "She descended into the dead city moving west, searching the apartment blocks for food and medicine, the rope secure and the van at her back.",
+    "thought": "The dead won't stop me. I'm ready.",
+    "location": {
+      "waypoint": "scavenge_run",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "resolved",
+    "timestamp": "2026-06-16T11:32:28.960170"
+  },
+  {
+    "day": 9,
+    "cycle": "midday",
+    "type": "interaction",
+    "characters": [
+      "huiling",
+      "dan"
+    ],
+    "description": "The food tin was scraped clean this morning; by midday she was at the ramp with her pack ready, and he checked her rope one last time, quiet and steady, before she dropped into the dead city.",
+    "dialogue": [
+      {
+        "speaker": "huiling",
+        "line": "Food's gone. I'm going down today."
+      },
+      {
+        "speaker": "dan",
+        "line": "Yeah. West is clear."
+      },
+      {
+        "speaker": "huiling",
+        "line": "How long do I have?"
+      },
+      {
+        "speaker": "dan",
+        "line": "Six hours before dark. You've done harder."
+      },
+      {
+        "speaker": "huiling",
+        "line": "The dead?"
+      },
+      {
+        "speaker": "dan",
+        "line": "Quiet this morning. Stick to the alleys."
+      },
+      {
+        "speaker": "huiling",
+        "line": "I will."
+      },
+      {
+        "speaker": "dan",
+        "line": "Come back whole."
+      }
+    ],
+    "timestamp": "2026-06-16T11:32:28.960170"
   }
 ]
