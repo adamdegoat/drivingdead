@@ -3214,5 +3214,100 @@
       }
     ],
     "timestamp": "2026-06-16T11:32:28.960170"
+  },
+  {
+    "day": 9,
+    "cycle": "afternoon",
+    "character": "dan",
+    "action": "He waited at the ramp all afternoon, watching the empty streets below until she climbed back up with the cans.",
+    "thought": "I wanted to order her back. I didn't.",
+    "location": {
+      "waypoint": "van_rear",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "steady",
+    "timestamp": "2026-06-16T15:02:38.343413"
+  },
+  {
+    "day": 9,
+    "cycle": "afternoon",
+    "character": "huiling",
+    "action": "She made it back from the picked-clean streets with two cans and the strange quiet of the dead city still in her ears.",
+    "thought": "He was terrified. He let me choose.",
+    "location": {
+      "waypoint": "van_rear",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "resolved",
+    "timestamp": "2026-06-16T15:02:38.343413"
+  },
+  {
+    "day": 9,
+    "cycle": "afternoon",
+    "type": "interaction",
+    "characters": [
+      "dan",
+      "huiling"
+    ],
+    "description": "She came back from the run with two cans; Dan had waited at the ramp, and they sat by the fire in the van, the food crisis now impossible to ignore.",
+    "dialogue": [
+      {
+        "speaker": "huiling",
+        "line": "I found two cans. The rest was picked clean."
+      },
+      {
+        "speaker": "dan",
+        "line": "You're okay?"
+      },
+      {
+        "speaker": "huiling",
+        "line": "Yeah. Streets were empty. The dead weren't out."
+      },
+      {
+        "speaker": "dan",
+        "line": "How long?"
+      },
+      {
+        "speaker": "huiling",
+        "line": "Three hours, maybe. Lost track."
+      },
+      {
+        "speaker": "dan",
+        "line": "Three hours."
+      },
+      {
+        "speaker": "huiling",
+        "line": "I came back. I'm back."
+      },
+      {
+        "speaker": "dan",
+        "line": "I know. I'm learning."
+      },
+      {
+        "speaker": "huiling",
+        "line": "You didn't tell me not to go."
+      },
+      {
+        "speaker": "dan",
+        "line": "I wanted to. God, I wanted to."
+      },
+      {
+        "speaker": "huiling",
+        "line": "But you didn't."
+      },
+      {
+        "speaker": "dan",
+        "line": "No."
+      },
+      {
+        "speaker": "huiling",
+        "line": "So we eat tonight. I'll go again if I have to."
+      }
+    ],
+    "timestamp": "2026-06-16T15:02:38.343413"
   }
 ]
