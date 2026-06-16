@@ -7,18 +7,18 @@
     "color": "#f59e0b",
     "scores": {
       "trust": 93,
-      "openness": 74,
+      "openness": 75,
       "ambition": 61,
       "loneliness": 0,
       "resilience": 99,
       "health": 100,
       "hunger": 53,
       "thirst": 53,
-      "energy": 90
+      "energy": 83
     },
     "mood": "steady",
     "location": {
-      "waypoint": "van_rear",
+      "waypoint": "ramp_block",
       "x": 42,
       "y": 52
     },
@@ -50,7 +50,7 @@
     },
     "interaction": {
       "with": "huiling",
-      "state": "talking"
+      "state": "working_together"
     },
     "memories": [
       {
@@ -81,11 +81,6 @@
       {
         "day": 7,
         "text": "I watched her head down without locking the gate behind her.",
-        "weight": 2
-      },
-      {
-        "day": 7,
-        "text": "I stopped sealing myself against her grief. I said I'd carry it.",
         "weight": 2
       },
       {
@@ -122,6 +117,11 @@
         "day": 9,
         "text": "She told me about the doll. I didn't look away.",
         "weight": 2
+      },
+      {
+        "day": 10,
+        "text": "I'm letting her go when everything wants to chain her.",
+        "weight": 2
       }
     ]
   },
@@ -140,11 +140,11 @@
       "health": 100,
       "hunger": 53,
       "thirst": 53,
-      "energy": 90
+      "energy": 83
     },
     "mood": "haunted",
     "location": {
-      "waypoint": "van_rear",
+      "waypoint": "ramp_block",
       "x": 64,
       "y": 44
     },
@@ -174,7 +174,7 @@
     },
     "interaction": {
       "with": "dan",
-      "state": "talking"
+      "state": "working_together"
     },
     "memories": [
       {
@@ -190,11 +190,6 @@
       {
         "day": 6,
         "text": "Dan didn't try to make the guilt smaller. He just stayed there.",
-        "weight": 2
-      },
-      {
-        "day": 6,
-        "text": "He's really letting me choose this time. I wasn't sure he would.",
         "weight": 2
       },
       {
@@ -245,6 +240,11 @@
       {
         "day": 9,
         "text": "We ate the last tin and he was beside me.",
+        "weight": 2
+      },
+      {
+        "day": 10,
+        "text": "He's not trying to lock me in. He actually trusts me.",
         "weight": 2
       }
     ]

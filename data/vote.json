@@ -1,32 +1,32 @@
 {
   "world": "drivingdead",
   "poll": {
-    "id": "2026-06-16",
+    "id": "2026-06-17",
     "closes": "tonight",
-    "question": "Hui Ling scavenges tomorrow. Dan's finally letting her go. Should she pack light and get back before dark—or take extra rations to stay longer and push deeper into the bu",
+    "question": "Tomorrow, when Hui Ling reaches for her rope, does Dan hand it to her again—or does he finally pick up his own?",
     "options": [
       {
-        "id": "go_deep",
-        "label": "Take extra rations",
-        "desc": "Stay longer, push deeper; weeks of food if the building yields"
+        "id": "hand_her_rope",
+        "label": "He hands her the rope",
+        "desc": "Some love is letting her choose; trust her, watch her go"
       },
       {
-        "id": "move_fast",
-        "label": "Travel light",
-        "desc": "Fast in and out, back before dark; he watches from the roof"
+        "id": "pick_up_his_rope",
+        "label": "He picks up his own",
+        "desc": "He's been terrified; now he faces the dead himself"
       },
       {
-        "id": "gauge",
-        "label": "Gauge it on the way",
-        "desc": "Light pack first; push deeper only if storage yields and time allows"
+        "id": "seal_the_ramp",
+        "label": "He seals the ramp",
+        "desc": "Fear and love say: not today, not yet, just rest"
       }
     ]
   },
   "in_play": {
-    "id": "run_alone",
-    "label": "She runs",
-    "desc": "One tin left. Push through the haunting.",
-    "decided": "2026-06-16",
+    "id": "go_deep",
+    "label": "Take extra rations",
+    "desc": "Stay longer, push deeper; weeks of food if the building yields",
+    "decided": "2026-06-17",
     "votes": 0,
     "tally": {}
   }

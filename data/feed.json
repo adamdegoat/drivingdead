@@ -3467,5 +3467,80 @@
       }
     ],
     "timestamp": "2026-06-16T22:32:03.991762"
+  },
+  {
+    "day": 10,
+    "cycle": "morning",
+    "character": "dan",
+    "action": "Checks the solar panels in the clear morning light, then walks to the ramp where Hui Ling is gearing up her pack, and stands beside the barricade without blocking her.",
+    "thought": "She's leaving and I'm not stopping her.",
+    "location": {
+      "waypoint": "ramp_block",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "steady",
+    "timestamp": "2026-06-17T07:03:04.276232"
+  },
+  {
+    "day": 10,
+    "cycle": "morning",
+    "character": "huiling",
+    "action": "Wakes with the sun, checks what little food remains, and begins packing her scavenging bag by the ramp with careful, practiced movements.",
+    "thought": "The doll's still there. I have to go.",
+    "location": {
+      "waypoint": "ramp_block",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "haunted",
+    "timestamp": "2026-06-17T07:03:04.276232"
+  },
+  {
+    "day": 10,
+    "cycle": "morning",
+    "type": "interaction",
+    "characters": [
+      "dan",
+      "huiling"
+    ],
+    "description": "Stores empty, sun climbing; Hui Ling is packed at the ramp and Dan stands beside her without blocking the way.",
+    "dialogue": [
+      {
+        "speaker": "huiling",
+        "line": "We've got nothing left."
+      },
+      {
+        "speaker": "dan",
+        "line": "Panels are charging good. You ready?"
+      },
+      {
+        "speaker": "huiling",
+        "line": "I'll go. Sun's high, visibility's clear."
+      },
+      {
+        "speaker": "dan",
+        "line": "Same route as yesterday?"
+      },
+      {
+        "speaker": "huiling",
+        "line": "Different streets. More careful this time."
+      },
+      {
+        "speaker": "dan",
+        "line": "I know you will."
+      },
+      {
+        "speaker": "huiling",
+        "line": "You're really okay with this?"
+      },
+      {
+        "speaker": "dan",
+        "line": "No. But I'm doing it anyway."
+      }
+    ],
+    "timestamp": "2026-06-17T07:03:04.276232"
   }
 ]
