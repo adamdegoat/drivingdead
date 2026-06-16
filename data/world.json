@@ -1,6 +1,6 @@
 {
   "day": 9,
-  "cycle": "evening",
+  "cycle": "night",
   "weather": "clear",
   "pending_events": [],
   "started": "2026-06-08",
@@ -9,7 +9,7 @@
       "id": "solar_rig",
       "type": "solar_rig",
       "level": 1,
-      "condition": 32,
+      "condition": 28,
       "x": 50,
       "y": 55,
       "builder": null,
@@ -20,26 +20,26 @@
   ],
   "fire": {
     "lit": true,
-    "fuel": 7
+    "fuel": 12
   },
   "last_run_date": "2026-06-16",
-  "pulse": "She carries ghosts from the city; he listens without flinching — a small shift in how they hold each other under siege.",
-  "scene": "Two cans returned from the run; one tin remains for tomorrow. By the fire in the van rear they sit quiet together, she haunted by what she saw below and he steady, already thinking three days ahead.",
+  "pulse": "The doll won't leave her; he won't push it away. One tin left and the city is hungry.",
+  "scene": "The last tin eaten by night; they sit by the fire where she tells him about the doll and he holds her haunting without turning away.",
   "resources_prev": {
-    "food": 2,
-    "water": 93,
-    "wood": 100,
-    "medicine": 30
-  },
-  "resources": {
     "food": 1,
     "water": 93,
     "wood": 96,
     "medicine": 30
   },
-  "camp_climate": "steady",
+  "resources": {
+    "food": 0,
+    "water": 94,
+    "wood": 90,
+    "medicine": 30
+  },
+  "camp_climate": "content",
   "discoveries": [],
-  "last_cycle_key": "2026-06-16:evening",
+  "last_cycle_key": "2026-06-16:night",
   "day_summaries": {
     "1": "Day 1 was clear and warm — good charging, hot meals in the cab, the systems steady. At dusk, Hui Ling found injured birds on the ramp and sheltered them on the van's corner despite Dan's strong refusal. By nightfall, they were sitting together in guarded silence, both aware that the cost of survival might exceed what they could afford to become.",
     "2": "Day 2 escalated from injured birds to a moral standoff: Dan refused shelter, and by nightfall, he blocked the van door as Hui Ling reached for it. When she asked why, he finally broke—not afraid of the dead, but of her leaving. The night left them both caged, one by the city, one by his terror.",
@@ -48,7 +48,8 @@
     "5": "Day 5 shattered Dan's control: he let Hui Ling into the dead city for supplies, and she returned with food but haunted by a dying woman she couldn't save. They have weeks of rations now, but the real cost was in her eyes—Dan finally understood that survival takes more than he could measure.",
     "6": "Day 6: food dwindling to two days, Hui Ling haunted by a woman's bitten arm she couldn't save yesterday. Dan stopped fighting her choice to go back out tomorrow and held the ramp instead. By nightfall, the breakthrough held fragile but real—he listened, she was vulnerable, and neither turned away.",
     "7": "Day 7 started with the last food gone — Hui Ling haunted by a severed arm but resolute, returning with tins to stretch their days; Dan held steady, learning to let her choose. By nightfall they sat by the fire, her haunting named and his certainty clear: she risks, he carries what it costs.",
-    "8": "Day 8 was clear — the battery charged to full by afternoon. Dan verified the rope while Hui Ling sorted supplies, moving through the day in quiet sync. His fear eased with each check of her gear. By night she was resting, pack ready for tomorrow, and he sat beside her finally at peace with letting her go."
+    "8": "Day 8 was clear — the battery charged to full by afternoon. Dan verified the rope while Hui Ling sorted supplies, moving through the day in quiet sync. His fear eased with each check of her gear. By night she was resting, pack ready for tomorrow, and he sat beside her finally at peace with letting her go.",
+    "9": "Day 9: Hui Ling ran alone for the first time, came back haunted by a child's doll, but with food. Dan waited terrified and trusted anyway; by night she spoke the haunting and he held it without trying to erase it. One tin remains; the hunger is closing in again."
   },
   "lean": {
     "id": "run_alone",

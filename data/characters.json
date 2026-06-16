@@ -6,15 +6,15 @@
     "archetype": "builder",
     "color": "#f59e0b",
     "scores": {
-      "trust": 92,
-      "openness": 73,
+      "trust": 93,
+      "openness": 74,
       "ambition": 61,
       "loneliness": 0,
       "resilience": 99,
       "health": 100,
       "hunger": 53,
       "thirst": 53,
-      "energy": 56
+      "energy": 90
     },
     "mood": "steady",
     "location": {
@@ -74,11 +74,6 @@
         "weight": 3
       },
       {
-        "day": 6,
-        "text": "She named the hard thing and I didn't turn away. That's enough.",
-        "weight": 2
-      },
-      {
         "day": 7,
         "text": "She came back carrying what she saw, and I held it with her.",
         "weight": 3
@@ -122,6 +117,11 @@
         "day": 9,
         "text": "I held her haunting with her instead of only pushing survival.",
         "weight": 2
+      },
+      {
+        "day": 9,
+        "text": "She told me about the doll. I didn't look away.",
+        "weight": 2
       }
     ]
   },
@@ -132,15 +132,15 @@
     "archetype": "healer",
     "color": "#22d3ee",
     "scores": {
-      "trust": 93,
-      "openness": 96,
+      "trust": 94,
+      "openness": 97,
       "ambition": 49,
       "loneliness": 0,
-      "resilience": 76,
+      "resilience": 77,
       "health": 100,
       "hunger": 53,
       "thirst": 53,
-      "energy": 56
+      "energy": 90
     },
     "mood": "haunted",
     "location": {
@@ -198,11 +198,6 @@
         "weight": 2
       },
       {
-        "day": 6,
-        "text": "Dan heard about the arm and didn't look away. He's holding steady.",
-        "weight": 2
-      },
-      {
         "day": 7,
         "text": "I came back haunted. Dan held that weight without flinching.",
         "weight": 3
@@ -245,6 +240,11 @@
       {
         "day": 9,
         "text": "He heard the doll matter and didn't try to erase my ghosts.",
+        "weight": 2
+      },
+      {
+        "day": 9,
+        "text": "We ate the last tin and he was beside me.",
         "weight": 2
       }
     ]

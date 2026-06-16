@@ -3392,5 +3392,80 @@
       }
     ],
     "timestamp": "2026-06-16T18:32:50.036041"
+  },
+  {
+    "day": 9,
+    "cycle": "night",
+    "character": "dan",
+    "action": "He sits by the fire in the van's rear, listening to her speak of the doll without offering solution or reassurance.",
+    "thought": "I couldn't fix it, but I could sit.",
+    "location": {
+      "waypoint": "van_rear",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "steady",
+    "timestamp": "2026-06-16T22:32:03.991762"
+  },
+  {
+    "day": 9,
+    "cycle": "night",
+    "character": "huiling",
+    "action": "By the fire, she breaks the silence and speaks of the doll on the pavement, and he listens instead of trying to erase what she carried back.",
+    "thought": "He heard me and didn't look away.",
+    "location": {
+      "waypoint": "van_rear",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "haunted",
+    "timestamp": "2026-06-16T22:32:03.991762"
+  },
+  {
+    "day": 9,
+    "cycle": "night",
+    "type": "interaction",
+    "characters": [
+      "dan",
+      "huiling"
+    ],
+    "description": "By the fire in the van's rear, the last tin gone, Hui Ling speaks what haunts her—a doll on the pavement—and Dan sits with her grief instead of trying to fix it.",
+    "dialogue": [
+      {
+        "speaker": "huiling",
+        "line": "I keep seeing that doll's face when I close my eyes."
+      },
+      {
+        "speaker": "dan",
+        "line": "I know."
+      },
+      {
+        "speaker": "huiling",
+        "line": "There was a child. I don't know how long ago."
+      },
+      {
+        "speaker": "dan",
+        "line": "You're here. That matters."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Does it? I came back with food and left that child there."
+      },
+      {
+        "speaker": "dan",
+        "line": "You came back alive. That's what had to happen."
+      },
+      {
+        "speaker": "huiling",
+        "line": "I know. Doesn't make the doll any less small."
+      },
+      {
+        "speaker": "dan",
+        "line": "No. But you carried it anyway. That's the difference."
+      }
+    ],
+    "timestamp": "2026-06-16T22:32:03.991762"
   }
 ]
