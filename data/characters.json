@@ -6,15 +6,15 @@
     "archetype": "builder",
     "color": "#f59e0b",
     "scores": {
-      "trust": 91,
-      "openness": 72,
+      "trust": 92,
+      "openness": 73,
       "ambition": 61,
       "loneliness": 0,
       "resilience": 99,
       "health": 100,
       "hunger": 53,
       "thirst": 53,
-      "energy": 63
+      "energy": 56
     },
     "mood": "steady",
     "location": {
@@ -79,11 +79,6 @@
         "weight": 2
       },
       {
-        "day": 6,
-        "text": "She's going tomorrow and I'm not fighting it. That's proof.",
-        "weight": 2
-      },
-      {
         "day": 7,
         "text": "She came back carrying what she saw, and I held it with her.",
         "weight": 3
@@ -122,6 +117,11 @@
         "day": 9,
         "text": "She came back. I let her go and she survived it.",
         "weight": 2
+      },
+      {
+        "day": 9,
+        "text": "I held her haunting with her instead of only pushing survival.",
+        "weight": 2
       }
     ]
   },
@@ -132,17 +132,17 @@
     "archetype": "healer",
     "color": "#22d3ee",
     "scores": {
-      "trust": 92,
-      "openness": 95,
+      "trust": 93,
+      "openness": 96,
       "ambition": 49,
       "loneliness": 0,
       "resilience": 76,
       "health": 100,
       "hunger": 53,
       "thirst": 53,
-      "energy": 63
+      "energy": 56
     },
-    "mood": "resolved",
+    "mood": "haunted",
     "location": {
       "waypoint": "van_rear",
       "x": 64,
@@ -186,11 +186,6 @@
         "day": 5,
         "text": "I left her to die and Dan didn't judge me for it.",
         "weight": 3
-      },
-      {
-        "day": 5,
-        "text": "He handed over the flasks like he trusted me completely.",
-        "weight": 2
       },
       {
         "day": 6,
@@ -245,6 +240,11 @@
       {
         "day": 9,
         "text": "He waited at the ramp for hours. He didn't order me back.",
+        "weight": 2
+      },
+      {
+        "day": 9,
+        "text": "He heard the doll matter and didn't try to erase my ghosts.",
         "weight": 2
       }
     ]

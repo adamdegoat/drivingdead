@@ -3309,5 +3309,88 @@
       }
     ],
     "timestamp": "2026-06-16T15:02:38.343413"
+  },
+  {
+    "day": 9,
+    "cycle": "evening",
+    "character": "dan",
+    "action": "He sits by the fire, listening to her describe what she saw below, quiet and steady as she speaks.",
+    "thought": "She's processing it, not breaking.",
+    "location": {
+      "waypoint": "van_rear",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "steady",
+    "timestamp": "2026-06-16T18:32:50.036041"
+  },
+  {
+    "day": 9,
+    "cycle": "evening",
+    "character": "huiling",
+    "action": "She settles by the fire, describing the uncanny silence of the streets and the doll she found, watching his face as she speaks.",
+    "thought": "The doll won't leave my head.",
+    "location": {
+      "waypoint": "van_rear",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "haunted",
+    "timestamp": "2026-06-16T18:32:50.036041"
+  },
+  {
+    "day": 9,
+    "cycle": "evening",
+    "type": "interaction",
+    "characters": [
+      "huiling",
+      "dan"
+    ],
+    "description": "By the fire's glow, she tells him about the silence and the doll on the pavement; Dan listens, counts the food they brought back, and says nothing about the run after tomorrow.",
+    "dialogue": [
+      {
+        "speaker": "huiling",
+        "line": "The city felt wrong today. Too quiet."
+      },
+      {
+        "speaker": "dan",
+        "line": "Quiet means they didn't see you."
+      },
+      {
+        "speaker": "huiling",
+        "line": "I found a doll on the curb. A child's toy, just... sitting there."
+      },
+      {
+        "speaker": "dan",
+        "line": "You can't carry every ghost in this city."
+      },
+      {
+        "speaker": "huiling",
+        "line": "I'm not trying to. But I saw it."
+      },
+      {
+        "speaker": "dan",
+        "line": "You came back safe with food. That's the whole thing."
+      },
+      {
+        "speaker": "huiling",
+        "line": "One tin left after tonight."
+      },
+      {
+        "speaker": "dan",
+        "line": "We've done more with less before."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Another run soon, then."
+      },
+      {
+        "speaker": "dan",
+        "line": "We'll manage it."
+      }
+    ],
+    "timestamp": "2026-06-16T18:32:50.036041"
   }
 ]
