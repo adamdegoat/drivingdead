@@ -6,17 +6,17 @@
     "archetype": "builder",
     "color": "#f59e0b",
     "scores": {
-      "trust": 96,
+      "trust": 97,
       "openness": 78,
       "ambition": 60,
       "loneliness": 0,
       "resilience": 100,
       "health": 100,
-      "hunger": 64,
-      "thirst": 64,
-      "energy": 100
+      "hunger": 56,
+      "thirst": 53,
+      "energy": 93
     },
-    "mood": "relieved",
+    "mood": "peaceful",
     "location": {
       "waypoint": "van_rear",
       "x": 42,
@@ -50,7 +50,7 @@
     },
     "interaction": {
       "with": "huiling",
-      "state": "sitting_together"
+      "state": "working_together"
     },
     "memories": [
       {
@@ -94,11 +94,6 @@
         "weight": 2
       },
       {
-        "day": 9,
-        "text": "I held her haunting with her instead of only pushing survival.",
-        "weight": 2
-      },
-      {
         "day": 10,
         "text": "I'm loading her pack and letting her walk into the city alone.",
         "weight": 3
@@ -122,6 +117,11 @@
         "day": 10,
         "text": "She went alone and came back with food — I was right to let her go.",
         "weight": 2
+      },
+      {
+        "day": 11,
+        "text": "I poured the coffee and didn't tell her how.",
+        "weight": 2
       }
     ]
   },
@@ -132,17 +132,17 @@
     "archetype": "healer",
     "color": "#22d3ee",
     "scores": {
-      "trust": 98,
+      "trust": 99,
       "openness": 98,
       "ambition": 52,
       "loneliness": 0,
       "resilience": 81,
       "health": 100,
-      "hunger": 64,
-      "thirst": 64,
-      "energy": 100
+      "hunger": 56,
+      "thirst": 53,
+      "energy": 93
     },
-    "mood": "peaceful",
+    "mood": "warm",
     "location": {
       "waypoint": "van_rear",
       "x": 64,
@@ -174,7 +174,7 @@
     },
     "interaction": {
       "with": "dan",
-      "state": "sitting_together"
+      "state": "working_together"
     },
     "memories": [
       {
@@ -196,11 +196,6 @@
         "day": 8,
         "text": "Dan stopped holding me like I'd run. He let me be.",
         "weight": 3
-      },
-      {
-        "day": 8,
-        "text": "He let me choose without fear.",
-        "weight": 2
       },
       {
         "day": 9,
@@ -245,6 +240,11 @@
       {
         "day": 10,
         "text": "Dan loaded my pack with shaking hands and let me walk away — that's trust.",
+        "weight": 2
+      },
+      {
+        "day": 11,
+        "text": "He's not planning my day anymore. Just handing me things.",
         "weight": 2
       }
     ]

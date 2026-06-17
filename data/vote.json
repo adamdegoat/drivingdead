@@ -1,32 +1,27 @@
 {
   "world": "drivingdead",
   "poll": {
-    "id": "2026-06-17",
+    "id": "2026-06-18",
     "closes": "tonight",
-    "question": "Tomorrow, when Hui Ling reaches for her rope, does Dan hand it to her again—or does he finally pick up his own?",
+    "question": "Hui Ling came back alive. Should Dan seal the van tight and rest, or should they move to find a safer location?",
     "options": [
       {
-        "id": "hand_her_rope",
-        "label": "He hands her the rope",
-        "desc": "Some love is letting her choose; trust her, watch her go"
+        "id": "move_tonight",
+        "label": "Move the van",
+        "desc": "They've got supplies and fuel. Maybe it's time to find better shelter."
       },
       {
-        "id": "pick_up_his_rope",
-        "label": "He picks up his own",
-        "desc": "He's been terrified; now he faces the dead himself"
-      },
-      {
-        "id": "seal_the_ramp",
-        "label": "He seals the ramp",
-        "desc": "Fear and love say: not today, not yet, just rest"
+        "id": "seal_and_rest",
+        "label": "Seal and rest",
+        "desc": "The doll is here, the food is back. Maybe tonight is about building home."
       }
     ]
   },
   "in_play": {
-    "id": "go_deep",
-    "label": "Take extra rations",
-    "desc": "Stay longer, push deeper; weeks of food if the building yields",
-    "decided": "2026-06-17",
+    "id": "hand_her_rope",
+    "label": "He hands her the rope",
+    "desc": "Some love is letting her choose; trust her, watch her go",
+    "decided": "2026-06-18",
     "votes": 0,
     "tally": {}
   }
