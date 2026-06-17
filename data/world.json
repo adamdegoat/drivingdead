@@ -1,6 +1,6 @@
 {
   "day": 10,
-  "cycle": "evening",
+  "cycle": "night",
   "weather": "clear",
   "pending_events": [],
   "started": "2026-06-08",
@@ -9,7 +9,7 @@
       "id": "solar_rig",
       "type": "solar_rig",
       "level": 1,
-      "condition": 12,
+      "condition": 8,
       "x": 50,
       "y": 55,
       "builder": null,
@@ -20,26 +20,26 @@
   ],
   "fire": {
     "lit": true,
-    "fuel": 14
+    "fuel": 1
   },
   "last_run_date": "2026-06-17",
-  "pulse": "Hui Ling's solo descent tested Dan's trust; she returned with food and the doll, and both knew something had shifted between them.",
-  "scene": "By dusk Hui Ling climbed the ramp wall on Dan's rope, supplies in hand, while streets fell dark. The doll and three tins sat on the van table—first real food in days—and they sat in silence.",
+  "pulse": "Dan's grip loosened when she left; now she's back and he's holding her differently — less grip, more closeness.",
+  "scene": "Hui Ling climbed back up the ramp at dusk with the doll and three tins of food; now they're in the van with the fire burning, both settling into the quiet of trust.",
   "resources_prev": {
-    "food": 0,
-    "water": 93,
-    "wood": 96,
-    "medicine": 28
-  },
-  "resources": {
     "food": 50,
     "water": 50,
     "wood": 96,
     "medicine": 28
   },
-  "camp_climate": "steady",
+  "resources": {
+    "food": 72,
+    "water": 76,
+    "wood": 100,
+    "medicine": 28
+  },
+  "camp_climate": "content",
   "discoveries": [],
-  "last_cycle_key": "2026-06-17:evening",
+  "last_cycle_key": "2026-06-17:night",
   "day_summaries": {
     "1": "Day 1 was clear and warm — good charging, hot meals in the cab, the systems steady. At dusk, Hui Ling found injured birds on the ramp and sheltered them on the van's corner despite Dan's strong refusal. By nightfall, they were sitting together in guarded silence, both aware that the cost of survival might exceed what they could afford to become.",
     "2": "Day 2 escalated from injured birds to a moral standoff: Dan refused shelter, and by nightfall, he blocked the van door as Hui Ling reached for it. When she asked why, he finally broke—not afraid of the dead, but of her leaving. The night left them both caged, one by the city, one by his terror.",
@@ -49,7 +49,8 @@
     "6": "Day 6: food dwindling to two days, Hui Ling haunted by a woman's bitten arm she couldn't save yesterday. Dan stopped fighting her choice to go back out tomorrow and held the ramp instead. By nightfall, the breakthrough held fragile but real—he listened, she was vulnerable, and neither turned away.",
     "7": "Day 7 started with the last food gone — Hui Ling haunted by a severed arm but resolute, returning with tins to stretch their days; Dan held steady, learning to let her choose. By nightfall they sat by the fire, her haunting named and his certainty clear: she risks, he carries what it costs.",
     "8": "Day 8 was clear — the battery charged to full by afternoon. Dan verified the rope while Hui Ling sorted supplies, moving through the day in quiet sync. His fear eased with each check of her gear. By night she was resting, pack ready for tomorrow, and he sat beside her finally at peace with letting her go.",
-    "9": "Day 9: Hui Ling ran alone for the first time, came back haunted by a child's doll, but with food. Dan waited terrified and trusted anyway; by night she spoke the haunting and he held it without trying to erase it. One tin remains; the hunger is closing in again."
+    "9": "Day 9: Hui Ling ran alone for the first time, came back haunted by a child's doll, but with food. Dan waited terrified and trusted anyway; by night she spoke the haunting and he held it without trying to erase it. One tin remains; the hunger is closing in again.",
+    "10": "Day 10: Hui Ling went down into the city for the doll while Dan held the rope. She came back at dusk with the doll and three tins of food. His terror eased — Dan learned that trust means letting her go, and that she comes home."
   },
   "lean": {
     "id": "go_deep",

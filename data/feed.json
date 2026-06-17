@@ -3767,5 +3767,80 @@
       }
     ],
     "timestamp": "2026-06-17T18:31:54.297634"
+  },
+  {
+    "day": 10,
+    "cycle": "night",
+    "character": "dan",
+    "action": "He settles by the fire, shoulders finally loose, as Hui Ling closes the van door and leans against him.",
+    "thought": "She's here. She's alive. I can breathe.",
+    "location": {
+      "waypoint": "van_rear",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "relieved",
+    "timestamp": "2026-06-17T22:32:14.254262"
+  },
+  {
+    "day": 10,
+    "cycle": "night",
+    "character": "huiling",
+    "action": "She closes the van door and settles beside Dan, the doll and three tins on the table glowing in the firelight beside them.",
+    "thought": "He let me go. He actually trusted me.",
+    "location": {
+      "waypoint": "van_rear",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "peaceful",
+    "timestamp": "2026-06-17T22:32:14.254262"
+  },
+  {
+    "day": 10,
+    "cycle": "night",
+    "type": "interaction",
+    "characters": [
+      "dan",
+      "huiling"
+    ],
+    "description": "She came back with the doll and food while Dan kept watch; now they're in the van, the fire burning warm, both learning a new way to hold on.",
+    "dialogue": [
+      {
+        "speaker": "huiling",
+        "line": "The doll's safe now."
+      },
+      {
+        "speaker": "dan",
+        "line": "You're safe now. That matters more."
+      },
+      {
+        "speaker": "huiling",
+        "line": "I know. And you let me go."
+      },
+      {
+        "speaker": "dan",
+        "line": "I wasn't sure I could."
+      },
+      {
+        "speaker": "huiling",
+        "line": "I knew you could. That's why I went."
+      },
+      {
+        "speaker": "dan",
+        "line": "I was terrified. Still am."
+      },
+      {
+        "speaker": "huiling",
+        "line": "I know. But you held the rope."
+      },
+      {
+        "speaker": "dan",
+        "line": "Come sit. Let me hold you instead."
+      }
+    ],
+    "timestamp": "2026-06-17T22:32:14.254262"
   }
 ]
