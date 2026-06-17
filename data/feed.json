@@ -3692,5 +3692,80 @@
       }
     ],
     "timestamp": "2026-06-17T15:01:26.751548"
+  },
+  {
+    "day": 10,
+    "cycle": "evening",
+    "character": "dan",
+    "action": "Watched the empty streets all afternoon, then pulled the rope hand over hand as she climbed the ramp wall in the dusk.",
+    "thought": "She came back alive.",
+    "location": {
+      "waypoint": "van_rear",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "relieved",
+    "timestamp": "2026-06-17T18:31:54.297634"
+  },
+  {
+    "day": 10,
+    "cycle": "evening",
+    "character": "huiling",
+    "action": "Descended into the dead city, found the pharmacy with food and the doll, and climbed back toward his waiting hands as the sun fell.",
+    "thought": "He was there waiting.",
+    "location": {
+      "waypoint": "van_rear",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "resolute",
+    "timestamp": "2026-06-17T18:31:54.297634"
+  },
+  {
+    "day": 10,
+    "cycle": "evening",
+    "type": "interaction",
+    "characters": [
+      "huiling",
+      "dan"
+    ],
+    "description": "As dusk fell, Hui Ling climbed the ramp wall on Dan's rope while streets grew dark below; by night, the doll and three tins lay on the van table between them.",
+    "dialogue": [
+      {
+        "speaker": "dan",
+        "line": "I see you. Move."
+      },
+      {
+        "speaker": "huiling",
+        "line": "I'm climbing."
+      },
+      {
+        "speaker": "dan",
+        "line": "I've got the rope."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Three tins from the pharmacy."
+      },
+      {
+        "speaker": "dan",
+        "line": "You're clear."
+      },
+      {
+        "speaker": "huiling",
+        "line": "The doll was still there."
+      },
+      {
+        "speaker": "dan",
+        "line": "You were right to go."
+      },
+      {
+        "speaker": "huiling",
+        "line": "So were you, to let me."
+      }
+    ],
+    "timestamp": "2026-06-17T18:31:54.297634"
   }
 ]

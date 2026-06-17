@@ -6,19 +6,19 @@
     "archetype": "builder",
     "color": "#f59e0b",
     "scores": {
-      "trust": 93,
-      "openness": 77,
+      "trust": 95,
+      "openness": 76,
       "ambition": 60,
       "loneliness": 0,
       "resilience": 100,
       "health": 100,
       "hunger": 53,
       "thirst": 53,
-      "energy": 69
+      "energy": 54
     },
-    "mood": "tense",
+    "mood": "relieved",
     "location": {
-      "waypoint": "ramp_block",
+      "waypoint": "van_rear",
       "x": 42,
       "y": 52
     },
@@ -48,7 +48,10 @@
       ],
       "beard": true
     },
-    "interaction": null,
+    "interaction": {
+      "with": "huiling",
+      "state": "sitting_together"
+    },
     "memories": [
       {
         "day": 2,
@@ -79,11 +82,6 @@
         "day": 8,
         "text": "I finally let her go and survived.",
         "weight": 3
-      },
-      {
-        "day": 8,
-        "text": "I'm not the man who locks gates anymore.",
-        "weight": 2
       },
       {
         "day": 9,
@@ -117,6 +115,11 @@
       },
       {
         "day": 10,
+        "text": "She came back with food. I was right to let her go.",
+        "weight": 3
+      },
+      {
+        "day": 10,
         "text": "I'm letting her go when everything wants to chain her.",
         "weight": 2
       }
@@ -129,19 +132,19 @@
     "archetype": "healer",
     "color": "#22d3ee",
     "scores": {
-      "trust": 95,
-      "openness": 97,
+      "trust": 97,
+      "openness": 98,
       "ambition": 51,
       "loneliness": 0,
-      "resilience": 78,
+      "resilience": 79,
       "health": 100,
       "hunger": 53,
       "thirst": 53,
-      "energy": 69
+      "energy": 54
     },
     "mood": "resolute",
     "location": {
-      "waypoint": "scavenge_run",
+      "waypoint": "van_rear",
       "x": 64,
       "y": 44
     },
@@ -169,7 +172,10 @@
         "slingbag"
       ]
     },
-    "interaction": null,
+    "interaction": {
+      "with": "dan",
+      "state": "sitting_together"
+    },
     "memories": [
       {
         "day": 2,
@@ -185,11 +191,6 @@
         "day": 7,
         "text": "I came back haunted. Dan held that weight without flinching.",
         "weight": 3
-      },
-      {
-        "day": 7,
-        "text": "He let me go when it would have been easy to hold on.",
-        "weight": 2
       },
       {
         "day": 8,
@@ -234,6 +235,11 @@
       {
         "day": 10,
         "text": "He let me walk away even though he's terrified.",
+        "weight": 3
+      },
+      {
+        "day": 10,
+        "text": "I went alone and came back. Dan held the rope. He trusts me.",
         "weight": 3
       },
       {
