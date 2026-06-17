@@ -3617,5 +3617,80 @@
       }
     ],
     "timestamp": "2026-06-17T11:31:23.655938"
+  },
+  {
+    "day": 10,
+    "cycle": "afternoon",
+    "character": "dan",
+    "action": "He watches her check the rope one last time, then steps back from the barricade.",
+    "thought": "She's leaving and I'm not stopping her.",
+    "location": {
+      "waypoint": "ramp_block",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "tense",
+    "timestamp": "2026-06-17T15:01:26.751548"
+  },
+  {
+    "day": 10,
+    "cycle": "afternoon",
+    "character": "huiling",
+    "action": "She tests the rope tied to the ramp, adjusts her pack, and begins the careful descent toward the streets below.",
+    "thought": "Down there, the doll. I have to go.",
+    "location": {
+      "waypoint": "scavenge_run",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "resolute",
+    "timestamp": "2026-06-17T15:01:26.751548"
+  },
+  {
+    "day": 10,
+    "cycle": "afternoon",
+    "type": "interaction",
+    "characters": [
+      "dan",
+      "huiling"
+    ],
+    "description": "At the ramp in the bright afternoon, Hui Ling checks her rope one last time while Dan watches without blocking her path—both silent, knowing this is it, the food gone and the city empty below.",
+    "dialogue": [
+      {
+        "speaker": "huiling",
+        "line": "The rope's secure?"
+      },
+      {
+        "speaker": "dan",
+        "line": "Tested it twice. You have water?"
+      },
+      {
+        "speaker": "huiling",
+        "line": "Two bottles and the knife."
+      },
+      {
+        "speaker": "dan",
+        "line": "Fifth is clear, but stay away from the shadows."
+      },
+      {
+        "speaker": "huiling",
+        "line": "I know the route. Back by dark."
+      },
+      {
+        "speaker": "dan",
+        "line": "Just come back."
+      },
+      {
+        "speaker": "huiling",
+        "line": "The doll—I saw it from the edge yesterday."
+      },
+      {
+        "speaker": "dan",
+        "line": "I know. Go."
+      }
+    ],
+    "timestamp": "2026-06-17T15:01:26.751548"
   }
 ]

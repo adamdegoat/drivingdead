@@ -7,16 +7,16 @@
     "color": "#f59e0b",
     "scores": {
       "trust": 93,
-      "openness": 76,
+      "openness": 77,
       "ambition": 60,
       "loneliness": 0,
       "resilience": 100,
       "health": 100,
       "hunger": 53,
       "thirst": 53,
-      "energy": 76
+      "energy": 69
     },
-    "mood": "steady",
+    "mood": "tense",
     "location": {
       "waypoint": "ramp_block",
       "x": 42,
@@ -26,7 +26,7 @@
     "relationships": {
       "huiling": {
         "closeness": 100,
-        "tension": 1,
+        "tension": 0,
         "attraction": 81
       }
     },
@@ -48,10 +48,7 @@
       ],
       "beard": true
     },
-    "interaction": {
-      "with": "huiling",
-      "state": "working_together"
-    },
+    "interaction": null,
     "memories": [
       {
         "day": 2,
@@ -89,11 +86,6 @@
         "weight": 2
       },
       {
-        "day": 8,
-        "text": "I told her I'm terrified and let her go.",
-        "weight": 2
-      },
-      {
         "day": 9,
         "text": "I let her go. She's not locked in anymore.",
         "weight": 2
@@ -120,6 +112,11 @@
       },
       {
         "day": 10,
+        "text": "She went and I let her, shaking inside.",
+        "weight": 3
+      },
+      {
+        "day": 10,
         "text": "I'm letting her go when everything wants to chain her.",
         "weight": 2
       }
@@ -134,17 +131,17 @@
     "scores": {
       "trust": 95,
       "openness": 97,
-      "ambition": 50,
+      "ambition": 51,
       "loneliness": 0,
-      "resilience": 77,
+      "resilience": 78,
       "health": 100,
       "hunger": 53,
       "thirst": 53,
-      "energy": 76
+      "energy": 69
     },
     "mood": "resolute",
     "location": {
-      "waypoint": "ramp_block",
+      "waypoint": "scavenge_run",
       "x": 64,
       "y": 44
     },
@@ -152,7 +149,7 @@
     "relationships": {
       "dan": {
         "closeness": 100,
-        "tension": 1,
+        "tension": 0,
         "attraction": 81
       }
     },
@@ -172,10 +169,7 @@
         "slingbag"
       ]
     },
-    "interaction": {
-      "with": "dan",
-      "state": "working_together"
-    },
+    "interaction": null,
     "memories": [
       {
         "day": 2,
@@ -195,11 +189,6 @@
       {
         "day": 7,
         "text": "He let me go when it would have been easy to hold on.",
-        "weight": 2
-      },
-      {
-        "day": 7,
-        "text": "He opened and said he'd carry it with me. I didn't expect that.",
         "weight": 2
       },
       {
@@ -240,6 +229,11 @@
       {
         "day": 10,
         "text": "He's terrified and holding it inside, but he's choosing to let me go.",
+        "weight": 3
+      },
+      {
+        "day": 10,
+        "text": "He let me walk away even though he's terrified.",
         "weight": 3
       },
       {
