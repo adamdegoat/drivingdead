@@ -7,14 +7,14 @@
     "color": "#f59e0b",
     "scores": {
       "trust": 93,
-      "openness": 75,
-      "ambition": 61,
+      "openness": 76,
+      "ambition": 60,
       "loneliness": 0,
-      "resilience": 99,
+      "resilience": 100,
       "health": 100,
       "hunger": 53,
       "thirst": 53,
-      "energy": 83
+      "energy": 76
     },
     "mood": "steady",
     "location": {
@@ -26,7 +26,7 @@
     "relationships": {
       "huiling": {
         "closeness": 100,
-        "tension": 0,
+        "tension": 1,
         "attraction": 81
       }
     },
@@ -79,11 +79,6 @@
         "weight": 3
       },
       {
-        "day": 7,
-        "text": "I watched her head down without locking the gate behind her.",
-        "weight": 2
-      },
-      {
         "day": 8,
         "text": "I finally let her go and survived.",
         "weight": 3
@@ -120,6 +115,11 @@
       },
       {
         "day": 10,
+        "text": "I'm loading her pack and letting her walk into the city alone.",
+        "weight": 3
+      },
+      {
+        "day": 10,
         "text": "I'm letting her go when everything wants to chain her.",
         "weight": 2
       }
@@ -132,17 +132,17 @@
     "archetype": "healer",
     "color": "#22d3ee",
     "scores": {
-      "trust": 94,
+      "trust": 95,
       "openness": 97,
-      "ambition": 49,
+      "ambition": 50,
       "loneliness": 0,
       "resilience": 77,
       "health": 100,
       "hunger": 53,
       "thirst": 53,
-      "energy": 83
+      "energy": 76
     },
-    "mood": "haunted",
+    "mood": "resolute",
     "location": {
       "waypoint": "ramp_block",
       "x": 64,
@@ -152,7 +152,7 @@
     "relationships": {
       "dan": {
         "closeness": 100,
-        "tension": 0,
+        "tension": 1,
         "attraction": 81
       }
     },
@@ -186,11 +186,6 @@
         "day": 5,
         "text": "I left her to die and Dan didn't judge me for it.",
         "weight": 3
-      },
-      {
-        "day": 6,
-        "text": "Dan didn't try to make the guilt smaller. He just stayed there.",
-        "weight": 2
       },
       {
         "day": 7,
@@ -241,6 +236,11 @@
         "day": 9,
         "text": "We ate the last tin and he was beside me.",
         "weight": 2
+      },
+      {
+        "day": 10,
+        "text": "He's terrified and holding it inside, but he's choosing to let me go.",
+        "weight": 3
       },
       {
         "day": 10,

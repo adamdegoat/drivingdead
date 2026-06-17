@@ -3542,5 +3542,80 @@
       }
     ],
     "timestamp": "2026-06-17T07:03:04.276232"
+  },
+  {
+    "day": 10,
+    "cycle": "midday",
+    "character": "dan",
+    "action": "Loading her pack with steady hands, each choice a refusal to hold her back.",
+    "thought": "She's leaving. I can't stop her.",
+    "location": {
+      "waypoint": "ramp_block",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "steady",
+    "timestamp": "2026-06-17T11:31:23.655938"
+  },
+  {
+    "day": 10,
+    "cycle": "midday",
+    "character": "huiling",
+    "action": "Shouldering the pack at the ramp, eyes on the empty streets below.",
+    "thought": "He's terrified. He's letting me anyway.",
+    "location": {
+      "waypoint": "ramp_block",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "resolute",
+    "timestamp": "2026-06-17T11:31:23.655938"
+  },
+  {
+    "day": 10,
+    "cycle": "midday",
+    "type": "interaction",
+    "characters": [
+      "dan",
+      "huiling"
+    ],
+    "description": "At the ramp's barricade, Dan loads her pack one last time while Hui Ling waits—the food gone, the streets empty, the choice finally made.",
+    "dialogue": [
+      {
+        "speaker": "huiling",
+        "line": "The pharmacy's four blocks out. It'll still be full."
+      },
+      {
+        "speaker": "dan",
+        "line": "Four blocks from here. Two from where they cluster."
+      },
+      {
+        "speaker": "huiling",
+        "line": "I've mapped the route. I'll move fast."
+      },
+      {
+        "speaker": "dan",
+        "line": "I know you will. That's not why I'm scared."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Then what?"
+      },
+      {
+        "speaker": "dan",
+        "line": "Losing you. But I'm not holding you back."
+      },
+      {
+        "speaker": "huiling",
+        "line": "I'll be back by dark."
+      },
+      {
+        "speaker": "dan",
+        "line": "Alive is all I need. The food doesn't matter."
+      }
+    ],
+    "timestamp": "2026-06-17T11:31:23.655938"
   }
 ]
