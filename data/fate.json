@@ -1,10 +1,10 @@
 {
-  "day": 10,
-  "text": "Hui Ling hears scratching at the van door—a child, crying, asking for shelter.",
-  "flavor": "a survivor appears",
-  "cycle": "morning",
-  "happens_at": "7am",
+  "day": 11,
+  "text": "Hui Ling discovers Dan has been feeding something outside—maybe infected, maybe human.",
+  "flavor": "the bond is tested",
+  "cycle": "evening",
+  "happens_at": "6pm",
   "status": "upcoming",
-  "revealed_at": "2026-06-18T00:00:53.708252",
+  "revealed_at": "2026-06-19T00:00:25.599190",
   "activated_at": null
 }
