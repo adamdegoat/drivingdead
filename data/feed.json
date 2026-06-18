@@ -3996,5 +3996,92 @@
       }
     ],
     "timestamp": "2026-06-18T11:32:09.101091"
+  },
+  {
+    "day": 11,
+    "cycle": "afternoon",
+    "character": "dan",
+    "action": "He discovers the solar array frame has collapsed and moves through the wreckage, checking which panels are salvageable and which connections are severed.",
+    "thought": "I can fix this. Just need the materials.",
+    "location": {
+      "waypoint": "solar_array",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "Focused",
+    "timestamp": "2026-06-18T15:01:54.610231"
+  },
+  {
+    "day": 11,
+    "cycle": "afternoon",
+    "character": "huiling",
+    "action": "She finds Dan at the collapsed rig and moves with him through the debris, understanding at once what has to happen—and that she will be the one to go.",
+    "thought": "He's trusting me. I won't let him down.",
+    "location": {
+      "waypoint": "solar_array",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "Determined",
+    "timestamp": "2026-06-18T15:01:54.610231"
+  },
+  {
+    "day": 11,
+    "cycle": "afternoon",
+    "type": "interaction",
+    "characters": [
+      "dan",
+      "huiling"
+    ],
+    "description": "The solar rig fails in the afternoon wind; Dan and Hui Ling stand at the collapsed frame, checking which panels are salvageable and planning the rebuild.",
+    "dialogue": [
+      {
+        "speaker": "dan",
+        "line": "The rig's gone. Frame's destroyed."
+      },
+      {
+        "speaker": "huiling",
+        "line": "What happened?"
+      },
+      {
+        "speaker": "dan",
+        "line": "Wind, I think. The mounts weren't strong enough."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Can you rebuild?"
+      },
+      {
+        "speaker": "dan",
+        "line": "Yeah. Need metal, bolts, brackets."
+      },
+      {
+        "speaker": "huiling",
+        "line": "I'll get them."
+      },
+      {
+        "speaker": "dan",
+        "line": "It'll be in the city. Dangerous."
+      },
+      {
+        "speaker": "huiling",
+        "line": "I've done it before."
+      },
+      {
+        "speaker": "dan",
+        "line": "I know. Tomorrow, then."
+      },
+      {
+        "speaker": "huiling",
+        "line": "At dawn."
+      },
+      {
+        "speaker": "dan",
+        "line": "I'll have the ramp locked."
+      }
+    ],
+    "timestamp": "2026-06-18T15:01:54.610231"
   }
 ]

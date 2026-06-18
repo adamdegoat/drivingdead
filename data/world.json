@@ -1,10 +1,8 @@
 {
   "day": 11,
-  "cycle": "midday",
+  "cycle": "afternoon",
   "weather": "clear",
-  "pending_events": [
-    "Solar Rig collapsed from neglect/weather."
-  ],
+  "pending_events": [],
   "started": "2026-06-08",
   "structures": [
     {
@@ -25,23 +23,23 @@
     "fuel": 30
   },
   "last_run_date": "2026-06-18",
-  "pulse": "Dan stops counting the seconds of her absence, and Hui Ling notices — the ease of it sinks into both of them like warmth.",
-  "scene": "The solar panels are running full in the clear sun and the battery's topped off; Hui Ling kneels in the garden while Dan sits nearby, the first easy afternoon in months.",
+  "pulse": "When the rig fails, Dan steadies and Hui Ling steps up—the crisis tests them, and the bond holds.",
+  "scene": "The solar rig fails in the afternoon wind; Dan and Hui Ling stand at the collapsed frame, checking which panels are salvageable and planning the rebuild.",
   "resources_prev": {
-    "food": 84,
-    "water": 100,
-    "wood": 96,
-    "medicine": 28
-  },
-  "resources": {
     "food": 95,
     "water": 94,
     "wood": 100,
     "medicine": 28
   },
-  "camp_climate": "content",
+  "resources": {
+    "food": 86,
+    "water": 94,
+    "wood": 100,
+    "medicine": 28
+  },
+  "camp_climate": "steady",
   "discoveries": [],
-  "last_cycle_key": "2026-06-18:midday",
+  "last_cycle_key": "2026-06-18:afternoon",
   "day_summaries": {
     "1": "Day 1 was clear and warm — good charging, hot meals in the cab, the systems steady. At dusk, Hui Ling found injured birds on the ramp and sheltered them on the van's corner despite Dan's strong refusal. By nightfall, they were sitting together in guarded silence, both aware that the cost of survival might exceed what they could afford to become.",
     "2": "Day 2 escalated from injured birds to a moral standoff: Dan refused shelter, and by nightfall, he blocked the van door as Hui Ling reached for it. When she asked why, he finally broke—not afraid of the dead, but of her leaving. The night left them both caged, one by the city, one by his terror.",
