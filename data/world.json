@@ -1,45 +1,47 @@
 {
   "day": 11,
-  "cycle": "morning",
+  "cycle": "midday",
   "weather": "clear",
-  "pending_events": [],
+  "pending_events": [
+    "Solar Rig collapsed from neglect/weather."
+  ],
   "started": "2026-06-08",
   "structures": [
     {
       "id": "solar_rig",
       "type": "solar_rig",
       "level": 1,
-      "condition": 4,
+      "condition": 100,
       "x": 50,
       "y": 55,
       "builder": null,
-      "day": 6,
+      "day": 11,
       "label": "Solar Rig",
       "baked": true
     }
   ],
   "fire": {
     "lit": true,
-    "fuel": 6
+    "fuel": 30
   },
   "last_run_date": "2026-06-18",
-  "pulse": "Dan is learning to let her choose without terror—this morning, that's hot coffee and a quiet understanding between them.",
-  "scene": "Clear sky charges the battery; at dawn in the van, Dan pours hot coffee while Hui Ling organizes water stores, Dan watching without hovering—learning a new way to hold on.",
+  "pulse": "Dan stops counting the seconds of her absence, and Hui Ling notices — the ease of it sinks into both of them like warmth.",
+  "scene": "The solar panels are running full in the clear sun and the battery's topped off; Hui Ling kneels in the garden while Dan sits nearby, the first easy afternoon in months.",
   "resources_prev": {
-    "food": 72,
-    "water": 76,
-    "wood": 100,
-    "medicine": 28
-  },
-  "resources": {
     "food": 84,
     "water": 100,
     "wood": 96,
     "medicine": 28
   },
+  "resources": {
+    "food": 95,
+    "water": 94,
+    "wood": 100,
+    "medicine": 28
+  },
   "camp_climate": "content",
   "discoveries": [],
-  "last_cycle_key": "2026-06-18:morning",
+  "last_cycle_key": "2026-06-18:midday",
   "day_summaries": {
     "1": "Day 1 was clear and warm — good charging, hot meals in the cab, the systems steady. At dusk, Hui Ling found injured birds on the ramp and sheltered them on the van's corner despite Dan's strong refusal. By nightfall, they were sitting together in guarded silence, both aware that the cost of survival might exceed what they could afford to become.",
     "2": "Day 2 escalated from injured birds to a moral standoff: Dan refused shelter, and by nightfall, he blocked the van door as Hui Ling reached for it. When she asked why, he finally broke—not afraid of the dead, but of her leaving. The night left them both caged, one by the city, one by his terror.",

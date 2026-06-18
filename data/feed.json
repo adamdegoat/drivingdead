@@ -3921,5 +3921,80 @@
       }
     ],
     "timestamp": "2026-06-18T07:02:09.674068"
+  },
+  {
+    "day": 11,
+    "cycle": "midday",
+    "character": "dan",
+    "action": "Sits on a low edge near the garden, watching the rooftop and the city beyond while Hui Ling kneels in the soil.",
+    "thought": "I can sit still and not lose her.",
+    "location": {
+      "waypoint": "garden_corner",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "peaceful",
+    "timestamp": "2026-06-18T11:32:09.101091"
+  },
+  {
+    "day": 11,
+    "cycle": "midday",
+    "character": "huiling",
+    "action": "Kneels in the rooftop garden, planting seeds and checking the soil depth, aware of Dan's steady presence nearby.",
+    "thought": "He's finally not counting the time.",
+    "location": {
+      "waypoint": "garden_corner",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "warm",
+    "timestamp": "2026-06-18T11:32:09.101091"
+  },
+  {
+    "day": 11,
+    "cycle": "midday",
+    "type": "interaction",
+    "characters": [
+      "dan",
+      "huiling"
+    ],
+    "description": "Hui Ling tends the rooftop garden while Dan sits on a nearby ledge, and the silence between them is easy for the first time — no clock-watching, no fear, just two people at their own work.",
+    "dialogue": [
+      {
+        "speaker": "huiling",
+        "line": "The garden's taking. The soil's rich."
+      },
+      {
+        "speaker": "dan",
+        "line": "You've got the depth right. Good work."
+      },
+      {
+        "speaker": "huiling",
+        "line": "I thought it would fail. Everything else did."
+      },
+      {
+        "speaker": "dan",
+        "line": "Most things don't make it. But some do."
+      },
+      {
+        "speaker": "huiling",
+        "line": "I'm betting on that. For the seeds, for us."
+      },
+      {
+        "speaker": "dan",
+        "line": "I know. I'm not fighting it anymore."
+      },
+      {
+        "speaker": "huiling",
+        "line": "What changed?"
+      },
+      {
+        "speaker": "dan",
+        "line": "You came back yesterday. That was enough."
+      }
+    ],
+    "timestamp": "2026-06-18T11:32:09.101091"
   }
 ]

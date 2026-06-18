@@ -6,19 +6,19 @@
     "archetype": "builder",
     "color": "#f59e0b",
     "scores": {
-      "trust": 97,
-      "openness": 78,
+      "trust": 99,
+      "openness": 79,
       "ambition": 60,
       "loneliness": 0,
       "resilience": 100,
       "health": 100,
-      "hunger": 56,
+      "hunger": 48,
       "thirst": 53,
-      "energy": 93
+      "energy": 86
     },
     "mood": "peaceful",
     "location": {
-      "waypoint": "van_rear",
+      "waypoint": "garden_corner",
       "x": 42,
       "y": 52
     },
@@ -50,7 +50,7 @@
     },
     "interaction": {
       "with": "huiling",
-      "state": "working_together"
+      "state": "sitting_together"
     },
     "memories": [
       {
@@ -89,11 +89,6 @@
         "weight": 2
       },
       {
-        "day": 9,
-        "text": "She came back. I let her go and she survived it.",
-        "weight": 2
-      },
-      {
         "day": 10,
         "text": "I'm loading her pack and letting her walk into the city alone.",
         "weight": 3
@@ -122,6 +117,11 @@
         "day": 11,
         "text": "I poured the coffee and didn't tell her how.",
         "weight": 2
+      },
+      {
+        "day": 11,
+        "text": "I let her work and didn't count the time. She came back because I trusted.",
+        "weight": 2
       }
     ]
   },
@@ -132,19 +132,19 @@
     "archetype": "healer",
     "color": "#22d3ee",
     "scores": {
-      "trust": 99,
+      "trust": 100,
       "openness": 98,
       "ambition": 52,
       "loneliness": 0,
       "resilience": 81,
       "health": 100,
-      "hunger": 56,
+      "hunger": 48,
       "thirst": 53,
-      "energy": 93
+      "energy": 86
     },
     "mood": "warm",
     "location": {
-      "waypoint": "van_rear",
+      "waypoint": "garden_corner",
       "x": 64,
       "y": 44
     },
@@ -174,7 +174,7 @@
     },
     "interaction": {
       "with": "dan",
-      "state": "working_together"
+      "state": "sitting_together"
     },
     "memories": [
       {
@@ -213,11 +213,6 @@
         "weight": 2
       },
       {
-        "day": 9,
-        "text": "We ate the last tin and he was beside me.",
-        "weight": 2
-      },
-      {
         "day": 10,
         "text": "He's terrified and holding it inside, but he's choosing to let me go.",
         "weight": 3
@@ -245,6 +240,11 @@
       {
         "day": 11,
         "text": "He's not planning my day anymore. Just handing me things.",
+        "weight": 2
+      },
+      {
+        "day": 11,
+        "text": "He sat quiet while I worked. That's faith, not fear.",
         "weight": 2
       }
     ]
