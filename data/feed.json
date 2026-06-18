@@ -4237,5 +4237,80 @@
       }
     ],
     "timestamp": "2026-06-18T22:33:02.416274"
+  },
+  {
+    "day": 12,
+    "cycle": "morning",
+    "character": "dan",
+    "action": "He kneels at the solar array, checking the bent frame with his hands, testing its flex, and laying out the cracked panels.",
+    "thought": "Frame bends but doesn't break. Spares ready.",
+    "location": {
+      "waypoint": "solar_array",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "focused",
+    "timestamp": "2026-06-19T07:03:19.860596"
+  },
+  {
+    "day": 12,
+    "cycle": "morning",
+    "character": "huiling",
+    "action": "She emerges from the van with water and settles beside him at the array, checking the damage with quiet hands.",
+    "thought": "He's not panicking. Just building again.",
+    "location": {
+      "waypoint": "solar_array",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "calm",
+    "timestamp": "2026-06-19T07:03:19.860596"
+  },
+  {
+    "day": 12,
+    "cycle": "morning",
+    "type": "interaction",
+    "characters": [
+      "dan",
+      "huiling"
+    ],
+    "description": "In the early light, Dan checks the bent frame and cracked panels at the solar array while Hui Ling sits with water—bad damage but spares ready, both steady.",
+    "dialogue": [
+      {
+        "speaker": "huiling",
+        "line": "You're already working?"
+      },
+      {
+        "speaker": "dan",
+        "line": "Frame's bent, two panels cracked."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Can you fix it?"
+      },
+      {
+        "speaker": "dan",
+        "line": "Have spares in storage. Planned for this."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Of course you did."
+      },
+      {
+        "speaker": "dan",
+        "line": "Come help me get them out?"
+      },
+      {
+        "speaker": "huiling",
+        "line": "Yeah. Let's get the rig back online."
+      },
+      {
+        "speaker": "dan",
+        "line": "Shouldn't take long."
+      }
+    ],
+    "timestamp": "2026-06-19T07:03:19.860596"
   }
 ]

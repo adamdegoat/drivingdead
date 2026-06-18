@@ -12,11 +12,11 @@
       "loneliness": 0,
       "resilience": 100,
       "health": 100,
-      "hunger": 53,
-      "thirst": 45,
-      "energy": 100
+      "hunger": 45,
+      "thirst": 53,
+      "energy": 93
     },
-    "mood": "steady",
+    "mood": "focused",
     "location": {
       "waypoint": "solar_array",
       "x": 42,
@@ -138,11 +138,11 @@
       "loneliness": 0,
       "resilience": 83,
       "health": 100,
-      "hunger": 53,
-      "thirst": 45,
-      "energy": 100
+      "hunger": 45,
+      "thirst": 53,
+      "energy": 93
     },
-    "mood": "steady",
+    "mood": "calm",
     "location": {
       "waypoint": "solar_array",
       "x": 64,

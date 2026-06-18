@@ -1,27 +1,32 @@
 {
   "world": "drivingdead",
   "poll": {
-    "id": "2026-06-18",
+    "id": "2026-06-19",
     "closes": "tonight",
-    "question": "Hui Ling came back alive. Should Dan seal the van tight and rest, or should they move to find a safer location?",
+    "question": "Solar rig down, panels cracked, frame bent. For the first time in twelve days, Dan and Hui Ling are warm, fed, easy together. Start the repair tonight while light holds, ",
     "options": [
       {
-        "id": "move_tonight",
-        "label": "Move the van",
-        "desc": "They've got supplies and fuel. Maybe it's time to find better shelter."
+        "id": "work_tonight",
+        "label": "Work tonight",
+        "desc": "Daylight is survival currency—fix it before dark hits and the cold deepens."
       },
       {
-        "id": "seal_and_rest",
-        "label": "Seal and rest",
-        "desc": "The doll is here, the food is back. Maybe tonight is about building home."
+        "id": "rest_first",
+        "label": "Rest first",
+        "desc": "This peace is fragile and earned—they need whole strength, not half-spent."
+      },
+      {
+        "id": "prep_tonight",
+        "label": "Prep tonight, work tomorrow",
+        "desc": "Busy hands while light lasts, then rest knowing tomorrow's ready—balance and survival."
       }
     ]
   },
   "in_play": {
-    "id": "hand_her_rope",
-    "label": "He hands her the rope",
-    "desc": "Some love is letting her choose; trust her, watch her go",
-    "decided": "2026-06-18",
+    "id": "move_tonight",
+    "label": "Move the van",
+    "desc": "They've got supplies and fuel. Maybe it's time to find better shelter.",
+    "decided": "2026-06-19",
     "votes": 0,
     "tally": {}
   }
