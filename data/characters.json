@@ -7,14 +7,14 @@
     "color": "#f59e0b",
     "scores": {
       "trust": 99,
-      "openness": 80,
+      "openness": 81,
       "ambition": 60,
       "loneliness": 0,
       "resilience": 100,
       "health": 100,
-      "hunger": 53,
+      "hunger": 45,
       "thirst": 53,
-      "energy": 79
+      "energy": 72
     },
     "mood": "Focused",
     "location": {
@@ -138,9 +138,9 @@
       "loneliness": 0,
       "resilience": 82,
       "health": 100,
-      "hunger": 53,
+      "hunger": 45,
       "thirst": 53,
-      "energy": 79
+      "energy": 72
     },
     "mood": "Determined",
     "location": {

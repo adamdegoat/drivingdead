@@ -4083,5 +4083,84 @@
       }
     ],
     "timestamp": "2026-06-18T15:01:54.610231"
+  },
+  {
+    "day": 11,
+    "cycle": "evening",
+    "character": "dan",
+    "action": "Stands at the collapsed solar array frame in the cooling evening, running hands over bent metal and cracked panels, already calculating salvage points.",
+    "thought": "Frame bends but doesn't break. We're okay.",
+    "location": {
+      "waypoint": "solar_array",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "Focused",
+    "timestamp": "2026-06-18T18:33:43.269011"
+  },
+  {
+    "day": 11,
+    "cycle": "evening",
+    "character": "huiling",
+    "action": "Kneels beside the array turning over a cracked panel, checking if cells inside are salvageable, tracking Dan's assessment with quiet focus.",
+    "thought": "He's not spiraling, and neither am I.",
+    "location": {
+      "waypoint": "solar_array",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "Determined",
+    "timestamp": "2026-06-18T18:33:43.269011"
+  },
+  {
+    "day": 11,
+    "cycle": "evening",
+    "type": "interaction",
+    "characters": [
+      "dan",
+      "huiling"
+    ],
+    "description": "By the damaged solar array in the cooling evening, Dan and Hui Ling stand assessing what the afternoon wind broke—two cracked panels, a bent frame—already planning salvage and tomorrow's rebuild.",
+    "dialogue": [
+      {
+        "speaker": "huiling",
+        "line": "Two panels cracked, one frame bent. Could've been worse."
+      },
+      {
+        "speaker": "dan",
+        "line": "Frame's fixable. Panels… we're down to three working."
+      },
+      {
+        "speaker": "huiling",
+        "line": "What about the battery? It held the wind."
+      },
+      {
+        "speaker": "dan",
+        "line": "Held. Frame caught the worst. We lost mounting points."
+      },
+      {
+        "speaker": "huiling",
+        "line": "So we rebuild the mounts and salvage what we can?"
+      },
+      {
+        "speaker": "dan",
+        "line": "Yeah. That's the job."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Okay. We'll do that tomorrow when it's light."
+      },
+      {
+        "speaker": "dan",
+        "line": "You're steady about this."
+      },
+      {
+        "speaker": "huiling",
+        "line": "We're steady about this."
+      }
+    ],
+    "timestamp": "2026-06-18T18:33:43.269011"
   }
 ]

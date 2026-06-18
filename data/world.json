@@ -1,6 +1,6 @@
 {
   "day": 11,
-  "cycle": "afternoon",
+  "cycle": "evening",
   "weather": "clear",
   "pending_events": [],
   "started": "2026-06-08",
@@ -9,7 +9,7 @@
       "id": "solar_rig",
       "type": "solar_rig",
       "level": 1,
-      "condition": 100,
+      "condition": 96,
       "x": 50,
       "y": 55,
       "builder": null,
@@ -20,26 +20,26 @@
   ],
   "fire": {
     "lit": true,
-    "fuel": 30
+    "fuel": 17
   },
   "last_run_date": "2026-06-18",
-  "pulse": "When the rig fails, Dan steadies and Hui Ling steps up—the crisis tests them, and the bond holds.",
-  "scene": "The solar rig fails in the afternoon wind; Dan and Hui Ling stand at the collapsed frame, checking which panels are salvageable and planning the rebuild.",
+  "pulse": "The rig broke but their trust held—he trusts her mind, she trusts his lead, and tomorrow's repair feels shared.",
+  "scene": "The afternoon wind damaged the solar rig, cracking two panels and bending a frame, but they stood together in the cooling dusk planning salvage and rebuild without fracturing.",
   "resources_prev": {
-    "food": 95,
+    "food": 86,
     "water": 94,
     "wood": 100,
     "medicine": 28
   },
   "resources": {
-    "food": 86,
+    "food": 97,
     "water": 94,
     "wood": 100,
     "medicine": 28
   },
   "camp_climate": "steady",
   "discoveries": [],
-  "last_cycle_key": "2026-06-18:afternoon",
+  "last_cycle_key": "2026-06-18:evening",
   "day_summaries": {
     "1": "Day 1 was clear and warm — good charging, hot meals in the cab, the systems steady. At dusk, Hui Ling found injured birds on the ramp and sheltered them on the van's corner despite Dan's strong refusal. By nightfall, they were sitting together in guarded silence, both aware that the cost of survival might exceed what they could afford to become.",
     "2": "Day 2 escalated from injured birds to a moral standoff: Dan refused shelter, and by nightfall, he blocked the van door as Hui Ling reached for it. When she asked why, he finally broke—not afraid of the dead, but of her leaving. The night left them both caged, one by the city, one by his terror.",
