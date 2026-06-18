@@ -4162,5 +4162,80 @@
       }
     ],
     "timestamp": "2026-06-18T18:33:43.269011"
+  },
+  {
+    "day": 11,
+    "cycle": "night",
+    "character": "dan",
+    "action": "Lay out the damaged panel pieces and the bent solar frame on the deck, accounting for what's salvageable and what's lost.",
+    "thought": "The tools are there. I can fix this.",
+    "location": {
+      "waypoint": "solar_array",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "steady",
+    "timestamp": "2026-06-18T22:33:02.416274"
+  },
+  {
+    "day": 11,
+    "cycle": "night",
+    "character": "huiling",
+    "action": "Check the frame's bend and test each cracked panel, helping Dan separate what can be straightened from what's truly gone.",
+    "thought": "He's not falling apart. We've got this.",
+    "location": {
+      "waypoint": "solar_array",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "steady",
+    "timestamp": "2026-06-18T22:33:02.416274"
+  },
+  {
+    "day": 11,
+    "cycle": "night",
+    "type": "interaction",
+    "characters": [
+      "dan",
+      "huiling"
+    ],
+    "description": "By the van's light, Dan lays out salvageable panel pieces while Hui Ling checks the frame's bend—no panic, just accounting for what broke and what can still work.",
+    "dialogue": [
+      {
+        "speaker": "dan",
+        "line": "Two panels are gone, but the frame is just bent."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Can you straighten it?"
+      },
+      {
+        "speaker": "dan",
+        "line": "The torch and some weight, maybe three hours tomorrow if it's clear."
+      },
+      {
+        "speaker": "huiling",
+        "line": "You'll want help?"
+      },
+      {
+        "speaker": "dan",
+        "line": "Your hands are steadier. Spot me on the rig?"
+      },
+      {
+        "speaker": "huiling",
+        "line": "Of course."
+      },
+      {
+        "speaker": "dan",
+        "line": "This isn't the end of it."
+      },
+      {
+        "speaker": "huiling",
+        "line": "No. But we've handled worse."
+      }
+    ],
+    "timestamp": "2026-06-18T22:33:02.416274"
   }
 ]

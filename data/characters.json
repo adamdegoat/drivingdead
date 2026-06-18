@@ -8,15 +8,15 @@
     "scores": {
       "trust": 99,
       "openness": 81,
-      "ambition": 60,
+      "ambition": 61,
       "loneliness": 0,
       "resilience": 100,
       "health": 100,
-      "hunger": 45,
-      "thirst": 53,
-      "energy": 72
+      "hunger": 53,
+      "thirst": 45,
+      "energy": 100
     },
-    "mood": "Focused",
+    "mood": "steady",
     "location": {
       "waypoint": "solar_array",
       "x": 42,
@@ -136,13 +136,13 @@
       "openness": 98,
       "ambition": 52,
       "loneliness": 0,
-      "resilience": 82,
+      "resilience": 83,
       "health": 100,
-      "hunger": 45,
-      "thirst": 53,
-      "energy": 72
+      "hunger": 53,
+      "thirst": 45,
+      "energy": 100
     },
-    "mood": "Determined",
+    "mood": "steady",
     "location": {
       "waypoint": "solar_array",
       "x": 64,
