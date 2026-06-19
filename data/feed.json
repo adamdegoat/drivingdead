@@ -4395,5 +4395,92 @@
       }
     ],
     "timestamp": "2026-06-19T11:32:40.696983"
+  },
+  {
+    "day": 12,
+    "cycle": "afternoon",
+    "character": "dan",
+    "action": "Dan kneels by the cracked panels at the solar array, assessing what the wind left salvageable and what can't be fixed again.",
+    "thought": "I finally admitted: I don't know the answers.",
+    "location": {
+      "waypoint": "solar_array",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "thoughtful",
+    "timestamp": "2026-06-19T15:02:44.531072"
+  },
+  {
+    "day": 12,
+    "cycle": "afternoon",
+    "character": "huiling",
+    "action": "Hui Ling sits on a tool crate, watching him work, then finally says aloud what they've both been thinking.",
+    "thought": "He trusted me enough to doubt. That's new.",
+    "location": {
+      "waypoint": "solar_array",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "attentive",
+    "timestamp": "2026-06-19T15:02:44.531072"
+  },
+  {
+    "day": 12,
+    "cycle": "afternoon",
+    "type": "interaction",
+    "characters": [
+      "dan",
+      "huiling"
+    ],
+    "description": "At the solar array, Dan and Hui Ling stand over cracked panels and a bent frame, and Dan finally says aloud what Hui Ling's been thinking: they can't keep doing this.",
+    "dialogue": [
+      {
+        "speaker": "dan",
+        "line": "It held."
+      },
+      {
+        "speaker": "huiling",
+        "line": "This time."
+      },
+      {
+        "speaker": "dan",
+        "line": "We can patch the next time."
+      },
+      {
+        "speaker": "huiling",
+        "line": "How many times, though?"
+      },
+      {
+        "speaker": "dan",
+        "line": "As many as it takes."
+      },
+      {
+        "speaker": "huiling",
+        "line": "But we're still just surviving."
+      },
+      {
+        "speaker": "dan",
+        "line": "Surviving is what matters."
+      },
+      {
+        "speaker": "huiling",
+        "line": "For how long, like this?"
+      },
+      {
+        "speaker": "dan",
+        "line": "You're saying we leave."
+      },
+      {
+        "speaker": "huiling",
+        "line": "I'm saying we should think about it."
+      },
+      {
+        "speaker": "dan",
+        "line": "And maybe we should."
+      }
+    ],
+    "timestamp": "2026-06-19T15:02:44.531072"
   }
 ]
