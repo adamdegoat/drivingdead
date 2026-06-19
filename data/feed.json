@@ -4312,5 +4312,88 @@
       }
     ],
     "timestamp": "2026-06-19T07:03:19.860596"
+  },
+  {
+    "day": 12,
+    "cycle": "midday",
+    "character": "dan",
+    "action": "He kneels among the salvageable panels, assessing which breaks can be patched and which parts are gone.",
+    "thought": "Most of it we can fix.",
+    "location": {
+      "waypoint": "solar_array",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "focused",
+    "timestamp": "2026-06-19T11:32:40.696983"
+  },
+  {
+    "day": 12,
+    "cycle": "midday",
+    "character": "huiling",
+    "action": "She sits nearby watching the dead city below, hands on her knees, present but quietly thinking further ahead.",
+    "thought": "We can't just keep patching things.",
+    "location": {
+      "waypoint": "solar_array",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "thoughtful",
+    "timestamp": "2026-06-19T11:32:40.696983"
+  },
+  {
+    "day": 12,
+    "cycle": "midday",
+    "type": "interaction",
+    "characters": [
+      "dan",
+      "huiling"
+    ],
+    "description": "In clear midday, Dan and Hui Ling sort yesterday's wind damage—salvageable panels and bent frame—their hands steady but a question rising: whether this roof can hold them both much longer.",
+    "dialogue": [
+      {
+        "speaker": "huiling",
+        "line": "How many days do we have without panels?"
+      },
+      {
+        "speaker": "dan",
+        "line": "Three, maybe four if we run minimal."
+      },
+      {
+        "speaker": "huiling",
+        "line": "And if we can't salvage these?"
+      },
+      {
+        "speaker": "dan",
+        "line": "Then we've got maybe two months before power becomes the problem."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Not if we move sooner."
+      },
+      {
+        "speaker": "dan",
+        "line": "Move where?"
+      },
+      {
+        "speaker": "huiling",
+        "line": "I don't know yet. Somewhere with more options."
+      },
+      {
+        "speaker": "dan",
+        "line": "Options mean risk."
+      },
+      {
+        "speaker": "huiling",
+        "line": "So does staying."
+      },
+      {
+        "speaker": "dan",
+        "line": "Yeah."
+      }
+    ],
+    "timestamp": "2026-06-19T11:32:40.696983"
   }
 ]

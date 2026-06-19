@@ -6,15 +6,15 @@
     "archetype": "builder",
     "color": "#f59e0b",
     "scores": {
-      "trust": 99,
-      "openness": 81,
+      "trust": 100,
+      "openness": 82,
       "ambition": 61,
       "loneliness": 0,
       "resilience": 100,
       "health": 100,
-      "hunger": 45,
+      "hunger": 53,
       "thirst": 53,
-      "energy": 93
+      "energy": 86
     },
     "mood": "focused",
     "location": {
@@ -84,11 +84,6 @@
         "weight": 3
       },
       {
-        "day": 9,
-        "text": "I let her go. She's not locked in anymore.",
-        "weight": 2
-      },
-      {
         "day": 10,
         "text": "I'm loading her pack and letting her walk into the city alone.",
         "weight": 3
@@ -122,6 +117,11 @@
         "day": 11,
         "text": "I let her work and didn't count the time. She came back because I trusted.",
         "weight": 2
+      },
+      {
+        "day": 12,
+        "text": "She raised the move and I didn't fight. We both feel it.",
+        "weight": 2
       }
     ]
   },
@@ -134,15 +134,15 @@
     "scores": {
       "trust": 100,
       "openness": 98,
-      "ambition": 52,
+      "ambition": 53,
       "loneliness": 0,
       "resilience": 83,
       "health": 100,
-      "hunger": 45,
+      "hunger": 53,
       "thirst": 53,
-      "energy": 93
+      "energy": 86
     },
-    "mood": "calm",
+    "mood": "thoughtful",
     "location": {
       "waypoint": "solar_array",
       "x": 64,
@@ -208,11 +208,6 @@
         "weight": 2
       },
       {
-        "day": 9,
-        "text": "He heard the doll matter and didn't try to erase my ghosts.",
-        "weight": 2
-      },
-      {
         "day": 10,
         "text": "He's terrified and holding it inside, but he's choosing to let me go.",
         "weight": 3
@@ -245,6 +240,11 @@
       {
         "day": 11,
         "text": "He sat quiet while I worked. That's faith, not fear.",
+        "weight": 2
+      },
+      {
+        "day": 12,
+        "text": "He heard me about moving and didn't shut down. Maybe he's thinking it too.",
         "weight": 2
       }
     ]
