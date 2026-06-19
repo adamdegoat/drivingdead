@@ -4482,5 +4482,88 @@
       }
     ],
     "timestamp": "2026-06-19T15:02:44.531072"
+  },
+  {
+    "day": 12,
+    "cycle": "evening",
+    "character": "dan",
+    "action": "At the solar array as light fades, Dan checks the bent frame one last time, running his hand over the cracked panel.",
+    "thought": "I was not built for leaving.",
+    "location": {
+      "waypoint": "solar_array",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "thoughtful",
+    "timestamp": "2026-06-19T18:31:46.706553"
+  },
+  {
+    "day": 12,
+    "cycle": "evening",
+    "character": "huiling",
+    "action": "Hui Ling stands beside him, hands in her pockets, watching him look at the damage they can't keep fixing forever.",
+    "thought": "He's finally listening. Finally here.",
+    "location": {
+      "waypoint": "solar_array",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "steady",
+    "timestamp": "2026-06-19T18:31:46.706553"
+  },
+  {
+    "day": 12,
+    "cycle": "evening",
+    "type": "interaction",
+    "characters": [
+      "huiling",
+      "dan"
+    ],
+    "description": "By fading dusk light at the solar array, Dan runs his hand over the cracked panels and admits they need a plan for moving; Hui Ling stands beside him, and for the first time he says yes.",
+    "dialogue": [
+      {
+        "speaker": "huiling",
+        "line": "You're checking the frame again."
+      },
+      {
+        "speaker": "dan",
+        "line": "Light's almost gone. Want to see it while I can."
+      },
+      {
+        "speaker": "huiling",
+        "line": "It'll hold longer. We just need a plan."
+      },
+      {
+        "speaker": "dan",
+        "line": "For staying or leaving?"
+      },
+      {
+        "speaker": "huiling",
+        "line": "For moving. Before it gets worse."
+      },
+      {
+        "speaker": "dan",
+        "line": "I don't know how to do that. Leave, I mean."
+      },
+      {
+        "speaker": "huiling",
+        "line": "We learn. We always do."
+      },
+      {
+        "speaker": "dan",
+        "line": "Yeah. Tomorrow?"
+      },
+      {
+        "speaker": "huiling",
+        "line": "We start planning tomorrow."
+      },
+      {
+        "speaker": "dan",
+        "line": "Okay. Tomorrow."
+      }
+    ],
+    "timestamp": "2026-06-19T18:31:46.706553"
   }
 ]

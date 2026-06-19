@@ -1,6 +1,6 @@
 {
   "day": 12,
-  "cycle": "afternoon",
+  "cycle": "evening",
   "weather": "clear",
   "pending_events": [],
   "started": "2026-06-08",
@@ -9,7 +9,7 @@
       "id": "solar_rig",
       "type": "solar_rig",
       "level": 1,
-      "condition": 80,
+      "condition": 76,
       "x": 50,
       "y": 55,
       "builder": null,
@@ -20,26 +20,26 @@
   ],
   "fire": {
     "lit": true,
-    "fuel": 1
+    "fuel": 6
   },
   "last_run_date": "2026-06-19",
-  "pulse": "Dan finally opens to what Hui Ling's been carrying, and she realizes he's not defending the fortress anymore.",
-  "scene": "In clear afternoon at the solar array, they assessed the wind damage and Dan finally voiced what Hui Ling had been thinking. Neither one was shutting down the bigger question anymore.",
+  "pulse": "Dan stops defending the van and starts planning to leave it—but the fear of leaving is real for both of them.",
+  "scene": "By fading dusk light at the solar array, Dan runs his hand over the cracked panels and admits they need a plan for moving; Hui Ling stands beside him, and for the first time he says yes.",
   "resources_prev": {
-    "food": 89,
-    "water": 94,
-    "wood": 96,
-    "medicine": 28
-  },
-  "resources": {
     "food": 99,
     "water": 94,
     "wood": 100,
     "medicine": 28
   },
+  "resources": {
+    "food": 89,
+    "water": 94,
+    "wood": 96,
+    "medicine": 28
+  },
   "camp_climate": "steady",
   "discoveries": [],
-  "last_cycle_key": "2026-06-19:afternoon",
+  "last_cycle_key": "2026-06-19:evening",
   "day_summaries": {
     "1": "Day 1 was clear and warm — good charging, hot meals in the cab, the systems steady. At dusk, Hui Ling found injured birds on the ramp and sheltered them on the van's corner despite Dan's strong refusal. By nightfall, they were sitting together in guarded silence, both aware that the cost of survival might exceed what they could afford to become.",
     "2": "Day 2 escalated from injured birds to a moral standoff: Dan refused shelter, and by nightfall, he blocked the van door as Hui Ling reached for it. When she asked why, he finally broke—not afraid of the dead, but of her leaving. The night left them both caged, one by the city, one by his terror.",

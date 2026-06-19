@@ -7,14 +7,14 @@
     "color": "#f59e0b",
     "scores": {
       "trust": 100,
-      "openness": 84,
-      "ambition": 63,
+      "openness": 86,
+      "ambition": 62,
       "loneliness": 0,
       "resilience": 100,
       "health": 100,
-      "hunger": 45,
+      "hunger": 53,
       "thirst": 53,
-      "energy": 79
+      "energy": 72
     },
     "mood": "thoughtful",
     "location": {
@@ -99,11 +99,6 @@
         "weight": 3
       },
       {
-        "day": 10,
-        "text": "I'm letting her go when everything wants to chain her.",
-        "weight": 2
-      },
-      {
         "day": 11,
         "text": "I poured the coffee and didn't tell her how.",
         "weight": 2
@@ -122,6 +117,11 @@
         "day": 12,
         "text": "I finally admitted: I don't know the answers.",
         "weight": 2
+      },
+      {
+        "day": 12,
+        "text": "She said move and I didn't shut down. I said yes.",
+        "weight": 2
       }
     ]
   },
@@ -134,15 +134,15 @@
     "scores": {
       "trust": 100,
       "openness": 98,
-      "ambition": 54,
+      "ambition": 55,
       "loneliness": 0,
-      "resilience": 84,
+      "resilience": 85,
       "health": 100,
-      "hunger": 45,
+      "hunger": 53,
       "thirst": 53,
-      "energy": 79
+      "energy": 72
     },
-    "mood": "attentive",
+    "mood": "steady",
     "location": {
       "waypoint": "solar_array",
       "x": 64,
@@ -198,11 +198,6 @@
         "weight": 3
       },
       {
-        "day": 9,
-        "text": "He stopped holding me back. I can go.",
-        "weight": 2
-      },
-      {
         "day": 10,
         "text": "He's terrified and holding it inside, but he's choosing to let me go.",
         "weight": 3
@@ -245,6 +240,11 @@
       {
         "day": 12,
         "text": "He trusted me enough to doubt. That's new.",
+        "weight": 2
+      },
+      {
+        "day": 12,
+        "text": "He's thinking about leaving now, not just holding on.",
         "weight": 2
       }
     ]
