@@ -1,6 +1,6 @@
 {
   "day": 12,
-  "cycle": "evening",
+  "cycle": "night",
   "weather": "clear",
   "pending_events": [],
   "started": "2026-06-08",
@@ -9,7 +9,7 @@
       "id": "solar_rig",
       "type": "solar_rig",
       "level": 1,
-      "condition": 76,
+      "condition": 72,
       "x": 50,
       "y": 55,
       "builder": null,
@@ -20,26 +20,26 @@
   ],
   "fire": {
     "lit": true,
-    "fuel": 6
+    "fuel": 11
   },
   "last_run_date": "2026-06-19",
-  "pulse": "Dan stops defending the van and starts planning to leave it—but the fear of leaving is real for both of them.",
-  "scene": "By fading dusk light at the solar array, Dan runs his hand over the cracked panels and admits they need a plan for moving; Hui Ling stands beside him, and for the first time he says yes.",
+  "pulse": "Dan finally opened up about hitting his limits, and Hui Ling leaned in to meet him—but now they're both afraid of what comes next, and neither has real answers.",
+  "scene": "After today's damage to the solar array forced Dan to finally say he has no answers, he and Hui Ling agreed to plan an exit; by night they sit by the fire, quieter and steadier together, the weight of the unknown pressing down.",
   "resources_prev": {
-    "food": 99,
-    "water": 94,
-    "wood": 100,
-    "medicine": 28
-  },
-  "resources": {
     "food": 89,
     "water": 94,
     "wood": 96,
     "medicine": 28
   },
-  "camp_climate": "steady",
+  "resources": {
+    "food": 100,
+    "water": 100,
+    "wood": 87,
+    "medicine": 28
+  },
+  "camp_climate": "content",
   "discoveries": [],
-  "last_cycle_key": "2026-06-19:evening",
+  "last_cycle_key": "2026-06-19:night",
   "day_summaries": {
     "1": "Day 1 was clear and warm — good charging, hot meals in the cab, the systems steady. At dusk, Hui Ling found injured birds on the ramp and sheltered them on the van's corner despite Dan's strong refusal. By nightfall, they were sitting together in guarded silence, both aware that the cost of survival might exceed what they could afford to become.",
     "2": "Day 2 escalated from injured birds to a moral standoff: Dan refused shelter, and by nightfall, he blocked the van door as Hui Ling reached for it. When she asked why, he finally broke—not afraid of the dead, but of her leaving. The night left them both caged, one by the city, one by his terror.",
@@ -51,7 +51,8 @@
     "8": "Day 8 was clear — the battery charged to full by afternoon. Dan verified the rope while Hui Ling sorted supplies, moving through the day in quiet sync. His fear eased with each check of her gear. By night she was resting, pack ready for tomorrow, and he sat beside her finally at peace with letting her go.",
     "9": "Day 9: Hui Ling ran alone for the first time, came back haunted by a child's doll, but with food. Dan waited terrified and trusted anyway; by night she spoke the haunting and he held it without trying to erase it. One tin remains; the hunger is closing in again.",
     "10": "Day 10: Hui Ling went down into the city for the doll while Dan held the rope. She came back at dusk with the doll and three tins of food. His terror eased — Dan learned that trust means letting her go, and that she comes home.",
-    "11": "Day 11 was clear and quiet—an easy morning, midday garden work, the kind of steady they've earned. Then wind bent the solar frame and cracked two panels, but Dan handled it calmly and Hui Ling stayed present; by nightfall they're past the shock, already planning the rebuild."
+    "11": "Day 11 was clear and quiet—an easy morning, midday garden work, the kind of steady they've earned. Then wind bent the solar frame and cracked two panels, but Dan handled it calmly and Hui Ling stayed present; by nightfall they're past the shock, already planning the rebuild.",
+    "12": "Day 12 began with wind damage to the solar array that broke through Dan's plan to hunker down indefinitely; by afternoon he said aloud he has no answers, and by evening he agreed to plan an exit. They sat by the fire with fear and fragile hope, finally aligned on the choice that might save them."
   },
   "lean": {
     "id": "move_tonight",

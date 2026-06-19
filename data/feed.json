@@ -4565,5 +4565,80 @@
       }
     ],
     "timestamp": "2026-06-19T18:31:46.706553"
+  },
+  {
+    "day": 12,
+    "cycle": "night",
+    "character": "dan",
+    "action": "Sits by the fire with a cup of water, turning over the day's admissions in the quiet dark—finally letting go of needing all the answers.",
+    "thought": "We're leaving. I let go. Gods help us both.",
+    "location": {
+      "waypoint": "van_rear",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "thoughtful",
+    "timestamp": "2026-06-19T22:32:47.513878"
+  },
+  {
+    "day": 12,
+    "cycle": "night",
+    "character": "huiling",
+    "action": "Sits beside him by the fire, watching the flames glow on his face, steadier now that he's finally heard her about leaving.",
+    "thought": "He said yes. Finally. But what comes next?",
+    "location": {
+      "waypoint": "van_rear",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "steady",
+    "timestamp": "2026-06-19T22:32:47.513878"
+  },
+  {
+    "day": 12,
+    "cycle": "night",
+    "type": "interaction",
+    "characters": [
+      "dan",
+      "huiling"
+    ],
+    "description": "By the fire at the van's rear, Dan and Hui Ling sit quiet after the day that broke open everything—the broken panels, his admission of limits, their first real agreement to leave—the night clear and cold around them.",
+    "dialogue": [
+      {
+        "speaker": "huiling",
+        "line": "You meant it? About moving?"
+      },
+      {
+        "speaker": "dan",
+        "line": "Yeah. I meant it."
+      },
+      {
+        "speaker": "huiling",
+        "line": "I didn't think you'd come around."
+      },
+      {
+        "speaker": "dan",
+        "line": "The roof won't hold forever. Neither will I, pretending it will."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Where would we even go?"
+      },
+      {
+        "speaker": "dan",
+        "line": "I don't know yet. But out of here."
+      },
+      {
+        "speaker": "huiling",
+        "line": "It'll never be safe, Dan. We just find safer."
+      },
+      {
+        "speaker": "dan",
+        "line": "Then we find safer. Together."
+      }
+    ],
+    "timestamp": "2026-06-19T22:32:47.513878"
   }
 ]

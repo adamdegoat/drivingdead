@@ -7,18 +7,18 @@
     "color": "#f59e0b",
     "scores": {
       "trust": 100,
-      "openness": 86,
-      "ambition": 62,
+      "openness": 88,
+      "ambition": 63,
       "loneliness": 0,
       "resilience": 100,
       "health": 100,
-      "hunger": 53,
-      "thirst": 53,
-      "energy": 72
+      "hunger": 45,
+      "thirst": 45,
+      "energy": 100
     },
     "mood": "thoughtful",
     "location": {
-      "waypoint": "solar_array",
+      "waypoint": "van_rear",
       "x": 42,
       "y": 52
     },
@@ -50,7 +50,7 @@
     },
     "interaction": {
       "with": "huiling",
-      "state": "talking"
+      "state": "sitting_together"
     },
     "memories": [
       {
@@ -104,9 +104,9 @@
         "weight": 2
       },
       {
-        "day": 11,
-        "text": "I let her work and didn't count the time. She came back because I trusted.",
-        "weight": 2
+        "day": 12,
+        "text": "I let her be right. I said yes. It cost me, but I let go.",
+        "weight": 3
       },
       {
         "day": 12,
@@ -133,18 +133,18 @@
     "color": "#22d3ee",
     "scores": {
       "trust": 100,
-      "openness": 98,
-      "ambition": 55,
+      "openness": 99,
+      "ambition": 56,
       "loneliness": 0,
       "resilience": 85,
       "health": 100,
-      "hunger": 53,
-      "thirst": 53,
-      "energy": 72
+      "hunger": 45,
+      "thirst": 45,
+      "energy": 100
     },
     "mood": "steady",
     "location": {
-      "waypoint": "solar_array",
+      "waypoint": "van_rear",
       "x": 64,
       "y": 44
     },
@@ -174,7 +174,7 @@
     },
     "interaction": {
       "with": "dan",
-      "state": "talking"
+      "state": "sitting_together"
     },
     "memories": [
       {
@@ -218,11 +218,6 @@
         "weight": 2
       },
       {
-        "day": 10,
-        "text": "Dan loaded my pack with shaking hands and let me walk away — that's trust.",
-        "weight": 2
-      },
-      {
         "day": 11,
         "text": "He's not planning my day anymore. Just handing me things.",
         "weight": 2
@@ -231,6 +226,11 @@
         "day": 11,
         "text": "He sat quiet while I worked. That's faith, not fear.",
         "weight": 2
+      },
+      {
+        "day": 12,
+        "text": "He finally heard me. He said yes to leaving. But now the fear is sharper than before.",
+        "weight": 3
       },
       {
         "day": 12,
