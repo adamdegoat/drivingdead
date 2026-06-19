@@ -4640,5 +4640,92 @@
       }
     ],
     "timestamp": "2026-06-19T22:32:47.513878"
+  },
+  {
+    "day": 13,
+    "cycle": "morning",
+    "character": "dan",
+    "action": "At the solar array, Dan runs his hands over the cracked panels and begins assessing which cells can be salvaged and which need replacement.",
+    "thought": "Two cells, rest intact. We can move.",
+    "location": {
+      "waypoint": "solar_array",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "resolute",
+    "timestamp": "2026-06-20T07:02:42.439668"
+  },
+  {
+    "day": 13,
+    "cycle": "morning",
+    "character": "huiling",
+    "action": "Hui Ling steps out of the van with hot tea, finds Dan at the panels, and stands beside him in the clear morning to see what must be done.",
+    "thought": "He's mapping it out. Getting ready.",
+    "location": {
+      "waypoint": "solar_array",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "warm",
+    "timestamp": "2026-06-20T07:02:42.439668"
+  },
+  {
+    "day": 13,
+    "cycle": "morning",
+    "type": "interaction",
+    "characters": [
+      "dan",
+      "huiling"
+    ],
+    "description": "In clear morning light, Dan and Hui Ling begin the real work: assessing what needs fixing at the solar array before they can move the van and leave the rooftop for good.",
+    "dialogue": [
+      {
+        "speaker": "huiling",
+        "line": "I brought tea."
+      },
+      {
+        "speaker": "dan",
+        "line": "Fire's fine. I'm checking the panels."
+      },
+      {
+        "speaker": "huiling",
+        "line": "I brought tea anyway."
+      },
+      {
+        "speaker": "dan",
+        "line": "Right. Thank you."
+      },
+      {
+        "speaker": "huiling",
+        "line": "How bad is it?"
+      },
+      {
+        "speaker": "dan",
+        "line": "Two cells cracked. Wiring's intact. We can replace them."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Before we go."
+      },
+      {
+        "speaker": "dan",
+        "line": "Today. Tonight we load the van."
+      },
+      {
+        "speaker": "huiling",
+        "line": "You're really doing this."
+      },
+      {
+        "speaker": "dan",
+        "line": "Had to. You were right."
+      },
+      {
+        "speaker": "huiling",
+        "line": "We both were. Just scared."
+      }
+    ],
+    "timestamp": "2026-06-20T07:02:42.439668"
   }
 ]

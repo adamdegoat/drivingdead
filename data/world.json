@@ -1,6 +1,6 @@
 {
-  "day": 12,
-  "cycle": "night",
+  "day": 13,
+  "cycle": "morning",
   "weather": "clear",
   "pending_events": [],
   "started": "2026-06-08",
@@ -9,7 +9,7 @@
       "id": "solar_rig",
       "type": "solar_rig",
       "level": 1,
-      "condition": 72,
+      "condition": 68,
       "x": 50,
       "y": 55,
       "builder": null,
@@ -20,26 +20,26 @@
   ],
   "fire": {
     "lit": true,
-    "fuel": 11
+    "fuel": 16
   },
-  "last_run_date": "2026-06-19",
-  "pulse": "Dan finally opened up about hitting his limits, and Hui Ling leaned in to meet him—but now they're both afraid of what comes next, and neither has real answers.",
-  "scene": "After today's damage to the solar array forced Dan to finally say he has no answers, he and Hui Ling agreed to plan an exit; by night they sit by the fire, quieter and steadier together, the weight of the unknown pressing down.",
+  "last_run_date": "2026-06-20",
+  "pulse": "Dan's fear shifted from 'will we go' to 'can we survive it'—but Hui Ling is steady, and he's letting her lead.",
+  "scene": "The van's fire is burning and panels caught the light, but two cells cracked yesterday. At the solar array, Dan and Hui Ling stand together, seeing what has to be done to move.",
   "resources_prev": {
-    "food": 89,
-    "water": 94,
-    "wood": 96,
-    "medicine": 28
-  },
-  "resources": {
     "food": 100,
     "water": 100,
     "wood": 87,
     "medicine": 28
   },
+  "resources": {
+    "food": 89,
+    "water": 90,
+    "wood": 96,
+    "medicine": 28
+  },
   "camp_climate": "content",
   "discoveries": [],
-  "last_cycle_key": "2026-06-19:night",
+  "last_cycle_key": "2026-06-20:morning",
   "day_summaries": {
     "1": "Day 1 was clear and warm — good charging, hot meals in the cab, the systems steady. At dusk, Hui Ling found injured birds on the ramp and sheltered them on the van's corner despite Dan's strong refusal. By nightfall, they were sitting together in guarded silence, both aware that the cost of survival might exceed what they could afford to become.",
     "2": "Day 2 escalated from injured birds to a moral standoff: Dan refused shelter, and by nightfall, he blocked the van door as Hui Ling reached for it. When she asked why, he finally broke—not afraid of the dead, but of her leaving. The night left them both caged, one by the city, one by his terror.",
@@ -55,8 +55,8 @@
     "12": "Day 12 began with wind damage to the solar array that broke through Dan's plan to hunker down indefinitely; by afternoon he said aloud he has no answers, and by evening he agreed to plan an exit. They sat by the fire with fear and fragile hope, finally aligned on the choice that might save them."
   },
   "lean": {
-    "id": "move_tonight",
-    "label": "Move the van",
-    "desc": "They've got supplies and fuel. Maybe it's time to find better shelter."
+    "id": "work_tonight",
+    "label": "Work tonight",
+    "desc": "Daylight is survival currency—fix it before dark hits and the cold deepens."
   }
 }

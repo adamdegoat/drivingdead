@@ -1,32 +1,32 @@
 {
   "world": "drivingdead",
   "poll": {
-    "id": "2026-06-19",
+    "id": "2026-06-20",
     "closes": "tonight",
-    "question": "Solar rig down, panels cracked, frame bent. For the first time in twelve days, Dan and Hui Ling are warm, fed, easy together. Start the repair tonight while light holds, ",
+    "question": "Tomorrow at first light: Dan wants to drive. Hui Ling stares at their broken solar array. Fix it, leave by noon, or scavenge the city one last time?",
     "options": [
       {
-        "id": "work_tonight",
-        "label": "Work tonight",
-        "desc": "Daylight is survival currency—fix it before dark hits and the cold deepens."
+        "id": "repair_the_array",
+        "label": "Repair the array",
+        "desc": "Her hands remember how. Maybe one more day of work feels like staying, not leaving."
       },
       {
-        "id": "rest_first",
-        "label": "Rest first",
-        "desc": "This peace is fragile and earned—they need whole strength, not half-spent."
+        "id": "leave_by_noon",
+        "label": "Leave by noon",
+        "desc": "Dan nods toward the keys. She breathes, picks up her pack. The rooftop is done."
       },
       {
-        "id": "prep_tonight",
-        "label": "Prep tonight, work tomorrow",
-        "desc": "Busy hands while light lasts, then rest knowing tomorrow's ready—balance and survival."
+        "id": "scavenge_one_last",
+        "label": "Scavenge one last time",
+        "desc": "One last run into the city below. To find what they need, or to not come back."
       }
     ]
   },
   "in_play": {
-    "id": "move_tonight",
-    "label": "Move the van",
-    "desc": "They've got supplies and fuel. Maybe it's time to find better shelter.",
-    "decided": "2026-06-19",
+    "id": "work_tonight",
+    "label": "Work tonight",
+    "desc": "Daylight is survival currency—fix it before dark hits and the cold deepens.",
+    "decided": "2026-06-20",
     "votes": 0,
     "tally": {}
   }
