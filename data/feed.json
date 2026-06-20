@@ -4727,5 +4727,80 @@
       }
     ],
     "timestamp": "2026-06-20T07:02:42.439668"
+  },
+  {
+    "day": 13,
+    "cycle": "midday",
+    "character": "dan",
+    "action": "Dan kneels at the solar array, examining the bent aluminum frame and cracked panels, calculating what can be salvaged for the journey ahead.",
+    "thought": "I'm pulling apart what saved our lives.",
+    "location": {
+      "waypoint": "solar_array",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "resolute",
+    "timestamp": "2026-06-20T11:32:18.937605"
+  },
+  {
+    "day": 13,
+    "cycle": "midday",
+    "character": "huiling",
+    "action": "Hui Ling hands him tools and holds sections steady, watching his face as he makes the hard calls about what leaves and what stays.",
+    "thought": "He's finally letting it go, both of us.",
+    "location": {
+      "waypoint": "solar_array",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "warm",
+    "timestamp": "2026-06-20T11:32:18.937605"
+  },
+  {
+    "day": 13,
+    "cycle": "midday",
+    "type": "interaction",
+    "characters": [
+      "dan",
+      "huiling"
+    ],
+    "description": "In bright midday sun at the bent solar array, Dan begins stripping the salvageable panels while Hui Ling hands him tools, both racing the daylight.",
+    "dialogue": [
+      {
+        "speaker": "dan",
+        "line": "Two cells intact. Frame's too bent to move."
+      },
+      {
+        "speaker": "huiling",
+        "line": "So we salvage the panels and go."
+      },
+      {
+        "speaker": "dan",
+        "line": "Nothing else comes. We need to move fast."
+      },
+      {
+        "speaker": "huiling",
+        "line": "How much time do we have?"
+      },
+      {
+        "speaker": "dan",
+        "line": "Four hours. Maybe five if we don't stop."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Then we don't stop."
+      },
+      {
+        "speaker": "dan",
+        "line": "You sure about this?"
+      },
+      {
+        "speaker": "huiling",
+        "line": "I'm sure we're doing it. That's enough."
+      }
+    ],
+    "timestamp": "2026-06-20T11:32:18.937605"
   }
 ]

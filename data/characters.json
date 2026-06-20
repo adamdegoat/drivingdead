@@ -8,13 +8,13 @@
     "scores": {
       "trust": 100,
       "openness": 89,
-      "ambition": 63,
+      "ambition": 64,
       "loneliness": 0,
       "resilience": 100,
       "health": 100,
-      "hunger": 53,
+      "hunger": 45,
       "thirst": 53,
-      "energy": 93
+      "energy": 86
     },
     "mood": "resolute",
     "location": {
@@ -50,7 +50,7 @@
     },
     "interaction": {
       "with": "huiling",
-      "state": "talking"
+      "state": "working_together"
     },
     "memories": [
       {
@@ -99,11 +99,6 @@
         "weight": 3
       },
       {
-        "day": 11,
-        "text": "I poured the coffee and didn't tell her how.",
-        "weight": 2
-      },
-      {
         "day": 12,
         "text": "I let her be right. I said yes. It cost me, but I let go.",
         "weight": 3
@@ -122,6 +117,11 @@
         "day": 12,
         "text": "She said move and I didn't shut down. I said yes.",
         "weight": 2
+      },
+      {
+        "day": 13,
+        "text": "I stripped the solar array with my own hands to leave.",
+        "weight": 2
       }
     ]
   },
@@ -134,13 +134,13 @@
     "scores": {
       "trust": 100,
       "openness": 100,
-      "ambition": 56,
+      "ambition": 57,
       "loneliness": 0,
       "resilience": 86,
       "health": 100,
-      "hunger": 53,
+      "hunger": 45,
       "thirst": 53,
-      "energy": 93
+      "energy": 86
     },
     "mood": "warm",
     "location": {
@@ -174,7 +174,7 @@
     },
     "interaction": {
       "with": "dan",
-      "state": "talking"
+      "state": "working_together"
     },
     "memories": [
       {
@@ -213,11 +213,6 @@
         "weight": 3
       },
       {
-        "day": 10,
-        "text": "He's not trying to lock me in. He actually trusts me.",
-        "weight": 2
-      },
-      {
         "day": 11,
         "text": "He's not planning my day anymore. Just handing me things.",
         "weight": 2
@@ -245,6 +240,11 @@
       {
         "day": 12,
         "text": "He's thinking about leaving now, not just holding on.",
+        "weight": 2
+      },
+      {
+        "day": 13,
+        "text": "He tore down what saved us both—and didn't look back.",
         "weight": 2
       }
     ]
