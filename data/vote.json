@@ -1,32 +1,32 @@
 {
   "world": "drivingdead",
   "poll": {
-    "id": "2026-06-20",
+    "id": "2026-06-21",
     "closes": "tonight",
-    "question": "Tomorrow at first light: Dan wants to drive. Hui Ling stares at their broken solar array. Fix it, leave by noon, or scavenge the city one last time?",
+    "question": "Dan wants to finish the repairs properly tonight—leave at dawn confident and ready. Hui Ling wants to move the van now, escape while the city's quiet and dark. Which inst",
     "options": [
       {
-        "id": "repair_the_array",
-        "label": "Repair the array",
-        "desc": "Her hands remember how. Maybe one more day of work feels like staying, not leaving."
+        "id": "dan_caution",
+        "label": "Finish repairs, leave at daw",
+        "desc": "Trust his careful hands. Trust preparation."
       },
       {
-        "id": "leave_by_noon",
-        "label": "Leave by noon",
-        "desc": "Dan nods toward the keys. She breathes, picks up her pack. The rooftop is done."
+        "id": "hui_instinct",
+        "label": "Move now, in the dark",
+        "desc": "Trust her read on when danger sleeps."
       },
       {
-        "id": "scavenge_one_last",
-        "label": "Scavenge one last time",
-        "desc": "One last run into the city below. To find what they need, or to not come back."
+        "id": "work_together",
+        "label": "Work through the night toget",
+        "desc": "Trust both. Make it ready before first light."
       }
     ]
   },
   "in_play": {
-    "id": "work_tonight",
-    "label": "Work tonight",
-    "desc": "Daylight is survival currency—fix it before dark hits and the cold deepens.",
-    "decided": "2026-06-20",
+    "id": "repair_the_array",
+    "label": "Repair the array",
+    "desc": "Her hands remember how. Maybe one more day of work feels like staying, not leaving.",
+    "decided": "2026-06-21",
     "votes": 0,
     "tally": {}
   }

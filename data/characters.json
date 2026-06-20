@@ -7,18 +7,18 @@
     "color": "#f59e0b",
     "scores": {
       "trust": 100,
-      "openness": 91,
-      "ambition": 65,
+      "openness": 92,
+      "ambition": 66,
       "loneliness": 0,
       "resilience": 100,
       "health": 100,
-      "hunger": 45,
-      "thirst": 45,
-      "energy": 100
+      "hunger": 53,
+      "thirst": 53,
+      "energy": 93
     },
-    "mood": "raw",
+    "mood": "steady",
     "location": {
-      "waypoint": "van_rear",
+      "waypoint": "solar_array",
       "x": 42,
       "y": 52
     },
@@ -50,7 +50,7 @@
     },
     "interaction": {
       "with": "huiling",
-      "state": "sitting_together"
+      "state": "talking"
     },
     "memories": [
       {
@@ -104,11 +104,6 @@
         "weight": 3
       },
       {
-        "day": 12,
-        "text": "She raised the move and I didn't fight. We both feel it.",
-        "weight": 2
-      },
-      {
         "day": 13,
         "text": "I took it apart myself. She held every piece I was letting go.",
         "weight": 3
@@ -121,6 +116,11 @@
       {
         "day": 13,
         "text": "I stripped the solar array with my own hands to leave.",
+        "weight": 2
+      },
+      {
+        "day": 14,
+        "text": "She saw how to fix them and I heard her without closing off.",
         "weight": 2
       }
     ]
@@ -138,13 +138,13 @@
       "loneliness": 0,
       "resilience": 87,
       "health": 100,
-      "hunger": 45,
-      "thirst": 45,
-      "energy": 100
+      "hunger": 53,
+      "thirst": 53,
+      "energy": 93
     },
     "mood": "calm",
     "location": {
-      "waypoint": "van_rear",
+      "waypoint": "solar_array",
       "x": 64,
       "y": 44
     },
@@ -174,7 +174,7 @@
     },
     "interaction": {
       "with": "dan",
-      "state": "sitting_together"
+      "state": "talking"
     },
     "memories": [
       {
@@ -228,11 +228,6 @@
         "weight": 2
       },
       {
-        "day": 12,
-        "text": "He's thinking about leaving now, not just holding on.",
-        "weight": 2
-      },
-      {
         "day": 13,
         "text": "His hands shook all afternoon taking it apart. He didn't stop.",
         "weight": 3
@@ -245,6 +240,11 @@
       {
         "day": 13,
         "text": "He tore down what saved us both—and didn't look back.",
+        "weight": 2
+      },
+      {
+        "day": 14,
+        "text": "He opened and listened to what my hands could do with them.",
         "weight": 2
       }
     ]

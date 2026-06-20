@@ -1,6 +1,6 @@
 {
-  "day": 13,
-  "cycle": "night",
+  "day": 14,
+  "cycle": "morning",
   "weather": "clear",
   "pending_events": [],
   "started": "2026-06-08",
@@ -9,7 +9,7 @@
       "id": "solar_rig",
       "type": "solar_rig",
       "level": 1,
-      "condition": 56,
+      "condition": 52,
       "x": 50,
       "y": 55,
       "builder": null,
@@ -20,26 +20,26 @@
   ],
   "fire": {
     "lit": true,
-    "fuel": 13
+    "fuel": 18
   },
-  "last_run_date": "2026-06-20",
-  "pulse": "Dan finally cracked open and Hui Ling's steady presence is the only thing holding him together—but the real terror is just beginning.",
-  "scene": "They spent Day 13 dismantling the solar array—Dan methodically stripping panels while Hui Ling held every piece he was shedding—and by nightfall sat by the dying fire at the van's rear with two salvageable cells and a choice that felt finally irreversible.",
+  "last_run_date": "2026-06-21",
+  "pulse": "Her hands remember the work; his willingness to listen is new. One more day of staying feels possible.",
+  "scene": "Clear morning on the array: Hui Ling kneels over the salvaged cells while Dan joins her, both reading what can still be fixed. The question of staying one more day versus leaving hangs between them, unresolved.",
   "resources_prev": {
-    "food": 89,
-    "water": 94,
-    "wood": 96,
-    "medicine": 28
-  },
-  "resources": {
     "food": 100,
     "water": 100,
     "wood": 95,
     "medicine": 28
   },
+  "resources": {
+    "food": 89,
+    "water": 90,
+    "wood": 96,
+    "medicine": 28
+  },
   "camp_climate": "content",
   "discoveries": [],
-  "last_cycle_key": "2026-06-20:night",
+  "last_cycle_key": "2026-06-21:morning",
   "day_summaries": {
     "1": "Day 1 was clear and warm — good charging, hot meals in the cab, the systems steady. At dusk, Hui Ling found injured birds on the ramp and sheltered them on the van's corner despite Dan's strong refusal. By nightfall, they were sitting together in guarded silence, both aware that the cost of survival might exceed what they could afford to become.",
     "2": "Day 2 escalated from injured birds to a moral standoff: Dan refused shelter, and by nightfall, he blocked the van door as Hui Ling reached for it. When she asked why, he finally broke—not afraid of the dead, but of her leaving. The night left them both caged, one by the city, one by his terror.",
@@ -56,8 +56,8 @@
     "13": "Day 13 was the dismantling—Dan stripped the solar array while Hui Ling held what he was shedding, his hands shaking through every piece. By nightfall they sat by the fire with two salvageable cells and the fortress broken. The choice to leave was finally real: they couldn't keep a sanctuary in a dead world."
   },
   "lean": {
-    "id": "work_tonight",
-    "label": "Work tonight",
-    "desc": "Daylight is survival currency—fix it before dark hits and the cold deepens."
+    "id": "repair_the_array",
+    "label": "Repair the array",
+    "desc": "Her hands remember how. Maybe one more day of work feels like staying, not leaving."
   }
 }

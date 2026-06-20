@@ -4976,5 +4976,80 @@
       }
     ],
     "timestamp": "2026-06-20T22:31:29.760824"
+  },
+  {
+    "day": 14,
+    "cycle": "morning",
+    "character": "dan",
+    "action": "Dan wakes to clear morning light and finds Hui Ling already at the solar array, hands moving over the salvaged cells; he watches a moment, then stands to join her.",
+    "thought": "Clear sky. She knows what to fix.",
+    "location": {
+      "waypoint": "solar_array",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "steady",
+    "timestamp": "2026-06-21T07:02:10.653967"
+  },
+  {
+    "day": 14,
+    "cycle": "morning",
+    "character": "huiling",
+    "action": "Hui Ling walks to the solar array in the clear morning, hands reading the junctions and curves, the work that might still be salvageable.",
+    "thought": "My hands remember the geometry of this.",
+    "location": {
+      "waypoint": "solar_array",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "calm",
+    "timestamp": "2026-06-21T07:02:10.653967"
+  },
+  {
+    "day": 14,
+    "cycle": "morning",
+    "type": "interaction",
+    "characters": [
+      "dan",
+      "huiling"
+    ],
+    "description": "Clear morning on the half-stripped array: Hui Ling bends over the cells, hands reading what's salvageable, while Dan emerges from the van—the question of one more day unspoken between them.",
+    "dialogue": [
+      {
+        "speaker": "huiling",
+        "line": "Two cells. They can be salvaged if we take the time."
+      },
+      {
+        "speaker": "dan",
+        "line": "I thought we were leaving."
+      },
+      {
+        "speaker": "huiling",
+        "line": "We are. But they're good work. Wasting them feels wrong."
+      },
+      {
+        "speaker": "dan",
+        "line": "They're dead, Hui. That's why they're down here."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Damaged, not dead. I can fix them."
+      },
+      {
+        "speaker": "dan",
+        "line": "How long?"
+      },
+      {
+        "speaker": "huiling",
+        "line": "One more day. Maybe two."
+      },
+      {
+        "speaker": "dan",
+        "line": "Okay. Show me what you see."
+      }
+    ],
+    "timestamp": "2026-06-21T07:02:10.653967"
   }
 ]
