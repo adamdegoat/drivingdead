@@ -4877,5 +4877,104 @@
       }
     ],
     "timestamp": "2026-06-20T18:31:44.598529"
+  },
+  {
+    "day": 13,
+    "cycle": "night",
+    "character": "dan",
+    "action": "Sitting by the dying fire with the salvaged cells stacked nearby, hands finally still, the day's weight settling into his bones.",
+    "thought": "I let the fortress fall. Now I just sit.",
+    "location": {
+      "waypoint": "van_rear",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "raw",
+    "timestamp": "2026-06-20T22:31:29.760824"
+  },
+  {
+    "day": 13,
+    "cycle": "night",
+    "character": "huiling",
+    "action": "Sitting beside Dan in the dark, close enough to feel him, watching the coals glow and letting the silence hold everything unsaid.",
+    "thought": "He cracked open and didn't close again.",
+    "location": {
+      "waypoint": "van_rear",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "calm",
+    "timestamp": "2026-06-20T22:31:29.760824"
+  },
+  {
+    "day": 13,
+    "cycle": "night",
+    "type": "interaction",
+    "characters": [
+      "dan",
+      "huiling"
+    ],
+    "description": "By the dying fire at the van's rear, Dan and Hui Ling sit in the dark after dismantling the solar array that kept them alive—he raw and finally open, she steady and certain, the weight of truly leaving settling between them like smoke.",
+    "dialogue": [
+      {
+        "speaker": "huiling",
+        "line": "Your hands finally stopped shaking."
+      },
+      {
+        "speaker": "dan",
+        "line": "Hours ago. I just didn't notice."
+      },
+      {
+        "speaker": "huiling",
+        "line": "That's how it works."
+      },
+      {
+        "speaker": "dan",
+        "line": "What?"
+      },
+      {
+        "speaker": "huiling",
+        "line": "You keep moving until you can't anymore. Then you sit down."
+      },
+      {
+        "speaker": "dan",
+        "line": "And then what?"
+      },
+      {
+        "speaker": "huiling",
+        "line": "Then someone sits next to you."
+      },
+      {
+        "speaker": "dan",
+        "line": "For how long?"
+      },
+      {
+        "speaker": "huiling",
+        "line": "As long as it takes."
+      },
+      {
+        "speaker": "dan",
+        "line": "The cells are good. We can move tomorrow if weather holds."
+      },
+      {
+        "speaker": "huiling",
+        "line": "I know."
+      },
+      {
+        "speaker": "dan",
+        "line": "Are you afraid?"
+      },
+      {
+        "speaker": "huiling",
+        "line": "Yes. Are you?"
+      },
+      {
+        "speaker": "dan",
+        "line": "Terrified. But that's the point now."
+      }
+    ],
+    "timestamp": "2026-06-20T22:31:29.760824"
   }
 ]
