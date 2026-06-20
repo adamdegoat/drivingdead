@@ -7,18 +7,18 @@
     "color": "#f59e0b",
     "scores": {
       "trust": 100,
-      "openness": 89,
-      "ambition": 64,
+      "openness": 90,
+      "ambition": 66,
       "loneliness": 0,
       "resilience": 100,
       "health": 100,
-      "hunger": 45,
+      "hunger": 53,
       "thirst": 53,
-      "energy": 86
+      "energy": 79
     },
-    "mood": "resolute",
+    "mood": "quiet",
     "location": {
-      "waypoint": "solar_array",
+      "waypoint": "van_rear",
       "x": 42,
       "y": 52
     },
@@ -50,7 +50,7 @@
     },
     "interaction": {
       "with": "huiling",
-      "state": "working_together"
+      "state": "sitting_together"
     },
     "memories": [
       {
@@ -114,9 +114,9 @@
         "weight": 2
       },
       {
-        "day": 12,
-        "text": "She said move and I didn't shut down. I said yes.",
-        "weight": 2
+        "day": 13,
+        "text": "I took it apart myself. She held every piece I was letting go.",
+        "weight": 3
       },
       {
         "day": 13,
@@ -134,17 +134,17 @@
     "scores": {
       "trust": 100,
       "openness": 100,
-      "ambition": 57,
+      "ambition": 58,
       "loneliness": 0,
       "resilience": 86,
       "health": 100,
-      "hunger": 45,
+      "hunger": 53,
       "thirst": 53,
-      "energy": 86
+      "energy": 79
     },
     "mood": "warm",
     "location": {
-      "waypoint": "solar_array",
+      "waypoint": "van_rear",
       "x": 64,
       "y": 44
     },
@@ -174,7 +174,7 @@
     },
     "interaction": {
       "with": "dan",
-      "state": "working_together"
+      "state": "sitting_together"
     },
     "memories": [
       {
@@ -218,11 +218,6 @@
         "weight": 2
       },
       {
-        "day": 11,
-        "text": "He sat quiet while I worked. That's faith, not fear.",
-        "weight": 2
-      },
-      {
         "day": 12,
         "text": "He finally heard me. He said yes to leaving. But now the fear is sharper than before.",
         "weight": 3
@@ -241,6 +236,11 @@
         "day": 12,
         "text": "He's thinking about leaving now, not just holding on.",
         "weight": 2
+      },
+      {
+        "day": 13,
+        "text": "His hands shook all afternoon taking it apart. He didn't stop.",
+        "weight": 3
       },
       {
         "day": 13,

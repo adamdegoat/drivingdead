@@ -4802,5 +4802,80 @@
       }
     ],
     "timestamp": "2026-06-20T11:32:18.937605"
+  },
+  {
+    "day": 13,
+    "cycle": "evening",
+    "character": "dan",
+    "action": "Brings the last of the salvageable solar cells back to the van as light fades, stacking them carefully near the storage corner.",
+    "thought": "She held every piece I was dismantling.",
+    "location": {
+      "waypoint": "van_rear",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "quiet",
+    "timestamp": "2026-06-20T18:31:44.598529"
+  },
+  {
+    "day": 13,
+    "cycle": "evening",
+    "character": "huiling",
+    "action": "Sits beside Dan by the fire at the van's rear, watching the night settle cold and clear around them, her hands still sore from handing him tools all day.",
+    "thought": "His hands shook all afternoon but kept going.",
+    "location": {
+      "waypoint": "van_rear",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "warm",
+    "timestamp": "2026-06-20T18:31:44.598529"
+  },
+  {
+    "day": 13,
+    "cycle": "evening",
+    "type": "interaction",
+    "characters": [
+      "dan",
+      "huiling"
+    ],
+    "description": "After stripping the solar panels all day, Dan and Hui Ling sit quiet by the fire at the van's rear, two salvageable cells stacked, the rig half-dismantled.",
+    "dialogue": [
+      {
+        "speaker": "huiling",
+        "line": "Two cells. You actually did it."
+      },
+      {
+        "speaker": "dan",
+        "line": "Wasn't sure I could."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Your hands were shaking all afternoon."
+      },
+      {
+        "speaker": "dan",
+        "line": "Are they still?"
+      },
+      {
+        "speaker": "huiling",
+        "line": "No. You steadied."
+      },
+      {
+        "speaker": "dan",
+        "line": "So we move, then."
+      },
+      {
+        "speaker": "huiling",
+        "line": "So we move. Rest first."
+      },
+      {
+        "speaker": "dan",
+        "line": "Yeah. Rest."
+      }
+    ],
+    "timestamp": "2026-06-20T18:31:44.598529"
   }
 ]
