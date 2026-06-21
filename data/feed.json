@@ -5375,5 +5375,80 @@
       }
     ],
     "timestamp": "2026-06-21T22:36:15.211072"
+  },
+  {
+    "day": 15,
+    "cycle": "morning",
+    "character": "dan",
+    "action": "He climbs to the solar array in clear morning light, running the hinge bolt through one final check—the last repair before they seal the van and leave.",
+    "thought": "One last fix. Then we move.",
+    "location": {
+      "waypoint": "solar_array",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "steady",
+    "timestamp": "2026-06-22T07:03:11.066563"
+  },
+  {
+    "day": 15,
+    "cycle": "morning",
+    "character": "huiling",
+    "action": "She follows with the spares kit and a steady hand, watching the battery hold at full charge as the sun rises—ready, certain, knowing they're leaving today.",
+    "thought": "Clear sky. We're actually leaving.",
+    "location": {
+      "waypoint": "solar_array",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "calm",
+    "timestamp": "2026-06-22T07:03:11.066563"
+  },
+  {
+    "day": 15,
+    "cycle": "morning",
+    "type": "interaction",
+    "characters": [
+      "dan",
+      "huiling"
+    ],
+    "description": "On the solar array in clear morning light, Dan works the final hinge while Hui Ling hands him tools—the charge holding steady—the last repair before they seal and leave.",
+    "dialogue": [
+      {
+        "speaker": "huiling",
+        "line": "Clear sky today."
+      },
+      {
+        "speaker": "dan",
+        "line": "Battery's at a hundred. Just keep the systems steady."
+      },
+      {
+        "speaker": "huiling",
+        "line": "The hinge?"
+      },
+      {
+        "speaker": "dan",
+        "line": "Today. That's it. Then we're sealed."
+      },
+      {
+        "speaker": "huiling",
+        "line": "You're ready?"
+      },
+      {
+        "speaker": "dan",
+        "line": "Ready to go. Are you?"
+      },
+      {
+        "speaker": "huiling",
+        "line": "I came back from the city. We can try again."
+      },
+      {
+        "speaker": "dan",
+        "line": "Then we leave."
+      }
+    ],
+    "timestamp": "2026-06-22T07:03:11.066563"
   }
 ]
