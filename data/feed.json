@@ -5300,5 +5300,80 @@
       }
     ],
     "timestamp": "2026-06-21T18:32:21.530441"
+  },
+  {
+    "day": 14,
+    "cycle": "night",
+    "character": "dan",
+    "action": "He sits by the rear fire, wood settled in, watching the embers hold steady as the night deepens around them.",
+    "thought": "My hands don't shake anymore. That's enough.",
+    "location": {
+      "waypoint": "van_rear",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "calm",
+    "timestamp": "2026-06-21T22:36:15.211072"
+  },
+  {
+    "day": 14,
+    "cycle": "night",
+    "character": "huiling",
+    "action": "She leans against the van, close enough to feel the warmth from him and the fire, her breathing slow and easy.",
+    "thought": "He's steady tonight. We both are.",
+    "location": {
+      "waypoint": "van_rear",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "calm",
+    "timestamp": "2026-06-21T22:36:15.211072"
+  },
+  {
+    "day": 14,
+    "cycle": "night",
+    "type": "interaction",
+    "characters": [
+      "dan",
+      "huiling"
+    ],
+    "description": "By the rear fire, Dan and Hui Ling sit close, the day's steady work behind them—his hands steady, hers remembering—the question of leaving unspoken between them.",
+    "dialogue": [
+      {
+        "speaker": "huiling",
+        "line": "It felt good, working like that."
+      },
+      {
+        "speaker": "dan",
+        "line": "It did."
+      },
+      {
+        "speaker": "huiling",
+        "line": "When's the last time we built something?"
+      },
+      {
+        "speaker": "dan",
+        "line": "Before we had to just hold on."
+      },
+      {
+        "speaker": "huiling",
+        "line": "That's not what we're doing now."
+      },
+      {
+        "speaker": "dan",
+        "line": "No. Not today."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Not tonight either?"
+      },
+      {
+        "speaker": "dan",
+        "line": "Not tonight."
+      }
+    ],
+    "timestamp": "2026-06-21T22:36:15.211072"
   }
 ]
