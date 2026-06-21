@@ -1,10 +1,10 @@
 {
-  "day": 13,
-  "text": "Dan discovers a functioning greenhouse on a neighboring roof, overgrown but full of food.",
-  "flavor": "a hard-won find",
-  "cycle": "midday",
-  "happens_at": "12:30pm",
+  "day": 14,
+  "text": "Hui Ling spots someone in the adjacent tower—alive, trapped, staring directly at them.",
+  "flavor": "a survivor appears",
+  "cycle": "night",
+  "happens_at": "11pm",
   "status": "upcoming",
-  "revealed_at": "2026-06-21T00:00:25.680942",
+  "revealed_at": "2026-06-22T00:00:35.323419",
   "activated_at": null
 }
