@@ -5051,5 +5051,80 @@
       }
     ],
     "timestamp": "2026-06-21T07:02:10.653967"
+  },
+  {
+    "day": 14,
+    "cycle": "midday",
+    "character": "dan",
+    "action": "He kneels beside the array frame, working a corroded panel loose while the sun charges what's left salvageable.",
+    "thought": "My hands know what to do again.",
+    "location": {
+      "waypoint": "solar_array",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "steady",
+    "timestamp": "2026-06-21T11:31:26.493857"
+  },
+  {
+    "day": 14,
+    "cycle": "midday",
+    "character": "huiling",
+    "action": "She bends over the cell connections, reading the damage with her fingertips, deciding what's worth keeping.",
+    "thought": "His hands are shaking less. That's something.",
+    "location": {
+      "waypoint": "solar_array",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "calm",
+    "timestamp": "2026-06-21T11:31:26.493857"
+  },
+  {
+    "day": 14,
+    "cycle": "midday",
+    "type": "interaction",
+    "characters": [
+      "huiling",
+      "dan"
+    ],
+    "description": "At midday on the array, Hui Ling reads the cell damage while Dan works a corroded panel loose, both steadier than they were last night.",
+    "dialogue": [
+      {
+        "speaker": "huiling",
+        "line": "Your hands are steadier than yesterday."
+      },
+      {
+        "speaker": "dan",
+        "line": "Battery's got power for the heat tool now."
+      },
+      {
+        "speaker": "huiling",
+        "line": "That's not what I meant."
+      },
+      {
+        "speaker": "dan",
+        "line": "I know. But this still needs doing."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Yes it does. Let me take that panel."
+      },
+      {
+        "speaker": "dan",
+        "line": "Check the connections first—two are corroded."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Already am. You're not the only one who remembers how."
+      },
+      {
+        "speaker": "dan",
+        "line": "Never said you were."
+      }
+    ],
+    "timestamp": "2026-06-21T11:31:26.493857"
   }
 ]

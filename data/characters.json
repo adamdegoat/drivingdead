@@ -7,14 +7,14 @@
     "color": "#f59e0b",
     "scores": {
       "trust": 100,
-      "openness": 92,
+      "openness": 93,
       "ambition": 66,
       "loneliness": 0,
       "resilience": 100,
       "health": 100,
-      "hunger": 53,
+      "hunger": 45,
       "thirst": 53,
-      "energy": 93
+      "energy": 86
     },
     "mood": "steady",
     "location": {
@@ -27,7 +27,7 @@
       "huiling": {
         "closeness": 100,
         "tension": 0,
-        "attraction": 83
+        "attraction": 84
       }
     },
     "bio": "35, an ex-solar and aircon technician who spent two years converting an old camper into a self-sufficient, solar-powered home before the world ended — the only reason they're still alive. Methodical and guarded, he plans every move down to the watt and the ration, keeps the van running and the ramp sealed, and would rather never open the gate than risk the two of them for a stranger. He fixes things instead of feeling them — and the dead city is wearing that down.",
@@ -50,7 +50,7 @@
     },
     "interaction": {
       "with": "huiling",
-      "state": "talking"
+      "state": "working_together"
     },
     "memories": [
       {
@@ -114,13 +114,13 @@
         "weight": 3
       },
       {
-        "day": 13,
-        "text": "I stripped the solar array with my own hands to leave.",
+        "day": 14,
+        "text": "She saw how to fix them and I heard her without closing off.",
         "weight": 2
       },
       {
         "day": 14,
-        "text": "She saw how to fix them and I heard her without closing off.",
+        "text": "She steadies me while I fix what I let go.",
         "weight": 2
       }
     ]
@@ -138,9 +138,9 @@
       "loneliness": 0,
       "resilience": 87,
       "health": 100,
-      "hunger": 53,
+      "hunger": 45,
       "thirst": 53,
-      "energy": 93
+      "energy": 86
     },
     "mood": "calm",
     "location": {
@@ -153,7 +153,7 @@
       "dan": {
         "closeness": 100,
         "tension": 0,
-        "attraction": 83
+        "attraction": 84
       }
     },
     "bio": "32, an ICU nurse who spent the first weeks of the outbreak watching people she couldn't save. Warm and stubborn, the conscience of the pair — and the only one with the hands to do field surgery if a bite ever gets through the barricade. She can't look away from a survivor down in the street the way Dan can; it costs her, and it scares him. She keeps them human; he keeps them alive. Five years together, and the dead city is testing every promise they made.",
@@ -174,7 +174,7 @@
     },
     "interaction": {
       "with": "dan",
-      "state": "talking"
+      "state": "working_together"
     },
     "memories": [
       {
@@ -223,11 +223,6 @@
         "weight": 2
       },
       {
-        "day": 12,
-        "text": "He trusted me enough to doubt. That's new.",
-        "weight": 2
-      },
-      {
         "day": 13,
         "text": "His hands shook all afternoon taking it apart. He didn't stop.",
         "weight": 3
@@ -245,6 +240,11 @@
       {
         "day": 14,
         "text": "He opened and listened to what my hands could do with them.",
+        "weight": 2
+      },
+      {
+        "day": 14,
+        "text": "He's still shaking but the panels are getting repaired anyway.",
         "weight": 2
       }
     ]
