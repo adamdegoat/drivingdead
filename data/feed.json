@@ -5205,5 +5205,100 @@
       }
     ],
     "timestamp": "2026-06-21T15:01:57.401586"
+  },
+  {
+    "day": 14,
+    "cycle": "evening",
+    "character": "dan",
+    "action": "Dan sits by the rear fire after a day on the array, his shoulders lower than last night.",
+    "thought": "My hands are steady again. Breathing is easier.",
+    "location": {
+      "waypoint": "van_rear",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "calm",
+    "timestamp": "2026-06-21T18:32:21.530441"
+  },
+  {
+    "day": 14,
+    "cycle": "evening",
+    "character": "huiling",
+    "action": "Hui Ling sits beside him, hands warm from the fire and satisfied with the day's work on the array.",
+    "thought": "He's steady tonight. I'm watching him breathe.",
+    "location": {
+      "waypoint": "van_rear",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "calm",
+    "timestamp": "2026-06-21T18:32:21.530441"
+  },
+  {
+    "day": 14,
+    "cycle": "evening",
+    "type": "interaction",
+    "characters": [
+      "dan",
+      "huiling"
+    ],
+    "description": "After yesterday's breaking, today's clear sky and steady work on the array brought them back to breathing; by evening Dan and Hui Ling sit close by the rear fire.",
+    "dialogue": [
+      {
+        "speaker": "huiling",
+        "line": "How are your hands?"
+      },
+      {
+        "speaker": "dan",
+        "line": "Steady. Yours?"
+      },
+      {
+        "speaker": "huiling",
+        "line": "I remembered how to read them. The cells."
+      },
+      {
+        "speaker": "dan",
+        "line": "You fixed four today."
+      },
+      {
+        "speaker": "huiling",
+        "line": "We did."
+      },
+      {
+        "speaker": "dan",
+        "line": "Better than yesterday."
+      },
+      {
+        "speaker": "huiling",
+        "line": "You let me work."
+      },
+      {
+        "speaker": "dan",
+        "line": "I'm here."
+      },
+      {
+        "speaker": "huiling",
+        "line": "I know."
+      },
+      {
+        "speaker": "dan",
+        "line": "I don't know how to leave."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Not tonight. Tonight we rest."
+      },
+      {
+        "speaker": "dan",
+        "line": "Tomorrow?"
+      },
+      {
+        "speaker": "huiling",
+        "line": "We'll see what the light says."
+      }
+    ],
+    "timestamp": "2026-06-21T18:32:21.530441"
   }
 ]

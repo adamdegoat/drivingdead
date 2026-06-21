@@ -12,13 +12,13 @@
       "loneliness": 0,
       "resilience": 100,
       "health": 100,
-      "hunger": 53,
+      "hunger": 45,
       "thirst": 53,
-      "energy": 79
+      "energy": 72
     },
-    "mood": "steady",
+    "mood": "calm",
     "location": {
-      "waypoint": "solar_array",
+      "waypoint": "van_rear",
       "x": 42,
       "y": 52
     },
@@ -50,7 +50,7 @@
     },
     "interaction": {
       "with": "huiling",
-      "state": "working_together"
+      "state": "sitting_together"
     },
     "memories": [
       {
@@ -138,13 +138,13 @@
       "loneliness": 0,
       "resilience": 87,
       "health": 100,
-      "hunger": 53,
+      "hunger": 45,
       "thirst": 53,
-      "energy": 79
+      "energy": 72
     },
     "mood": "calm",
     "location": {
-      "waypoint": "solar_array",
+      "waypoint": "van_rear",
       "x": 64,
       "y": 44
     },
@@ -174,7 +174,7 @@
     },
     "interaction": {
       "with": "dan",
-      "state": "working_together"
+      "state": "sitting_together"
     },
     "memories": [
       {
@@ -228,11 +228,6 @@
         "weight": 3
       },
       {
-        "day": 13,
-        "text": "He tore down what saved us both—and didn't look back.",
-        "weight": 2
-      },
-      {
         "day": 14,
         "text": "He opened and listened to what my hands could do with them.",
         "weight": 2
@@ -245,6 +240,11 @@
       {
         "day": 14,
         "text": "Repair work feels like staying. But we chose to leave.",
+        "weight": 2
+      },
+      {
+        "day": 14,
+        "text": "His hands didn't shake today. We could work in peace.",
         "weight": 2
       }
     ]
