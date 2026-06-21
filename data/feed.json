@@ -5126,5 +5126,84 @@
       }
     ],
     "timestamp": "2026-06-21T11:31:26.493857"
+  },
+  {
+    "day": 14,
+    "cycle": "afternoon",
+    "character": "dan",
+    "action": "Dan works a corroded riser panel free from the array, hands steady and practiced.",
+    "thought": "She chooses what lives. I let it go.",
+    "location": {
+      "waypoint": "solar_array",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "steady",
+    "timestamp": "2026-06-21T15:01:57.401586"
+  },
+  {
+    "day": 14,
+    "cycle": "afternoon",
+    "character": "huiling",
+    "action": "Hui Ling examines a salvageable cell, tracing the corroded wire and testing the core for function.",
+    "thought": "His hands are steady. Mine remember the geometry.",
+    "location": {
+      "waypoint": "solar_array",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "calm",
+    "timestamp": "2026-06-21T15:01:57.401586"
+  },
+  {
+    "day": 14,
+    "cycle": "afternoon",
+    "type": "interaction",
+    "characters": [
+      "dan",
+      "huiling"
+    ],
+    "description": "On the solar array under clear sky, Hui Ling restores a salvageable cell while Dan works the riser—the day's steady work a reprieve from choosing to leave.",
+    "dialogue": [
+      {
+        "speaker": "huiling",
+        "line": "This one's not dead. Core's sound."
+      },
+      {
+        "speaker": "dan",
+        "line": "So we save it."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Wire's corroded. Needs cleaning, but it'll work."
+      },
+      {
+        "speaker": "dan",
+        "line": "You always know which ones to keep."
+      },
+      {
+        "speaker": "huiling",
+        "line": "It's nice to fix something, for once."
+      },
+      {
+        "speaker": "dan",
+        "line": "Yeah."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Two more panels if the afternoon holds."
+      },
+      {
+        "speaker": "dan",
+        "line": "By morning?"
+      },
+      {
+        "speaker": "huiling",
+        "line": "If we keep moving."
+      }
+    ],
+    "timestamp": "2026-06-21T15:01:57.401586"
   }
 ]

@@ -12,9 +12,9 @@
       "loneliness": 0,
       "resilience": 100,
       "health": 100,
-      "hunger": 45,
+      "hunger": 53,
       "thirst": 53,
-      "energy": 86
+      "energy": 79
     },
     "mood": "steady",
     "location": {
@@ -138,9 +138,9 @@
       "loneliness": 0,
       "resilience": 87,
       "health": 100,
-      "hunger": 45,
+      "hunger": 53,
       "thirst": 53,
-      "energy": 86
+      "energy": 79
     },
     "mood": "calm",
     "location": {
@@ -218,11 +218,6 @@
         "weight": 3
       },
       {
-        "day": 12,
-        "text": "He heard me about moving and didn't shut down. Maybe he's thinking it too.",
-        "weight": 2
-      },
-      {
         "day": 13,
         "text": "His hands shook all afternoon taking it apart. He didn't stop.",
         "weight": 3
@@ -245,6 +240,11 @@
       {
         "day": 14,
         "text": "He's still shaking but the panels are getting repaired anyway.",
+        "weight": 2
+      },
+      {
+        "day": 14,
+        "text": "Repair work feels like staying. But we chose to leave.",
         "weight": 2
       }
     ]
