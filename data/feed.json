@@ -5707,5 +5707,100 @@
       }
     ],
     "timestamp": "2026-06-22T18:32:06.421633"
+  },
+  {
+    "day": 15,
+    "cycle": "night",
+    "character": "dan",
+    "action": "Traces the van's seals and connections one more time by the dim battery light, his hands steady but his breath shallow.",
+    "thought": "Everything holds. So why won't I?",
+    "location": {
+      "waypoint": "van_rear",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "anxious",
+    "timestamp": "2026-06-22T22:31:53.616104"
+  },
+  {
+    "day": 15,
+    "cycle": "night",
+    "character": "huiling",
+    "action": "Lies in the bunk watching him, not stopping him, letting him settle what he needs to settle.",
+    "thought": "He's scared. I'll hold this steady.",
+    "location": {
+      "waypoint": "van_rear",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "calm",
+    "timestamp": "2026-06-22T22:31:53.616104"
+  },
+  {
+    "day": 15,
+    "cycle": "night",
+    "type": "interaction",
+    "characters": [
+      "dan",
+      "huiling"
+    ],
+    "description": "Inside the dark van on the last night on the rooftop, Dan traces seals and connections while Hui Ling watches from the bunk — his fear becoming routine, her certainty holding still.",
+    "dialogue": [
+      {
+        "speaker": "huiling",
+        "line": "You already checked that three times today."
+      },
+      {
+        "speaker": "dan",
+        "line": "Doesn't matter. Need to know it holds."
+      },
+      {
+        "speaker": "huiling",
+        "line": "It does. You built it to hold."
+      },
+      {
+        "speaker": "dan",
+        "line": "Yeah. Still doesn't feel like enough."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Enough for what?"
+      },
+      {
+        "speaker": "dan",
+        "line": "For the dead city. For outside."
+      },
+      {
+        "speaker": "huiling",
+        "line": "For us, you mean."
+      },
+      {
+        "speaker": "dan",
+        "line": "For keeping you alive out there."
+      },
+      {
+        "speaker": "huiling",
+        "line": "You already are. You have been."
+      },
+      {
+        "speaker": "dan",
+        "line": "Different out there. No walls above us."
+      },
+      {
+        "speaker": "huiling",
+        "line": "We're leaving at dawn. You're ready."
+      },
+      {
+        "speaker": "dan",
+        "line": "You keep saying that like it helps."
+      },
+      {
+        "speaker": "huiling",
+        "line": "It does. You'll see."
+      }
+    ],
+    "timestamp": "2026-06-22T22:31:53.616104"
   }
 ]

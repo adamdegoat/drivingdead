@@ -1,6 +1,6 @@
 {
   "day": 15,
-  "cycle": "evening",
+  "cycle": "night",
   "weather": "clear",
   "pending_events": [],
   "started": "2026-06-08",
@@ -9,7 +9,7 @@
       "id": "solar_rig",
       "type": "solar_rig",
       "level": 1,
-      "condition": 84,
+      "condition": 80,
       "x": 50,
       "y": 55,
       "builder": null,
@@ -20,26 +20,26 @@
   ],
   "fire": {
     "lit": true,
-    "fuel": 4
+    "fuel": 9
   },
   "last_run_date": "2026-06-22",
-  "pulse": "Tomorrow they leave the rooftop. Tonight Dan admits the fear but moves anyway; Hui Ling holds the certainty for both.",
-  "scene": "The final repairs held—every system checked and solid. By the rear fire on the last evening, Dan runs through the journey one more time while Hui Ling sits with him, both carrying the weight of tomorrow.",
+  "pulse": "Dan can't stop checking, can't stop the fear; Hui Ling holds steady.",
+  "scene": "Dan checks the systems one last time in the dark van while Hui Ling watches from the bunk, the dead city silent outside. By dawn they leave the rooftop behind.",
   "resources_prev": {
-    "food": 99,
-    "water": 94,
-    "wood": 96,
-    "medicine": 28
-  },
-  "resources": {
     "food": 89,
     "water": 94,
     "wood": 100,
     "medicine": 28
   },
-  "camp_climate": "steady",
+  "resources": {
+    "food": 100,
+    "water": 100,
+    "wood": 96,
+    "medicine": 28
+  },
+  "camp_climate": "content",
   "discoveries": [],
-  "last_cycle_key": "2026-06-22:evening",
+  "last_cycle_key": "2026-06-22:night",
   "day_summaries": {
     "1": "Day 1 was clear and warm — good charging, hot meals in the cab, the systems steady. At dusk, Hui Ling found injured birds on the ramp and sheltered them on the van's corner despite Dan's strong refusal. By nightfall, they were sitting together in guarded silence, both aware that the cost of survival might exceed what they could afford to become.",
     "2": "Day 2 escalated from injured birds to a moral standoff: Dan refused shelter, and by nightfall, he blocked the van door as Hui Ling reached for it. When she asked why, he finally broke—not afraid of the dead, but of her leaving. The night left them both caged, one by the city, one by his terror.",
@@ -54,7 +54,8 @@
     "11": "Day 11 was clear and quiet—an easy morning, midday garden work, the kind of steady they've earned. Then wind bent the solar frame and cracked two panels, but Dan handled it calmly and Hui Ling stayed present; by nightfall they're past the shock, already planning the rebuild.",
     "12": "Day 12 began with wind damage to the solar array that broke through Dan's plan to hunker down indefinitely; by afternoon he said aloud he has no answers, and by evening he agreed to plan an exit. They sat by the fire with fear and fragile hope, finally aligned on the choice that might save them.",
     "13": "Day 13 was the dismantling—Dan stripped the solar array while Hui Ling held what he was shedding, his hands shaking through every piece. By nightfall they sat by the fire with two salvageable cells and the fortress broken. The choice to leave was finally real: they couldn't keep a sanctuary in a dead world.",
-    "14": "Day 14 was clear; Hui Ling guided solar repairs while Dan steadied the riser, both recovered from yesterday's breaking. The clear sky charged the battery and grounded them. By nightfall they sat by the fire breathing easy, the decision to leave still unspoken—one more day bought by work and each other."
+    "14": "Day 14 was clear; Hui Ling guided solar repairs while Dan steadied the riser, both recovered from yesterday's breaking. The clear sky charged the battery and grounded them. By nightfall they sat by the fire breathing easy, the decision to leave still unspoken—one more day bought by work and each other.",
+    "15": "Day 15 sealed the final repairs. By evening the systems held and Dan believed it; now, hours before dawn, he checks one more time in the dark — his hands steady, his fear not. Hui Ling watches from the bunk, holding the certainty he can't find alone."
   },
   "lean": {
     "id": "dan_caution",
