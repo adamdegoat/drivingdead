@@ -12,9 +12,9 @@
       "loneliness": 0,
       "resilience": 100,
       "health": 100,
-      "hunger": 53,
+      "hunger": 45,
       "thirst": 53,
-      "energy": 86
+      "energy": 79
     },
     "mood": "steady",
     "location": {
@@ -114,13 +114,13 @@
         "weight": 3
       },
       {
-        "day": 14,
-        "text": "She saw how to fix them and I heard her without closing off.",
+        "day": 15,
+        "text": "The van is ready. Everything is. Now we actually move.",
         "weight": 2
       },
       {
         "day": 15,
-        "text": "The van is ready. Everything is. Now we actually move.",
+        "text": "Hui Ling stood beside me checking the systems. She trusted my hands.",
         "weight": 2
       }
     ]
@@ -138,13 +138,13 @@
       "loneliness": 0,
       "resilience": 87,
       "health": 100,
-      "hunger": 53,
+      "hunger": 45,
       "thirst": 53,
-      "energy": 86
+      "energy": 79
     },
     "mood": "calm",
     "location": {
-      "waypoint": "van_rear",
+      "waypoint": "van_front",
       "x": 64,
       "y": 44
     },
@@ -238,13 +238,13 @@
         "weight": 2
       },
       {
-        "day": 14,
-        "text": "Repair work feels like staying. But we chose to leave.",
+        "day": 15,
+        "text": "He's steady. I'm ready. By tomorrow this place is gone.",
         "weight": 2
       },
       {
         "day": 15,
-        "text": "He's steady. I'm ready. By tomorrow this place is gone.",
+        "text": "His hands were steady. He's ready. I'm ready.",
         "weight": 2
       }
     ]

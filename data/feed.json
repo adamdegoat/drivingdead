@@ -5541,5 +5541,92 @@
       }
     ],
     "timestamp": "2026-06-22T11:37:03.375169"
+  },
+  {
+    "day": 15,
+    "cycle": "afternoon",
+    "character": "dan",
+    "action": "He moves through the van's control panel, running the final systems check—battery, filter, heater, radio—his hands steady on each switch.",
+    "thought": "Everything holds. We're actually going.",
+    "location": {
+      "waypoint": "van_front",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "steady",
+    "timestamp": "2026-06-22T15:02:11.113860"
+  },
+  {
+    "day": 15,
+    "cycle": "afternoon",
+    "character": "huiling",
+    "action": "She stands beside him at the control panel, watching his hands move with the calm certainty she has learned to trust.",
+    "thought": "He's steady. I can trust this.",
+    "location": {
+      "waypoint": "van_front",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "calm",
+    "timestamp": "2026-06-22T15:02:11.113860"
+  },
+  {
+    "day": 15,
+    "cycle": "afternoon",
+    "type": "interaction",
+    "characters": [
+      "dan",
+      "huiling"
+    ],
+    "description": "The final systems check is complete and solid. At the van's front, Dan confirms each one while Hui Ling stands with him, watching the steady certainty she needs to believe this will hold.",
+    "dialogue": [
+      {
+        "speaker": "huiling",
+        "line": "Everything's holding?"
+      },
+      {
+        "speaker": "dan",
+        "line": "Battery's at ninety-six. Filter's clean. The rig's solid."
+      },
+      {
+        "speaker": "huiling",
+        "line": "So we're actually doing this."
+      },
+      {
+        "speaker": "dan",
+        "line": "We are. Tomorrow morning, when it's light."
+      },
+      {
+        "speaker": "huiling",
+        "line": "I'm not scared anymore."
+      },
+      {
+        "speaker": "dan",
+        "line": "Yes you are."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Of the dead, no. Of leaving? Still."
+      },
+      {
+        "speaker": "dan",
+        "line": "That's the sane part."
+      },
+      {
+        "speaker": "huiling",
+        "line": "And you?"
+      },
+      {
+        "speaker": "dan",
+        "line": "My hands are steady."
+      },
+      {
+        "speaker": "huiling",
+        "line": "I know. I watched you all day."
+      }
+    ],
+    "timestamp": "2026-06-22T15:02:11.113860"
   }
 ]
