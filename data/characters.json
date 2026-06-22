@@ -7,18 +7,18 @@
     "color": "#f59e0b",
     "scores": {
       "trust": 100,
-      "openness": 93,
-      "ambition": 67,
+      "openness": 94,
+      "ambition": 68,
       "loneliness": 0,
       "resilience": 100,
       "health": 100,
-      "hunger": 45,
+      "hunger": 53,
       "thirst": 53,
-      "energy": 93
+      "energy": 86
     },
     "mood": "steady",
     "location": {
-      "waypoint": "solar_array",
+      "waypoint": "van_front",
       "x": 42,
       "y": 52
     },
@@ -119,8 +119,8 @@
         "weight": 2
       },
       {
-        "day": 14,
-        "text": "She steadies me while I fix what I let go.",
+        "day": 15,
+        "text": "The van is ready. Everything is. Now we actually move.",
         "weight": 2
       }
     ]
@@ -134,17 +134,17 @@
     "scores": {
       "trust": 100,
       "openness": 100,
-      "ambition": 59,
+      "ambition": 60,
       "loneliness": 0,
       "resilience": 87,
       "health": 100,
-      "hunger": 45,
+      "hunger": 53,
       "thirst": 53,
-      "energy": 93
+      "energy": 86
     },
     "mood": "calm",
     "location": {
-      "waypoint": "solar_array",
+      "waypoint": "van_rear",
       "x": 64,
       "y": 44
     },
@@ -243,8 +243,8 @@
         "weight": 2
       },
       {
-        "day": 14,
-        "text": "His hands didn't shake today. We could work in peace.",
+        "day": 15,
+        "text": "He's steady. I'm ready. By tomorrow this place is gone.",
         "weight": 2
       }
     ]

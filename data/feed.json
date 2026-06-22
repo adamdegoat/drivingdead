@@ -5450,5 +5450,96 @@
       }
     ],
     "timestamp": "2026-06-22T07:03:11.066563"
+  },
+  {
+    "day": 15,
+    "cycle": "midday",
+    "character": "dan",
+    "action": "He checks the battery terminals, the water filter seal, the storage hatch—every system the van depends on, hands steady, mind already turning through the details of the road ahead.",
+    "thought": "Everything holds. We're actually leaving.",
+    "location": {
+      "waypoint": "van_front",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "steady",
+    "timestamp": "2026-06-22T11:37:03.375169"
+  },
+  {
+    "day": 15,
+    "cycle": "midday",
+    "character": "huiling",
+    "action": "She locks down the water rig connections, coils the spare rope, checks the storage corner—quiet, methodical work, each task a small confirmation that they're truly going.",
+    "thought": "By tomorrow we're not here.",
+    "location": {
+      "waypoint": "van_rear",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "calm",
+    "timestamp": "2026-06-22T11:37:03.375169"
+  },
+  {
+    "day": 15,
+    "cycle": "midday",
+    "type": "interaction",
+    "characters": [
+      "dan",
+      "huiling"
+    ],
+    "description": "In the clear midday light, Dan completes the final systems check at the van's front while Hui Ling secures the water rig at the rear—quiet, focused work on the machines that have held them and will carry them away by tomorrow morning.",
+    "dialogue": [
+      {
+        "speaker": "huiling",
+        "line": "Water rig's secured. Everything's locked down."
+      },
+      {
+        "speaker": "dan",
+        "line": "Battery at ninety-eight. All systems checked."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Okay. So we actually leave in the morning."
+      },
+      {
+        "speaker": "dan",
+        "line": "We do."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Are you still scared?"
+      },
+      {
+        "speaker": "dan",
+        "line": "Yeah. But not like before."
+      },
+      {
+        "speaker": "huiling",
+        "line": "What's different?"
+      },
+      {
+        "speaker": "dan",
+        "line": "I know the van is ready. I know you're ready. I just need to be."
+      },
+      {
+        "speaker": "huiling",
+        "line": "And are you?"
+      },
+      {
+        "speaker": "dan",
+        "line": "Getting there. The work helps."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Then we go when the sun comes up."
+      },
+      {
+        "speaker": "dan",
+        "line": "First light. That's the plan."
+      }
+    ],
+    "timestamp": "2026-06-22T11:37:03.375169"
   }
 ]
