@@ -1,10 +1,10 @@
 {
-  "day": 14,
-  "text": "Hui Ling spots someone in the adjacent tower—alive, trapped, staring directly at them.",
+  "day": 15,
+  "text": "At dusk, a fever-sick stranger limps to the ramp, begging Dan for sanctuary.",
   "flavor": "a survivor appears",
-  "cycle": "night",
-  "happens_at": "11pm",
+  "cycle": "evening",
+  "happens_at": "6pm",
   "status": "upcoming",
-  "revealed_at": "2026-06-22T00:00:35.323419",
+  "revealed_at": "2026-06-23T00:00:24.616873",
   "activated_at": null
 }
