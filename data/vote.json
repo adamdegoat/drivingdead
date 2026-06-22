@@ -1,27 +1,27 @@
 {
   "world": "drivingdead",
   "poll": {
-    "id": "2026-06-22",
+    "id": "2026-06-23",
     "closes": "tonight",
-    "question": "Day 15, evening. Dan and Hui Ling sit close by the fire—steadier than yesterday. A voice calls from the rooftop, asking for shelter. Do they:",
+    "question": "Tonight—Dan wants one more scavenge run into the city. Hui Ling wants the van sealed for dawn. Who's right?",
     "options": [
       {
-        "id": "open_ramp",
-        "label": "Open the ramp",
-        "desc": "Extend their healing to one more person. They don't just survive—they choose to help."
+        "id": "dan_run",
+        "label": "Dan's one more run",
+        "desc": "Trust the scavenger. The city still holds. One last chance before the road."
       },
       {
-        "id": "stay_sealed",
-        "label": "Stay sealed",
-        "desc": "Protect the fragile steadiness they've just found. They're barely alive—they can't save anyone else."
+        "id": "hui_ling_sealed",
+        "label": "Hui Ling's sealed dawn",
+        "desc": "The work is done. Everything loaded. Leave with certainty, not risk."
       }
     ]
   },
   "in_play": {
-    "id": "dan_caution",
-    "label": "Finish repairs, leave at daw",
-    "desc": "Trust his careful hands. Trust preparation.",
-    "decided": "2026-06-22",
+    "id": "open_ramp",
+    "label": "Open the ramp",
+    "desc": "Extend their healing to one more person. They don't just survive—they choose to help.",
+    "decided": "2026-06-23",
     "votes": 0,
     "tally": {}
   }

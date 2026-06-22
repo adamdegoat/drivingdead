@@ -5802,5 +5802,84 @@
       }
     ],
     "timestamp": "2026-06-22T22:31:53.616104"
+  },
+  {
+    "day": 16,
+    "cycle": "morning",
+    "character": "dan",
+    "action": "Moved through the van's final systems check, then joined Hui Ling at the rooftop edge when she called him over.",
+    "thought": "She asked, and I said yes.",
+    "location": {
+      "waypoint": "rooftop_edge",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "resolute",
+    "timestamp": "2026-06-23T07:03:12.957872"
+  },
+  {
+    "day": 16,
+    "cycle": "morning",
+    "character": "huiling",
+    "action": "Stood at the rooftop edge watching the street below, then steadied the rope as Dan lowered supplies and water to a limping survivor.",
+    "thought": "He said yes. That's what matters.",
+    "location": {
+      "waypoint": "rooftop_edge",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "calm",
+    "timestamp": "2026-06-23T07:03:12.957872"
+  },
+  {
+    "day": 16,
+    "cycle": "morning",
+    "type": "interaction",
+    "characters": [
+      "dan",
+      "huiling"
+    ],
+    "description": "Hui Ling spotted a survivor in the street below; Dan joined her at the ledge and lowered rope and supplies while the dead stirred in the distance, both of them quick and quiet and steady.",
+    "dialogue": [
+      {
+        "speaker": "huiling",
+        "line": "There's someone below. East street. She's limping, Dan."
+      },
+      {
+        "speaker": "dan",
+        "line": "Not ours. We're leaving in three hours."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Then we lower supplies. Water, rope, something."
+      },
+      {
+        "speaker": "dan",
+        "line": "One person becomes everyone else we can't save. That's how it starts."
+      },
+      {
+        "speaker": "huiling",
+        "line": "I know. That's why we do it now, before we leave."
+      },
+      {
+        "speaker": "dan",
+        "line": "Okay. Supplies only."
+      },
+      {
+        "speaker": "huiling",
+        "line": "The ramp stays locked?"
+      },
+      {
+        "speaker": "dan",
+        "line": "The ramp stays locked. And we move fast."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Okay."
+      }
+    ],
+    "timestamp": "2026-06-23T07:03:12.957872"
   }
 ]

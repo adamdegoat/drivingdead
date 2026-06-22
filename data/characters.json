@@ -7,18 +7,18 @@
     "color": "#f59e0b",
     "scores": {
       "trust": 100,
-      "openness": 96,
+      "openness": 97,
       "ambition": 68,
       "loneliness": 0,
-      "resilience": 99,
+      "resilience": 100,
       "health": 100,
-      "hunger": 45,
-      "thirst": 45,
-      "energy": 100
+      "hunger": 53,
+      "thirst": 53,
+      "energy": 93
     },
-    "mood": "anxious",
+    "mood": "resolute",
     "location": {
-      "waypoint": "van_rear",
+      "waypoint": "rooftop_edge",
       "x": 42,
       "y": 52
     },
@@ -50,7 +50,7 @@
     },
     "interaction": {
       "with": "huiling",
-      "state": "talking"
+      "state": "working_together"
     },
     "memories": [
       {
@@ -119,8 +119,8 @@
         "weight": 2
       },
       {
-        "day": 15,
-        "text": "Hui Ling stood beside me checking the systems. She trusted my hands.",
+        "day": 16,
+        "text": "She asked me to help and I said yes. My seal cracked.",
         "weight": 2
       }
     ]
@@ -134,17 +134,17 @@
     "scores": {
       "trust": 100,
       "openness": 100,
-      "ambition": 61,
+      "ambition": 62,
       "loneliness": 0,
       "resilience": 87,
       "health": 100,
-      "hunger": 45,
-      "thirst": 45,
-      "energy": 100
+      "hunger": 53,
+      "thirst": 53,
+      "energy": 93
     },
     "mood": "calm",
     "location": {
-      "waypoint": "van_rear",
+      "waypoint": "rooftop_edge",
       "x": 64,
       "y": 44
     },
@@ -174,7 +174,7 @@
     },
     "interaction": {
       "with": "dan",
-      "state": "talking"
+      "state": "working_together"
     },
     "memories": [
       {
@@ -228,11 +228,6 @@
         "weight": 3
       },
       {
-        "day": 14,
-        "text": "He opened and listened to what my hands could do with them.",
-        "weight": 2
-      },
-      {
         "day": 15,
         "text": "He's steady. I'm ready. By tomorrow this place is gone.",
         "weight": 2
@@ -245,6 +240,11 @@
       {
         "day": 15,
         "text": "He was scared as I've ever seen him. I held it.",
+        "weight": 2
+      },
+      {
+        "day": 16,
+        "text": "He said yes when it mattered. His fear finally bent.",
         "weight": 2
       }
     ]
