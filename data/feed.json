@@ -5628,5 +5628,84 @@
       }
     ],
     "timestamp": "2026-06-22T15:02:11.113860"
+  },
+  {
+    "day": 15,
+    "cycle": "evening",
+    "character": "dan",
+    "action": "By the rear fire, he runs through the route one more time—van, fuel, the road beyond, every variable that could fail.",
+    "thought": "Everything's ready but I'm not",
+    "location": {
+      "waypoint": "van_rear",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "steady",
+    "timestamp": "2026-06-22T18:32:06.421633"
+  },
+  {
+    "day": 15,
+    "cycle": "evening",
+    "character": "huiling",
+    "action": "She sits beside him by the fire, watching him think, knowing what the silence holds and holding the certainty steady.",
+    "thought": "He's going to get us there",
+    "location": {
+      "waypoint": "van_rear",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "calm",
+    "timestamp": "2026-06-22T18:32:06.421633"
+  },
+  {
+    "day": 15,
+    "cycle": "evening",
+    "type": "interaction",
+    "characters": [
+      "dan",
+      "huiling"
+    ],
+    "description": "By the rear fire on the last evening before they leave, Dan speaks through the journey while Hui Ling holds the certainty steady, the rooftop fortress quiet around them.",
+    "dialogue": [
+      {
+        "speaker": "huiling",
+        "line": "Last night here."
+      },
+      {
+        "speaker": "dan",
+        "line": "Yeah."
+      },
+      {
+        "speaker": "huiling",
+        "line": "You're thinking about the road."
+      },
+      {
+        "speaker": "dan",
+        "line": "About everything. The van, the fuel, what we'll find."
+      },
+      {
+        "speaker": "huiling",
+        "line": "What you'll find, or what we won't."
+      },
+      {
+        "speaker": "dan",
+        "line": "Both."
+      },
+      {
+        "speaker": "huiling",
+        "line": "And you're still leaving."
+      },
+      {
+        "speaker": "dan",
+        "line": "We both are."
+      },
+      {
+        "speaker": "huiling",
+        "line": "I know."
+      }
+    ],
+    "timestamp": "2026-06-22T18:32:06.421633"
   }
 ]
