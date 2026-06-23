@@ -8,17 +8,17 @@
     "scores": {
       "trust": 100,
       "openness": 100,
-      "ambition": 67,
+      "ambition": 66,
       "loneliness": 0,
       "resilience": 97,
       "health": 100,
-      "hunger": 45,
-      "thirst": 53,
-      "energy": 72
+      "hunger": 53,
+      "thirst": 45,
+      "energy": 100
     },
     "mood": "wary",
     "location": {
-      "waypoint": "van_door",
+      "waypoint": "ramp_block",
       "x": 42,
       "y": 52
     },
@@ -50,7 +50,7 @@
     },
     "interaction": {
       "with": "huiling",
-      "state": "talking"
+      "state": "sitting_together"
     },
     "memories": [
       {
@@ -134,17 +134,17 @@
     "scores": {
       "trust": 100,
       "openness": 100,
-      "ambition": 63,
+      "ambition": 64,
       "loneliness": 0,
       "resilience": 90,
       "health": 100,
-      "hunger": 45,
-      "thirst": 53,
-      "energy": 72
+      "hunger": 53,
+      "thirst": 45,
+      "energy": 100
     },
     "mood": "calm",
     "location": {
-      "waypoint": "van_rear",
+      "waypoint": "ramp_block",
       "x": 64,
       "y": 44
     },
@@ -174,7 +174,7 @@
     },
     "interaction": {
       "with": "dan",
-      "state": "talking"
+      "state": "sitting_together"
     },
     "memories": [
       {

@@ -6126,5 +6126,96 @@
       }
     ],
     "timestamp": "2026-06-23T18:36:32.149138"
+  },
+  {
+    "day": 16,
+    "cycle": "night",
+    "character": "dan",
+    "action": "He stands at the open ramp, watching the dark street below, his hands resting on the rail he once sealed forever.",
+    "thought": "I let go. She was right.",
+    "location": {
+      "waypoint": "ramp_block",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "wary",
+    "timestamp": "2026-06-23T22:32:50.027499"
+  },
+  {
+    "day": 16,
+    "cycle": "night",
+    "character": "huiling",
+    "action": "She comes to stand with Dan at the ramp, her hand finding his arm in the dark.",
+    "thought": "He's scared but he's here.",
+    "location": {
+      "waypoint": "ramp_block",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "calm",
+    "timestamp": "2026-06-23T22:32:50.027499"
+  },
+  {
+    "day": 16,
+    "cycle": "night",
+    "type": "interaction",
+    "characters": [
+      "dan",
+      "huiling"
+    ],
+    "description": "The stranger Mari sleeps in the van at last; by nightfall Dan stands at the open ramp watching the dead city, and Hui Ling joins him in the dark, both of them awake and listening.",
+    "dialogue": [
+      {
+        "speaker": "huiling",
+        "line": "She's asleep. Finally."
+      },
+      {
+        "speaker": "dan",
+        "line": "Good. She needed rest."
+      },
+      {
+        "speaker": "huiling",
+        "line": "You need rest too."
+      },
+      {
+        "speaker": "dan",
+        "line": "Can't. Not yet. The ramp's open."
+      },
+      {
+        "speaker": "huiling",
+        "line": "It's open because we chose it."
+      },
+      {
+        "speaker": "dan",
+        "line": "We did. You were right."
+      },
+      {
+        "speaker": "huiling",
+        "line": "That matters now?"
+      },
+      {
+        "speaker": "dan",
+        "line": "Yeah. It matters."
+      },
+      {
+        "speaker": "huiling",
+        "line": "The dead were loud before dusk."
+      },
+      {
+        "speaker": "dan",
+        "line": "Moved on. Gone quiet now."
+      },
+      {
+        "speaker": "huiling",
+        "line": "We're holding, Dan. That's the point."
+      },
+      {
+        "speaker": "dan",
+        "line": "Yeah. We are holding."
+      }
+    ],
+    "timestamp": "2026-06-23T22:32:50.027499"
   }
 ]
