@@ -5956,5 +5956,88 @@
       }
     ],
     "timestamp": "2026-06-23T11:32:11.534481"
+  },
+  {
+    "day": 16,
+    "cycle": "afternoon",
+    "character": "dan",
+    "action": "He stands beside Hui Ling at the water station, jaw tight as the stranger rests, processing the decision he made.",
+    "thought": "She was right. I can feel that now.",
+    "location": {
+      "waypoint": "water_rig",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "conflicted",
+    "timestamp": "2026-06-23T15:02:19.588321"
+  },
+  {
+    "day": 16,
+    "cycle": "afternoon",
+    "character": "huiling",
+    "action": "She checks the stranger for bites and fever, her nursing instincts guiding each touch as she assesses what he needs.",
+    "thought": "He said yes. He's scared but holding.",
+    "location": {
+      "waypoint": "water_rig",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "steady",
+    "timestamp": "2026-06-23T15:02:19.588321"
+  },
+  {
+    "day": 16,
+    "cycle": "afternoon",
+    "type": "interaction",
+    "characters": [
+      "dan",
+      "huiling"
+    ],
+    "description": "At the water station in afternoon light, Hui Ling finishes checking the stranger while Dan stands beside her, watching the ramp they opened—the sealed fortress finally breached.",
+    "dialogue": [
+      {
+        "speaker": "huiling",
+        "line": "No bites. Dehydrated, but stable."
+      },
+      {
+        "speaker": "dan",
+        "line": "How long can we keep him?"
+      },
+      {
+        "speaker": "huiling",
+        "line": "Few days on half rations, maybe longer."
+      },
+      {
+        "speaker": "dan",
+        "line": "Everything's different now."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Yes. But he's alive because we chose that."
+      },
+      {
+        "speaker": "dan",
+        "line": "Because you asked me to. Because I listened."
+      },
+      {
+        "speaker": "huiling",
+        "line": "You're listening now. That's what matters."
+      },
+      {
+        "speaker": "dan",
+        "line": "Tomorrow?"
+      },
+      {
+        "speaker": "huiling",
+        "line": "Tomorrow we figure it out. Together."
+      },
+      {
+        "speaker": "dan",
+        "line": "Yeah. Together."
+      }
+    ],
+    "timestamp": "2026-06-23T15:02:19.588321"
   }
 ]
