@@ -7,16 +7,16 @@
     "color": "#f59e0b",
     "scores": {
       "trust": 100,
-      "openness": 97,
+      "openness": 99,
       "ambition": 68,
       "loneliness": 0,
-      "resilience": 100,
+      "resilience": 98,
       "health": 100,
-      "hunger": 53,
+      "hunger": 45,
       "thirst": 53,
-      "energy": 93
+      "energy": 86
     },
-    "mood": "resolute",
+    "mood": "conflicted",
     "location": {
       "waypoint": "rooftop_edge",
       "x": 42,
@@ -50,7 +50,7 @@
     },
     "interaction": {
       "with": "huiling",
-      "state": "working_together"
+      "state": "talking"
     },
     "memories": [
       {
@@ -114,9 +114,9 @@
         "weight": 3
       },
       {
-        "day": 15,
-        "text": "The van is ready. Everything is. Now we actually move.",
-        "weight": 2
+        "day": 16,
+        "text": "I opened the ramp when she asked. I let the fortress break.",
+        "weight": 3
       },
       {
         "day": 16,
@@ -136,13 +136,13 @@
       "openness": 100,
       "ambition": 62,
       "loneliness": 0,
-      "resilience": 87,
+      "resilience": 88,
       "health": 100,
-      "hunger": 53,
+      "hunger": 45,
       "thirst": 53,
-      "energy": 93
+      "energy": 86
     },
-    "mood": "calm",
+    "mood": "steady",
     "location": {
       "waypoint": "rooftop_edge",
       "x": 64,
@@ -174,7 +174,7 @@
     },
     "interaction": {
       "with": "dan",
-      "state": "working_together"
+      "state": "talking"
     },
     "memories": [
       {
@@ -238,9 +238,9 @@
         "weight": 2
       },
       {
-        "day": 15,
-        "text": "He was scared as I've ever seen him. I held it.",
-        "weight": 2
+        "day": 16,
+        "text": "He said yes to the stranger. He let go of the control for me.",
+        "weight": 3
       },
       {
         "day": 16,

@@ -5881,5 +5881,80 @@
       }
     ],
     "timestamp": "2026-06-23T07:03:12.957872"
+  },
+  {
+    "day": 16,
+    "cycle": "midday",
+    "character": "dan",
+    "action": "Dan watched from the ledge, rigid with the weight of his choice, as the stranger climbed the ramp toward the deck.",
+    "thought": "We just let the fortress open.",
+    "location": {
+      "waypoint": "rooftop_edge",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "conflicted",
+    "timestamp": "2026-06-23T11:32:11.534481"
+  },
+  {
+    "day": 16,
+    "cycle": "midday",
+    "character": "huiling",
+    "action": "Hui Ling stood beside him with her hand on his arm, watching the survivor reach the ramp with a steadiness he wasn't finding.",
+    "thought": "He heard me. He said yes.",
+    "location": {
+      "waypoint": "rooftop_edge",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "steady",
+    "timestamp": "2026-06-23T11:32:11.534481"
+  },
+  {
+    "day": 16,
+    "cycle": "midday",
+    "type": "interaction",
+    "characters": [
+      "dan",
+      "huiling"
+    ],
+    "description": "At the ledge at midday, Hui Ling pointed to a struggling figure three streets over while Dan stood rigid beside her — and then, without words, opened the ramp to let them climb toward the deck he'd sworn to keep sealed.",
+    "dialogue": [
+      {
+        "speaker": "huiling",
+        "line": "See that one? Bottom of the street?"
+      },
+      {
+        "speaker": "dan",
+        "line": "Yeah. I see them."
+      },
+      {
+        "speaker": "huiling",
+        "line": "We can help them up."
+      },
+      {
+        "speaker": "dan",
+        "line": "We're leaving."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Not without trying."
+      },
+      {
+        "speaker": "dan",
+        "line": "Fine. The ramp. Not the van."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Thank you."
+      },
+      {
+        "speaker": "dan",
+        "line": "Don't thank me yet."
+      }
+    ],
+    "timestamp": "2026-06-23T11:32:11.534481"
   }
 ]
