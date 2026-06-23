@@ -1,27 +1,32 @@
 {
   "world": "drivingdead",
   "poll": {
-    "id": "2026-06-23",
+    "id": "2026-06-24",
     "closes": "tonight",
-    "question": "Tonight—Dan wants one more scavenge run into the city. Hui Ling wants the van sealed for dawn. Who's right?",
+    "question": "Dusk falls. The ramp is open. Does Dan close it for the night, or trust what Hui Ling's opened?",
     "options": [
       {
-        "id": "dan_run",
-        "label": "Dan's one more run",
-        "desc": "Trust the scavenger. The city still holds. One last chance before the road."
+        "id": "seal",
+        "label": "Close it",
+        "desc": "Fear returns as dark falls; he seals the fortress."
       },
       {
-        "id": "hui_ling_sealed",
-        "label": "Hui Ling's sealed dawn",
-        "desc": "The work is done. Everything loaded. Leave with certainty, not risk."
+        "id": "keep_open",
+        "label": "Leave it open",
+        "desc": "His yes was real; he stays open to her world."
+      },
+      {
+        "id": "watch_together",
+        "label": "Close—but keep watch",
+        "desc": "Sealed for safety, but both of them keep watch at the ledge."
       }
     ]
   },
   "in_play": {
-    "id": "open_ramp",
-    "label": "Open the ramp",
-    "desc": "Extend their healing to one more person. They don't just survive—they choose to help.",
-    "decided": "2026-06-23",
+    "id": "dan_run",
+    "label": "Dan's one more run",
+    "desc": "Trust the scavenger. The city still holds. One last chance before the road.",
+    "decided": "2026-06-24",
     "votes": 0,
     "tally": {}
   }

@@ -6217,5 +6217,80 @@
       }
     ],
     "timestamp": "2026-06-23T22:32:50.027499"
+  },
+  {
+    "day": 17,
+    "cycle": "morning",
+    "character": "dan",
+    "action": "He stands at the van's open door, eyes on the ramp and the quiet street below, hands steady on the frame.",
+    "thought": "The ramp's still open. Can't close it now.",
+    "location": {
+      "waypoint": "van_door",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "wary",
+    "timestamp": "2026-06-24T07:07:25.089154"
+  },
+  {
+    "day": 17,
+    "cycle": "morning",
+    "character": "huiling",
+    "action": "She finishes checking Mari's pulse in the van's rear, then moves forward to stand beside Dan at the open door.",
+    "thought": "His shoulders are softer. He's holding this differently.",
+    "location": {
+      "waypoint": "van_door",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "calm",
+    "timestamp": "2026-06-24T07:07:25.089154"
+  },
+  {
+    "day": 17,
+    "cycle": "morning",
+    "type": "interaction",
+    "characters": [
+      "dan",
+      "huiling"
+    ],
+    "description": "Mari's fever's down, the ramp still open—by morning Hui Ling joins Dan at the door and they stand together steady in the warm sun.",
+    "dialogue": [
+      {
+        "speaker": "huiling",
+        "line": "Mari's fever's dropped. She slept through the night."
+      },
+      {
+        "speaker": "dan",
+        "line": "That's good. She eating?"
+      },
+      {
+        "speaker": "huiling",
+        "line": "A little, this morning. Drank water."
+      },
+      {
+        "speaker": "dan",
+        "line": "Good. Ramp's been quiet."
+      },
+      {
+        "speaker": "huiling",
+        "line": "And you? Are you okay?"
+      },
+      {
+        "speaker": "dan",
+        "line": "Yeah. Different, but okay."
+      },
+      {
+        "speaker": "huiling",
+        "line": "We're going to be alright. All three of us."
+      },
+      {
+        "speaker": "dan",
+        "line": "Yeah. I think we are."
+      }
+    ],
+    "timestamp": "2026-06-24T07:07:25.089154"
   }
 ]
