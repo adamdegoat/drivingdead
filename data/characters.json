@@ -10,15 +10,15 @@
       "openness": 100,
       "ambition": 67,
       "loneliness": 0,
-      "resilience": 98,
+      "resilience": 97,
       "health": 100,
-      "hunger": 53,
+      "hunger": 45,
       "thirst": 53,
-      "energy": 79
+      "energy": 72
     },
-    "mood": "conflicted",
+    "mood": "wary",
     "location": {
-      "waypoint": "water_rig",
+      "waypoint": "van_door",
       "x": 42,
       "y": 52
     },
@@ -50,14 +50,9 @@
     },
     "interaction": {
       "with": "huiling",
-      "state": "working_together"
+      "state": "talking"
     },
     "memories": [
-      {
-        "day": 2,
-        "text": "When she asked why I blocked the door, I told her the truth—I'm terrified she'll leave me.",
-        "weight": 3
-      },
       {
         "day": 3,
         "text": "I thought letting go meant losing her. It meant saving us.",
@@ -122,6 +117,11 @@
         "day": 16,
         "text": "She was right and I finally heard her. We're changed now.",
         "weight": 3
+      },
+      {
+        "day": 16,
+        "text": "She was right. I opened the ramp. I let go.",
+        "weight": 3
       }
     ]
   },
@@ -136,15 +136,15 @@
       "openness": 100,
       "ambition": 63,
       "loneliness": 0,
-      "resilience": 89,
+      "resilience": 90,
       "health": 100,
-      "hunger": 53,
+      "hunger": 45,
       "thirst": 53,
-      "energy": 79
+      "energy": 72
     },
-    "mood": "steady",
+    "mood": "calm",
     "location": {
-      "waypoint": "water_rig",
+      "waypoint": "van_rear",
       "x": 64,
       "y": 44
     },
@@ -174,7 +174,7 @@
     },
     "interaction": {
       "with": "dan",
-      "state": "working_together"
+      "state": "talking"
     },
     "memories": [
       {
@@ -228,11 +228,6 @@
         "weight": 3
       },
       {
-        "day": 15,
-        "text": "He's steady. I'm ready. By tomorrow this place is gone.",
-        "weight": 2
-      },
-      {
         "day": 16,
         "text": "He said yes to the stranger. He let go of the control for me.",
         "weight": 3
@@ -240,6 +235,11 @@
       {
         "day": 16,
         "text": "He opened the fortress when I asked. He broke his own law for what's right.",
+        "weight": 3
+      },
+      {
+        "day": 16,
+        "text": "He said yes. He opened the fortress for me.",
         "weight": 3
       },
       {

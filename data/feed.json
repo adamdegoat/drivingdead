@@ -6039,5 +6039,92 @@
       }
     ],
     "timestamp": "2026-06-23T15:02:19.588321"
+  },
+  {
+    "day": 16,
+    "cycle": "evening",
+    "character": "dan",
+    "action": "Dan positions himself at the van door as darkness settles, eyes on the open ramp, one hand on the frame.",
+    "thought": "I let it open. Now I watch it.",
+    "location": {
+      "waypoint": "van_door",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "wary",
+    "timestamp": "2026-06-23T18:36:32.149138"
+  },
+  {
+    "day": 16,
+    "cycle": "evening",
+    "character": "huiling",
+    "action": "Hui Ling kneels beside Mari inside the van, checking her pulse and listening to her breathing, offering water in careful sips.",
+    "thought": "He broke his rule. Now we're something else.",
+    "location": {
+      "waypoint": "van_rear",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "calm",
+    "timestamp": "2026-06-23T18:36:32.149138"
+  },
+  {
+    "day": 16,
+    "cycle": "evening",
+    "type": "interaction",
+    "characters": [
+      "dan",
+      "huiling"
+    ],
+    "description": "In the van's growing dusk, Hui Ling tends the stranger—Mari—while Dan stands at the door watching the open ramp, the fortress breached, both of them watching what comes next.",
+    "dialogue": [
+      {
+        "speaker": "huiling",
+        "line": "She's dehydrated and scared. Not bitten."
+      },
+      {
+        "speaker": "dan",
+        "line": "What's her name?"
+      },
+      {
+        "speaker": "huiling",
+        "line": "Mari. She's been alone three weeks."
+      },
+      {
+        "speaker": "dan",
+        "line": "Three weeks."
+      },
+      {
+        "speaker": "huiling",
+        "line": "She hid in a basement. The dead don't know she's here."
+      },
+      {
+        "speaker": "dan",
+        "line": "And now they might."
+      },
+      {
+        "speaker": "huiling",
+        "line": "They might have anyway."
+      },
+      {
+        "speaker": "dan",
+        "line": "So the ramp stays open."
+      },
+      {
+        "speaker": "huiling",
+        "line": "For now, yes."
+      },
+      {
+        "speaker": "dan",
+        "line": "I'll watch it."
+      },
+      {
+        "speaker": "huiling",
+        "line": "I know you will."
+      }
+    ],
+    "timestamp": "2026-06-23T18:36:32.149138"
   }
 ]
