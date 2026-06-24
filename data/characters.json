@@ -8,17 +8,17 @@
     "scores": {
       "trust": 100,
       "openness": 100,
-      "ambition": 69,
+      "ambition": 68,
       "loneliness": 0,
-      "resilience": 99,
+      "resilience": 100,
       "health": 100,
-      "hunger": 53,
-      "thirst": 53,
-      "energy": 72
+      "hunger": 45,
+      "thirst": 45,
+      "energy": 100
     },
-    "mood": "resolute",
+    "mood": "thoughtful",
     "location": {
-      "waypoint": "scavenge_run",
+      "waypoint": "van_rear",
       "x": 42,
       "y": 52
     },
@@ -50,14 +50,9 @@
     },
     "interaction": {
       "with": "huiling",
-      "state": "talking"
+      "state": "sitting_together"
     },
     "memories": [
-      {
-        "day": 3,
-        "text": "I thought letting go meant losing her. It meant saving us.",
-        "weight": 3
-      },
       {
         "day": 4,
         "text": "I let her lead and nothing broke.",
@@ -122,6 +117,11 @@
         "day": 16,
         "text": "She was right. I opened the ramp. I let go.",
         "weight": 3
+      },
+      {
+        "day": 17,
+        "text": "I opened the ramp and lived through it. I can move again.",
+        "weight": 3
       }
     ]
   },
@@ -134,17 +134,17 @@
     "scores": {
       "trust": 100,
       "openness": 100,
-      "ambition": 66,
+      "ambition": 65,
       "loneliness": 0,
-      "resilience": 93,
+      "resilience": 94,
       "health": 100,
-      "hunger": 53,
-      "thirst": 53,
-      "energy": 72
+      "hunger": 45,
+      "thirst": 45,
+      "energy": 100
     },
-    "mood": "steady",
+    "mood": "warm",
     "location": {
-      "waypoint": "ramp_block",
+      "waypoint": "van_rear",
       "x": 64,
       "y": 44
     },
@@ -174,7 +174,7 @@
     },
     "interaction": {
       "with": "dan",
-      "state": "talking"
+      "state": "sitting_together"
     },
     "memories": [
       {

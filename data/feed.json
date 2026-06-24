@@ -6521,5 +6521,84 @@
       }
     ],
     "timestamp": "2026-06-24T18:31:37.007661"
+  },
+  {
+    "day": 17,
+    "cycle": "night",
+    "character": "dan",
+    "action": "He settles by the heater in the van's warmth, listening to Mari sleep and thinking about the run he's ready for.",
+    "thought": "The fear's smaller now. I can move.",
+    "location": {
+      "waypoint": "van_rear",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "thoughtful",
+    "timestamp": "2026-06-24T22:31:57.331053"
+  },
+  {
+    "day": 17,
+    "cycle": "night",
+    "character": "huiling",
+    "action": "She settles beside him in the van's warm interior, listening to Mari's steady breathing and the sound of the city beyond the open ramp.",
+    "thought": "He's ready now. Finally, he's ready.",
+    "location": {
+      "waypoint": "van_rear",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "warm",
+    "timestamp": "2026-06-24T22:31:57.331053"
+  },
+  {
+    "day": 17,
+    "cycle": "night",
+    "type": "interaction",
+    "characters": [
+      "dan",
+      "huiling"
+    ],
+    "description": "The ramp open to the night, the heater warming the van, and Dan finally sitting still beside Hui Ling instead of counting fears—Mari asleep nearby, and both of them quieter than they've been in months.",
+    "dialogue": [
+      {
+        "speaker": "huiling",
+        "line": "Mari's sleeping deep. Better than last night."
+      },
+      {
+        "speaker": "dan",
+        "line": "Yeah."
+      },
+      {
+        "speaker": "huiling",
+        "line": "You okay?"
+      },
+      {
+        "speaker": "dan",
+        "line": "Yeah. Just... thinking."
+      },
+      {
+        "speaker": "huiling",
+        "line": "About what?"
+      },
+      {
+        "speaker": "dan",
+        "line": "The run. I think I'm ready."
+      },
+      {
+        "speaker": "huiling",
+        "line": "I know you are."
+      },
+      {
+        "speaker": "dan",
+        "line": "It's strange, being scared and ready at the same time."
+      },
+      {
+        "speaker": "huiling",
+        "line": "That's not strange. That's growing."
+      }
+    ],
+    "timestamp": "2026-06-24T22:31:57.331053"
   }
 ]
