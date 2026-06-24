@@ -8,17 +8,17 @@
     "scores": {
       "trust": 100,
       "openness": 100,
-      "ambition": 68,
+      "ambition": 69,
       "loneliness": 0,
       "resilience": 100,
       "health": 100,
-      "hunger": 45,
-      "thirst": 45,
-      "energy": 100
+      "hunger": 53,
+      "thirst": 53,
+      "energy": 93
     },
-    "mood": "thoughtful",
+    "mood": "steady",
     "location": {
-      "waypoint": "van_rear",
+      "waypoint": "ramp_block",
       "x": 42,
       "y": 52
     },
@@ -50,7 +50,7 @@
     },
     "interaction": {
       "with": "huiling",
-      "state": "sitting_together"
+      "state": "working_together"
     },
     "memories": [
       {
@@ -138,9 +138,9 @@
       "loneliness": 0,
       "resilience": 94,
       "health": 100,
-      "hunger": 45,
-      "thirst": 45,
-      "energy": 100
+      "hunger": 53,
+      "thirst": 53,
+      "energy": 93
     },
     "mood": "warm",
     "location": {
@@ -174,7 +174,7 @@
     },
     "interaction": {
       "with": "dan",
-      "state": "sitting_together"
+      "state": "working_together"
     },
     "memories": [
       {
@@ -243,8 +243,8 @@
         "weight": 3
       },
       {
-        "day": 17,
-        "text": "He packed himself and went. I believe he comes back.",
+        "day": 18,
+        "text": "He's moving with certainty now. I didn't know if that would come back.",
         "weight": 2
       }
     ]

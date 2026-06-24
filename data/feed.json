@@ -6600,5 +6600,80 @@
       }
     ],
     "timestamp": "2026-06-24T22:31:57.331053"
+  },
+  {
+    "day": 18,
+    "cycle": "morning",
+    "character": "dan",
+    "action": "He checks the ramp in daylight for the first time since opening it, running his hands over the timber and hinges, then turns to pack his scavenge bag with methodical certainty.",
+    "thought": "Light's clear. I can move now.",
+    "location": {
+      "waypoint": "ramp_block",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "steady",
+    "timestamp": "2026-06-25T07:03:50.267364"
+  },
+  {
+    "day": 18,
+    "cycle": "morning",
+    "character": "huiling",
+    "action": "She stands at the van's rear door with a cloth satchel of supplies—tools, bandages, water—and watches him work, her face open and unguarded in the morning light.",
+    "thought": "He's ready. Finally, he's ready.",
+    "location": {
+      "waypoint": "van_rear",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "warm",
+    "timestamp": "2026-06-25T07:03:50.267364"
+  },
+  {
+    "day": 18,
+    "cycle": "morning",
+    "type": "interaction",
+    "characters": [
+      "dan",
+      "huiling"
+    ],
+    "description": "Morning light floods the open ramp; Dan checks the timber and hinges with steady hands while Hui Ling watches from the van's rear door with a satchel of supplies, both of them moving with a new ease.",
+    "dialogue": [
+      {
+        "speaker": "huiling",
+        "line": "Weather's clear. You're really going out?"
+      },
+      {
+        "speaker": "dan",
+        "line": "Fifth Street. That pharmacy we marked. Long time since I've moved."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Just stay close to the edges. Don't go past the old school."
+      },
+      {
+        "speaker": "dan",
+        "line": "I won't. I know the boundaries."
+      },
+      {
+        "speaker": "huiling",
+        "line": "And back before dark?"
+      },
+      {
+        "speaker": "dan",
+        "line": "Back before dark. You have my word."
+      },
+      {
+        "speaker": "huiling",
+        "line": "You do now. That's different."
+      },
+      {
+        "speaker": "dan",
+        "line": "Yeah. It is."
+      }
+    ],
+    "timestamp": "2026-06-25T07:03:50.267364"
   }
 ]

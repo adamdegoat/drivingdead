@@ -1,32 +1,32 @@
 {
   "world": "drivingdead",
   "poll": {
-    "id": "2026-06-24",
+    "id": "2026-06-25",
     "closes": "tonight",
-    "question": "Dusk falls. The ramp is open. Does Dan close it for the night, or trust what Hui Ling's opened?",
+    "question": "Dan shoulders his pack at the open ramp. Hui Ling holds the moment with him. Does she let him go alone, or does she go with him?",
     "options": [
       {
-        "id": "seal",
-        "label": "Close it",
-        "desc": "Fear returns as dark falls; he seals the fortress."
+        "id": "let_him_go",
+        "label": "Let him go",
+        "desc": "She stays with Mari. She trusts him. The ramp closes behind him."
       },
       {
-        "id": "keep_open",
-        "label": "Leave it open",
-        "desc": "His yes was real; he stays open to her world."
+        "id": "go_together",
+        "label": "Go with him",
+        "desc": "Mari stays sealed in the van. Hui Ling moves into the dark at his side."
       },
       {
-        "id": "watch_together",
-        "label": "Close—but keep watch",
-        "desc": "Sealed for safety, but both of them keep watch at the ledge."
+        "id": "ramp_open",
+        "label": "Keep the ramp open",
+        "desc": "He goes alone. They keep it open—a lifeline burning through the night."
       }
     ]
   },
   "in_play": {
-    "id": "dan_run",
-    "label": "Dan's one more run",
-    "desc": "Trust the scavenger. The city still holds. One last chance before the road.",
-    "decided": "2026-06-24",
+    "id": "seal",
+    "label": "Close it",
+    "desc": "Fear returns as dark falls; he seals the fortress.",
+    "decided": "2026-06-25",
     "votes": 0,
     "tally": {}
   }
