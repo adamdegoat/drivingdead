@@ -6446,5 +6446,80 @@
       }
     ],
     "timestamp": "2026-06-24T15:02:37.882346"
+  },
+  {
+    "day": 17,
+    "cycle": "evening",
+    "character": "dan",
+    "action": "He carries his pack to the open ramp, pauses at the threshold of the city, then turns back to look at her one last time.",
+    "thought": "The ramp is open. I can move now.",
+    "location": {
+      "waypoint": "scavenge_run",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "resolute",
+    "timestamp": "2026-06-24T18:31:37.007661"
+  },
+  {
+    "day": 17,
+    "cycle": "evening",
+    "character": "huiling",
+    "action": "She stands at the ramp's edge, one hand on his shoulder as he checks his pack, watching the streets below darken.",
+    "thought": "He's finally moving. Just let him come back.",
+    "location": {
+      "waypoint": "ramp_block",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "steady",
+    "timestamp": "2026-06-24T18:31:37.007661"
+  },
+  {
+    "day": 17,
+    "cycle": "evening",
+    "type": "interaction",
+    "characters": [
+      "dan",
+      "huiling"
+    ],
+    "description": "By dusk, Dan shoulders his pack at the open ramp and Hui Ling holds the moment with him—the first time they've stood here truly open to the city, not sealed against it.",
+    "dialogue": [
+      {
+        "speaker": "huiling",
+        "line": "You've got the radio?"
+      },
+      {
+        "speaker": "dan",
+        "line": "Clipped to my pack. Back by dark."
+      },
+      {
+        "speaker": "huiling",
+        "line": "The fort's open until you come back."
+      },
+      {
+        "speaker": "dan",
+        "line": "I'm coming back. Both of you."
+      },
+      {
+        "speaker": "huiling",
+        "line": "I know you are."
+      },
+      {
+        "speaker": "dan",
+        "line": "Then let me go."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Be careful down there."
+      },
+      {
+        "speaker": "dan",
+        "line": "Always."
+      }
+    ],
+    "timestamp": "2026-06-24T18:31:37.007661"
   }
 ]
