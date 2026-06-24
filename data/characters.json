@@ -8,17 +8,17 @@
     "scores": {
       "trust": 100,
       "openness": 100,
-      "ambition": 67,
+      "ambition": 68,
       "loneliness": 0,
-      "resilience": 98,
+      "resilience": 99,
       "health": 100,
-      "hunger": 53,
+      "hunger": 45,
       "thirst": 53,
-      "energy": 86
+      "energy": 79
     },
-    "mood": "thoughtful",
+    "mood": "resolute",
     "location": {
-      "waypoint": "ramp_block",
+      "waypoint": "scavenge_run",
       "x": 42,
       "y": 52
     },
@@ -48,10 +48,7 @@
       ],
       "beard": true
     },
-    "interaction": {
-      "with": "huiling",
-      "state": "talking"
-    },
+    "interaction": null,
     "memories": [
       {
         "day": 3,
@@ -136,15 +133,15 @@
       "openness": 100,
       "ambition": 65,
       "loneliness": 0,
-      "resilience": 91,
+      "resilience": 92,
       "health": 100,
-      "hunger": 53,
+      "hunger": 45,
       "thirst": 53,
-      "energy": 86
+      "energy": 79
     },
     "mood": "steady",
     "location": {
-      "waypoint": "ramp_block",
+      "waypoint": "rooftop_mid",
       "x": 64,
       "y": 44
     },
@@ -172,10 +169,7 @@
         "slingbag"
       ]
     },
-    "interaction": {
-      "with": "dan",
-      "state": "talking"
-    },
+    "interaction": null,
     "memories": [
       {
         "day": 2,
@@ -243,8 +237,8 @@
         "weight": 3
       },
       {
-        "day": 16,
-        "text": "He said yes when it mattered. His fear finally bent.",
+        "day": 17,
+        "text": "He packed himself and went. I believe he comes back.",
         "weight": 2
       }
     ]

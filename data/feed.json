@@ -6367,5 +6367,84 @@
       }
     ],
     "timestamp": "2026-06-24T11:32:20.836112"
+  },
+  {
+    "day": 17,
+    "cycle": "afternoon",
+    "character": "dan",
+    "action": "He ties his pack at the ramp, checking the straps one last time, the city clear and close below.",
+    "thought": "The fear's smaller now. I can go.",
+    "location": {
+      "waypoint": "scavenge_run",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "resolute",
+    "timestamp": "2026-06-24T15:02:37.882346"
+  },
+  {
+    "day": 17,
+    "cycle": "afternoon",
+    "character": "huiling",
+    "action": "She stands at the rooftop edge watching him prepare, the city spread below them, the open ramp finally made sense.",
+    "thought": "He's ready. The ramp opened him.",
+    "location": {
+      "waypoint": "rooftop_mid",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "steady",
+    "timestamp": "2026-06-24T15:02:37.882346"
+  },
+  {
+    "day": 17,
+    "cycle": "afternoon",
+    "type": "interaction",
+    "characters": [
+      "dan",
+      "huiling"
+    ],
+    "description": "The afternoon sun is clear and bright; Dan readies his pack at the ramp while Hui Ling watches the city with him, the open ramp their newest risk turned into choice.",
+    "dialogue": [
+      {
+        "speaker": "huiling",
+        "line": "Mari's fever broke. You're thinking about the city."
+      },
+      {
+        "speaker": "dan",
+        "line": "Clear day. Good visibility. I could go in."
+      },
+      {
+        "speaker": "huiling",
+        "line": "You're not asking me."
+      },
+      {
+        "speaker": "dan",
+        "line": "You were right. About opening the ramp. About me."
+      },
+      {
+        "speaker": "huiling",
+        "line": "I know."
+      },
+      {
+        "speaker": "dan",
+        "line": "So I'm going. You stay with her."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Be back before dark."
+      },
+      {
+        "speaker": "dan",
+        "line": "I will."
+      },
+      {
+        "speaker": "huiling",
+        "line": "I know you will."
+      }
+    ],
+    "timestamp": "2026-06-24T15:02:37.882346"
   }
 ]
