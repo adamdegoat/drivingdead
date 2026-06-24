@@ -6292,5 +6292,80 @@
       }
     ],
     "timestamp": "2026-06-24T07:07:25.089154"
+  },
+  {
+    "day": 17,
+    "cycle": "midday",
+    "character": "dan",
+    "action": "He stands at the open ramp, one hand on the reinforced frame, looking down the sloped path into the city.",
+    "thought": "She was right. I'm letting it stay.",
+    "location": {
+      "waypoint": "ramp_block",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "thoughtful",
+    "timestamp": "2026-06-24T11:32:20.836112"
+  },
+  {
+    "day": 17,
+    "cycle": "midday",
+    "character": "huiling",
+    "action": "She brings two cups of water with mint from the planter and joins him at the ramp, standing close.",
+    "thought": "He's ready to go. I know it.",
+    "location": {
+      "waypoint": "ramp_block",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "steady",
+    "timestamp": "2026-06-24T11:32:20.836112"
+  },
+  {
+    "day": 17,
+    "cycle": "midday",
+    "type": "interaction",
+    "characters": [
+      "dan",
+      "huiling"
+    ],
+    "description": "The ramp is open in midday sun, and Dan stands thinking about the next run — Mari sleeping in the van, Hui Ling steady beside him, the fortress changed but holding.",
+    "dialogue": [
+      {
+        "speaker": "dan",
+        "line": "It's strange, how normal it looks open."
+      },
+      {
+        "speaker": "huiling",
+        "line": "You're thinking about running again."
+      },
+      {
+        "speaker": "dan",
+        "line": "Maybe soon. Not today."
+      },
+      {
+        "speaker": "huiling",
+        "line": "When you're ready, I can hold the gate."
+      },
+      {
+        "speaker": "dan",
+        "line": "The scavenged store is getting thin. Fresh eyes would help."
+      },
+      {
+        "speaker": "huiling",
+        "line": "You've thought about it."
+      },
+      {
+        "speaker": "dan",
+        "line": "Since the fever broke. Just running the math."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Then go when it's right. I'm here."
+      }
+    ],
+    "timestamp": "2026-06-24T11:32:20.836112"
   }
 ]

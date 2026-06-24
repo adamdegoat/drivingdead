@@ -8,17 +8,17 @@
     "scores": {
       "trust": 100,
       "openness": 100,
-      "ambition": 66,
+      "ambition": 67,
       "loneliness": 0,
-      "resilience": 97,
+      "resilience": 98,
       "health": 100,
-      "hunger": 45,
+      "hunger": 53,
       "thirst": 53,
-      "energy": 93
+      "energy": 86
     },
-    "mood": "wary",
+    "mood": "thoughtful",
     "location": {
-      "waypoint": "van_door",
+      "waypoint": "ramp_block",
       "x": 42,
       "y": 52
     },
@@ -134,17 +134,17 @@
     "scores": {
       "trust": 100,
       "openness": 100,
-      "ambition": 64,
+      "ambition": 65,
       "loneliness": 0,
-      "resilience": 90,
+      "resilience": 91,
       "health": 100,
-      "hunger": 45,
+      "hunger": 53,
       "thirst": 53,
-      "energy": 93
+      "energy": 86
     },
-    "mood": "calm",
+    "mood": "steady",
     "location": {
-      "waypoint": "van_door",
+      "waypoint": "ramp_block",
       "x": 64,
       "y": 44
     },
