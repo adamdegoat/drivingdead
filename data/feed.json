@@ -6758,5 +6758,88 @@
       }
     ],
     "timestamp": "2026-06-25T11:31:41.563404"
+  },
+  {
+    "day": 18,
+    "cycle": "afternoon",
+    "character": "dan",
+    "action": "He works the ramp hinges with steady hands, checking the tension and alignment as afternoon light shifts toward evening.",
+    "thought": "The light's slipping and I feel her there.",
+    "location": {
+      "waypoint": "van_rear",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "guarded",
+    "timestamp": "2026-06-25T15:02:04.168386"
+  },
+  {
+    "day": 18,
+    "cycle": "afternoon",
+    "character": "huiling",
+    "action": "She watches him from the van's edge, seeing the familiar weight settle back into his shoulders as the sun moves lower.",
+    "thought": "He's fighting the old fear but he's still here.",
+    "location": {
+      "waypoint": "van_rear",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "warm",
+    "timestamp": "2026-06-25T15:02:04.168386"
+  },
+  {
+    "day": 18,
+    "cycle": "afternoon",
+    "type": "interaction",
+    "characters": [
+      "dan",
+      "huiling"
+    ],
+    "description": "In the clear afternoon, Dan works the ramp hinges with growing confidence while Hui Ling watches; as shadows lengthen, the old weight returns to his shoulders, and they both feel dusk arriving.",
+    "dialogue": [
+      {
+        "speaker": "huiling",
+        "line": "You're moving well on those hinges."
+      },
+      {
+        "speaker": "dan",
+        "line": "They're almost there. Sun's still good though."
+      },
+      {
+        "speaker": "huiling",
+        "line": "A few more hours before dark."
+      },
+      {
+        "speaker": "dan",
+        "line": "I can feel it coming already. The pull to seal it."
+      },
+      {
+        "speaker": "huiling",
+        "line": "The fear?"
+      },
+      {
+        "speaker": "dan",
+        "line": "Yeah. It's like a weight I know how to carry."
+      },
+      {
+        "speaker": "huiling",
+        "line": "You don't have to fight it. We close when we need to."
+      },
+      {
+        "speaker": "dan",
+        "line": "I know. But I don't want to lose the open yet."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Then we stay open. Until we don't."
+      },
+      {
+        "speaker": "dan",
+        "line": "Yeah. Okay."
+      }
+    ],
+    "timestamp": "2026-06-25T15:02:04.168386"
   }
 ]

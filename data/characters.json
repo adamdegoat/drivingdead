@@ -12,13 +12,13 @@
       "loneliness": 0,
       "resilience": 100,
       "health": 100,
-      "hunger": 45,
+      "hunger": 53,
       "thirst": 53,
-      "energy": 86
+      "energy": 79
     },
-    "mood": "steady",
+    "mood": "guarded",
     "location": {
-      "waypoint": "ramp_block",
+      "waypoint": "van_rear",
       "x": 42,
       "y": 52
     },
@@ -50,7 +50,7 @@
     },
     "interaction": {
       "with": "huiling",
-      "state": "working_together"
+      "state": "talking"
     },
     "memories": [
       {
@@ -138,13 +138,13 @@
       "loneliness": 0,
       "resilience": 94,
       "health": 100,
-      "hunger": 45,
+      "hunger": 53,
       "thirst": 53,
-      "energy": 86
+      "energy": 79
     },
     "mood": "warm",
     "location": {
-      "waypoint": "lookout",
+      "waypoint": "van_rear",
       "x": 64,
       "y": 44
     },
@@ -174,7 +174,7 @@
     },
     "interaction": {
       "with": "dan",
-      "state": "working_together"
+      "state": "talking"
     },
     "memories": [
       {
