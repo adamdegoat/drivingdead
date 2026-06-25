@@ -6841,5 +6841,84 @@
       }
     ],
     "timestamp": "2026-06-25T15:02:04.168386"
+  },
+  {
+    "day": 18,
+    "cycle": "evening",
+    "character": "dan",
+    "action": "Checks the ramp as darkness falls, feeling the pull to seal it again.",
+    "thought": "I'm sliding backward into the fear.",
+    "location": {
+      "waypoint": "ramp_block",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "anxious",
+    "timestamp": "2026-06-25T18:32:11.700929"
+  },
+  {
+    "day": 18,
+    "cycle": "evening",
+    "character": "huiling",
+    "action": "Stands on the deck nearby, steady and quiet, watching him fight the old pull.",
+    "thought": "He's fighting the pull back toward control.",
+    "location": {
+      "waypoint": "rooftop_mid",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "calm",
+    "timestamp": "2026-06-25T18:32:11.700929"
+  },
+  {
+    "day": 18,
+    "cycle": "evening",
+    "type": "interaction",
+    "characters": [
+      "huiling",
+      "dan"
+    ],
+    "description": "As dusk falls and the first moans carry up from the streets, Dan checks the ramp one last time with clenched hands while Hui Ling stands nearby, steady and watching.",
+    "dialogue": [
+      {
+        "speaker": "huiling",
+        "line": "You're thinking about closing it."
+      },
+      {
+        "speaker": "dan",
+        "line": "Not thinking. Just aware."
+      },
+      {
+        "speaker": "huiling",
+        "line": "The locks are fine."
+      },
+      {
+        "speaker": "dan",
+        "line": "I know."
+      },
+      {
+        "speaker": "huiling",
+        "line": "You're scared something will break."
+      },
+      {
+        "speaker": "dan",
+        "line": "Maybe."
+      },
+      {
+        "speaker": "huiling",
+        "line": "But you already let it. And we're okay."
+      },
+      {
+        "speaker": "dan",
+        "line": "We could watch tonight. See how it feels."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Okay."
+      }
+    ],
+    "timestamp": "2026-06-25T18:32:11.700929"
   }
 ]
