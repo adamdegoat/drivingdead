@@ -6675,5 +6675,88 @@
       }
     ],
     "timestamp": "2026-06-25T07:03:50.267364"
+  },
+  {
+    "day": 18,
+    "cycle": "midday",
+    "character": "dan",
+    "action": "Checks the ramp hinges in the bright midday, hands steady and careful.",
+    "thought": "She pushed it open. I'm holding it now.",
+    "location": {
+      "waypoint": "ramp_block",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "steady",
+    "timestamp": "2026-06-25T11:31:41.563404"
+  },
+  {
+    "day": 18,
+    "cycle": "midday",
+    "character": "huiling",
+    "action": "Watches the far streets from the deck edge, alert but calm.",
+    "thought": "Daylight lets him move. He's finally moving.",
+    "location": {
+      "waypoint": "lookout",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "warm",
+    "timestamp": "2026-06-25T11:31:41.563404"
+  },
+  {
+    "day": 18,
+    "cycle": "midday",
+    "type": "interaction",
+    "characters": [
+      "dan",
+      "huiling"
+    ],
+    "description": "In clear midday, Dan works the ramp hinges while Hui Ling watches the city from the deck—the opened door still new, both of them aware that dark will seal it again for the night.",
+    "dialogue": [
+      {
+        "speaker": "huiling",
+        "line": "You okay?"
+      },
+      {
+        "speaker": "dan",
+        "line": "Yeah. Panels are charging clean."
+      },
+      {
+        "speaker": "huiling",
+        "line": "That's not what I asked."
+      },
+      {
+        "speaker": "dan",
+        "line": "I know. I'm okay."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Tonight we close it."
+      },
+      {
+        "speaker": "dan",
+        "line": "Yeah."
+      },
+      {
+        "speaker": "huiling",
+        "line": "It's not like before."
+      },
+      {
+        "speaker": "dan",
+        "line": "No. It's just... careful."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Careful is fair."
+      },
+      {
+        "speaker": "dan",
+        "line": "You were right. To push me."
+      }
+    ],
+    "timestamp": "2026-06-25T11:31:41.563404"
   }
 ]
