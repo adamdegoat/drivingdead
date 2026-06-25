@@ -1,32 +1,27 @@
 {
   "world": "drivingdead",
   "poll": {
-    "id": "2026-06-25",
+    "id": "2026-06-26",
     "closes": "tonight",
-    "question": "Dan shoulders his pack at the open ramp. Hui Ling holds the moment with him. Does she let him go alone, or does she go with him?",
+    "question": "Dusk is falling and the moans are rising from the streets. Dan's hands tense on the ramp hinges as the old fear pulls him back toward sealed-tight control. Hui Ling stand",
     "options": [
       {
-        "id": "let_him_go",
-        "label": "Let him go",
-        "desc": "She stays with Mari. She trusts him. The ramp closes behind him."
+        "id": "seal_now",
+        "label": "Seal it shut",
+        "desc": "He's come far today. One night of mercy."
       },
       {
-        "id": "go_together",
-        "label": "Go with him",
-        "desc": "Mari stays sealed in the van. Hui Ling moves into the dark at his side."
-      },
-      {
-        "id": "ramp_open",
-        "label": "Keep the ramp open",
-        "desc": "He goes alone. They keep it open—a lifeline burning through the night."
+        "id": "keep_open",
+        "label": "Keep it open",
+        "desc": "He's holding it. Don't let dusk undo him."
       }
     ]
   },
   "in_play": {
-    "id": "seal",
-    "label": "Close it",
-    "desc": "Fear returns as dark falls; he seals the fortress.",
-    "decided": "2026-06-25",
+    "id": "let_him_go",
+    "label": "Let him go",
+    "desc": "She stays with Mari. She trusts him. The ramp closes behind him.",
+    "decided": "2026-06-26",
     "votes": 0,
     "tally": {}
   }

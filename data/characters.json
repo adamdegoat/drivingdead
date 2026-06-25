@@ -7,18 +7,18 @@
     "color": "#f59e0b",
     "scores": {
       "trust": 100,
-      "openness": 98,
-      "ambition": 68,
+      "openness": 99,
+      "ambition": 70,
       "loneliness": 0,
-      "resilience": 98,
+      "resilience": 99,
       "health": 100,
-      "hunger": 53,
-      "thirst": 45,
-      "energy": 100
+      "hunger": 45,
+      "thirst": 53,
+      "energy": 93
     },
-    "mood": "anxious",
+    "mood": "determined",
     "location": {
-      "waypoint": "ramp_block",
+      "waypoint": "scavenge_run",
       "x": 42,
       "y": 52
     },
@@ -26,7 +26,7 @@
     "relationships": {
       "huiling": {
         "closeness": 100,
-        "tension": 1,
+        "tension": 0,
         "attraction": 85
       }
     },
@@ -48,10 +48,7 @@
       ],
       "beard": true
     },
-    "interaction": {
-      "with": "huiling",
-      "state": "talking"
-    },
+    "interaction": null,
     "memories": [
       {
         "day": 4,
@@ -138,13 +135,13 @@
       "loneliness": 0,
       "resilience": 93,
       "health": 100,
-      "hunger": 53,
-      "thirst": 45,
-      "energy": 100
+      "hunger": 45,
+      "thirst": 53,
+      "energy": 93
     },
-    "mood": "resigned",
+    "mood": "steady",
     "location": {
-      "waypoint": "van_rear",
+      "waypoint": "rooftop_edge",
       "x": 64,
       "y": 44
     },
@@ -152,7 +149,7 @@
     "relationships": {
       "dan": {
         "closeness": 100,
-        "tension": 1,
+        "tension": 0,
         "attraction": 85
       }
     },
@@ -172,10 +169,7 @@
         "slingbag"
       ]
     },
-    "interaction": {
-      "with": "dan",
-      "state": "talking"
-    },
+    "interaction": null,
     "memories": [
       {
         "day": 2,
@@ -243,8 +237,8 @@
         "weight": 3
       },
       {
-        "day": 18,
-        "text": "He's moving with certainty now. I didn't know if that would come back.",
+        "day": 19,
+        "text": "He's choosing to walk into fear instead of sealing it away. That took something real.",
         "weight": 2
       }
     ]

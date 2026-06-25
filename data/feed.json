@@ -7003,5 +7003,80 @@
       }
     ],
     "timestamp": "2026-06-25T22:32:15.082798"
+  },
+  {
+    "day": 19,
+    "cycle": "morning",
+    "character": "dan",
+    "action": "He packed a scavenge bag and checked the ramp locks one final time, then looked at Hui Ling and started to open the gate.",
+    "thought": "I can face the city. I have to try.",
+    "location": {
+      "waypoint": "scavenge_run",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "determined",
+    "timestamp": "2026-06-26T07:02:07.716340"
+  },
+  {
+    "day": 19,
+    "cycle": "morning",
+    "character": "huiling",
+    "action": "She helped him pack without asking why, then took position at the rooftop edge to watch until he disappeared into the morning streets.",
+    "thought": "He's choosing to move instead of hiding.",
+    "location": {
+      "waypoint": "rooftop_edge",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "steady",
+    "timestamp": "2026-06-26T07:02:07.716340"
+  },
+  {
+    "day": 19,
+    "cycle": "morning",
+    "type": "interaction",
+    "characters": [
+      "dan",
+      "huiling"
+    ],
+    "description": "By first light, Dan has made his decision — packed for a run while Hui Ling watched from the van door, and now he's opening the ramp as she holds the fortress.",
+    "dialogue": [
+      {
+        "speaker": "huiling",
+        "line": "You're already packed."
+      },
+      {
+        "speaker": "dan",
+        "line": "Woke early. Been thinking about the city."
+      },
+      {
+        "speaker": "huiling",
+        "line": "About leaving?"
+      },
+      {
+        "speaker": "dan",
+        "line": "About not being a coward about it."
+      },
+      {
+        "speaker": "huiling",
+        "line": "The power's good. The streets were quiet last night."
+      },
+      {
+        "speaker": "dan",
+        "line": "You'd be alone up here."
+      },
+      {
+        "speaker": "huiling",
+        "line": "I'm not your reason to hide."
+      },
+      {
+        "speaker": "dan",
+        "line": "You're my reason to come back."
+      }
+    ],
+    "timestamp": "2026-06-26T07:02:07.716340"
   }
 ]
