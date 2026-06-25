@@ -6920,5 +6920,88 @@
       }
     ],
     "timestamp": "2026-06-25T18:32:11.700929"
+  },
+  {
+    "day": 18,
+    "cycle": "night",
+    "character": "dan",
+    "action": "He works the ramp lock by lantern, checking the hinges and latch as full dark falls overhead, moving through the ritual of securing the fortress.",
+    "thought": "I lasted longer in the light this time.",
+    "location": {
+      "waypoint": "ramp_block",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "anxious",
+    "timestamp": "2026-06-25T22:32:15.082798"
+  },
+  {
+    "day": 18,
+    "cycle": "night",
+    "character": "huiling",
+    "action": "She stands in the van's rear door watching him work the ramp lock, arms wrapped around herself against the cold, silent.",
+    "thought": "He's closing the door again. We're shrinking back.",
+    "location": {
+      "waypoint": "van_rear",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "resigned",
+    "timestamp": "2026-06-25T22:32:15.082798"
+  },
+  {
+    "day": 18,
+    "cycle": "night",
+    "type": "interaction",
+    "characters": [
+      "dan",
+      "huiling"
+    ],
+    "description": "As full dark falls and moans carry up from the streets below, Dan works the ramp lock by lantern while Hui Ling stands in the van's rear door, watching him slip backward into fear.",
+    "dialogue": [
+      {
+        "speaker": "huiling",
+        "line": "The ramp was fine all day."
+      },
+      {
+        "speaker": "dan",
+        "line": "Days end. Night's when things go wrong."
+      },
+      {
+        "speaker": "huiling",
+        "line": "We weren't wrong this morning."
+      },
+      {
+        "speaker": "dan",
+        "line": "Morning's not night, Ling."
+      },
+      {
+        "speaker": "huiling",
+        "line": "I can feel you disappearing."
+      },
+      {
+        "speaker": "dan",
+        "line": "I'm right here."
+      },
+      {
+        "speaker": "huiling",
+        "line": "No, you're not. You're locking the door again."
+      },
+      {
+        "speaker": "dan",
+        "line": "Because the door is the only thing keeping them out."
+      },
+      {
+        "speaker": "huiling",
+        "line": "It's also keeping us in."
+      },
+      {
+        "speaker": "dan",
+        "line": "That's the point."
+      }
+    ],
+    "timestamp": "2026-06-25T22:32:15.082798"
   }
 ]
