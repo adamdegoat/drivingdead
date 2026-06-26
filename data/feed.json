@@ -7078,5 +7078,80 @@
       }
     ],
     "timestamp": "2026-06-26T07:02:07.716340"
+  },
+  {
+    "day": 19,
+    "cycle": "midday",
+    "character": "dan",
+    "action": "He climbs the ramp as it lowers, dusty from the streets, arms holding a salvaged crate of tinned food and a field dressing kit.",
+    "thought": "I did it. Moved and came back.",
+    "location": {
+      "waypoint": "van_rear",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "determined",
+    "timestamp": "2026-06-26T11:32:39.259517"
+  },
+  {
+    "day": 19,
+    "cycle": "midday",
+    "character": "huiling",
+    "action": "She steps to the ramp edge as she sees him, watches him carefully for injury, then moves to help him in with the crate.",
+    "thought": "He's OK. He's really OK.",
+    "location": {
+      "waypoint": "van_rear",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "steady",
+    "timestamp": "2026-06-26T11:32:39.259517"
+  },
+  {
+    "day": 19,
+    "cycle": "midday",
+    "type": "interaction",
+    "characters": [
+      "dan",
+      "huiling"
+    ],
+    "description": "Dan returns from his first solo run since the ramp opened, climbing into the van at midday with salvage in his arms while Hui Ling steps forward to meet him, her held breath finally released.",
+    "dialogue": [
+      {
+        "speaker": "dan",
+        "line": "Found a pharmacy two blocks over. Stuff's still there."
+      },
+      {
+        "speaker": "huiling",
+        "line": "You're not hurt?"
+      },
+      {
+        "speaker": "dan",
+        "line": "No. Quiet down there. Saw two of them far off, moving away."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Did you get the dressing kit?"
+      },
+      {
+        "speaker": "dan",
+        "line": "Yeah. And tins — beans, tomatoes, some fruit. Battery in me the whole way."
+      },
+      {
+        "speaker": "huiling",
+        "line": "You did good. Let me see your hands."
+      },
+      {
+        "speaker": "dan",
+        "line": "I'm good, Ling. Really."
+      },
+      {
+        "speaker": "huiling",
+        "line": "I know. But let me look anyway."
+      }
+    ],
+    "timestamp": "2026-06-26T11:32:39.259517"
   }
 ]

@@ -1,7 +1,7 @@
 {
   "day": 19,
-  "cycle": "morning",
-  "weather": "partly_cloudy",
+  "cycle": "midday",
+  "weather": "clear",
   "pending_events": [],
   "started": "2026-06-08",
   "structures": [
@@ -9,7 +9,7 @@
       "id": "solar_rig",
       "type": "solar_rig",
       "level": 1,
-      "condition": 16,
+      "condition": 12,
       "x": 50,
       "y": 55,
       "builder": null,
@@ -20,26 +20,26 @@
   ],
   "fire": {
     "lit": true,
-    "fuel": 17
+    "fuel": 4
   },
   "last_run_date": "2026-06-26",
-  "pulse": "Dan chooses to walk into the city this morning — and Hui Ling lets him go, trusting him more than he trusts himself.",
-  "scene": "He packed in silence while she watched, reading his choice to move past yesterday's fear; now the ramp opens and he descends into morning while she holds the fortress.",
+  "pulse": "He went out and came back alive; she held the line without panic, and now they know they can do this.",
+  "scene": "After six hours, Dan returns to the van with salvage from a pharmacy while Hui Ling steps forward to meet him, her held breath released. The ramp rises as they move inside.",
   "resources_prev": {
-    "food": 89,
-    "water": 100,
-    "wood": 96,
-    "medicine": 25
-  },
-  "resources": {
     "food": 100,
     "water": 92,
     "wood": 95,
     "medicine": 25
   },
-  "camp_climate": "content",
+  "resources": {
+    "food": 89,
+    "water": 94,
+    "wood": 100,
+    "medicine": 33
+  },
+  "camp_climate": "steady",
   "discoveries": [],
-  "last_cycle_key": "2026-06-26:morning",
+  "last_cycle_key": "2026-06-26:midday",
   "day_summaries": {
     "1": "Day 1 was clear and warm — good charging, hot meals in the cab, the systems steady. At dusk, Hui Ling found injured birds on the ramp and sheltered them on the van's corner despite Dan's strong refusal. By nightfall, they were sitting together in guarded silence, both aware that the cost of survival might exceed what they could afford to become.",
     "2": "Day 2 escalated from injured birds to a moral standoff: Dan refused shelter, and by nightfall, he blocked the van door as Hui Ling reached for it. When she asked why, he finally broke—not afraid of the dead, but of her leaving. The night left them both caged, one by the city, one by his terror.",

@@ -7,18 +7,18 @@
     "color": "#f59e0b",
     "scores": {
       "trust": 100,
-      "openness": 99,
-      "ambition": 70,
+      "openness": 100,
+      "ambition": 71,
       "loneliness": 0,
-      "resilience": 99,
+      "resilience": 100,
       "health": 100,
-      "hunger": 45,
+      "hunger": 53,
       "thirst": 53,
-      "energy": 93
+      "energy": 78
     },
     "mood": "determined",
     "location": {
-      "waypoint": "scavenge_run",
+      "waypoint": "van_rear",
       "x": 42,
       "y": 52
     },
@@ -48,7 +48,10 @@
       ],
       "beard": true
     },
-    "interaction": null,
+    "interaction": {
+      "with": "huiling",
+      "state": "talking"
+    },
     "memories": [
       {
         "day": 4,
@@ -131,17 +134,17 @@
     "scores": {
       "trust": 100,
       "openness": 100,
-      "ambition": 65,
+      "ambition": 66,
       "loneliness": 0,
-      "resilience": 93,
+      "resilience": 94,
       "health": 100,
-      "hunger": 45,
+      "hunger": 53,
       "thirst": 53,
-      "energy": 93
+      "energy": 78
     },
     "mood": "steady",
     "location": {
-      "waypoint": "rooftop_edge",
+      "waypoint": "van_rear",
       "x": 64,
       "y": 44
     },
@@ -169,7 +172,10 @@
         "slingbag"
       ]
     },
-    "interaction": null,
+    "interaction": {
+      "with": "dan",
+      "state": "talking"
+    },
     "memories": [
       {
         "day": 2,
