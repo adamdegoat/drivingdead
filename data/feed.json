@@ -7153,5 +7153,88 @@
       }
     ],
     "timestamp": "2026-06-26T11:32:39.259517"
+  },
+  {
+    "day": 19,
+    "cycle": "afternoon",
+    "character": "dan",
+    "action": "He unloads wire and batteries at the van's rear, movements careful, still buzzing from the run.",
+    "thought": "Came back whole. The city's still out there.",
+    "location": {
+      "waypoint": "van_rear",
+      "x": 42,
+      "y": 52
+    },
+    "shelter": "van",
+    "mood": "steady",
+    "timestamp": "2026-06-26T15:01:56.376625"
+  },
+  {
+    "day": 19,
+    "cycle": "afternoon",
+    "character": "huiling",
+    "action": "She watches him unload, a hand on his shoulder, the relief in her face quiet and held.",
+    "thought": "He came back alive. I was right.",
+    "location": {
+      "waypoint": "van_rear",
+      "x": 64,
+      "y": 44
+    },
+    "shelter": "van",
+    "mood": "steady",
+    "timestamp": "2026-06-26T15:01:56.376625"
+  },
+  {
+    "day": 19,
+    "cycle": "afternoon",
+    "type": "interaction",
+    "characters": [
+      "dan",
+      "huiling"
+    ],
+    "description": "At the van's rear in afternoon light, Dan unloads salvage while Hui Ling listens, the fortress steady and warm as the city quiets below.",
+    "dialogue": [
+      {
+        "speaker": "huiling",
+        "line": "Wire and batteries."
+      },
+      {
+        "speaker": "dan",
+        "line": "Few usable. Better than nothing."
+      },
+      {
+        "speaker": "huiling",
+        "line": "Did you see them?"
+      },
+      {
+        "speaker": "dan",
+        "line": "Heard them. Three blocks south. Didn't come near."
+      },
+      {
+        "speaker": "huiling",
+        "line": "You kept clear."
+      },
+      {
+        "speaker": "dan",
+        "line": "Rooftops mostly. Moved quiet."
+      },
+      {
+        "speaker": "huiling",
+        "line": "You did good."
+      },
+      {
+        "speaker": "dan",
+        "line": "Couldn't have without you holding it down here."
+      },
+      {
+        "speaker": "huiling",
+        "line": "You did that. On your own."
+      },
+      {
+        "speaker": "dan",
+        "line": "Yeah. But knowing you were steady—it helped."
+      }
+    ],
+    "timestamp": "2026-06-26T15:01:56.376625"
   }
 ]
